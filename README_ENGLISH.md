@@ -12,7 +12,6 @@
 - [Libraries](#-libraries-used)
 - [Statistical Concepts](#-statistical-concepts-covered)
 - [Lab Structure](#-lab-structure--content)
-- [Exercises & Grading](#-exercises--grading)
 - [Troubleshooting](#-troubleshooting)
 - [Tips](#-tips)
 - [Mathematical Formulas](#-mathematical-formulas-used)
@@ -279,21 +278,6 @@ Where:
   - Lead time management (pre-booking limits)
   - Pricing strategies (dynamic pricing)
   - Customer loyalty programs
-
-## 🎓 Exercises & Grading
-
-The lab includes **5 main exercises** (20 points each = 100 points):
-
-1. **Exercise 1–2:** Intelligence Phase (Data Cleaning & Inspection)
-2. **Exercise 3:** Correlation & Tornado Chart
-3. **Exercise 4:** Sensitivity & Goal Seek Analysis
-4. **Exercise 5:** What-If Analysis & Binning
-5. **Exercise 6 (Bonus):** Pearson vs Spearman (+10 points)
-
-**Evaluation Criteria:**
-- ✅ Correct Python code
-- ✅ Charts with titles and axis labels
-- ✅ Commentary/interpretation of results in markdown or `print()`
 
 ## 🤝 Contributing
 
