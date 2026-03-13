@@ -1,11 +1,37 @@
 ---
 marp: true
-theme: gaia
-class: lead
+theme: default
 paginate: true
 header: 'Unit 3: Business Intelligence & Knowledge Representation'
 footer: 'University of West Attica (UNIWA) — Intelligent Systems & DSS'
+style: |
+  section {
+    font-size: 22px;
+  }
+  section.small {
+    font-size: 18px;
+  }
+  /* Slide with diagram only — large image max-height */
+  section.diagram img {
+    max-height: 500px !important;
+    max-width: 94% !important;
+    display: block;
+    margin: 0 auto;
+  }
+  /* Slide with diagram + text */
+  section.diagram-sm img {
+    max-height: 320px !important;
+    max-width: 94% !important;
+    display: block;
+    margin: 0 auto;
+  }
 ---
+
+<div style="text-align:center; margin-bottom:16px;">
+
+![w:280](uniwa_logo.png)
+
+</div>
 
 # Intelligent Systems and Decision Support Systems
 **Unit 3: Business Intelligence & Knowledge Representation**
@@ -65,6 +91,7 @@ University of West Attica
 
 ---
 
+<!-- _class: diagram -->
 # The DIKW Hierarchy — Diagram
 
 ```mermaid
@@ -95,6 +122,7 @@ flowchart TB
 
 ---
 
+<!-- _class: diagram -->
 # BI Architecture — Pipeline Diagram
 
 ```mermaid
@@ -165,6 +193,7 @@ The "bridge" that moves data from sources (OLTP) to the Data Warehouse:
 
 ---
 
+<!-- _class: diagram -->
 # The ETL Process — Diagram
 
 ```mermaid
@@ -301,6 +330,7 @@ Composed of:
 
 ---
 
+<!-- _class: diagram-sm -->
 # Semantic Network — Example
 
 ```mermaid
@@ -377,6 +407,7 @@ Use logical reasoning to solve problems. Advantages: Modularity and Scalability.
 
 ---
 
+<!-- _class: diagram-sm -->
 # Forward vs Backward Chaining — Diagram
 
 ```mermaid
@@ -436,6 +467,7 @@ The strict separation of the Knowledge Base from the Inference Engine allows eas
 
 ---
 
+<!-- _class: diagram -->
 # Expert System Architecture — Diagram
 
 ```mermaid

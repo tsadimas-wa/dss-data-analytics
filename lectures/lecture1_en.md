@@ -13,6 +13,12 @@ style: |
   }
 ---
 
+<div style="text-align:center; margin-bottom:16px;">
+
+![w:280](uniwa_logo.png)
+
+</div>
+
 # Intelligent Systems & Decision Support Systems (DSS)
 ## Unit 1: Foundations & Decision Theory
 
