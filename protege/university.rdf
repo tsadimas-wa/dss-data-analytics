@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/rg/ontologies/2026/2/untitled-ontology-7/"
+     xml:base="http://www.semanticweb.org/rg/ontologies/2026/2/untitled-ontology-7/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:university="http://www.example.org/university#">
+    <owl:Ontology rdf:about="http://www.example.org/university"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/university#hasPrerequisite -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#hasPrerequisite">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Course"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#offeredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#offeredBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Course"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#taughtBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#taughtBy">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Course"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Professor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/university#courseCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#courseCode">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#credits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#credits">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#departmentName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#departmentName">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Department"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#semester -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#semester">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/university#AdvancedCourse -->
+
+    <owl:Class rdf:about="http://www.example.org/university#AdvancedCourse">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/university#Course"/>
+        <owl:disjointWith rdf:resource="http://www.example.org/university#IntroductoryCourse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Course -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Course"/>
+    
+
+
+    <!-- http://www.example.org/university#Department -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Department"/>
+    
+
+
+    <!-- http://www.example.org/university#IntroductoryCourse -->
+
+    <owl:Class rdf:about="http://www.example.org/university#IntroductoryCourse">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/university#Course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Professor -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Professor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/university#Algorithms -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Algorithms">
+        <rdf:type rdf:resource="http://www.example.org/university#AdvancedCourse"/>
+        <university:hasPrerequisite rdf:resource="http://www.example.org/university#DataStructures"/>
+        <university:courseCode>CS301</university:courseCode>
+        <university:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</university:credits>
+        <university:semester rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</university:semester>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#DataStructures -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#DataStructures">
+        <rdf:type rdf:resource="http://www.example.org/university#AdvancedCourse"/>
+        <university:hasPrerequisite rdf:resource="http://www.example.org/university#Programming1"/>
+        <university:offeredBy rdf:resource="http://www.example.org/university#Informatics"/>
+        <university:taughtBy rdf:resource="http://www.example.org/university#Prof_Tsadimas"/>
+        <university:courseCode>CS201</university:courseCode>
+        <university:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</university:credits>
+        <university:semester rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</university:semester>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#Informatics -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Informatics">
+        <university:departmentName></university:departmentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#MachineLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#MachineLearning">
+        <rdf:type rdf:resource="http://www.example.org/university#AdvancedCourse"/>
+        <university:hasPrerequisite rdf:resource="http://www.example.org/university#DataStructures"/>
+        <university:hasPrerequisite rdf:resource="http://www.example.org/university#Math1"/>
+        <university:courseCode>CS401</university:courseCode>
+        <university:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</university:credits>
+        <university:semester rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</university:semester>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#Math1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Math1">
+        <rdf:type rdf:resource="http://www.example.org/university#IntroductoryCourse"/>
+        <university:courseCode>MAT101</university:courseCode>
+        <university:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</university:credits>
+        <university:semester rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</university:semester>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#Prof_Tsadimas -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Prof_Tsadimas">
+        <rdf:type rdf:resource="http://www.example.org/university#Professor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#Programming1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Programming1">
+        <rdf:type rdf:resource="http://www.example.org/university#IntroductoryCourse"/>
+        <university:courseCode>CS101</university:courseCode>
+        <university:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</university:credits>
+        <university:semester rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</university:semester>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

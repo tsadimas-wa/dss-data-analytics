@@ -144,7 +144,7 @@ Thing
    - `Department`
    - `Professor`
 4. Επιλέξτε την κλάση `Course` και κάντε την **parent class** (υπερκλάση) για:
-   - `IntroductoryCourse` (πατήστε **+** με επιλεγμένη την `Course`)
+C   - `IntroductoryCourse` (πατήστε **+** με επιλεγμένη την `Course`)
    - `AdvancedCourse`
 5. Ορίστε `IntroductoryCourse` και `AdvancedCourse` ως **Disjoint**: επιλέξτε `IntroductoryCourse`, πηγαίνετε στο πάνελ **Disjoint With**, πατήστε **+** και προσθέστε `AdvancedCourse`.
 
@@ -162,12 +162,17 @@ Thing
    | `taughtBy` | `Course` | `Professor` | — |
 
 3. Για να ορίσετε Domain/Range μιας ιδιότητας:
-   - Επιλέξτε την ιδιότητα (π.χ. `hasPrerequisite`)
-   - Στο πάνελ δεξιά, στο **Domains** πατήστε **+** → επιλέξτε `Course`
-   - Στο **Ranges** πατήστε **+** → επιλέξτε `Course`
+   - Κάντε κλικ **πάνω στο όνομα** της ιδιότητας (π.χ. `hasPrerequisite`) στην αριστερή ιεραρχία
+   - ⚠️ **Σημαντικό:** Βεβαιωθείτε ότι το **δεξί πάνελ** δείχνει τη συγκεκριμένη ιδιότητα (π.χ. τίτλος `hasPrerequisite`) και **όχι** κάποια Κλάση — αν δείχνει Κλάση, κάντε κλικ αλλού και μετά ξανά στην ιδιότητα
+   - Στο δεξί πάνελ, βεβαιωθείτε ότι είστε στην καρτέλα **Description**
+   - Θα δείτε διαδοχικά (κυλήστε αν χρειάζεται): **Characteristics**, **Domains (intersection)**, **Ranges (intersection)**
+   - Στο **Domains (intersection)** πατήστε **+** → επιλέξτε `Course`
+   - Στο **Ranges (intersection)** πατήστε **+** → επιλέξτε `Course`
 
 4. Για να ορίσετε `hasPrerequisite` ως **Transitive**:
-   - Στο πάνελ χαρακτηριστικών (Characteristics) τσεκάρετε το **Transitive**
+   - Με την `hasPrerequisite` επιλεγμένη, στην καρτέλα **Description** του δεξιού πάνελ
+   - Στην **κορυφή** της καρτέλας θα δείτε την ενότητα **Characteristics** (Functional, Inverse Functional, Transitive, Symmetric, Asymmetric, Reflexive, Irreflexive)
+   - Τσεκάρετε το **Transitive**
    - *(Αν το Α απαιτεί Β και Β απαιτεί Γ, τότε αυτόματα Α απαιτεί Γ)*
 
 ---
@@ -186,10 +191,15 @@ Thing
 
 ---
 
+
 ### 5.6 Δημιουργία Individuals (Στιγμιότυπα)
 
-1. Πηγαίνετε στην καρτέλα **Entities > Individuals by class**.
-2. Επιλέξτε μια κλάση (π.χ. `Department`) και πατήστε **+** για να προσθέσετε άτομο.
+> **Σημαντικό για Protégé 5.6.7:**
+> Για να δημιουργήσετε σωστά individuals, χρησιμοποιήστε το tab **Individuals by class** (που βρίσκεται δίπλα στο Entities tab). Εκεί εμφανίζονται οι κλάσεις και μπορείτε να επιλέξετε την κλάση που θέλετε και να προσθέσετε individual με το **+**. 
+> Το tab **Individuals** κάτω από το Entities tab δεν επιτρέπει να διαλέξετε κλάση για το νέο individual και δεν συνιστάται για τη δημιουργία στιγμιότυπων.
+
+1. Πηγαίνετε στην καρτέλα **Individuals by class** (δίπλα στο Entities tab).
+2. Επιλέξτε μια κλάση (π.χ. `Department`) και πατήστε **+** για να προσθέσετε άτομο (individual).
 3. Δημιουργήστε τα παρακάτω individuals:
 
 **Departments:**
@@ -224,8 +234,20 @@ Thing
 
 1. **Reasoner > Start reasoner (HermiT)**
 2. Επαληθεύστε ότι η οντολογία είναι **συνεπής** (consistent) — δεν πρέπει να εμφανιστεί κόκκινο `owl:Nothing`.
+
 3. Λόγω του `Transitive` χαρακτηριστικού στο `hasPrerequisite`, ο reasoner θα συναγάγει ότι:
-   - το `MachineLearning` έχει (έμμεσα) προαπαιτούμενο και το `Programming1`
+    - το `MachineLearning` έχει (έμμεσα) προαπαιτούμενο και το `Programming1`
+
+#### Πώς να το δεις στο Protégé:
+
+1. Πήγαινε στο μενού **Reasoner** και επίλεξε **Start reasoner** (π.χ. HermiT).
+2. Πήγαινε στο tab **Individuals by class** και επίλεξε την κλάση `AdvancedCourse`, μετά το individual `MachineLearning`.
+3. Στο δεξί πάνελ, βρες την ενότητα **Object Property Assertions**.
+4. Εκεί θα εμφανιστούν οι άμεσες και έμμεσες (inferred) σχέσεις. Αν ο reasoner είναι ενεργός, θα δεις ότι το `MachineLearning` έχει `hasPrerequisite` και το `Programming1` (μέσω transitiveness).
+5. Εναλλακτικά, μπορείς να ενεργοποιήσεις το **Inferred** view (πάνω από το δέντρο των individuals) για να δεις τις λογικά συναγόμενες σχέσεις.
+6. Αν δεν εμφανίζεται, βεβαιώσου ότι:
+    - Έχεις ορίσει το `hasPrerequisite` ως **Transitive**.
+    - Έχεις προσθέσει σωστά τα προαπαιτούμενα (Programming1 → DataStructures → Algorithms → MachineLearning).
 
 ---
 
