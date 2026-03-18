@@ -555,7 +555,9 @@ for row in rows:
 | Εξαγωγή | File > Save As → OWL/XML | `university.owl` |
 | Φόρτωση & ερώτηση | `owlready2` (Python) | Προγραμματιστική πρόσβαση |
 | Inferred εξαγωγή γνώσης | `sync_reasoner_hermit` | Transitivity, νέα facts |
-| SPARQL | `default_world.sparql()` | Δομημένα ερωτήματα |
+| Συγγραφή Κανόνων | SWRLTab | Λογική IF-THEN (`DemandingCourse`) |
+| Ενσωματωμένο SPARQL | SPARQL Query Tab | Ερωτήματα μέσα στο GUI |
+| SPARQL (Python) | `default_world.sparql()` | Δομημένα ερωτήματα μέσω Python |
 
 
 
@@ -575,11 +577,13 @@ graph TD
         C[Course]:::classNode
         IC[IntroductoryCourse]:::classNode
         AC[AdvancedCourse]:::classNode
+        DC[DemandingCourse]:::classNode
         D[Department]:::classNode
         P[Professor]:::classNode
         
         C -->|is parent of| IC
         C -->|is parent of| AC
+        C -->|is parent of| DC
     end
 
     subgraph A-Box [Επίπεδο Δεδομένων - Individuals]
