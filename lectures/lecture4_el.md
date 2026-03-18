@@ -1,12 +1,12 @@
 ---
 marp: true
-theme: uncover
+theme: default
 paginate: true
 html: true
 backgroundColor: #ffffff
 style: |
-  section { font-family: 'Segoe UI', sans-serif; font-size: 22px; text-align: left; }
-  h1 { color: #0056b3; text-align: center; }
+  section { font-family: 'Segoe UI', sans-serif; font-size: 20px; text-align: left; padding: 40px 60px; }
+  h1 { color: #0056b3; font-size: 1.45em; margin: 0 0 0.35em 0; padding: 0; }
   h2 { color: #007bff; border-bottom: 2px solid #eee; }
   code { background-color: #f4f4f4; color: #d63384; padding: 2px 5px; border-radius: 4px; }
   pre { background: #f8f8f8; border-left: 4px solid #007bff; padding: 8px; font-size: 21px; }
@@ -251,6 +251,27 @@ flowchart TB
 
 ---
 
+<!-- _class: small -->
+# 2. URI / IRI / URL — Μοναδικές Ταυτότητες
+
+Κάθε κλάση, ιδιότητα ή στιγμιότυπο σε μια οντολογία έχει **μοναδικό αναγνωριστικό** — όπως ο ΑΦΜ για έναν πολίτη.
+
+| | **URI** | **IRI** | **URL** |
+|---|---|---|---|
+| **Σημαίνει** | Uniform Resource Identifier | Internationalized Resource Identifier | Uniform Resource Locator |
+| **Χαρακτήρες** | ASCII μόνο | Unicode (ελληνικά, emoji ✅) | ASCII μόνο |
+| **Παράδειγμα** | `…/ontology#Person` | `…/οντολογία#Άνθρωπος` | `https://dbpedia.org/…` |
+| **Τοποθεσία;** | Όχι απαραίτητα | Όχι απαραίτητα | ✅ Ναι |
+
+**Κανόνες:**
+* `URL ⊆ URI ⊆ IRI` — κάθε URL είναι URI, κάθε URI είναι IRI
+* IRI με ελληνικά → αυτόματη μετατροπή σε percent-encoding:
+  `Άνθρωπος` → `%CE%8C%CE%BD%CE%B8%CF%81%CF%89%CF%80%CE%BF%CF%82`
+
+> 💡 Στο Protégé κάθε κλάση/ιδιότητα παίρνει IRI στο παρασκήνιο — π.χ. `http://example.org/persons#hasAge`
+
+---
+
 # 2.1 Τι είναι η Οντολογία;
 
 Ένα ψηφιακό, δομημένο **"λεξικό"** που ορίζει τις έννοιες ενός πεδίου και τις σχέσεις μεταξύ τους.
@@ -392,12 +413,12 @@ A: { αν τιμή_προϊόντος > 150€  →  δωρεάν αποστολ
 **Στρατηγικές Ανάπτυξης:**
 
 | Στρατηγική | Κατεύθυνση | Κατάλληλη για |
-|---|---|---||
+|---|---|---|
 | **Top-Down** | Γενικό → Ειδικό | Συστηματική θεώρηση τομέα |
 | **Bottom-Up** | Ειδικό → Γενικό | Ξεκίνημα από συγκεκριμένα παραδείγματα |
 | **Combination** | Μεσαία → Άκρα | Πιο συνηθισμένη πρακτική |
 
-**Κανόνες Σχεδιασμού (από το PDF):**
+**Κανόνες Σχεδιασμού:**
 
 * **is-a rule:** Κάθε instance κλάσης B *είναι επίσης* instance της υπερκλάσης A — *"kind-of"* σχέση.
 * **Transitivity:** Αν `C ⊆ B` και `B ⊆ A`, τότε `C ⊆ A` — αυτόματα.
@@ -557,7 +578,27 @@ WHERE {
 | `CONSTRUCT` | Νέος RDF γράφος |
 | `DESCRIBE` | Περιγραφή ενός πόρου |
 
-> Live δοκιμή: **dbpedia.org/sparql** — ερωτά ~580 εκ. RDF triples της Wikipedia
+> Live δοκιμή: **[dbpedia.org/sparql](https://dbpedia.org/sparql)** — ερωτά ~580 εκ. RDF triples της Wikipedia
+
+---
+
+<!-- _class: small -->
+# 2.2δ SPARQL — Live Παράδειγμα (DBpedia)
+
+Το **DBpedia** εκθέτει όλη τη Wikipedia ως RDF γράφο με ~580 εκ. triples.
+
+```sparql
+SELECT ?film ?director WHERE {
+  ?film  rdf:type        dbo:Film .
+  ?film  dbo:director    ?dirRes .
+  ?dirRes rdfs:label     ?director .
+  ?film  rdfs:label      "Inception"@en .
+  FILTER(LANG(?director) = "en")
+} LIMIT 5
+```
+*Βρες τον σκηνοθέτη της ταινίας "Inception" από τη Wikipedia.*
+
+Δοκίμασέ το live: **[dbpedia.org/sparql](https://dbpedia.org/sparql)** → επικόλλησε το query → **Run Query**.
 
 ---
 
