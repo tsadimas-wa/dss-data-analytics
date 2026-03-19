@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.example.org/university"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.example.org/university">
+    <Prefix name="" IRI="http://www.semanticweb.org/rg/ontologies/2026/2/untitled-ontology-7/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#AdvancedCourse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Course"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Department"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntroductoryCourse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Professor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPrerequisite"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#offeredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#taughtBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#courseCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#credits"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#departmentName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#semester"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Algorithms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DataStructures"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Informatics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MachineLearning"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Math1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof_Tsadimas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Programming1"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AdvancedCourse"/>
+        <Class IRI="#Course"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntroductoryCourse"/>
+        <Class IRI="#Course"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#AdvancedCourse"/>
+        <Class IRI="#IntroductoryCourse"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#AdvancedCourse"/>
+        <NamedIndividual IRI="#Algorithms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AdvancedCourse"/>
+        <NamedIndividual IRI="#DataStructures"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AdvancedCourse"/>
+        <NamedIndividual IRI="#MachineLearning"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntroductoryCourse"/>
+        <NamedIndividual IRI="#Math1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Professor"/>
+        <NamedIndividual IRI="#Prof_Tsadimas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntroductoryCourse"/>
+        <NamedIndividual IRI="#Programming1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrerequisite"/>
+        <NamedIndividual IRI="#Algorithms"/>
+        <NamedIndividual IRI="#DataStructures"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrerequisite"/>
+        <NamedIndividual IRI="#DataStructures"/>
+        <NamedIndividual IRI="#Programming1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#offeredBy"/>
+        <NamedIndividual IRI="#DataStructures"/>
+        <NamedIndividual IRI="#Informatics"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#taughtBy"/>
+        <NamedIndividual IRI="#DataStructures"/>
+        <NamedIndividual IRI="#Prof_Tsadimas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrerequisite"/>
+        <NamedIndividual IRI="#MachineLearning"/>
+        <NamedIndividual IRI="#DataStructures"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrerequisite"/>
+        <NamedIndividual IRI="#MachineLearning"/>
+        <NamedIndividual IRI="#Math1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#courseCode"/>
+        <NamedIndividual IRI="#Algorithms"/>
+        <Literal>CS301</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#credits"/>
+        <NamedIndividual IRI="#Algorithms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#semester"/>
+        <NamedIndividual IRI="#Algorithms"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#courseCode"/>
+        <NamedIndividual IRI="#DataStructures"/>
+        <Literal>CS201</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#credits"/>
+        <NamedIndividual IRI="#DataStructures"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#semester"/>
+        <NamedIndividual IRI="#DataStructures"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#departmentName"/>
+        <NamedIndividual IRI="#Informatics"/>
+        <Literal></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#courseCode"/>
+        <NamedIndividual IRI="#MachineLearning"/>
+        <Literal>CS401</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#credits"/>
+        <NamedIndividual IRI="#MachineLearning"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#semester"/>
+        <NamedIndividual IRI="#MachineLearning"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#courseCode"/>
+        <NamedIndividual IRI="#Math1"/>
+        <Literal>MAT101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#credits"/>
+        <NamedIndividual IRI="#Math1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#semester"/>
+        <NamedIndividual IRI="#Math1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#courseCode"/>
+        <NamedIndividual IRI="#Programming1"/>
+        <Literal>CS101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#credits"/>
+        <NamedIndividual IRI="#Programming1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#semester"/>
+        <NamedIndividual IRI="#Programming1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#offeredBy"/>
+    </FunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasPrerequisite"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPrerequisite"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#offeredBy"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#taughtBy"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPrerequisite"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#offeredBy"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#taughtBy"/>
+        <Class IRI="#Professor"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#courseCode"/>
+        <Class IRI="#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#credits"/>
+        <Class IRI="#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#departmentName"/>
+        <Class IRI="#Department"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#semester"/>
+        <Class IRI="#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#courseCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#credits"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#departmentName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#semester"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
