@@ -103,6 +103,7 @@ $RECYCLE.BIN/
 # Output files
 # ------------
 *.png
+!lectures/semantic_web_layer_cake.png
 *.jpg
 *.jpeg
 *.pdf

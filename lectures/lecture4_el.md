@@ -71,16 +71,28 @@ style: |
 
 ---
 
+<!-- _class: small -->
+# 1.1 Το Πρόβλημα: Knowledge Acquisition Bottleneck
+
+Γιατί τα κλασικά Έμπειρα Συστήματα με κανόνες έπεσαν σε παρακμή τη δεκαετία του '90, δίνοντας τη θέση τους στη Μηχανική Μάθηση;
+
+Το βασικό τους μειονέκτημα ήταν το **"Στενωπό της Απόκτησης Γνώσης" (Knowledge Acquisition Bottleneck)**:
+* **Δυσκολία εξαγωγής γνώσης:** Οι ανθρώπινοι ειδικοί δυσκολεύονται να εκφράσουν την "εμπειρική" τους διαίσθηση ως αυστηρούς κανόνες `IF-THEN`.
+* **Κόστος συντήρησης:** Ένα σύστημα με 5.000 κανόνες γίνεται εξαιρετικά πολύπλοκο. Η προσθήκη ενός νέου κανόνα μπορεί να δημιουργήσει απρόβλεπτες λογικές αντιφάσεις με τους παλιούς.
+* **Ακαμψία:** Αδυναμία προσαρμογής σε νέα δεδομένα χωρίς χειροκίνητη επανασυγγραφή του κώδικα (έλλειψη "μάθησης").
+
+---
+
 <!-- _class: diagram -->
 # Αρχιτεκτονική Έμπειρου Συστήματος — Διάγραμμα
 
 ```mermaid
 flowchart TB
-    UI["👤 Διεπαφή Χρήστη\n(User Interface)"]
-    IE["⚙️ Μηχανή Συμπερασμάτων\n(Inference Engine)"]
-    KB["📚 Βάση Γνώσης\n(Knowledge Base)"]
-    F["📋 Γεγονότα\n(Facts)"]
-    R["📜 Κανόνες\n(Rules: IF → THEN)"]
+    UI["👤 Διεπαφή Χρήστη<br>(User Interface)"]
+    IE["⚙️ Μηχανή Συμπερασμάτων<br>(Inference Engine)"]
+    KB["📚 Βάση Γνώσης<br>(Knowledge Base)"]
+    F["📋 Γεγονότα<br>(Facts)"]
+    R["📜 Κανόνες<br>(Rules: IF → THEN)"]
     UI -->|"Ερώτηση / Δεδομένα"| IE
     IE -->|"Απάντηση / Συμπέρασμα"| UI
     IE <--> KB
@@ -227,7 +239,7 @@ flowchart TB
 <!-- _class: diagram -->
 # Semantic Web — Layer Cake (Tim Berners-Lee)
 
-![w:460](lecture4_layer_cake.png)
+![w:460](semantic_web_layer_cake.png)
 
 ---
 
@@ -285,6 +297,22 @@ flowchart TB
 | **Στιγμιότυπα (Individuals)** | Συγκεκριμένα αντικείμενα | `Γιώργος`, `ΠΑΔΑ` |
 
 > **Ορισμός (Gruber, 1993):** *"An ontology is an explicit formal specification of a shared conceptualization."*
+
+---
+
+<!-- _class: small -->
+# 2.1 TBox vs ABox: Ο Διαχωρισμός της Γνώσης
+
+Στην Περιγραφική Λογική (στην οποία βασίζονται οι Οντολογίες), η Βάση Γνώσης χωρίζεται αυστηρά σε δύο "κουτιά" (Boxes):
+
+| TBox (Terminological Box) | ABox (Assertional Box) |
+|---|---|
+| **Το Λεξιλόγιο / Το Σχήμα** | **Τα Δεδομένα / Τα Γεγονότα** |
+| Ορίζει τις **Κλάσεις** και τις **Ιδιότητες** | Περιέχει τα **Στιγμιότυπα (Individuals)** |
+| Απαντά στο *"Ποιοι είναι οι κανόνες του κόσμου;"* | Απαντά στο *"Τι υπάρχει στον κόσμο;"* |
+| *Παράδειγμα:* "Ο Φοιτητής είναι Υποκλάση του Ανθρώπου" | *Παράδειγμα:* "Ο Γιώργος είναι Φοιτητής" |
+
+> Σκεφτείτε το με όρους Βάσεων Δεδομένων: Το **TBox** είναι το σχήμα των πινάκων (DDL), και το **ABox** είναι οι εγγραφές/γραμμές (DML).
 
 ---
 
@@ -423,6 +451,7 @@ A: { αν τιμή_προϊόντος > 150€  →  δωρεάν αποστολ
 * **is-a rule:** Κάθε instance κλάσης B *είναι επίσης* instance της υπερκλάσης A — *"kind-of"* σχέση.
 * **Transitivity:** Αν `C ⊆ B` και `B ⊆ A`, τότε `C ⊆ A` — αυτόματα.
 * **Αποφυγή κύκλων:** Κύκλος `A ⊆ B` και `B ⊆ A` σημαίνει ότι A ≡ B.
+* **Disjoint Classes:** Κλάσεις που δεν μπορούν να μοιράζονται κοινά στιγμιότυπα (π.χ. `Φυτό` και `Ζώο`). 
 * **Αδέλφια στο ίδιο επίπεδο:** Οι υποκλάσεις ίδιας κλάσης πρέπει να είναι στο ίδιο επίπεδο γενικότητας.
 * **Πλήθος υποκλάσεων:** Ιδανικά **2–12** απευθείας υποκλάσεις.
 * **Νέα κλάση ή property value;** Αν η διάκριση δημιουργεί **διαφορετικές σχέσεις** με άλλες κλάσεις → νέα κλάση. Αλλιώς → property τιμή.
@@ -472,6 +501,8 @@ Port  isa  DessertWine
 |---|---|---|
 | **Απουσία δεδομένων** | ≡ Ψευδές | ≡ Άγνωστο |
 | **Κόσμος** | Κλειστός, πλήρης | Ανοικτός, μερικός |
+
+> ⚠️ **Η παγίδα του OWA:** Αν δεν δηλώσουμε ρητά δύο κλάσεις ως **Disjoint** (Αμοιβαία αποκλειόμενες), ο Reasoner δεν υποθέτει ότι διαφέρουν! Ένα individual θα μπορούσε να ανήκει ταυτόχρονα και στο `Dog` και στο `Cat` αν δεν το αποτρέψουμε.
 
 ---
 
@@ -623,10 +654,10 @@ SELECT ?film ?director WHERE {
 
 ```mermaid
 flowchart LR
-    G["👤 Γιώργος\n(Υποκείμενο)"]
-    P["🏛️ ΠΑΔΑ\n(Αντικείμενο)"]
-    CS["💻 Πληροφορική\n(Αντικείμενο)"]
-    Human["🧑 Άνθρωπος\n(Κλάση)"]
+    G["👤 Γιώργος<br>(Υποκείμενο)"]
+    P["🏛️ ΠΑΔΑ<br>(Αντικείμενο)"]
+    CS["💻 Πληροφορική<br>(Αντικείμενο)"]
+    Human["🧑 Άνθρωπος<br>(Κλάση)"]
     G -->|"σπουδάζει_στο"| P
     G -->|"σπουδάζει"| CS
     G -->|"rdf:type"| Human
@@ -742,11 +773,11 @@ SELECT ?city WHERE {
 
 ```mermaid
 flowchart LR
-    ONT["📚 Οντολογία\n(Κλάσεις + Ιδιότητες + Κανόνες)"]
-    FACTS["📋 Γεγονότα\n(Individuals & Data)"]
-    REASONER["⚙️ Reasoner\n(Pellet / HermiT / Fact++)"]
-    INF["✅ Νέα Γνώση\n(Inferred Facts)"]
-    ERR["⚠️ Inconsistency\nErrors"]
+    ONT["📚 Οντολογία<br>(Κλάσεις + Ιδιότητες + Κανόνες)"]
+    FACTS["📋 Γεγονότα<br>(Individuals & Data)"]
+    REASONER["⚙️ Reasoner<br>(Pellet / HermiT / Fact++)"]
+    INF["✅ Νέα Γνώση<br>(Inferred Facts)"]
+    ERR["⚠️ Inconsistency<br>Errors"]
     ONT --> REASONER
     FACTS --> REASONER
     REASONER -->|"Inference"| INF
@@ -853,12 +884,12 @@ Person(?p) ^ hasAge(?p, ?age) ^ swrlb:greaterThan(?age, 17)  ->  Adult(?p)
 
 ```mermaid
 flowchart LR
-    C["🗂️ Classes\nowl:Thing → Person\n→ Adult, Minor"]
-    P["🔗 Properties\nhasParent (Object)\nhasAge (Data)"]
-    I["👤 Individuals\nJohn : Person\nhasAge = 25"]
-    S["📜 SWRL Rule\nhasAge > 17 → Adult"]
-    R["⚙️ Reasoner\nPellet / HermiT"]
-    O["✅ Inferred Fact\nJohn : Adult"]
+    C["🗂️ Classes<br>owl:Thing → Person<br>→ Adult, Minor"]
+    P["🔗 Properties<br>hasParent (Object)<br>hasAge (Data)"]
+    I["👤 Individuals<br>John : Person<br>hasAge = 25"]
+    S["📜 SWRL Rule<br>hasAge > 17 → Adult"]
+    R["⚙️ Reasoner<br>Pellet / HermiT"]
+    O["✅ Inferred Fact<br>John : Adult"]
     C --> I
     P --> I
     I --> R
