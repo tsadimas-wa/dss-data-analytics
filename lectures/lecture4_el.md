@@ -3,6 +3,9 @@ marp: true
 theme: default
 paginate: true
 html: true
+header: Ευφυή Συστήματα και Συστήματα Υποστήριξης Αποφάσεων
+footer: Πανεπιστήμιο Δυτικής Αττικής
+
 backgroundColor: #ffffff
 style: |
   section { font-family: 'Segoe UI', sans-serif; font-size: 20px; text-align: left; padding: 40px 60px; }
