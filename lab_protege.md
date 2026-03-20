@@ -27,15 +27,11 @@
    - **Windows:** `run.bat`
    - **macOS / Linux:** `run.sh` (ίσως χρειαστεί `chmod +x run.sh`)
 
-### Εγκατάσταση Reasoner (Pellet)
+### Reasoner
 
-Το Protégé έρχεται με ενσωματωμένο τον **HermiT**. Για τον **Pellet** (ταχύτερος για SWRL):
+Το Protégé έρχεται με ενσωματωμένο τον **HermiT**, ο οποίος αρκεί για τις ανάγκες του εργαστηρίου.
 
-1. Μέσα στο Protégé: **File > Check for Plugins...**
-2. Αναζητήστε **Pellet Reasoner** και εγκαταστήστε το
-3. Επανεκκινήστε το Protégé
-
-> 💡 Για τις ανάγκες του εργαστηρίου αρκεί ο **HermiT** που έρχεται προεγκατεστημένος.
+> 💡 **Προαιρετικό:** Αν θέλετε τον **Pellet** (ταχύτερος για SWRL κανόνες), μπορείτε να τον εγκαταστήσετε μέσω **File > Check for Plugins...** → αναζήτηση **Pellet Reasoner** → εγκατάσταση → επανεκκίνηση Protégé.
 
 ---
 
@@ -144,7 +140,7 @@ Thing
    - `Department`
    - `Professor`
 4. Επιλέξτε την κλάση `Course` και κάντε την **parent class** (υπερκλάση) για:
-C   - `IntroductoryCourse` (πατήστε **+** με επιλεγμένη την `Course`)
+   - `IntroductoryCourse` (πατήστε **+** με επιλεγμένη την `Course`)
    - `AdvancedCourse`
 5. Ορίστε `IntroductoryCourse` και `AdvancedCourse` ως **Disjoint**: επιλέξτε `IntroductoryCourse`, πηγαίνετε στο πάνελ **Disjoint With**, πατήστε **+** και προσθέστε `AdvancedCourse`.
 
@@ -175,9 +171,11 @@ C   - `IntroductoryCourse` (πατήστε **+** με επιλεγμένη τη�
    - Τσεκάρετε το **Transitive**
    - *(Αν το Α απαιτεί Β και Β απαιτεί Γ, τότε αυτόματα Α απαιτεί Γ)*
 
-### 5.4.1 Λογικά Χαρακτηριστικά (Characteristics) των Object Properties
+### 5.4.1 Εξήγηση: Λογικά Χαρακτηριστικά (Characteristics) των Object Properties
 
-Το πρότυπο OWL μας επιτρέπει να προσδώσουμε "ευφυΐα" στις ιδιότητες (properties), ώστε ο Reasoner να εξάγει νέα γνώση αυτόματα. Στο Protégé, τα χαρακτηριστικά αυτά βρίσκονται στο δεξί πάνελ, κάτω από την ενότητα **Characteristics**. 
+> Αυτή η ενότητα είναι **θεωρητική αναφορά** — μπορείτε να τη διαβάσετε αφού ολοκληρώσετε τα βήματα της 5.4.
+
+Το πρότυπο OWL μας επιτρέπει να προσδώσουμε "ευφυΐα" στις ιδιότητες (properties), ώστε ο Reasoner να εξάγει νέα γνώση αυτόματα. Στο Protégé, τα χαρακτηριστικά αυτά βρίσκονται στο δεξί πάνελ, κάτω από την ενότητα **Characteristics**.
 
 Τα πιο σημαντικά είναι:
 
@@ -207,7 +205,7 @@ C   - `IntroductoryCourse` (πατήστε **+** με επιλεγμένη τη�
 ---
 
 
-### 5.6 Δημιουργία Individuals (Στιγμιότυπα)
+### 5.6 Δημιουργία Στιγμιότυπων (Individuals)
 
 > **Σημαντικό για Protégé 5.6.7:**
 > Για να δημιουργήσετε σωστά individuals, χρησιμοποιήστε το tab **Individuals by class** (που βρίσκεται δίπλα στο Entities tab). Εκεί εμφανίζονται οι κλάσεις και μπορείτε να επιλέξετε την κλάση που θέλετε και να προσθέσετε individual με το **+**. 
@@ -241,7 +239,7 @@ C   - `IntroductoryCourse` (πατήστε **+** με επιλεγμένη τη�
    - `MachineLearning` → `hasPrerequisite` → `Math1`
    - Επίσης: `DataStructures` → `offeredBy` → `Informatics`, `taughtBy` → `Prof_Papadopoulos`
 
-5. Επίσης ορίστε **Same Individual** για να ενεργοποιηθεί η Unique Name Assumption: επιλέξτε `Math1`, πηγαίνετε **Same Individual As** πάνελ και βεβαιωθείτε ότι όλα τα individuals είναι διακριτά (ή χρησιμοποιήστε **Edit > Make all individuals different**).
+5. Ορίστε τα individuals ως **διακριτά** (Different Individuals) για να ενεργοποιηθεί η Unique Name Assumption: χρησιμοποιήστε **Edit > Make all individuals different**, ή επιλέξτε ένα individual (π.χ. `Math1`), πηγαίνετε στο πάνελ **Different Individuals** και προσθέστε τα υπόλοιπα.
 
 ---
 
@@ -312,7 +310,7 @@ C   - `IntroductoryCourse` (πατήστε **+** με επιλεγμένη τη�
 
 1. Επιλέξτε **File > Save As...**
 2. Στο παράθυρο διαλόγου επιλέξτε format: **OWL/XML Syntax**
-3. Αποθηκεύστε το αρχείο ως `university.owl` σε φάκελο της επιλογής σας.
+3. Αποθηκεύστε το αρχείο ως `university.owl` σε φάκελο της επιλογής σας. Σημειώστε την πλήρη διαδρομή (path) του αρχείου — θα τη χρειαστείτε στην ενότητα 6.
 
 > Εναλλακτικά, αποθηκεύστε σε **Turtle (.ttl)** ή **RDF/XML** — το `owlready2` (επόμενη ενότητα) τα διαβάζει όλα.
 
@@ -532,8 +530,8 @@ with onto:
     new_course.hasPrerequisite.append(ml)
 
 # Αποθήκευση της ενημερωμένης οντολογίας
-onto.save(file="university_updated.owl", format="rdfxml")
-print("Αποθηκεύτηκε ως university_updated.owl")
+onto.save(file="university.owl", format="rdfxml")
+print("Αποθηκεύτηκε ως university.owl")
 ```
 
 ---
@@ -550,7 +548,7 @@ university_ontology.py
 
 from owlready2 import get_ontology, sync_reasoner_hermit, default_world
 
-OWL_PATH = "file:///path/to/university.owl"   # ← προσαρμόστε
+OWL_PATH = "file:///path/to/university.owl"   # ← αντικαταστήστε με τη διαδρομή από το βήμα 5.10
 
 onto = get_ontology(OWL_PATH).load()
 
