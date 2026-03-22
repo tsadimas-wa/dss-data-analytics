@@ -621,45 +621,7 @@ for row in rows:
 
 Το παρακάτω διάγραμμα αναπαριστά οπτικά τη βασική δομή αυτού που μόλις δημιουργήσαμε στο Protégé. Αριστερά βλέπουμε την ιεραρχία των **Κλάσεων** (Classes) και δεξιά τα **Στιγμιότυπα** (Individuals) με τις μεταξύ τους σχέσεις (Object Properties).
 
-```mermaid
-graph TD
-    %% Ορισμός Στυλ
-    classDef classNode fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef indivNode fill:#bbf,stroke:#333,stroke-width:1px,rx:10,ry:10;
-    
-    subgraph T-Box [Επίπεδο Εννοιών - Classes]
-        C[Course]:::classNode
-        IC[IntroductoryCourse]:::classNode
-        AC[AdvancedCourse]:::classNode
-        DC[DemandingCourse]:::classNode
-        D[Department]:::classNode
-        P[Professor]:::classNode
-        
-        C -->|is parent of| IC
-        C -->|is parent of| AC
-        C -->|is parent of| DC
-    end
-
-    subgraph A-Box [Επίπεδο Δεδομένων - Individuals]
-        M1(Math1):::indivNode
-        P1(Programming1):::indivNode
-        DS(DataStructures):::indivNode
-        ALG(Algorithms):::indivNode
-        ML(MachineLearning):::indivNode
-        INF(Informatics : Department):::indivNode
-        PROF(Prof_Papadopoulos):::indivNode
-
-        %% Σχέσεις Προαπαιτούμενων
-        DS -->|hasPrerequisite| P1
-        ALG -->|hasPrerequisite| DS
-        ML -->|hasPrerequisite| ALG
-        ML -->|hasPrerequisite| M1
-
-        %% Άλλες Σχέσεις
-        DS -->|offeredBy| INF
-        DS -->|taughtBy| PROF
-    end
-```
+![Οπτική Σύνοψη της Οντολογίας Πανεπιστημίου](../img/university_ontology.png)
 
 ## 9. Πώς να συνεχίσετε (Προτάσεις Επέκτασης)
 
@@ -686,38 +648,3 @@ graph TD
 
 ---
 
-## 10. Άσκηση Εξάσκησης: Αναπτύξτε τη δική σας Οντολογία
-
-Τώρα που κατανοήσατε τη διαδικασία από το σχεδιασμό μέχρι την εκτέλεση κώδικα, ήρθε η ώρα να εφαρμόσετε τις γνώσεις σας αυτόνομα! 
-
-**Στόχος:** Να σχεδιάσετε, να κατασκευάσετε και να ερωτήσετε μια δική σας οντολογία από την αρχή μέχρι το τέλος.
-
-### Α. Επιλογή Πεδίου (Domain)
-Επιλέξτε **ένα** από τα παρακάτω 5 ενδεικτικά πεδία, ή προτείνετε ένα δικό σας:
-
-1. **Ηλεκτρονικό Κατάστημα (E-commerce):** Πελάτες, Παραγγελίες, Προϊόντα, Κατηγορίες (π.χ. Ηλεκτρονικά, Ρούχα), Κριτικές.
-2. **Κινηματογράφος (Cinema/Movies):** Ταινίες, Ηθοποιοί, Σκηνοθέτες, Είδη (Genres), Αίθουσες.
-3. **Σύστημα Υγείας (Hospital):** Γιατροί (ανά ειδικότητα), Ασθενείς, Ασθένειες, Φάρμακα/Θεραπείες.
-4. **Βιβλιοθήκη (Library):** Βιβλία, Συγγραφείς, Εκδοτικοί Οίκοι, Μέλη, Δανεισμοί.
-5. **Τουρισμός (Tourism/Hotels):** Ξενοδοχεία, Δωμάτια, Πελάτες, Υπηρεσίες (Παροχές), Κρατήσεις.
-
-### Β. Απαιτήσεις στο Protégé
-Κατασκευάστε την οντολογία σας στο Protégé φροντίζοντας να περιέχει τουλάχιστον:
-* **4-5 Κλάσεις (Classes):** Με ιεραρχία (π.χ. Subclasses) και χρήση `Disjoint` όπου έχει νόημα.
-* **3 Object Properties:** Ορίστε τα Domain και Range τους. Δοκιμάστε να εφαρμόσετε λογικά χαρακτηριστικά (π.χ. *Inverse Of* ή *Functional*).
-* **3 Data Properties:** Π.χ. ονόματα, τιμές, ημερομηνίες, ηλικίες κ.λπ. με τον αντίστοιχο τύπο δεδομένων (string, integer, float).
-* **5-10 Individuals (Στιγμιότυπα):** Συνδέστε τα μεταξύ τους χρησιμοποιώντας τα Object & Data properties που φτιάξατε.
-* **(Προαιρετικά) 1 SWRL Rule:** Για παράδειγμα, "Αν ένα βιβλίο έχει πάνω από 500 σελίδες, είναι `LargeBook`".
-
-> **Tip:** Τρέξτε τον Reasoner (HermiT) στο Protégé για να βεβαιωθείτε ότι δεν υπάρχουν λογικά σφάλματα (Inconsistencies) πριν αποθηκεύσετε την οντολογία σας σε μορφή **OWL/XML** (π.χ. `my_ontology.owl`).
-
-### Γ. Απαιτήσεις στην Python (`owlready2`)
-Γράψτε ένα Python script (π.χ. `ontology_test.py` ή ένα Jupyter Notebook) το οποίο:
-1. **Φορτώνει** το δικό σας `.owl` αρχείο χρησιμοποιώντας την `owlready2`.
-2. Τυπώνει μια **λίστα με όλες τις κλάσεις** της οντολογίας σας.
-3. Εκτελεί τον **Reasoner** (μέσω Python `sync_reasoner_hermit()`) για να ελέγξει τη συνέπεια.
-4. Εκτελεί ένα δομημένο **SPARQL ερώτημα** (μέσω του `default_world.sparql()`) που να φέρνει ένα ουσιαστικό αποτέλεσμα (π.χ. "Φέρε μου όλους τους πελάτες που έκαναν κράτηση σε δωμάτιο που κοστίζει πάνω από 100€"). 
-
-**Παραδοτέα (Ενδεικτικά):**
-* Το αρχείο `.owl`
-* Το αρχείο `.py` ή `.ipynb` με τον κώδικά σας.

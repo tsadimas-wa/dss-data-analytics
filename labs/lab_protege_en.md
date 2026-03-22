@@ -596,3 +596,55 @@ rows = default_world.sparql("""
 for row in rows:
     print(f"  {row[0].name:20s} → {row[1].name}")
 ```
+
+---
+
+## 7. New Section Summary
+
+| Step | Tool | Result |
+|---|---|---|
+| Design classes & properties | — (paper/whiteboard) | Ontology diagram |
+| Create in Protégé | Protégé Desktop | Structure + individuals |
+| Verify logical consistency | HermiT Reasoner (Protégé) | Inferred hierarchy |
+| Export | File > Save As → OWL/XML | `university.owl` |
+| Load & query | `owlready2` (Python) | Programmatic access |
+| Inferred knowledge extraction | `sync_reasoner_hermit` | Transitivity, new facts |
+| Writing Rules | SWRLTab | IF-THEN logic (`DemandingCourse`) |
+| Built-in SPARQL | SPARQL Query Tab | Queries within the GUI |
+| SPARQL (Python) | `default_world.sparql()` | Structured queries via Python |
+
+
+
+---
+
+## 8. Visual Summary of Our Ontology
+
+The following diagram visually represents the basic structure of what we just created in Protégé. On the left we see the **Class** hierarchy and on the right the **Individuals** with their relationships (Object Properties).
+
+![Visual Summary of the University Ontology](../img/university_ontology.png)
+
+## 9. How to Continue (Extension Suggestions)
+
+The ontology we built is an excellent starting point. To better understand the capabilities of the Semantic Web and Protégé, try enriching your model with the following:
+
+1. **Adding Students:**
+   * Create a new class `Student`.
+   * Create Object Properties such as `isEnrolledIn` (connects `Student` to `Course`) and `hasPassed` (courses that have been passed).
+   * **Reasoner Challenge:** Can you create a rule (e.g. with Equivalent Class) that states *"A Graduate Student is any student who has passed at least 40 courses"*?
+
+2. **Rooms & Schedules:**
+   * Add classes `Room` and `TimeSlot`.
+   * Connect courses to rooms (`takesPlaceIn`).
+   * Add Data Properties for room capacity (`capacity` as integer).
+
+3. **Cardinality Restrictions:**
+   * Use Protégé to enforce restrictions, such as: *"Every course must be taught by **exactly one** (exactly 1) professor"*.
+   * Try creating a course without a professor or with two professors, run the Reasoner and see how it raises an "Inconsistency".
+
+4. **Linking to the Real World (Linked Open Data):**
+   * Instead of having Departments as simple names, try adding properties (e.g. `locatedIn`) that point to the real IRI of the city from **DBpedia** or **Wikidata** (e.g. linking the University to Athens or Thessaloniki).
+
+These additions will transform your simple example into a complete Knowledge Representation System!
+
+---
+

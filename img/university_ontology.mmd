@@ -1,0 +1,37 @@
+graph TD
+    %% Ορισμός Στυλ
+    classDef classNode fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef indivNode fill:#bbf,stroke:#333,stroke-width:1px,rx:10,ry:10;
+
+    subgraph T-Box [Επίπεδο Εννοιών - Classes]
+        C[Course]:::classNode
+        IC[IntroductoryCourse]:::classNode
+        AC[AdvancedCourse]:::classNode
+        DC[DemandingCourse]:::classNode
+        D[Department]:::classNode
+        P[Professor]:::classNode
+
+        C -->|is parent of| IC
+        C -->|is parent of| AC
+        C -->|is parent of| DC
+    end
+
+    subgraph A-Box [Επίπεδο Δεδομένων - Individuals]
+        M1(Math1):::indivNode
+        P1(Programming1):::indivNode
+        DS(DataStructures):::indivNode
+        ALG(Algorithms):::indivNode
+        ML(MachineLearning):::indivNode
+        INF(Informatics : Department):::indivNode
+        PROF(Prof_Papadopoulos):::indivNode
+
+        %% Σχέσεις Προαπαιτούμενων
+        DS -->|hasPrerequisite| P1
+        ALG -->|hasPrerequisite| DS
+        ML -->|hasPrerequisite| ALG
+        ML -->|hasPrerequisite| M1
+
+        %% Άλλες Σχέσεις
+        DS -->|offeredBy| INF
+        DS -->|taughtBy| PROF
+    end
