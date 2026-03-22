@@ -8,7 +8,7 @@ footer: Πανεπιστήμιο Δυτικής Αττικής
 
 backgroundColor: #ffffff
 style: |
-  section { font-family: 'Segoe UI', sans-serif; font-size: 20px; text-align: left; padding: 40px 60px; }
+  section { font-family: 'Adwaita Sans','Segoe UI', sans-serif; font-size: 20px; text-align: left; padding: 40px 60px; }
   h1 { color: #0056b3; font-size: 1.45em; margin: 0 0 0.35em 0; padding: 0; }
   h2 { color: #007bff; border-bottom: 2px solid #eee; }
   code { background-color: #f4f4f4; color: #d63384; padding: 2px 5px; border-radius: 4px; }
@@ -23,7 +23,7 @@ style: |
 
 ---
 
-<img src="uniwa_logo.png" width="200px" style="position:absolute;top:24px;right:32px;height:64px;">
+<img src="../img/uniwa_logo.png" width="200px" style="position:absolute;top:24px;right:32px;height:64px;">
 
 
 # Ευφυή Συστήματα και Συστήματα Υποστήριξης Αποφάσεων

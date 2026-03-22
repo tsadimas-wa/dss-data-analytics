@@ -26,7 +26,7 @@ style: |
 
 <div style="text-align:center; margin-bottom:16px;">
 
-![w:280](uniwa_logo.png)
+![w:280](../img/uniwa_logo.png)
 
 </div>
 
