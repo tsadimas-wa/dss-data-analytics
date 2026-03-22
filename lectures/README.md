@@ -26,13 +26,13 @@
 cd lectures/
 
 # Μία διάλεξη
-python3 md_to_html.py lecture3_el.md
+python3 ../scripts/md_to_html.py lecture3_el.md
 
 # Με custom όνομα εξόδου
-python3 md_to_html.py lecture3_el.md ../output/lecture3.html
+python3 ../scripts/md_to_html.py lecture3_el.md ../output/lecture3.html
 
 # Όλα τα αρχεία ταυτόχρονα
-for f in lecture*.md; do python3 md_to_html.py "$f"; done
+for f in lecture*.md; do python3 ../scripts/md_to_html.py "$f"; done
 ```
 
 Το HTML αποθηκεύεται δίπλα στο `.md` (ίδιο όνομα, κατάληξη `.html`).  
@@ -53,13 +53,13 @@ for f in lecture*.md; do python3 md_to_html.py "$f"; done
 cd lectures/
 
 # Μία διάλεξη
-python3 md_to_pdf.py lecture3_el.md
+python3 ../scripts/md_to_pdf.py lecture3_el.md
 
 # Με custom όνομα εξόδου
-python3 md_to_pdf.py lecture3_el.md ../output/lecture3.pdf
+python3 ../scripts/md_to_pdf.py lecture3_el.md ../output/lecture3.pdf
 
 # Όλα τα αρχεία ταυτόχρονα
-for f in lecture*.md; do python3 md_to_pdf.py "$f"; done
+for f in lecture*.md; do python3 ../scripts/md_to_pdf.py "$f"; done
 ```
 
 Το PDF αποθηκεύεται δίπλα στο `.md` (ίδιο όνομα, κατάληξη `.pdf`).
@@ -86,14 +86,18 @@ for f in lecture*.md; do python3 md_to_pdf.py "$f"; done
 ## Δομή καταλόγου
 
 ```
-lectures/
-├── README.md              ← αυτό το αρχείο
-├── md_to_html.py          ← Markdown → HTML (Marp + Mermaid + logo)
-├── md_to_pdf.py           ← Markdown → PDF (μέσω HTML + Chromium)
-├── lecture1_el.md         ← Ενότητα 1 (ελληνικά)
-├── lecture1_en.md         ← Ενότητα 1 (αγγλικά)
-├── lecture3_el.md         ← Ενότητα 3 (ελληνικά)
-├── lecture3_en.md         ← Ενότητα 3 (αγγλικά)
-├── uniwa_logo.png         ← λογότυπο ΠΑΔΑ (ενσωματώνεται ως base64)
-└── *.html / *.pdf         ← αρχεία εξόδου
+dss-data-analytics/
+├── lectures/
+│   ├── README.md              ← αυτό το αρχείο
+│   ├── lecture1_el.md         ← Ενότητα 1 (ελληνικά)
+│   ├── lecture1_en.md         ← Ενότητα 1 (αγγλικά)
+│   ├── lecture3_el.md         ← Ενότητα 3 (ελληνικά)
+│   ├── lecture3_en.md         ← Ενότητα 3 (αγγλικά)
+│   ├── lecture4_el.md         ← Ενότητα 4 (ελληνικά)
+│   └── *.html / *.pdf         ← αρχεία εξόδου
+├── scripts/
+│   ├── md_to_html.py          ← Markdown → HTML (Marp + Mermaid + logo)
+│   └── md_to_pdf.py           ← Markdown → PDF (μέσω HTML + Chromium)
+└── img/
+    └── uniwa_logo.png         ← λογότυπο ΠΑΔΑ (ενσωματώνεται ως base64)
 ```

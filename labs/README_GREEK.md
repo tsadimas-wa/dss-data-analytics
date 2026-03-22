@@ -142,12 +142,16 @@ python lab1.py
 ## 🗂️ Δομή Project
 
 ```
-lab1/
-├── lab1_greek.ipynb        # Κύριο Jupyter Notebook
-├── hotel_bookings.csv      # Dataset
-├── requirements.txt        # Python dependencies
-├── README.md              # Αυτό το αρχείο
-└── lab1venv/              # Virtual environment (δημιουργείται από εσάς)
+dss-data-analytics/
+├── labs/
+│   ├── lab1_greek.ipynb        # Κύριο Jupyter Notebook
+│   ├── lab1_english.ipynb      # Αγγλική έκδοση
+│   ├── README_GREEK.md         # Αυτό το αρχείο
+│   └── README_ENGLISH.md       # Οδηγίες στα αγγλικά
+├── datasets/
+│   └── hotel_bookings.csv      # Dataset
+├── requirements.txt            # Python dependencies
+└── lab1venv/                   # Virtual environment (δημιουργείται από εσάς)
 ```
 
 ## 📚 Βιβλιοθήκες που Χρησιμοποιούνται
@@ -217,7 +221,7 @@ python -m ipykernel install --user --name=lab1venv
 ### Πρόβλημα: Λείπει το αρχείο hotel_bookings.csv
 
 **Λύση:**
-Κατεβάστε το dataset από [εδώ](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand) και τοποθετήστε το στο φάκελο `lab1/`.
+Κατεβάστε το dataset από [εδώ](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand) και τοποθετήστε το στο φάκελο `datasets/`.
 
 ## 💡 Tips
 

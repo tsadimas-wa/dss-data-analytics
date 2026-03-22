@@ -142,13 +142,16 @@ The `hotel_bookings.csv` dataset contains historical hotel booking data with:
 ## 🗂️ Project Structure
 
 ```
-lab1/
-├── lab1_greek.ipynb        # Main Jupyter Notebook
-├── hotel_bookings.csv      # Dataset
-├── requirements.txt        # Python dependencies
-├── README.md              # This file (Greek)
-├── README_ENGLISH.md      # This file (English)
-└── lab1venv/              # Virtual environment (created by you)
+dss-data-analytics/
+├── labs/
+│   ├── lab1_greek.ipynb        # Main Jupyter Notebook (Greek)
+│   ├── lab1_english.ipynb      # Main Jupyter Notebook (English)
+│   ├── README_GREEK.md         # Instructions in Greek
+│   └── README_ENGLISH.md       # This file
+├── datasets/
+│   └── hotel_bookings.csv      # Dataset
+├── requirements.txt            # Python dependencies
+└── lab1venv/                   # Virtual environment (created by you)
 ```
 
 ## 📚 Libraries Used
@@ -218,7 +221,7 @@ python -m ipykernel install --user --name=lab1venv
 ### Problem: Missing hotel_bookings.csv file
 
 **Solution:**
-Download the dataset from [here](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand) and place it in the `lab1/` folder.
+Download the dataset from [here](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand) and place it in the `datasets/` folder.
 
 ## 💡 Tips
 
