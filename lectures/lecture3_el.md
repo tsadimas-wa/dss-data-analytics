@@ -26,7 +26,7 @@ style: |
 
 <div style="text-align:center; margin-bottom:16px;">
 
-![w:280](../img/uniwa_logo.png)
+![w:280](../img/shared/uniwa_logo.png)
 
 </div>
 
@@ -39,6 +39,7 @@ style: |
 
 ---
 
+<!-- _class: small -->
 # Η Εξέλιξη (Evolution of Decision Support, BI, Analytics & AI)
 
 * **1970s (Θεμελίωση):** Μετάβαση από στατικές αναφορές (MIS) στα Συστήματα Υποστήριξης Αποφάσεων (DSS). Χρήση Επιχειρησιακής Έρευνας.
@@ -91,20 +92,7 @@ style: |
 <!-- _class: diagram -->
 # Η Ιεραρχία DIKW — Διάγραμμα
 
-```mermaid
-flowchart TB
-    D["📊 Data — Δεδομένα<br>Ακατέργαστα γεγονότα<br>π.χ. Κρατήσεις: 120"]
-    I["ℹ️ Information — Πληροφορία<br>Δεδομένα + πλαίσιο<br>π.χ. -30% τον Ιανουάριο"]
-    K["💡 Knowledge — Γνώση<br>Πληροφορία + εμπειρία<br>π.χ. Χαμηλή σεζόν = Ιαν–Φεβ"]
-    W["🏆 Wisdom — Σοφία<br>Γνώση + κρίση για δράση<br>π.χ. Dynamic Pricing"]
-
-    D --> I --> K --> W
-
-    style D fill:#4472C4,color:#fff,rx:8
-    style I fill:#5B9BD5,color:#fff,rx:8
-    style K fill:#70AD47,color:#fff,rx:8
-    style W fill:#ED7D31,color:#fff,rx:8
-```
+![Ιεραρχία DIKW](../img/lec3/dikw_hierarchy_el.png)
 
 ---
 
@@ -121,28 +109,7 @@ flowchart TB
 
 # Αρχιτεκτονική BI — Διάγραμμα Pipeline
 
-```mermaid
-flowchart LR
-    subgraph Sources ["Πηγές Δεδομένων"]
-        ERP["ERP"]
-        CRM["CRM"]
-        XLS["Excel / Files"]
-    end
-
-    ETL["⚙️ ETL<br>Extract · Transform · Load"]
-    DW[("🗄️ Data<br>Warehouse")]
-    OLAP["📐 OLAP<br>Engine"]
-    DASH["📊 Dashboards<br>& Reports"]
-    USER["👤 Decision<br>Maker"]
-
-    ERP --> ETL
-    CRM --> ETL
-    XLS --> ETL
-    ETL --> DW
-    DW --> OLAP
-    OLAP --> DASH
-    DASH --> USER
-```
+![Αρχιτεκτονική BI](../img/lec3/bi_architecture_el.png)
 
 ---
 
@@ -172,15 +139,6 @@ flowchart LR
 
 > **Κανόνας Χρυσός:** Ποτέ δεν τρέχουμε βαριά analytics queries απευθείας στο OLTP σύστημα — επιβραδύνει τις λειτουργικές συναλλαγές!
 
-**1. OLTP (Online Transaction Processing) - *Η Λειτουργία:***
-Τα συστήματα όπου "γεννιούνται" τα δεδομένα (ERP, CRM, e-shops). Εστιάζουν στην ταχύτητα εγγραφής τρεχουσών συναλλαγών.
-
-**2. Data Warehouse - *Η Αποθήκευση:***
-Η φυσική βάση (κεντρικό αποθετήριο) που συγκεντρώνει ιστορικά δεδομένα από τα OLTP. Αποτελεί τη "Μοναδική Πηγή Αλήθειας".
-
-**3. OLAP (Online Analytical Processing) - *Η Ανάλυση:***
-Η τεχνολογία που τρέχει *πάνω* στο Data Warehouse. Εστιάζει στην ταχύτητα ανάγνωσης (Query Performance) τεράστιου όγκου ιστορικών δεδομένων.
-
 ---
 
 # Η Διαδικασία ETL (Extract, Transform, Load)
@@ -200,35 +158,11 @@ flowchart LR
 
 # Η Διαδικασία ETL — Διάγραμμα
 
-```mermaid
-flowchart LR
-    subgraph SRC ["1. EXTRACT — Πηγές"]
-        S1["ERP"]
-        S2["CRM"]
-        S3["APIs / Files"]
-    end
-
-    subgraph TRF ["2. TRANSFORM — Μετασχηματισμός"]
-        C["🧹 Καθαρισμός<br>(NaNs, Duplicates)"]
-        N["📐 Κανονικοποίηση<br>(Dates, Currencies)"]
-        E["➕ Εμπλουτισμός<br>(Νέες Μετρικές)"]
-        C --> N --> E
-    end
-
-    subgraph DST ["3. LOAD — Προορισμός"]
-        DW[("Data Warehouse")]
-        DM[("Data Mart<br>(Marketing)")]
-    end
-
-    S1 --> C
-    S2 --> C
-    S3 --> C
-    E --> DW
-    E --> DM
-```
+![Διαδικασία ETL](../img/lec3/etl_process_el.png)
 
 ---
 
+<!-- _class: small -->
 # Σχήματα Αποθηκών Δεδομένων: Star & Snowflake Schema
 
 **Star Schema (Σχήμα Αστέρα):**
@@ -252,62 +186,13 @@ flowchart LR
 
 # ⭐ Star Schema — Παράδειγμα (Κρατήσεις Ξενοδοχείου)
 
-```mermaid
-flowchart TB
-    FACT["🔵 FACT_BOOKING<br/>booking_id · date_id<br/>hotel_id · customer_id<br/>room_id · revenue · nights"]
-
-    D1["🟢 DIM_DATE<br/>date_id · year<br/>month · day · season"]
-    D2["🟢 DIM_HOTEL<br/>hotel_id · name<br/>city · category"]
-    D3["🟢 DIM_CUSTOMER<br/>customer_id · name<br/>country · segment"]
-    D4["🟢 DIM_ROOM<br/>room_id · type<br/>price · capacity"]
-
-    D1 --> FACT
-    D2 --> FACT
-    D3 --> FACT
-    D4 --> FACT
-
-    style FACT fill:#4472C4,color:#fff,stroke:#2a4a8a,stroke-width:2px
-    style D1 fill:#70AD47,color:#fff
-    style D2 fill:#70AD47,color:#fff
-    style D3 fill:#70AD47,color:#fff
-    style D4 fill:#70AD47,color:#fff
-```
+![Star Schema](../img/lec3/star_schema_el.png)
 
 ---
 
 # ❄️ Snowflake Schema — Παράδειγμα (Κρατήσεις Ξενοδοχείου)
 
-```mermaid
-flowchart TB
-    FACT["🔵 FACT_BOOKING<br/>booking_id · date_id<br/>hotel_id · customer_id<br/>room_id · revenue"]
-
-    D1["🟢 DIM_DATE<br/>date_id · month_id · day"]
-    D2["🟢 DIM_HOTEL<br/>hotel_id · name · city_id"]
-    D3["🟢 DIM_CUSTOMER<br/>customer_id · name · country_id"]
-    D4["🟢 DIM_ROOM<br/>room_id · type · price"]
-
-    SD1["🟠 DIM_MONTH<br/>month_id · year · season"]
-    SD2["🟠 DIM_CITY<br/>city_id · city · country_id"]
-    SD3["🟠 DIM_COUNTRY<br/>country_id · name · continent"]
-
-    D1 --> FACT
-    D2 --> FACT
-    D3 --> FACT
-    D4 --> FACT
-    SD1 --> D1
-    SD2 --> D2
-    SD3 --> D3
-    SD3 --> D2
-
-    style FACT fill:#4472C4,color:#fff,stroke:#2a4a8a,stroke-width:2px
-    style D1 fill:#70AD47,color:#fff
-    style D2 fill:#70AD47,color:#fff
-    style D3 fill:#70AD47,color:#fff
-    style D4 fill:#70AD47,color:#fff
-    style SD1 fill:#ED7D31,color:#fff
-    style SD2 fill:#ED7D31,color:#fff
-    style SD3 fill:#ED7D31,color:#fff
-```
+![Snowflake Schema](../img/lec3/snowflake_schema_el.png)
 
 ---
 
@@ -398,37 +283,13 @@ flowchart TB
 <!-- _class: diagram-sm -->
 # Σημασιολογικό Δίκτυο — Παράδειγμα
 
-```mermaid
-graph TD
-    Animal["Ζώο<br>(Animal)"]
-    Mammal["Θηλαστικό<br>(Mammal)"]
-    Dog["Σκύλος<br>(Dog)"]
-    Fido["Fido<br>▸ instance"]
-
-    Breathes["Αναπνέει"]
-    HasBlood["Ζεστό αίμα"]
-    Barks["Γαβγίζει"]
-    Color["Χρώμα: καφέ"]
-
-    Mammal -->|AKO| Animal
-    Dog -->|AKO| Mammal
-    Fido -->|ISA| Dog
-
-    Animal -.->|has-property| Breathes
-    Mammal -.->|has-property| HasBlood
-    Dog -.->|has-property| Barks
-    Fido -.->|has-value| Color
-
-    style Fido fill:#ED7D31,color:#fff
-    style Animal fill:#4472C4,color:#fff
-    style Mammal fill:#5B9BD5,color:#fff
-    style Dog fill:#70AD47,color:#fff
-```
+![Σημασιολογικό Δίκτυο](../img/lec3/semantic_network_el.png)
 
 > 📌 Το **Fido** κληρονομεί αυτόματα τις ιδιότητες `Αναπνέει`, `Ζεστό αίμα` και `Γαβγίζει` χωρίς να χρειαστεί επαναπρογραμματισμός.
 
 ---
 
+<!-- _class: small -->
 # Οντολογίες (Ontologies): Η Τυπική Γλώσσα της Γνώσης
 
 **Τι είναι Οντολογία:**
@@ -474,22 +335,7 @@ graph TD
 
 # Forward vs Backward Chaining — Διάγραμμα
 
-```mermaid
-flowchart TB
-    subgraph FC ["🔵 Forward Chaining (Data-driven)"]
-        direction LR
-        F1["Fact: Πυρετός"] --> FR1["Rule 1<br>IF Πυρετός AND Βήχας<br>THEN Γρίπη"]
-        F2["Fact: Βήχας"] --> FR1
-        FR1 --> FC1["✅ Συμπέρασμα:<br>Πιθανή Γρίπη"]
-    end
-
-    subgraph BC ["🟠 Backward Chaining (Goal-driven)"]
-        direction LR
-        BG["Goal: Γρίπη;"] --> BR1["Ψάχνω Rule<br>για 'Γρίπη'"]
-        BR1 --> BF1["Χρειάζομαι:<br>Πυρετός & Βήχας;"]
-        BF1 --> BD1["✅ Επαληθεύω<br>στη Working Memory"]
-    end
-```
+![Forward vs Backward Chaining](../img/lec3/chaining_el.png)
 
 | | Forward | Backward |
 |---|---|---|
@@ -499,6 +345,7 @@ flowchart TB
 
 ---
 
+<!-- _class: small -->
 # Ασαφής Λογική (Fuzzy Logic): Πέρα από το Αληθές/Ψευδές
 
 **Το Πρόβλημα της Κλασικής Λογικής:**
@@ -534,27 +381,7 @@ flowchart TB
 <!-- _class: diagram -->
 # Αρχιτεκτονική Έμπειρου Συστήματος — Διάγραμμα
 
-```mermaid
-flowchart TB
-    USER["👤 Χρήστης"]
-    UI["🖥️ User Interface<br>(Εισαγωγή / Έξοδος)"]
-    IE["⚙️ Inference Engine<br>(Μηχανή Συλλογισμού)<br>Forward / Backward Chaining"]
-    KB["📚 Knowledge Base<br>(Βάση Κανόνων)<br>IF … THEN …"]
-    WM["🗂️ Working Memory<br>(Χώρος Εργασίας)<br>Τρέχουσα κατάσταση"]
-    EXP["👨‍⚕️ Domain Expert<br>(Μηχανικός Γνώσης)"]
-    EXP2["🛠️ Knowledge Engineer"]
-
-    USER <-->|ερωτήσεις| UI
-    UI <-->|δεδομένα / εξηγήσεις| IE
-    IE <-->|αναζήτηση κανόνων| KB
-    IE <-->|ανάγνωση / εγγραφή| WM
-    EXP -->|παρέχει γνώση| EXP2
-    EXP2 -->|κωδικοποιεί| KB
-
-    style KB fill:#4472C4,color:#fff
-    style IE fill:#ED7D31,color:#fff
-    style WM fill:#70AD47,color:#fff
-```
+![Αρχιτεκτονική Έμπειρου Συστήματος](../img/lec3/expert_system_arch2_el.png)
 
 ---
 
@@ -563,7 +390,7 @@ flowchart TB
 Ενσωματώνουν τη γνώση (Δομημένη, Ημιδομημένη και Αφανή) στις επιχειρησιακές διαδικασίες. 
 
 **Κύκλος Ζωής Γνώσης:**
-1. **Απόκτηση:** 1Εντοπισμός/ψηφιοποίηση άρρητης γνώσης.
+1. **Απόκτηση:** Εντοπισμός/ψηφιοποίηση άρρητης γνώσης.
 2. **Αποθήκευση:** Κεντρικά αποθετήρια (CMS).
 3. **Διάχυση:** Έξυπνα δίκτυα/πύλες.
 4. **Εφαρμογή:** Ενσωμάτωση στην καθημερινότητα.

@@ -23,7 +23,7 @@ style: |
 
 ---
 
-<img src="../img/uniwa_logo.png" width="200px" style="position:absolute;top:24px;right:32px;height:64px;">
+<img src="../img/shared/uniwa_logo.png" width="200px" style="position:absolute;top:24px;right:32px;height:64px;">
 
 
 # Ευφυή Συστήματα και Συστήματα Υποστήριξης Αποφάσεων
@@ -89,24 +89,7 @@ style: |
 <!-- _class: diagram -->
 # Αρχιτεκτονική Έμπειρου Συστήματος — Διάγραμμα
 
-```mermaid
-flowchart TB
-    UI["👤 Διεπαφή Χρήστη<br>(User Interface)"]
-    IE["⚙️ Μηχανή Συμπερασμάτων<br>(Inference Engine)"]
-    KB["📚 Βάση Γνώσης<br>(Knowledge Base)"]
-    F["📋 Γεγονότα<br>(Facts)"]
-    R["📜 Κανόνες<br>(Rules: IF → THEN)"]
-    UI -->|"Ερώτηση / Δεδομένα"| IE
-    IE -->|"Απάντηση / Συμπέρασμα"| UI
-    IE <--> KB
-    KB --> F
-    KB --> R
-    style UI fill:#4472C4,color:#fff
-    style IE fill:#ED7D31,color:#fff
-    style KB fill:#70AD47,color:#fff
-    style F fill:#A9D18E,color:#000
-    style R fill:#A9D18E,color:#000
-```
+![Αρχιτεκτονική Έμπειρου Συστήματος](../img/lec4/expert_system_arch_el.png)
 
 
 ---
@@ -670,20 +653,7 @@ SELECT ?film ?director WHERE {
 <!-- _class: diagram -->
 # RDF Τριάδες — Διάγραμμα
 
-```mermaid
-flowchart LR
-    G["👤 Γιώργος<br>(Υποκείμενο)"]
-    P["🏛️ ΠΑΔΑ<br>(Αντικείμενο)"]
-    CS["💻 Πληροφορική<br>(Αντικείμενο)"]
-    Human["🧑 Άνθρωπος<br>(Κλάση)"]
-    G -->|"σπουδάζει_στο"| P
-    G -->|"σπουδάζει"| CS
-    G -->|"rdf:type"| Human
-    style G fill:#4472C4,color:#fff
-    style P fill:#70AD47,color:#fff
-    style CS fill:#70AD47,color:#fff
-    style Human fill:#ED7D31,color:#fff
-```
+![RDF Τριάδες](../img/lec4/rdf_triples_el.png)
 
 
 ---
@@ -789,23 +759,7 @@ SELECT ?city WHERE {
 <!-- _class: diagram -->
 # Reasoner — Λειτουργία
 
-```mermaid
-flowchart LR
-    ONT["📚 Οντολογία<br>(Κλάσεις + Ιδιότητες + Κανόνες)"]
-    FACTS["📋 Γεγονότα<br>(Individuals & Data)"]
-    REASONER["⚙️ Reasoner<br>(Pellet / HermiT / Fact++)"]
-    INF["✅ Νέα Γνώση<br>(Inferred Facts)"]
-    ERR["⚠️ Inconsistency<br>Errors"]
-    ONT --> REASONER
-    FACTS --> REASONER
-    REASONER -->|"Inference"| INF
-    REASONER -->|"Consistency Check"| ERR
-    style ONT fill:#4472C4,color:#fff
-    style FACTS fill:#5B9BD5,color:#fff
-    style REASONER fill:#ED7D31,color:#fff
-    style INF fill:#70AD47,color:#fff
-    style ERR fill:#C00000,color:#fff
-```
+![Reasoner — Λειτουργία](../img/lec4/reasoner_operation_el.png)
 
 
 ---
@@ -900,26 +854,7 @@ Person(?p) ^ hasAge(?p, ?age) ^ swrlb:greaterThan(?age, 17)  ->  Adult(?p)
 <!-- _class: diagram -->
 # Συνολικό Pipeline Protégé & SWRL
 
-```mermaid
-flowchart LR
-    C["🗂️ Classes<br>owl:Thing → Person<br>→ Adult, Minor"]
-    P["🔗 Properties<br>hasParent (Object)<br>hasAge (Data)"]
-    I["👤 Individuals<br>John : Person<br>hasAge = 25"]
-    S["📜 SWRL Rule<br>hasAge > 17 → Adult"]
-    R["⚙️ Reasoner<br>Pellet / HermiT"]
-    O["✅ Inferred Fact<br>John : Adult"]
-    C --> I
-    P --> I
-    I --> R
-    S --> R
-    R --> O
-    style C fill:#4472C4,color:#fff
-    style P fill:#5B9BD5,color:#fff
-    style I fill:#70AD47,color:#fff
-    style S fill:#ED7D31,color:#fff
-    style R fill:#7030A0,color:#fff
-    style O fill:#FF9900,color:#000
-```
+![Συνολικό Pipeline Protégé & SWRL](../img/lec4/protege_swrl_pipeline.png)
 
 ---
 

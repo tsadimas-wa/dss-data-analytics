@@ -29,7 +29,7 @@ style: |
 
 <div style="text-align:center; margin-bottom:16px;">
 
-![w:280](uniwa_logo.png)
+![w:280](../img/shared/uniwa_logo.png)
 
 </div>
 
@@ -42,6 +42,7 @@ University of West Attica
 
 ---
 
+<!-- _class: small -->
 # The Evolution of Decision Support, BI, Analytics & AI
 
 * **1970s (Foundations):** Shift from static reports (MIS) to Decision Support Systems (DSS). Use of Operations Research.
@@ -94,20 +95,7 @@ University of West Attica
 <!-- _class: diagram -->
 # The DIKW Hierarchy — Diagram
 
-```mermaid
-flowchart TB
-    D["📊 Data<br>Raw facts<br>e.g. Bookings: 120"]
-    I["ℹ️ Information<br>Data + context<br>e.g. -30% in January"]
-    K["💡 Knowledge<br>Information + experience<br>e.g. Low season = Jan–Feb"]
-    W["🏆 Wisdom<br>Knowledge + judgement for action<br>e.g. Dynamic Pricing"]
-
-    D --> I --> K --> W
-
-    style D fill:#4472C4,color:#fff,rx:8
-    style I fill:#5B9BD5,color:#fff,rx:8
-    style K fill:#70AD47,color:#fff,rx:8
-    style W fill:#ED7D31,color:#fff,rx:8
-```
+![DIKW Hierarchy](../img/lec3/dikw_hierarchy_en.png)
 
 ---
 
@@ -125,28 +113,7 @@ flowchart TB
 <!-- _class: diagram -->
 # BI Architecture — Pipeline Diagram
 
-```mermaid
-flowchart LR
-    subgraph Sources ["Data Sources"]
-        ERP["ERP"]
-        CRM["CRM"]
-        XLS["Excel / Files"]
-    end
-
-    ETL["⚙️ ETL<br>Extract · Transform · Load"]
-    DW[("🗄️ Data<br>Warehouse")]
-    OLAP["📐 OLAP<br>Engine"]
-    DASH["📊 Dashboards<br>& Reports"]
-    USER["👤 Decision<br>Maker"]
-
-    ERP --> ETL
-    CRM --> ETL
-    XLS --> ETL
-    ETL --> DW
-    DW --> OLAP
-    OLAP --> DASH
-    DASH --> USER
-```
+![BI Architecture](../img/lec3/bi_architecture_en.png)
 
 ---
 
@@ -196,35 +163,11 @@ The "bridge" that moves data from sources (OLTP) to the Data Warehouse:
 <!-- _class: diagram -->
 # The ETL Process — Diagram
 
-```mermaid
-flowchart LR
-    subgraph SRC ["1. EXTRACT — Sources"]
-        S1["ERP"]
-        S2["CRM"]
-        S3["APIs / Files"]
-    end
-
-    subgraph TRF ["2. TRANSFORM — Transformation"]
-        C["🧹 Cleaning<br>(NaNs, Duplicates)"]
-        N["📐 Normalisation<br>(Dates, Currencies)"]
-        E["➕ Enrichment<br>(New Metrics)"]
-        C --> N --> E
-    end
-
-    subgraph DST ["3. LOAD — Destination"]
-        DW[("Data Warehouse")]
-        DM[("Data Mart<br>(Marketing)")]
-    end
-
-    S1 --> C
-    S2 --> C
-    S3 --> C
-    E --> DW
-    E --> DM
-```
+![ETL Process](../img/lec3/etl_process_en.png)
 
 ---
 
+<!-- _class: small -->
 # Data Warehouse Schemas: Star & Snowflake
 
 **Star Schema:**
@@ -333,37 +276,13 @@ Composed of:
 <!-- _class: diagram-sm -->
 # Semantic Network — Example
 
-```mermaid
-graph TD
-    Animal["Animal"]
-    Mammal["Mammal"]
-    Dog["Dog"]
-    Fido["Fido<br>▸ instance"]
-
-    Breathes["Breathes"]
-    HasBlood["Warm blood"]
-    Barks["Barks"]
-    Color["Colour: brown"]
-
-    Mammal -->|AKO| Animal
-    Dog -->|AKO| Mammal
-    Fido -->|ISA| Dog
-
-    Animal -.->|has-property| Breathes
-    Mammal -.->|has-property| HasBlood
-    Dog -.->|has-property| Barks
-    Fido -.->|has-value| Color
-
-    style Fido fill:#ED7D31,color:#fff
-    style Animal fill:#4472C4,color:#fff
-    style Mammal fill:#5B9BD5,color:#fff
-    style Dog fill:#70AD47,color:#fff
-```
+![Semantic Network](../img/lec3/semantic_network_en.png)
 
 > 📌 **Fido** automatically inherits `Breathes`, `Warm blood` and `Barks` without any reprogramming.
 
 ---
 
+<!-- _class: small -->
 # Ontologies: The Formal Language of Knowledge
 
 **What is an Ontology:**
@@ -410,22 +329,7 @@ Use logical reasoning to solve problems. Advantages: Modularity and Scalability.
 <!-- _class: diagram-sm -->
 # Forward vs Backward Chaining — Diagram
 
-```mermaid
-flowchart TB
-    subgraph FC ["🔵 Forward Chaining (Data-driven)"]
-        direction LR
-        F1["Fact: Fever"] --> FR1["Rule 1<br>IF Fever AND Cough<br>THEN Flu"]
-        F2["Fact: Cough"] --> FR1
-        FR1 --> FC1["✅ Conclusion:<br>Probable Flu"]
-    end
-
-    subgraph BC ["🟠 Backward Chaining (Goal-driven)"]
-        direction LR
-        BG["Goal: Flu?"] --> BR1["Search Rule<br>for 'Flu'"]
-        BR1 --> BF1["Need:<br>Fever & Cough?"]
-        BF1 --> BD1["✅ Verify<br>in Working Memory"]
-    end
-```
+![Forward vs Backward Chaining](../img/lec3/chaining_en.png)
 
 | | Forward | Backward |
 |---|---|---|
@@ -435,6 +339,7 @@ flowchart TB
 
 ---
 
+<!-- _class: small -->
 # Fuzzy Logic: Beyond True / False
 
 **The Problem with Classical Logic:**
@@ -470,27 +375,7 @@ The strict separation of the Knowledge Base from the Inference Engine allows eas
 <!-- _class: diagram -->
 # Expert System Architecture — Diagram
 
-```mermaid
-flowchart TB
-    USER["👤 User"]
-    UI["🖥️ User Interface<br>(Input / Output)"]
-    IE["⚙️ Inference Engine<br>(Reasoning Engine)<br>Forward / Backward Chaining"]
-    KB["📚 Knowledge Base<br>(Rule Base)<br>IF … THEN …"]
-    WM["🗂️ Working Memory<br>(Workspace)<br>Current state"]
-    EXP["👨‍⚕️ Domain Expert<br>(Knowledge Provider)"]
-    EXP2["🛠️ Knowledge Engineer"]
-
-    USER <-->|queries| UI
-    UI <-->|data / explanations| IE
-    IE <-->|rule lookup| KB
-    IE <-->|read / write| WM
-    EXP -->|provides knowledge| EXP2
-    EXP2 -->|encodes| KB
-
-    style KB fill:#4472C4,color:#fff
-    style IE fill:#ED7D31,color:#fff
-    style WM fill:#70AD47,color:#fff
-```
+![Expert System Architecture](../img/lec3/expert_system_arch2_en.png)
 
 ---
 

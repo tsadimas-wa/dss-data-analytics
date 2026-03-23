@@ -134,6 +134,5 @@ Write a Python script (e.g. `ontology_test.py`) or a Jupyter Notebook (`.ipynb`)
 ## Submission
 
 - **Platform:** eclass, via the assignment **"Ontology Assignment"**
-- **Deadline:** April 4, 2026
 - This is an **individual** assignment.
 - The assignment is **not graded**, but you will receive **feedback** on your work.

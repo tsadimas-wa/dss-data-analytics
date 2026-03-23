@@ -622,7 +622,7 @@ for row in rows:
 
 The following diagram visually represents the basic structure of what we just created in Protégé. On the left we see the **Class** hierarchy and on the right the **Individuals** with their relationships (Object Properties).
 
-![Visual Summary of the University Ontology](../img/university_ontology.png)
+![Visual Summary of the University Ontology](../img/lab_protege/university_ontology.png)
 
 ## 9. How to Continue (Extension Suggestions)
 
