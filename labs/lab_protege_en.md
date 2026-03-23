@@ -49,7 +49,7 @@ To begin the demonstration, we will load a ready-made ontology directly from the
 
 ## 2. Exploring Basic Elements
 
-Before running the reasoning engine, we explain the structure of the ontology:
+Before running the reasoning engine, we explain the structure of the ontology to the audience:
 
 * **Classes:** In the **Entities > Classes** tab, expand the hierarchy `Thing > Food > Pizza`. Show how concepts are categorized.
 * **Object Properties:** In the **Object Properties** tab, show the property `hasTopping` and its inverse `isToppingOf`.
@@ -171,7 +171,7 @@ Thing
    - Check **Transitive**
    - *(If A requires B and B requires C, then automatically A requires C)*
 
-### 5.4.1 Reference: Logical Characteristics of Object Properties
+### 5.4.1 Explanation: Logical Characteristics of Object Properties
 
 > This section is a **theoretical reference** — you can read it after completing the steps in 5.4.
 
@@ -379,6 +379,7 @@ for prop in onto.data_properties():
  - Course
  - IntroductoryCourse
  - AdvancedCourse
+ - DemandingCourse
  - Department
  - Professor
 
@@ -599,7 +600,7 @@ for row in rows:
 
 ---
 
-## 7. New Section Summary
+## 7. Lab Summary
 
 | Step | Tool | Result |
 |---|---|---|

@@ -379,6 +379,7 @@ for prop in onto.data_properties():
  - Course
  - IntroductoryCourse
  - AdvancedCourse
+ - DemandingCourse
  - Department
  - Professor
 
@@ -599,7 +600,7 @@ for row in rows:
 
 ---
 
-## 7. Σύνοψη Νέας Ενότητας
+## 7. Σύνοψη Εργαστηρίου
 
 | Βήμα | Εργαλείο | Αποτέλεσμα |
 |---|---|---|

@@ -48,7 +48,69 @@
 
 ---
 
-## Γ. Απαιτήσεις στην Python (`owlready2`)
+## Γ. Εισαγωγή στη SPARQL
+
+Η **SPARQL** (SPARQL Protocol and RDF Query Language) είναι η επίσημη γλώσσα ερωτημάτων για δεδομένα RDF και οντολογίες OWL. Λειτουργεί παρόμοια με την SQL, αλλά απευθύνεται σε γράφους γνώσης (Knowledge Graphs).
+
+### Βασική δομή ερωτήματος
+
+```sparql
+PREFIX ex: <http://example.org/ontology#>
+
+SELECT ?subject ?property ?object
+WHERE {
+    ?subject ?property ?object .
+}
+```
+
+- **PREFIX**: ορίζει συντομογραφίες για namespaces.
+- **SELECT**: επιλέγει τις μεταβλητές που θέλουμε να επιστραφούν.
+- **WHERE**: ορίζει τα **triple patterns** (υποκείμενο–κατηγόρημα–αντικείμενο) που πρέπει να ταιριάζουν.
+
+### Παραδείγματα
+
+**1. Φέρε όλα τα individuals μιας κλάσης:**
+```sparql
+PREFIX ex: <http://example.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?person
+WHERE {
+    ?person rdf:type ex:Customer .
+}
+```
+
+**2. Φέρε individuals με συγκεκριμένη ιδιότητα:**
+```sparql
+SELECT ?customer ?room
+WHERE {
+    ?customer ex:hasBooked ?room .
+    ?room ex:price ?price .
+    FILTER(?price > 100)
+}
+```
+
+**3. Χρήση με `owlready2` στην Python:**
+```python
+from owlready2 import *
+
+onto = get_ontology("my_ontology.owl").load()
+
+results = list(default_world.sparql("""
+    PREFIX ex: <http://example.org/ontology#>
+    SELECT ?customer
+    WHERE { ?customer a ex:Customer . }
+"""))
+
+for r in results:
+    print(r)
+```
+
+> **Σημείωση:** Το `default_world.sparql()` εκτελεί SPARQL ερωτήματα πάνω στην οντολογία που έχει φορτωθεί στο `default_world` της `owlready2`.
+
+---
+
+## Δ. Απαιτήσεις στην Python (`owlready2`)
 
 Γράψτε ένα Python script (π.χ. `ontology_test.py`) ή ένα Jupyter Notebook (`.ipynb`) το οποίο:
 

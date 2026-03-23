@@ -48,7 +48,69 @@ Build your ontology in Protégé making sure it contains **at least**:
 
 ---
 
-## C. Python Requirements (`owlready2`)
+## C. Introduction to SPARQL
+
+**SPARQL** (SPARQL Protocol and RDF Query Language) is the official query language for RDF data and OWL ontologies. It works similarly to SQL, but targets Knowledge Graphs.
+
+### Basic query structure
+
+```sparql
+PREFIX ex: <http://example.org/ontology#>
+
+SELECT ?subject ?property ?object
+WHERE {
+    ?subject ?property ?object .
+}
+```
+
+- **PREFIX**: defines shorthand aliases for namespaces.
+- **SELECT**: specifies which variables to return.
+- **WHERE**: defines the **triple patterns** (subject–predicate–object) that must match.
+
+### Examples
+
+**1. Get all individuals of a class:**
+```sparql
+PREFIX ex: <http://example.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?person
+WHERE {
+    ?person rdf:type ex:Customer .
+}
+```
+
+**2. Get individuals with a specific property value:**
+```sparql
+SELECT ?customer ?room
+WHERE {
+    ?customer ex:hasBooked ?room .
+    ?room ex:price ?price .
+    FILTER(?price > 100)
+}
+```
+
+**3. Using SPARQL with `owlready2` in Python:**
+```python
+from owlready2 import *
+
+onto = get_ontology("my_ontology.owl").load()
+
+results = list(default_world.sparql("""
+    PREFIX ex: <http://example.org/ontology#>
+    SELECT ?customer
+    WHERE { ?customer a ex:Customer . }
+"""))
+
+for r in results:
+    print(r)
+```
+
+> **Note:** `default_world.sparql()` executes SPARQL queries over the ontology loaded into `owlready2`'s `default_world`.
+
+---
+
+## D. Python Requirements (`owlready2`)
 
 Write a Python script (e.g. `ontology_test.py`) or a Jupyter Notebook (`.ipynb`) that:
 
