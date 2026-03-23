@@ -112,7 +112,7 @@ style: |
 | Η τιμή είναι υψηλή: **Ναι / Όχι** | Η τιμή είναι υψηλή: **0.40** |
 | Το ρίσκο είναι μεγάλο: **Ναι / Όχι** | Το ρίσκο είναι μεγάλο: **0.85** |
 
-> Η ασαφής λογική **δεν μοντελοποιεί άγνοια** — μοντελοποιεί την εγγενή ασάφεια των ανθρώπινων εννοιών.
+> Η ασαφής λογική **δεν μοντελοποιεί άγνοια** — μοντελοποιεί την εγγενή ασάφεια των ανθρώπινων εννοιών. *(Zadeh, 1965; Kahraman et al., 2022)*
 
 ---
 
@@ -133,6 +133,8 @@ style: |
 | **Τραπεζοειδής** | Επίπεδη κορυφή | Εύρη τιμών |
 | **Σιγμοειδής** | Ομαλή S-καμπύλη | Σταδιακές μεταβάσεις |
 | **Γκαουσιανή** | Καμπάνα | Πιο ρεαλιστική κατανομή |
+
+*Αναλυτικά: Ross (2017), κεφ. 2–3*
 
 ---
 # Συναρτήσεις Συμμετοχής
@@ -598,7 +600,7 @@ $$P(\text{Άρρωστος} \mid \text{Θετικό}) = \frac{0{,}95 \times 0{,}
 # Δίκτυα Bayes (Bayesian Networks)
 
 **Ορισμός:**
-Ένα **Δίκτυο Bayes** είναι ένας κατευθυνόμενος ακυκλικός γράφος (DAG) που αναπαριστά τις **αιτιώδεις σχέσεις** μεταξύ τυχαίων μεταβλητών.
+Ένα **Δίκτυο Bayes** είναι ένας κατευθυνόμενος ακυκλικός γράφος (DAG) που αναπαριστά τις **αιτιώδεις σχέσεις** μεταξύ τυχαίων μεταβλητών *(Pearl, 1988)*.
 
 **Δομικά στοιχεία:**
 
@@ -668,7 +670,7 @@ $$P(\text{Άρρωστος} \mid \text{Θετικό}) = \frac{0{,}95 \times 0{,}
 
 ---
 
-<!-- _class: small -->
+<!-- _class: xsmall -->
 # Μάθηση Δικτύων Bayes
 
 Πώς κατασκευάζεται ένα BN στην πράξη;
@@ -677,19 +679,17 @@ $$P(\text{Άρρωστος} \mid \text{Θετικό}) = \frac{0{,}95 \times 0{,}
 <div>
 
 ### Μάθηση Δομής (Structure Learning)
-Ποιες μεταβλητές συνδέονται και με ποια κατεύθυνση;
 
 | Μέθοδος | Περιγραφή |
 |---------|-----------|
-| **Εμπειρογνώμονας** | Ο ειδικός σχεδιάζει τον γράφο χειροκίνητα |
-| **Score-based** | Αναζήτηση δομής που μεγιστοποιεί σκορ (π.χ. BIC) |
-| **Constraint-based** | Στατιστικοί έλεγχοι ανεξαρτησίας (π.χ. PC algorithm) |
+| **Εμπειρογνώμονας** | Χειροκίνητος σχεδιασμός γράφου |
+| **Score-based** | Μεγιστοποίηση σκορ (π.χ. BIC) |
+| **Constraint-based** | Έλεγχοι ανεξαρτησίας (π.χ. PC) |
 
 </div>
 <div>
 
 ### Μάθηση Παραμέτρων (Parameter Learning)
-Δεδομένης της δομής, ποιες είναι οι πιθανότητες στους CPTs;
 
 | Μέθοδος | Περιγραφή |
 |---------|-----------|
@@ -700,7 +700,7 @@ $$P(\text{Άρρωστος} \mid \text{Θετικό}) = \frac{0{,}95 \times 0{,}
 </div>
 </div>
 
-> Στην πράξη, συχνά ο ειδικός ορίζει τη **δομή** και τα δεδομένα εκπαιδεύουν τις **παραμέτρους** — υβριδική προσέγγιση.
+> Στην πράξη, συχνά ο ειδικός ορίζει τη **δομή** και τα δεδομένα εκπαιδεύουν τις **παραμέτρους**. *(Koller & Friedman, 2009; Scanagatta et al., 2019)*
 
 ---
 
@@ -736,7 +736,7 @@ $$P(\text{Άρρωστος} \mid \text{Θετικό}) = \frac{0{,}95 \times 0{,}
 | **Likelihood weighting** | Σταθμισμένη δειγματοληψία βάσει evidence |
 | **Loopy Belief Propagation** | Επαναληπτική ανταλλαγή μηνυμάτων μεταξύ κόμβων |
 
-> Τα σύγχρονα εργαλεία (pgmpy, BayesNet, Netica) επιλέγουν αυτόματα τον κατάλληλο αλγόριθμο.
+> Τα σύγχρονα εργαλεία (pgmpy, BayesNet, Netica) επιλέγουν αυτόματα τον κατάλληλο αλγόριθμο. *(Darwiche, 2009)*
 
 </div>
 </div>
@@ -829,7 +829,7 @@ $$P(H{=}T \mid P{=}T) = \frac{0.0338 + 0.0008}{0.1043} \approx 33.2\%$$
 * Επιλέγεται η δράση που **μεγιστοποιεί** την αναμενόμενη χρησιμότητα.
 * Χρήση σε ΣΥΑ: ιατρικές αποφάσεις, επενδύσεις, διαχείριση ρίσκου.
 
-> Τα Influence Diagrams ενοποιούν **αβεβαιότητα + αποφάσεις + προτιμήσεις** σε ένα μοντέλο.
+> Τα Influence Diagrams ενοποιούν **αβεβαιότητα + αποφάσεις + προτιμήσεις** σε ένα μοντέλο. *(Kjaerulff & Madsen, 2013)*
 
 ---
 
@@ -850,6 +850,8 @@ $$P(H{=}T \mid P{=}T) = \frac{0.0338 + 0.0008}{0.1043} \approx 33.2\%$$
 * **Ενσωμάτωση γνώσης** — συνδυάζουν expert knowledge + δεδομένα
 * **Ενημέρωση σε πραγματικό χρόνο** — νέο evidence → αυτόματο update
 * **Λειτουργούν με λίγα δεδομένα** — χάρη στα informative priors
+
+*Βλ. Sharda, Delen & Turban (2020), κεφ. 8–9*
 
 ---
 
@@ -940,6 +942,8 @@ $$P(C \mid x_1, \ldots, x_n) \propto P(C) \prod_{i=1}^{n} P(x_i \mid C)$$
 | Μαθαίνει από δεδομένα | Κίνδυνος overfitting |
 | Καλύτερη ακρίβεια από «καθαρό» FIS | Πιο σύνθετο σε εκπαίδευση |
 
+*(Jang, 1993; Norouzi et al., 2023)*
+
 ---
 
 <!-- _class: small -->
@@ -978,14 +982,22 @@ $$P(C \mid x_1, \ldots, x_n) \propto P(C) \prod_{i=1}^{n} P(x_i \mid C)$$
 
 ---
 
-<!-- _class: small -->
-# Βιβλιογραφία
+<!-- _class: xxsmall -->
+# Βιβλιογραφία & Προτεινόμενη Ανάγνωση
 
+**Κλασικά / θεμελιώδη:**
 - Zadeh, L.A. (1965). Fuzzy sets. *Information and Control*, 8(3), 338–353.
-- Zadeh, L.A. (1975). The concept of a linguistic variable and its application to approximate reasoning. *Information Sciences*, 8(3), 199–249.
 - Pearl, J. (1988). *Probabilistic Reasoning in Intelligent Systems.* Morgan Kaufmann.
-- Jensen, F.V. & Nielsen, T.D. (2007). *Bayesian Networks and Decision Graphs* (2nd ed.). Springer.
 - Jang, J.-S.R. (1993). ANFIS: Adaptive-Network-Based Fuzzy Inference System. *IEEE Trans. on Systems, Man, and Cybernetics*, 23(3), 665–685.
+
+**Σύγχρονα εγχειρίδια:**
 - Koller, D. & Friedman, N. (2009). *Probabilistic Graphical Models: Principles and Techniques.* MIT Press.
-- Turban, E., Aronson, J.E. & Liang, T.P. (2007). *Decision Support Systems and Intelligent Systems* (8th ed.). Pearson.
-- Ross, T.J. (2010). *Fuzzy Logic with Engineering Applications* (3rd ed.). Wiley.
+- Ross, T.J. (2017). *Fuzzy Logic with Engineering Applications* (4th ed.). Wiley.
+- Darwiche, A. (2009). *Modeling and Reasoning with Bayesian Networks.* Cambridge University Press.
+- Kjaerulff, U.B. & Madsen, A.L. (2013). *Bayesian Networks and Influence Diagrams* (2nd ed.). Springer.
+- Sharda, R., Delen, D. & Turban, E. (2020). *Analytics, Data Science, & Artificial Intelligence: Systems for Decision Support* (11th ed.). Pearson.
+
+**Πρόσφατα άρθρα & surveys:**
+- Scanagatta, M. et al. (2019). A survey on Bayesian network structure learning from data. *Progress in AI*, 8, 425–439.
+- Kahraman, C. et al. (2022). Fuzzy Sets and Extensions: Where We Stand and Where We Go. *Expert Systems with Applications*, 209, 118272.
+- Norouzi, A. et al. (2023). Neuro-fuzzy systems in engineering: A survey of applications and trends. *Engineering Applications of AI*, 123, 106396.
