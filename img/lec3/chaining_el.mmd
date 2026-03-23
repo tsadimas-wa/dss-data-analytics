@@ -1,0 +1,14 @@
+flowchart TB
+    subgraph FC ["🔵 Forward Chaining (Data-driven)"]
+        direction LR
+        F1["Fact: Πυρετός"] --> FR1["Rule 1<br>IF Πυρετός AND Βήχας<br>THEN Γρίπη"]
+        F2["Fact: Βήχας"] --> FR1
+        FR1 --> FC1["✅ Συμπέρασμα:<br>Πιθανή Γρίπη"]
+    end
+
+    subgraph BC ["🟠 Backward Chaining (Goal-driven)"]
+        direction LR
+        BG["Goal: Γρίπη;"] --> BR1["Ψάχνω Rule<br>για 'Γρίπη'"]
+        BR1 --> BF1["Χρειάζομαι:<br>Πυρετός & Βήχας;"]
+        BF1 --> BD1["✅ Επαληθεύω<br>στη Working Memory"]
+    end

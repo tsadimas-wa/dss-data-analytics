@@ -1,0 +1,15 @@
+flowchart LR
+    ONT["📚 Ontology<br>(Classes + Properties + Rules)"]
+    FACTS["📋 Facts<br>(Individuals & Data)"]
+    REASONER["⚙️ Reasoner<br>(Pellet / HermiT / Fact++)"]
+    INF["✅ New Knowledge<br>(Inferred Facts)"]
+    ERR["⚠️ Inconsistency<br>Errors"]
+    ONT --> REASONER
+    FACTS --> REASONER
+    REASONER -->|"Inference"| INF
+    REASONER -->|"Consistency Check"| ERR
+    style ONT fill:#4472C4,color:#fff
+    style FACTS fill:#5B9BD5,color:#fff
+    style REASONER fill:#ED7D31,color:#fff
+    style INF fill:#70AD47,color:#fff
+    style ERR fill:#C00000,color:#fff

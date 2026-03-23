@@ -1,0 +1,16 @@
+flowchart TB
+    UI["👤 Διεπαφή Χρήστη<br>(User Interface)"]
+    IE["⚙️ Μηχανή Συμπερασμάτων<br>(Inference Engine)"]
+    KB["📚 Βάση Γνώσης<br>(Knowledge Base)"]
+    F["📋 Γεγονότα<br>(Facts)"]
+    R["📜 Κανόνες<br>(Rules: IF → THEN)"]
+    UI -->|"Ερώτηση / Δεδομένα"| IE
+    IE -->|"Απάντηση / Συμπέρασμα"| UI
+    IE <--> KB
+    KB --> F
+    KB --> R
+    style UI fill:#4472C4,color:#fff
+    style IE fill:#ED7D31,color:#fff
+    style KB fill:#70AD47,color:#fff
+    style F fill:#A9D18E,color:#000
+    style R fill:#A9D18E,color:#000

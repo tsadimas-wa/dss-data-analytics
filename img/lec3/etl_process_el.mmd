@@ -1,0 +1,24 @@
+flowchart LR
+    subgraph SRC ["1. EXTRACT — Πηγές"]
+        S1["ERP"]
+        S2["CRM"]
+        S3["APIs / Files"]
+    end
+
+    subgraph TRF ["2. TRANSFORM — Μετασχηματισμός"]
+        C["🧹 Καθαρισμός<br>(NaNs, Duplicates)"]
+        N["📐 Κανονικοποίηση<br>(Dates, Currencies)"]
+        E["➕ Εμπλουτισμός<br>(Νέες Μετρικές)"]
+        C --> N --> E
+    end
+
+    subgraph DST ["3. LOAD — Προορισμός"]
+        DW[("Data Warehouse")]
+        DM[("Data Mart<br>(Marketing)")]
+    end
+
+    S1 --> C
+    S2 --> C
+    S3 --> C
+    E --> DW
+    E --> DM

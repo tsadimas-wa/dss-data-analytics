@@ -1,0 +1,19 @@
+flowchart TB
+    USER["👤 Χρήστης"]
+    UI["🖥️ User Interface<br>(Εισαγωγή / Έξοδος)"]
+    IE["⚙️ Inference Engine<br>(Μηχανή Συλλογισμού)<br>Forward / Backward Chaining"]
+    KB["📚 Knowledge Base<br>(Βάση Κανόνων)<br>IF … THEN …"]
+    WM["🗂️ Working Memory<br>(Χώρος Εργασίας)<br>Τρέχουσα κατάσταση"]
+    EXP["👨‍⚕️ Domain Expert<br>(Μηχανικός Γνώσης)"]
+    EXP2["🛠️ Knowledge Engineer"]
+
+    USER <-->|ερωτήσεις| UI
+    UI <-->|δεδομένα / εξηγήσεις| IE
+    IE <-->|αναζήτηση κανόνων| KB
+    IE <-->|ανάγνωση / εγγραφή| WM
+    EXP -->|παρέχει γνώση| EXP2
+    EXP2 -->|κωδικοποιεί| KB
+
+    style KB fill:#4472C4,color:#fff
+    style IE fill:#ED7D31,color:#fff
+    style WM fill:#70AD47,color:#fff

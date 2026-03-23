@@ -1,0 +1,14 @@
+flowchart TB
+    subgraph FC ["🔵 Forward Chaining (Data-driven)"]
+        direction LR
+        F1["Fact: Fever"] --> FR1["Rule 1<br>IF Fever AND Cough<br>THEN Flu"]
+        F2["Fact: Cough"] --> FR1
+        FR1 --> FC1["✅ Conclusion:<br>Probable Flu"]
+    end
+
+    subgraph BC ["🟠 Backward Chaining (Goal-driven)"]
+        direction LR
+        BG["Goal: Flu?"] --> BR1["Search Rule<br>for 'Flu'"]
+        BR1 --> BF1["Need:<br>Fever & Cough?"]
+        BF1 --> BD1["✅ Verify<br>in Working Memory"]
+    end

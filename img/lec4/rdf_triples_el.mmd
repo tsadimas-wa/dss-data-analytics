@@ -1,0 +1,12 @@
+flowchart LR
+    G["👤 Γιώργος<br>(Υποκείμενο)"]
+    P["🏛️ ΠΑΔΑ<br>(Αντικείμενο)"]
+    CS["💻 Πληροφορική<br>(Αντικείμενο)"]
+    Human["🧑 Άνθρωπος<br>(Κλάση)"]
+    G -->|"σπουδάζει_στο"| P
+    G -->|"σπουδάζει"| CS
+    G -->|"rdf:type"| Human
+    style G fill:#4472C4,color:#fff
+    style P fill:#70AD47,color:#fff
+    style CS fill:#70AD47,color:#fff
+    style Human fill:#ED7D31,color:#fff

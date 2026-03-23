@@ -1,0 +1,12 @@
+flowchart LR
+    G["👤 George<br>(Subject)"]
+    P["🏛️ UNIWA<br>(Object)"]
+    CS["💻 Informatics<br>(Object)"]
+    Human["🧑 Human<br>(Class)"]
+    G -->|"studiesAt"| P
+    G -->|"studies"| CS
+    G -->|"rdf:type"| Human
+    style G fill:#4472C4,color:#fff
+    style P fill:#70AD47,color:#fff
+    style CS fill:#70AD47,color:#fff
+    style Human fill:#ED7D31,color:#fff

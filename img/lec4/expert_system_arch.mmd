@@ -1,0 +1,16 @@
+flowchart TB
+    UI["👤 User Interface"]
+    IE["⚙️ Inference Engine"]
+    KB["📚 Knowledge Base"]
+    F["📋 Facts"]
+    R["📜 Rules (IF → THEN)"]
+    UI -->|"Query / Data"| IE
+    IE -->|"Answer / Conclusion"| UI
+    IE <--> KB
+    KB --> F
+    KB --> R
+    style UI fill:#4472C4,color:#fff
+    style IE fill:#ED7D31,color:#fff
+    style KB fill:#70AD47,color:#fff
+    style F fill:#A9D18E,color:#000
+    style R fill:#A9D18E,color:#000

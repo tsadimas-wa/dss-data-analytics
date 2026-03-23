@@ -1,0 +1,24 @@
+graph TD
+    Animal["Ζώο<br>(Animal)"]
+    Mammal["Θηλαστικό<br>(Mammal)"]
+    Dog["Σκύλος<br>(Dog)"]
+    Fido["Fido<br>▸ instance"]
+
+    Breathes["Αναπνέει"]
+    HasBlood["Ζεστό αίμα"]
+    Barks["Γαβγίζει"]
+    Color["Χρώμα: καφέ"]
+
+    Mammal -->|AKO| Animal
+    Dog -->|AKO| Mammal
+    Fido -->|ISA| Dog
+
+    Animal -.->|has-property| Breathes
+    Mammal -.->|has-property| HasBlood
+    Dog -.->|has-property| Barks
+    Fido -.->|has-value| Color
+
+    style Fido fill:#ED7D31,color:#fff
+    style Animal fill:#4472C4,color:#fff
+    style Mammal fill:#5B9BD5,color:#fff
+    style Dog fill:#70AD47,color:#fff

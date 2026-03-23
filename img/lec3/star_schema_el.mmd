@@ -1,0 +1,18 @@
+flowchart TB
+    FACT["🔵 FACT_BOOKING<br/>booking_id · date_id<br/>hotel_id · customer_id<br/>room_id · revenue · nights"]
+
+    D1["🟢 DIM_DATE<br/>date_id · year<br/>month · day · season"]
+    D2["🟢 DIM_HOTEL<br/>hotel_id · name<br/>city · category"]
+    D3["🟢 DIM_CUSTOMER<br/>customer_id · name<br/>country · segment"]
+    D4["🟢 DIM_ROOM<br/>room_id · type<br/>price · capacity"]
+
+    D1 --> FACT
+    D2 --> FACT
+    D3 --> FACT
+    D4 --> FACT
+
+    style FACT fill:#4472C4,color:#fff,stroke:#2a4a8a,stroke-width:2px
+    style D1 fill:#70AD47,color:#fff
+    style D2 fill:#70AD47,color:#fff
+    style D3 fill:#70AD47,color:#fff
+    style D4 fill:#70AD47,color:#fff

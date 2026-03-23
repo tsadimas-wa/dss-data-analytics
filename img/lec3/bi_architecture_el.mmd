@@ -1,0 +1,20 @@
+flowchart LR
+    subgraph Sources ["Πηγές Δεδομένων"]
+        ERP["ERP"]
+        CRM["CRM"]
+        XLS["Excel / Files"]
+    end
+
+    ETL["⚙️ ETL<br>Extract · Transform · Load"]
+    DW[("🗄️ Data<br>Warehouse")]
+    OLAP["📐 OLAP<br>Engine"]
+    DASH["📊 Dashboards<br>& Reports"]
+    USER["👤 Decision<br>Maker"]
+
+    ERP --> ETL
+    CRM --> ETL
+    XLS --> ETL
+    ETL --> DW
+    DW --> OLAP
+    OLAP --> DASH
+    DASH --> USER
