@@ -959,7 +959,7 @@ $$P(\text{Έγκριση}) = \underbrace{0.90 \times 0.268}_{\text{αν Ρίσκ
 <!-- _class: xxsmall -->
 # Μάθηση Δικτύων Bayes
 
-Για να χρησιμοποιήσουμε ένα BN πρέπει να απαντήσουμε δύο ερωτήματα: **ποιοι κόμβοι συνδέονται;** και **με ποιες τιμές CPT;**
+Για να χρησιμοποιήσουμε ένα BN πρέπει να απαντήσουμε δύο ερωτήματα: **ποιοι κόμβοι συνδέονται;** και **με ποιες τιμές CPT;** Στην πράξη: ο ειδικός ορίζει τη **δομή** (ποιο επηρεάζει τι), τα δεδομένα εκπαιδεύουν τις **παραμέτρους** (κατά πόσο). *(Koller & Friedman, 2009)
 
 **Μάθηση Δομής** — ποιοι κόμβοι συνδέονται και με ποια κατεύθυνση (βέλη):
 
@@ -977,7 +977,7 @@ $$P(\text{Έγκριση}) = \underbrace{0.90 \times 0.268}_{\text{αν Ρίσκ
 | **Bayesian estimation** | Εκτίμηση με τον κανόνα Bayes | Συνδυάζει τις συχνότητες των δεδομένων με prior εκτίμηση του ειδικού — χρήσιμο όταν τα δεδομένα είναι λίγα |
 | **EM algorithm** | *Expectation-Maximization* — εναλλαγή εκτίμησης και μεγιστοποίησης | Συμπληρώνει εκτιμητικά τις ελλιπείς εγγραφές και επαναεκτιμά τις CPT, επαναληπτικά |
 
-> Στην πράξη: ο ειδικός ορίζει τη **δομή** (ποιο επηρεάζει τι), τα δεδομένα εκπαιδεύουν τις **παραμέτρους** (κατά πόσο). *(Koller & Friedman, 2009)*
+
 
 ---
 
@@ -1039,29 +1039,63 @@ $$P(\text{Spam} | \text{Λέξεις}) = \frac{P(\text{Λέξεις} | \text{Spa
 
 Ο στόχος: επιλέξτε την απόφαση που **μεγιστοποιεί την αναμενόμενη χρησιμότητα** (EU = Σ πιθανότητα × αξία).
 
-<img src="../lectures_material/influence_diagram.png" alt="Influence Diagram — Ιατρική Θεραπεία" height="62%">
+
+---
+
+<!-- _class: small -->
+# Δίκτυα Αποφάσεων (Influence Diagrams)
+
+<img src="../lectures_material/influence_diagram.png" alt="Influence Diagram — Ιατρική Θεραπεία" height="62%"> 
+---
 
 ---
 
 <!-- _class: xsmall -->
 # Δίκτυα Αποφάσεων — Ανάγνωση του παραδείγματος
 
-**Σενάριο:** Ασθενής με πιθανή ασθένεια (P(Ασθένεια)=0.30). Έχουμε αποτέλεσμα τεστ. Τι θεραπεία επιλέγουμε;
+**Σενάριο:** Δεν ξέρουμε αν ο ασθενής έχει την ασθένεια. Έχουμε αποτέλεσμα τεστ. Τι θεραπεία επιλέγουμε;
 
-**Τι δίνεται:**
-* P(Ασθένεια = T) = 0.30 — prior από επιδημιολογικά δεδομένα
-* P(Τεστ | Ασθένεια) — CPT: πόσο αξιόπιστο είναι το τεστ
-* Πίνακας χρησιμότητας: αξία κάθε συνδυασμού (θεραπεία × πραγματική κατάσταση)
+**Τι δίνεται — πίνακας χρησιμότητας** (αξία κάθε συνδυασμού *απόφασης × πραγματικής κατάστασης*):
 
-**Τι υπολογίζεται — Αναμενόμενη Χρησιμότητα (EU) για κάθε επιλογή:**
-
-| Επιλογή | Υπολογισμός | EU |
+| | Ασθένεια = T (30%) | Ασθένεια = F (70%) |
 |---|---|---|
-| Θεραπεία Α | 0.30×80 + 0.70×(−10) | **+17** |
-| Θεραπεία Β | 0.30×60 + 0.70×(+5) | **+21.5** ✓ |
-| Χωρίς θεραπεία | 0.30×(−50) + 0.70×10 | **−8** |
+| Θεραπεία Α | +80 (θεραπεύει αποτελεσματικά) | −10 (παρενέργειες χωρίς λόγο) |
+| Θεραπεία Β | +60 (θεραπεύει μέτρια) | +5 (ήπια, σχεδόν ακίνδυνη) |
+| Χωρίς θεραπεία | −50 (ασθένεια εξελίσσεται) | +10 (αποφύγαμε περιττή θεραπεία) |
 
-> Επιλέγεται η **Θεραπεία Β** γιατί έχει τη μεγαλύτερη EU — ακόμα κι αν δεν έχει την υψηλότερη αξία στην καλύτερη περίπτωση.
+Δεν ξέρουμε σε ποια στήλη ανήκει ο ασθενής — οπότε σταθμίζουμε και τις δύο με τις πιθανότητές τους:
+
+**EU = P(Ασθένεια=T) × U(T) + P(Ασθένεια=F) × U(F)**
+
+| Επιλογή | EU = 0.30 × U(T) + 0.70 × U(F) | Αποτέλεσμα |
+|---|---|---|
+| Θεραπεία Α | 0.30×(+80) + 0.70×(−10) = 24 − 7 | **+17** |
+| Θεραπεία Β | 0.30×(+60) + 0.70×(+5) = 18 + 3.5 | **+21.5** ✓ |
+| Χωρίς θεραπεία | 0.30×(−50) + 0.70×(+10) = −15 + 7 | **−8** |
+
+> Επιλέγεται η **Θεραπεία Β** — όχι γιατί είναι η καλύτερη αν ο ασθενής *είναι* σίγουρα άρρωστος (εκεί η Α δίνει +80), αλλά γιατί είναι η ασφαλέστερη επιλογή **υπό αβεβαιότητα**: αν ο ασθενής δεν είναι άρρωστος (70% πιθανότητα), η Α τον βλάπτει (−10) ενώ η Β δεν τον επιβαρύνει (+5).
+
+---
+
+<!-- _class: xsmall -->
+# Δίκτυα Αποφάσεων — Τι αλλάζει με το αποτέλεσμα τεστ;
+
+Η ανάλυση προηγουμένως χρησιμοποίησε μόνο το prior (0.30/0.70). Αλλά το διάγραμμα περιέχει κι έναν κόμβο **Αποτέλεσμα Τεστ** — αν το λάβουμε υπόψη, οι πιθανότητες ενημερώνονται μέσω Bayes.
+
+Υποθέτουμε: P(Τεστ=+ | Ασθ.=T) = 0.90,  P(Τεστ=+ | Ασθ.=F) = 0.15
+
+**Αν το τεστ βγει θετικό (+):**
+$$P(\text{Ασθ.}=T \mid +) = \frac{0.90 \times 0.30}{0.90 \times 0.30 + 0.15 \times 0.70} = \frac{0.27}{0.375} = \mathbf{0.72}$$
+
+| Επιλογή | EU = 0.72×U(T) + 0.28×U(F) | Αποτέλεσμα |
+|---|---|---|
+| Θεραπεία Α | 0.72×80 + 0.28×(−10) = 57.6 − 2.8 | **+54.8** ✓ |
+| Θεραπεία Β | 0.72×60 + 0.28×5 = 43.2 + 1.4 | **+44.6** |
+| Χωρίς θεραπεία | 0.72×(−50) + 0.28×10 | **−33.2** |
+
+**Αν το τεστ βγει αρνητικό (−):** P(Ασθ.=T | −) ≈ 0.05 → η Β παραμένει καλύτερη (EU=+7.6).
+
+> **Συμπέρασμα:** Το Influence Diagram αλλάζει αυτόματα την **βέλτιστη απόφαση** ανάλογα με το evidence: θετικό τεστ → Θεραπεία Α, αρνητικό τεστ → Θεραπεία Β. Αυτό δεν μπορεί να γίνει με απλούς if/else κανόνες.
 
 ---
 
@@ -1124,33 +1158,25 @@ $$P(\text{Spam} | \text{Λέξεις}) = \frac{P(\text{Λέξεις} | \text{Spa
 
 ---
 
-<!-- _class: small -->
+<!-- _class: xxsmall -->
 # Naive Bayes — Η Γέφυρα από BN σε ML
 
-Ο **Naive Bayes classifier** είναι ο πιο απλός ML αλγόριθμος — και βασίζεται στο θεώρημα Bayes!
+Ο **Naive Bayes classifier** βασίζεται στον κανόνα Bayes, εφαρμοσμένο σε πολλαπλά χαρακτηριστικά ταυτόχρονα.
 
-**Ιδέα:** Δεδομένης μιας κλάσης C, υποθέτουμε ότι τα χαρακτηριστικά $x_1, x_2, \ldots, x_n$ είναι **ανεξάρτητα**:
+Ο κανόνας Bayes για κλάση C και χαρακτηριστικά $x_1, x_2, \ldots, x_n$:
+$$P(C \mid x_1,\ldots,x_n) = \frac{P(x_1,\ldots,x_n \mid C)\cdot P(C)}{P(x_1,\ldots,x_n)}$$
 
-$$P(C \mid x_1, \ldots, x_n) \propto P(C) \prod_{i=1}^{n} P(x_i \mid C)$$
+Το πρόβλημα: P(x₁, x₂, … xₙ | C) απαιτεί να γνωρίζουμε **όλους τους συνδυασμούς** — αδύνατο για χιλιάδες λέξεις. Η "αφελής" λύση: υποθέτουμε ότι κάθε λέξη είναι **ανεξάρτητη** από τις άλλες:
+$$P(x_1,\ldots,x_n \mid C) \approx \prod_{i=1}^{n} P(x_i \mid C)$$
 
-**Παράδειγμα — Spam Detection:**
+Οπότε ο τύπος γίνεται (αγνοούμε τον παρονομαστή γιατί είναι ίδιος για όλες τις κλάσεις):
+$$P(C \mid x_1,\ldots,x_n) \propto P(C) \cdot \prod_{i=1}^{n} P(x_i \mid C)$$
 
-Εκπαιδεύουμε με εκατομμύρια emails που έχουν ήδη σημανθεί ως Spam ή Ham (κανονικό). Μετράμε συχνότητες:
+**Παράδειγμα:** email με "δωρεάν" και "κέρδισε", P(Spam)=P(Ham)=0.50:
+$$P(\text{Spam} \mid \text{email}) \propto \underbrace{0.50}_{P(\text{Spam})} \cdot \underbrace{0.80}_{P(\text{δωρεάν}|\text{Spam})} \cdot \underbrace{0.70}_{P(\text{κέρδισε}|\text{Spam})} = 0.28$$
+$$P(\text{Ham} \mid \text{email}) \propto \underbrace{0.50}_{P(\text{Ham})} \cdot \underbrace{0.05}_{P(\text{δωρεάν}|\text{Ham})} \cdot \underbrace{0.02}_{P(\text{κέρδισε}|\text{Ham})} = 0.0005$$
 
-| Λέξη | P(λέξη \| Spam) | P(λέξη \| Ham) | Ερμηνεία |
-|------|-----------------|----------------|----------|
-| "δωρεάν" | 0.80 | 0.05 | Από τα Spam emails, το 80% περιέχει τη λέξη — από τα Ham μόνο 5% |
-| "συνάντηση" | 0.10 | 0.60 | Σπάνια σε Spam, συχνή σε κανονικά emails |
-| "κέρδισε" | 0.70 | 0.02 | Ισχυρή ένδειξη Spam |
-
-Για νέο email που περιέχει "δωρεάν" και "κέρδισε":
-$$P(\text{Spam} | \text{email}) \propto P(\text{Spam}) \cdot 0.80 \cdot 0.70 = 0.50 \cdot 0.56 = 0.28$$
-$$P(\text{Ham} | \text{email}) \propto P(\text{Ham}) \cdot 0.05 \cdot 0.02 = 0.50 \cdot 0.001 = 0.0005$$
-
-Κανονικοποίηση → P(Spam) ≈ **99.8%** → το email κατατάσσεται ως Spam.
-
-* Μαθαίνει τα P(λέξη|κλάση) **αυτόματα** από δεδομένα — δεν χρειάζεται εμπειρογνώμονας
-* Παρά την «αφελή» υπόθεση ανεξαρτησίας μεταξύ λέξεων, δουλεύει εκπληκτικά καλά στην πράξη
+**Κανονικοποίηση** (ώστε να αθροίζουν σε 1): $P(\text{Spam}) = \frac{0.28}{0.28+0.0005} \approx$ **99.8%** → Spam.
 
 
 
@@ -1207,17 +1233,18 @@ $$P(\text{Ham} | \text{email}) \propto P(\text{Ham}) \cdot 0.05 \cdot 0.02 = 0.5
 
 | # | Έννοια | Σύντομη υπενθύμιση |
 |---|---|---|
-| 1 | Γλωσσική αβεβαιότητα | Ασαφής Λογική — μοντελοποίηση ανθρώπινων εννοιών |
-| 2 | Στοχαστική αβεβαιότητα | Δίκτυα Bayes — ενημέρωση πιθανοτήτων με νέα δεδομένα |
-| 3 | Συνάρτηση συμμετοχής | Βαθμός ανήκειν στο [0,1] — πέρα από Ναι/Όχι |
-| 4 | Γλωσσική μεταβλητή | Τιμές = λέξεις («Υψηλό», «Μέτριο», «Χαμηλό») |
-| 5 | FIS κύκλος | Ασαφοποίηση → Κανόνες → Αποασαφοποίηση |
-| 6 | Θεώρημα Bayes | Prior + Evidence → Posterior (ενημερωμένη εκτίμηση) |
-| 7 | Μάθηση BN | Δομή (expert/data) + Παράμετροι (MLE/Bayesian) |
-| 8 | Influence Diagrams | BN + κόμβοι απόφασης + χρησιμότητα → ΣΥΑ |
-| 9 | Naive Bayes | Γέφυρα BN → ML: αυτόματη μάθηση πιθανοτήτων |
-| 10 | Neuro-Fuzzy | Ερμηνευσιμότητα Fuzzy + μάθηση Neural Nets |
-| 11 | Knowledge vs Data-driven | Συμπληρωματικές προσεγγίσεις → υβριδικά ΣΥΑ |
+| 1 | Γλωσσική αβεβαιότητα | Ασαφής Λογική — μοντελοποίηση ανθρώπινων εννοιών με βαθμούς αλήθειας |
+| 2 | Στοχαστική αβεβαιότητα | Δίκτυα Bayes — ενημέρωση πιθανοτήτων (prior → posterior) με νέα δεδομένα |
+| 3 | Συνάρτηση συμμετοχής | Βαθμός ανήκειν στο [0,1] — ένα στοιχείο μπορεί να ανήκει μερικώς σε πολλούς όρους |
+| 4 | FIS κύκλος | Ασαφοποίηση → Κανόνες (AND=min/product) → Aggregation (max) → Αποασαφοποίηση |
+| 5 | Mamdani vs Sugeno | THEN = ασαφές σύνολο (Mamdani) vs σταθερά/εξίσωση (Sugeno) — διαφορετικό αποτέλεσμα |
+| 6 | CPT | Πίνακας δεσμευμένων πιθανοτήτων — συχνότητα παρατήρησης κόμβου δεδομένου γονέα |
+| 7 | Prior vs Posterior | Prior = συχνότητα πληθυσμού (δίνεται), Posterior = υπολογίζεται για συγκεκριμένο instance |
+| 8 | Explaining Away | Νέο evidence «εξηγεί» ήδη γνωστό αποτέλεσμα → μειώνει πιθανότητα άλλης αιτίας |
+| 9 | Influence Diagrams | BN + κόμβοι απόφασης + χρησιμότητα → επιλογή που μεγιστοποιεί EU |
+| 10 | Naive Bayes | P(C|x₁…xₙ) ∝ P(C)·∏P(xᵢ|C) — αυτόματη μάθηση από labeled δεδομένα |
+| 11 | Neuro-Fuzzy | Ερμηνευσιμότητα Fuzzy + αυτόματη βελτιστοποίηση παραμέτρων από δεδομένα |
+| 12 | Knowledge vs Data-driven | Συμπληρωματικές — το ένα δεν αντικαθιστά το άλλο |
 
 ---
 
@@ -1225,19 +1252,19 @@ $$P(\text{Ham} | \text{email}) \propto P(\text{Ham}) \cdot 0.05 \cdot 0.02 = 0.5
 # Βιβλιογραφία & Προτεινόμενη Ανάγνωση
 
 **Κλασικά / θεμελιώδη:**
-- Zadeh, L.A. (1965). Fuzzy sets. *Information and Control*, 8(3), 338–353.
-- Pearl, J. (1988). *Probabilistic Reasoning in Intelligent Systems.* Morgan Kaufmann.
-- Jang, J.-S.R. (1993). ANFIS: Adaptive-Network-Based Fuzzy Inference System. *IEEE Trans. on Systems, Man, and Cybernetics*, 23(3), 665–685.
+- Zadeh, L.A. (1965). Fuzzy sets. *Information and Control*, 8(3), 338–353. — Το πρωτότυπο άρθρο που εισήγαγε την ασαφή λογική.
+- Pearl, J. (1988). *Probabilistic Reasoning in Intelligent Systems.* Morgan Kaufmann. — Το θεμελιώδες βιβλίο των BN, από τον δημιουργό του παραδείγματος συναγερμού.
+- Jang, J.-S.R. (1993). ANFIS: Adaptive-Network-Based Fuzzy Inference System. *IEEE Trans. on Systems, Man, and Cybernetics*, 23(3), 665–685. — Το αρχικό άρθρο για τα Neuro-Fuzzy συστήματα.
 
 **Σύγχρονα εγχειρίδια:**
-- Koller, D. & Friedman, N. (2009). *Probabilistic Graphical Models: Principles and Techniques.* MIT Press.
-- Ross, T.J. (2017). *Fuzzy Logic with Engineering Applications* (4th ed.). Wiley.
-- Darwiche, A. (2009). *Modeling and Reasoning with Bayesian Networks.* Cambridge University Press.
-- Kjaerulff, U.B. & Madsen, A.L. (2013). *Bayesian Networks and Influence Diagrams* (2nd ed.). Springer.
-- Sharda, R., Delen, D. & Turban, E. (2020). *Analytics, Data Science, & Artificial Intelligence: Systems for Decision Support* (11th ed.). Pearson.
+- Ross, T.J. (2017). *Fuzzy Logic with Engineering Applications* (4th ed.). Wiley. — Πλήρης κάλυψη ασαφούς λογικής με εφαρμογές μηχανικής.
+- Darwiche, A. (2009). *Modeling and Reasoning with Bayesian Networks.* Cambridge University Press. — Αλγόριθμοι συμπερασμού σε BN.
+- Koller, D. & Friedman, N. (2009). *Probabilistic Graphical Models: Principles and Techniques.* MIT Press. — Εκτενής θεωρία BN και μάθηση παραμέτρων/δομής.
+- Kjaerulff, U.B. & Madsen, A.L. (2013). *Bayesian Networks and Influence Diagrams* (2nd ed.). Springer. — Εστίαση στα Influence Diagrams και ΣΥΑ.
+- Sharda, R., Delen, D. & Turban, E. (2020). *Analytics, Data Science, & Artificial Intelligence: Systems for Decision Support* (11th ed.). Pearson. — Γενικό εγχειρίδιο ΣΥΑ με κεφάλαια για BN και fuzzy.
 
 **Πρόσφατα άρθρα & surveys:**
-- Scanagatta, M. et al. (2019). A survey on Bayesian network structure learning from data. *Progress in AI*, 8, 425–439.
-- Kahraman, C. et al. (2022). Fuzzy Sets and Extensions: Where We Stand and Where We Go. *Expert Systems with Applications*, 209, 118272.
-- Norouzi, A. et al. (2023). Neuro-fuzzy systems in engineering: A survey of applications and trends. *Engineering Applications of AI*, 123, 106396.
+- Scanagatta, M. et al. (2019). A survey on Bayesian network structure learning from data. *Progress in AI*, 8, 425–439. — Ανασκόπηση μεθόδων μάθησης δομής BN.
+- Kahraman, C. et al. (2022). Fuzzy Sets and Extensions: Where We Stand and Where We Go. *Expert Systems with Applications*, 209, 118272. — Σύγχρονες επεκτάσεις ασαφούς λογικής.
+- Norouzi, A. et al. (2023). Neuro-fuzzy systems in engineering: A survey of applications and trends. *Engineering Applications of AI*, 123, 106396. — Εφαρμογές Neuro-Fuzzy σε μηχανική.
 
