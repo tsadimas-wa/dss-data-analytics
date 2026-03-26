@@ -88,16 +88,24 @@ for f in lecture*.md; do python3 ../scripts/md_to_pdf.py "$f"; done
 ```
 dss-data-analytics/
 ├── lectures/
-│   ├── README.md              ← αυτό το αρχείο
-│   ├── lecture1_el.md         ← Ενότητα 1 (ελληνικά)
-│   ├── lecture1_en.md         ← Ενότητα 1 (αγγλικά)
-│   ├── lecture3_el.md         ← Ενότητα 3 (ελληνικά)
-│   ├── lecture3_en.md         ← Ενότητα 3 (αγγλικά)
-│   ├── lecture4_el.md         ← Ενότητα 4 (ελληνικά)
-│   └── *.html / *.pdf         ← αρχεία εξόδου
+│   ├── README.md                    ← αυτό το αρχείο
+│   ├── lecture1_el.md               ← Ενότητα 1 (ελληνικά)
+│   ├── lecture1_en.md               ← Ενότητα 1 (αγγλικά)
+│   ├── lecture3_el.md               ← Ενότητα 3 (ελληνικά)
+│   ├── lecture3_en.md               ← Ενότητα 3 (αγγλικά)
+│   ├── lecture4_el.md               ← Ενότητα 4 (ελληνικά)
+│   ├── lecture4_en.md               ← Ενότητα 4 (αγγλικά)
+│   ├── lecture5_el.md               ← Ενότητα 5 — Ασαφής Λογική (ελληνικά)
+│   ├── humidity_fuzzification.png   ← διάγραμμα fuzzification (παράγεται από gen_humidity_fuzzy.py)
+│   ├── defuzzification.png          ← διάγραμμα defuzzification centroid (παράγεται από gen_defuzz.py)
+│   ├── mamdani_vs_singleton.png     ← σύγκριση Mamdani/Singleton (παράγεται από gen_mamdani_defuzz.py)
+│   ├── gen_humidity_fuzzy.py        ← script δημιουργίας humidity_fuzzification.png
+│   ├── gen_defuzz.py                ← script δημιουργίας defuzzification.png
+│   ├── gen_mamdani_defuzz.py        ← script δημιουργίας mamdani_vs_singleton.png
+│   └── *.html / *.pdf               ← αρχεία εξόδου
 ├── scripts/
-│   ├── md_to_html.py          ← Markdown → HTML (Marp + Mermaid + logo)
-│   └── md_to_pdf.py           ← Markdown → PDF (μέσω HTML + Chromium)
+│   ├── md_to_html.py                ← Markdown → HTML (Marp + Mermaid + logo)
+│   └── md_to_pdf.py                 ← Markdown → PDF (μέσω HTML + Chromium)
 └── img/
-    └── uniwa_logo.png         ← λογότυπο ΠΑΔΑ (ενσωματώνεται ως base64)
+    └── uniwa_logo.png               ← λογότυπο ΠΑΔΑ (ενσωματώνεται ως base64)
 ```

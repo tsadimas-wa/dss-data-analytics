@@ -45,6 +45,12 @@ dss-data-analytics/
 | English | [README_ENGLISH.md](labs/README_ENGLISH.md) | [lab1_english.ipynb](labs/lab1_english.ipynb) |
 | Ελληνικά | [README_GREEK.md](labs/README_GREEK.md) | [lab1_greek.ipynb](labs/lab1_greek.ipynb) |
 
+### Lab 5 — Fuzzy Logic (Ασαφής Λογική)
+
+| Language | Notebook |
+|---|---|
+| Ελληνικά | [lab5_el.ipynb](labs/lab5_el.ipynb) |
+
 ### Lab — Protégé & Ontologies
 
 | Language | Guide |
