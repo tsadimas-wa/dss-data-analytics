@@ -72,6 +72,6 @@ inactive = mpatches.Patch(color='#9E9E9E', alpha=0.4, label='Ανενεργός 
 ax.legend(handles=[active, inactive], fontsize=10, loc='upper left')
 
 fig.tight_layout()
-out = 'lectures/defuzzification.png'
+out = 'lectures_material/defuzzification.png'
 fig.savefig(out, dpi=150, bbox_inches='tight')
 print(f'Saved: {out}')

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i \"s|''lectures/influence_diagram.png''|''lectures_material/influence_diagram.png''|g\" gen_influence_diagram.py)",
+      "Bash(sed -i \"s|''lectures/server_bn_graph.png''|''lectures_material/server_bn_graph.png''|g;:*)",
+      "Bash(sed -i \"s|''lectures/bayes_credit_net.png''|''lectures_material/bayes_credit_net.png''|g\" gen_bayes_net.py)",
+      "Bash(sed -i \"s|''lectures/mamdani_vs_singleton.png''|''lectures_material/mamdani_vs_singleton.png''|g\" gen_mamdani_defuzz.py)",
+      "Bash(sed -i \"s|''lectures/defuzzification.png''|''lectures_material/defuzzification.png''|g\" gen_defuzz.py)"
+    ]
+  }
+}

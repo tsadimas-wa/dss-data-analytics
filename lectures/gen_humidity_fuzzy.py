@@ -68,6 +68,6 @@ ax.grid(True, alpha=0.3)
 ax.legend(loc='upper right', fontsize=10)
 
 fig.tight_layout()
-out = 'lectures/humidity_fuzzification.png'
+out = 'lectures_material/humidity_fuzzification.png'
 fig.savefig(out, dpi=150, bbox_inches='tight')
 print(f'Saved: {out}')

@@ -122,6 +122,6 @@ ax.grid(True, alpha=0.3)
 
 fig.suptitle('Defuzzification: Mamdani vs Sugeno/Singleton', fontsize=13, fontweight='bold', y=1.01)
 fig.tight_layout()
-out = 'lectures/mamdani_vs_singleton.png'
+out = 'lectures_material/mamdani_vs_singleton.png'
 fig.savefig(out, dpi=150, bbox_inches='tight')
 print(f'Saved: {out}')

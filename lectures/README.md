@@ -96,13 +96,24 @@ dss-data-analytics/
 │   ├── lecture4_el.md               ← Ενότητα 4 (ελληνικά)
 │   ├── lecture4_en.md               ← Ενότητα 4 (αγγλικά)
 │   ├── lecture5_el.md               ← Ενότητα 5 — Ασαφής Λογική (ελληνικά)
-│   ├── humidity_fuzzification.png   ← διάγραμμα fuzzification (παράγεται από gen_humidity_fuzzy.py)
-│   ├── defuzzification.png          ← διάγραμμα defuzzification centroid (παράγεται από gen_defuzz.py)
-│   ├── mamdani_vs_singleton.png     ← σύγκριση Mamdani/Singleton (παράγεται από gen_mamdani_defuzz.py)
 │   ├── gen_humidity_fuzzy.py        ← script δημιουργίας humidity_fuzzification.png
 │   ├── gen_defuzz.py                ← script δημιουργίας defuzzification.png
 │   ├── gen_mamdani_defuzz.py        ← script δημιουργίας mamdani_vs_singleton.png
+│   ├── gen_bayes_net.py             ← script δημιουργίας bayes_credit_net.png
+│   ├── gen_server_bn.py             ← script δημιουργίας server_bn_graph.png + server_bn_cpts.png
+│   ├── gen_influence_diagram.py     ← script δημιουργίας influence_diagram.png
 │   └── *.html / *.pdf               ← αρχεία εξόδου
+├── lectures_material/               ← εικόνες που χρησιμοποιούνται στις διαλέξεις
+│   ├── humidity_fuzzification.png   ← διάγραμμα fuzzification (παράγεται από gen_humidity_fuzzy.py)
+│   ├── defuzzification.png          ← διάγραμμα defuzzification centroid (παράγεται από gen_defuzz.py)
+│   ├── mamdani_vs_singleton.png     ← σύγκριση Mamdani/Singleton (παράγεται από gen_mamdani_defuzz.py)
+│   ├── bayes_credit_net.png         ← διάγραμμα δικτύου Bayes (παράγεται από gen_bayes_net.py)
+│   ├── server_bn_graph.png          ← γράφος BN διάγνωσης server (παράγεται από gen_server_bn.py)
+│   ├── server_bn_cpts.png           ← CPT πίνακες BN server (παράγεται από gen_server_bn.py)
+│   ├── influence_diagram.png        ← διάγραμμα αποφάσεων (παράγεται από gen_influence_diagram.py)
+│   ├── fuzzy-control-system.png     ← αρχιτεκτονική FIS
+│   ├── bayes-ex-1.png               ← παράδειγμα Bayes
+│   └── semantic_web_layer_cake.png  ← Semantic Web layer cake (lecture4)
 ├── scripts/
 │   ├── md_to_html.py                ← Markdown → HTML (Marp + Mermaid + logo)
 │   └── md_to_pdf.py                 ← Markdown → PDF (μέσω HTML + Chromium)

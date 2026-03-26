@@ -224,7 +224,7 @@ THEN  πιθανή_διάγνωση = "Γρίπη"
 <!-- _class: diagram -->
 # Semantic Web — Layer Cake (Tim Berners-Lee)
 
-![w:460](semantic_web_layer_cake.png)
+![w:460](../lectures_material/semantic_web_layer_cake.png)
 
 ---
 
