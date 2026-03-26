@@ -3,7 +3,7 @@ import matplotlib.patches as mpatches
 from matplotlib.patches import FancyArrowPatch
 import numpy as np
 
-fig, ax = plt.subplots(figsize=(11, 7))
+fig, ax = plt.subplots(figsize=(14, 9))
 ax.set_xlim(0, 10)
 ax.set_ylim(-0.2, 6.8)
 ax.axis('off')
@@ -35,10 +35,10 @@ for key, (label, (x, y), color, prob) in nodes.items():
     )
     ax.add_patch(box)
     ax.text(x, y, label, ha='center', va='center',
-            fontsize=10, color='white', fontweight='bold', zorder=4)
+            fontsize=16, color='white', fontweight='bold', zorder=4)
     # Probability label below node
     ax.text(x, y - 0.60, prob, ha='center', va='top',
-            fontsize=7.2, color='#37474F',
+            fontsize=10, color='#37474F',
             bbox=dict(boxstyle='round,pad=0.2', facecolor='#F5F5F5',
                       edgecolor=color, linewidth=0.8, alpha=0.9),
             zorder=4)
@@ -78,7 +78,7 @@ arrow(ax, *node_patches['risk'],    *node_patches['approval'])
 
 # CPT mini-table next to Ρίσκο node
 cpt_x, cpt_y = 8.5, 1.6
-ax.text(cpt_x, cpt_y + 0.7, 'CPT — P(Ρίσκο = Υψηλό)', fontsize=8.5,
+ax.text(cpt_x, cpt_y + 0.7, 'CPT — P(Ρίσκο = Υψηλό)', fontsize=12,
         ha='center', fontweight='bold', color='#B71C1C')
 rows = [
     ('Πιστοληπτ.', 'Αναλογία', 'P'),
@@ -99,7 +99,7 @@ for i, row in enumerate(rows):
         ax.add_patch(rect)
     for cx, val in zip(col_x, row):
         ax.text(cx, y_row, val, ha='center', va='center',
-                fontsize=8, fontweight='bold' if bold else 'normal',
+                fontsize=9, fontweight='bold' if bold else 'normal',
                 color='#212121')
 
 # Legend
@@ -109,11 +109,11 @@ legend_items = [
     mpatches.Patch(color='#B71C1C', label='Κόμβος κινδύνου'),
     mpatches.Patch(color='#2E7D32', label='Έξοδος (απόφαση)'),
 ]
-ax.legend(handles=legend_items, loc='lower left', fontsize=8.5,
+ax.legend(handles=legend_items, loc='lower left', fontsize=12,
           framealpha=0.9, edgecolor='#ccc')
 
-ax.set_title('Δίκτυο Bayes — Αξιολόγηση Πιστωτικού Ρίσκου', fontsize=13,
-             fontweight='bold', pad=10)
+# ax.set_title('Δίκτυο Bayes — Αξιολόγηση Πιστωτικού Ρίσκου', fontsize=18,
+#              fontweight='bold', pad=10)
 
 fig.tight_layout()
 out = 'lectures_material/bayes_credit_net.png'
