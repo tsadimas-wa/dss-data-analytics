@@ -33,6 +33,7 @@ def arrow(ax, x1, y1, x2, y2, off=0.47):
 # IMAGE 1 — Network graph
 # ══════════════════════════════════════════════════════════════════════════════
 fig1, ax = plt.subplots(figsize=(9, 7))
+fig1.subplots_adjust(left=0.01, right=0.99, top=0.99, bottom=0.01)
 ax.set_xlim(0, 8); ax.set_ylim(0, 8); ax.axis('off')
 
 pos = {'D': (2.0, 6.5), 'H': (6.0, 6.5), 'A': (4.0, 4.5), 'P': (4.0, 2.3)}
@@ -62,18 +63,16 @@ for xi, lbl, col in [
     ax.text(xi, 0.575, lbl, ha='center', va='center',
             fontsize=10.5, color=col, fontweight='bold', zorder=4)
 
+# Legend — top right, away from nodes
 legend = [
     mpatches.Patch(color=C_ROOT,  label='Root — prior γνωστό'),
     mpatches.Patch(color=C_INTER, label='Ενδιάμεση — CPT 2'),
     mpatches.Patch(color=C_OBS,   label='Observed evidence — CPT 3'),
 ]
-ax.legend(handles=legend, loc='lower left', fontsize=9.5,
-          framealpha=0.9, edgecolor='#ccc')
+ax.legend(handles=legend, loc='upper center', fontsize=9.5,
+          framealpha=0.9, edgecolor='#ccc', ncol=3,
+          bbox_to_anchor=(0.5, 0.18))
 
-ax.set_title('Δίκτυο Bayes — Διάγνωση Server', fontsize=14,
-             fontweight='bold', pad=10)
-
-fig1.tight_layout()
 fig1.savefig('lectures_material/server_bn_graph.png', dpi=150, bbox_inches='tight')
 print('Saved: server_bn_graph.png')
 
