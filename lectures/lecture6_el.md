@@ -158,37 +158,10 @@ style: |
 
 ---
 
+<!-- _class: diagram -->
 # Δέντρο Απόφασης — Διάγραμμα (Customer Churn)
 
-```mermaid
-flowchart TD
-    A["🌳 Tenure &lt; 12 μήνες;\nΡίζα"] -->|ΝΑΙ — νέος πελάτης| B["MonthlyCharges > 70€;"]
-    A -->|ΌΧΙ — παλιός πελάτης| C["Contract =\nMonth-to-month;"]
-
-    B -->|ΝΑΙ| D["✗ ΑΚΥΡΩΣΗ\nnέος + ακριβό πακέτο"]
-    B -->|ΌΧΙ| E["Contract =\nMonth-to-month;"]
-
-    E -->|ΝΑΙ| F["✗ ΑΚΥΡΩΣΗ\nχωρίς δέσμευση"]
-    E -->|ΌΧΙ| G["✓ ΠΑΡΑΜΟΝΗ\nετήσιο συμβόλαιο"]
-
-    C -->|ΝΑΙ| H["MonthlyCharges > 85€;"]
-    C -->|ΌΧΙ| I["✓ ΠΑΡΑΜΟΝΗ\nδεσμευμένος"]
-
-    H -->|ΝΑΙ| J["✗ ΑΚΥΡΩΣΗ\nακριβό + χωρίς δέσμευση"]
-    H -->|ΌΧΙ| K["✓ ΠΑΡΑΜΟΝΗ\nμέτρια χρέωση"]
-
-    style A fill:#fff3cd,stroke:#856404,color:#000
-    style B fill:#cfe2ff,stroke:#0a58ca,color:#000
-    style C fill:#cfe2ff,stroke:#0a58ca,color:#000
-    style E fill:#cfe2ff,stroke:#0a58ca,color:#000
-    style H fill:#cfe2ff,stroke:#0a58ca,color:#000
-    style D fill:#f8d7da,stroke:#842029,color:#000
-    style F fill:#f8d7da,stroke:#842029,color:#000
-    style J fill:#f8d7da,stroke:#842029,color:#000
-    style G fill:#d1e7dd,stroke:#0f5132,color:#000
-    style I fill:#d1e7dd,stroke:#0f5132,color:#000
-    style K fill:#d1e7dd,stroke:#0f5132,color:#000
-```
+![Decision Tree Churn](../img/lec6/decision_tree.png)
 
 ---
 
