@@ -611,6 +611,7 @@ $$\text{SplitInfo}(S, A) = -\sum_{v} \frac{|S_v|}{|S|} \log_2 \frac{|S_v|}{|S|}$
 > **Κανόνας:** Κλαδεύουμε αν η απλούστερη εκδοχή έχει **ίδια ή καλύτερη** απόδοση στο validation set. Αρχή της λιτότητας: το απλούστερο μοντέλο που εξηγεί τα δεδομένα είναι το προτιμότερο.
 
 ---
+<!-- _class: xsmall -->
 
 # Εποπτευόμενη Μάθηση: Random Forests
 
@@ -681,6 +682,7 @@ $$\text{SplitInfo}(S, A) = -\sum_{v} \frac{|S_v|}{|S|} \log_2 \frac{|S_v|}{|S|}$
 </div>
 
 ---
+<!-- _class: xsmall -->
 
 # Εποπτευόμενη Μάθηση: Logistic Regression
 
