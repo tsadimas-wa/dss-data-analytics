@@ -252,6 +252,8 @@ style: |
 ![Decision Tree Churn](../img/lec6/decision_tree.png)
 
 
+
+
 ---
 
 <!-- _class: xsmall -->
