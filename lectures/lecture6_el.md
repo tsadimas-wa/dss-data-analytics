@@ -63,28 +63,14 @@ style: |
 <!-- _class: xsmall -->
 # Ενότητα 6 — Περίληψη
 
-1. Τι είναι η Προβλεπτική Αναλυτική; — Τα 4 επίπεδα αναλυτικής
-2. Κατηγορίες Μηχανικής Μάθησης
-3. Εποπτευόμενη Μάθηση: Δέντρα Απόφασης (Decision Trees)
-4. Δέντρο Απόφασης — Τυπικός Ορισμός & Φάσεις Κατασκευής
-5. Τύποι Διαχωρισμών (Splits)
-6. Δέντρο Απόφασης — Διάγραμμα
-7. Δέντρα Απόφασης: Ταξινόμηση Νέου Δεδομένου
-8. Αλγόριθμοι Δέντρων Απόφασης — ID3, CART, C4.5
-9. Κριτήριο Διαχωρισμού: Gini Impurity (CART)
-10. Κριτήριο Διαχωρισμού: Εντροπία & Κέρδος Πληροφορίας (ID3)
-11. Κριτήριο Διαχωρισμού: GainRatio (C4.5)
-12. Κλάδεμα Δέντρου (Pruning)
-13. Εποπτευόμενη Μάθηση: Random Forests & Bagging
-13. Εποπτευόμενη Μάθηση: Support Vector Machines (SVM)
-14. Μη Εποπτευόμενη Μάθηση: K-Means Clustering
-15. Overfitting, Underfitting & Cross-Validation
-16. Αξιολόγηση Μοντέλων: Πίνακας Σύγχυσης (Confusion Matrix)
-17. Βασικές Μετρικές: Accuracy, Precision, Recall, F1
-18. Το Δίλημμα Precision–Recall
-19. Καμπύλη ROC & AUC
-20. Σύγκριση Αλγορίθμων
-21. Εργαστήριο: Πρόβλεψη Ακυρώσεων & Churn Analysis
+1. Προβλεπτική Αναλυτική & Κατηγορίες Μηχανικής Μάθησης
+2. Δέντρα Απόφασης — Δομή, Αλγόριθμοι & Κριτήρια Διαχωρισμού
+3. Κλάδεμα (Pruning)
+4. Άλλοι Αλγόριθμοι Εποπτευόμενης Μάθησης (Random Forests, SVM, k-NN, Naive Bayes, Logistic Regression)
+5. Μη Εποπτευόμενη Μάθηση: K-Means Clustering
+6. Overfitting, Underfitting & Cross-Validation
+7. Αξιολόγηση Μοντέλων (Confusion Matrix, Precision, Recall, ROC)
+8. Εργαστήριο: Churn Analysis
 
 ---
 
@@ -997,6 +983,8 @@ $$P(\text{κλάση} \mid \mathbf{x}) = \frac{P(\mathbf{x} \mid \text{κλάσ�
 > Δεν υπάρχει «καλύτερος» αλγόριθμος — **No Free Lunch Theorem** (Wolpert, 1996): κάθε αλγόριθμος υπερέχει σε κάποια προβλήματα και υστερεί σε άλλα.
 
 ---
+
+<!-- _class: xsmall -->
 
 # Εργαστήριο: Πρόβλεψη Ακυρώσεων & Churn Analysis
 
