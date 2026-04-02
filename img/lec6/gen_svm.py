@@ -13,8 +13,8 @@ fig.patch.set_facecolor('white')
 # ── Panel 1: Linear SVM with margin ──────────────────────────────────────────
 # Two linearly separable classes
 n = 30
-X1 = np.random.randn(n, 2) + np.array([-1.8, 1.5])   # class 0 (blue)
-X2 = np.random.randn(n, 2) + np.array([1.8, -1.5])   # class 1 (red)
+X1 = 0.6 * np.random.randn(n, 2) + np.array([-1.5, -1.5])   # class 0 (blue), x+y ≈ -3
+X2 = 0.6 * np.random.randn(n, 2) + np.array([1.5,  1.5])    # class 1 (red),  x+y ≈ +3
 
 ax1.scatter(X1[:, 0], X1[:, 1], color='#1565C0', s=50, label='Παραμονή', zorder=3, alpha=0.8)
 ax1.scatter(X2[:, 0], X2[:, 1], color='#C62828', s=50, label='Ακύρωση', zorder=3, alpha=0.8)
@@ -91,6 +91,6 @@ ax2.set_ylabel('Χαρακτηριστικό 2', fontsize=9)
 ax2.grid(alpha=0.2)
 
 plt.tight_layout()
-out = '/home/rg/Teaching/uniwa/dss-data-analytics/img/lec6/svm_illustration.png'
+out = '/home/rg/Teaching/uniwa/dss/dss-data-analytics/img/lec6/svm_illustration.png'
 plt.savefig(out, dpi=150, bbox_inches='tight', facecolor='white')
 print(f'Saved → {out}')
