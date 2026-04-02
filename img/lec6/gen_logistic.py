@@ -51,7 +51,7 @@ ax2.scatter(X1[:, 0], X1[:, 1], color='#C62828', s=50, label='Ακύρωση',  
 
 # Decision boundary: w·x = 0  →  x2 = -x1  (approx)
 xx = np.linspace(-4.5, 4.5, 200)
-yy = -xx
+yy = xx
 ax2.plot(xx, yy, 'k-', lw=2.0, label='Όριο Απόφασης (P=0.5)', zorder=4)
 
 # Gradient fill to suggest probability
@@ -72,6 +72,6 @@ ax2.set_ylabel('Χαρακτηριστικό 2', fontsize=9)
 ax2.grid(alpha=0.2)
 
 plt.tight_layout()
-out = '/home/rg/Teaching/uniwa/dss-data-analytics/img/lec6/logistic_illustration.png'
+out = '/home/rg/Teaching/uniwa/dss/dss-data-analytics/img/lec6/logistic_illustration.png'
 plt.savefig(out, dpi=150, bbox_inches='tight', facecolor='white')
 print(f'Saved → {out}')
