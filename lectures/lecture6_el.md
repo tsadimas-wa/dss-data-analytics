@@ -1082,12 +1082,14 @@ $$\text{CI}_{95\%} = \hat{p} \pm 1{,}96 \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}
 
 ---
 
-# Από το Sigmoid στην Καμπύλη ROC
+# Από τις Κατανομές Σκορ στην Καμπύλη ROC
 
-![w:980](../img/lec6/sigmoid_roc.png)
+<!-- _class: xxsmall -->
 
-> **Αριστερά:** Κάθε threshold $t$ κόβει το sigmoid οριζόντια — από εκεί και πάνω → «Ακύρωση».
-> **Δεξιά:** Κάθε $t$ δίνει ένα σημείο (FPR, TPR) στην καμπύλη ROC. Η ROC είναι απλώς η συλλογή **όλων** αυτών των σημείων για $t \in [0,1]$.
+![w:750](../img/lec6/score_dist_roc.png)
+
+> **Κάθε panel:** μπλε = Παραμονή, κόκκινο = Ακύρωση. Το threshold (κατακόρυφη γραμμή) ορίζει τις 4 περιοχές: **TN** (μπλε αριστερά), **TP** (κόκκινο δεξιά), **FN** (κόκκινο αριστερά — χάσαμε), **FP** (μπλε δεξιά — ψεύτικος συναγερμός).
+> **Κάτω δεξιά:** κάθε threshold δίνει ένα σημείο (FPR, TPR) — η ROC είναι η συλλογή **όλων** αυτών.
 
 ---
 
@@ -1679,14 +1681,11 @@ pd.get_dummies(df, columns=['Συμβόλαιο'],
 
 **Πότε να επιλέξω τι;**
 
-* **Decision Tree:** Εξηγησιμότητα κρίσιμη (ιατρική, νομική απόφαση)
-* **Random Forest:** «Ασφαλής» επιλογή για tabular data — εξαιρετική ισορροπία
-* **XGBoost / LightGBM:** De facto πρότυπο βιομηχανίας για tabular data — υψηλότερη ακρίβεια από Random Forest, κερδίζει σχεδόν πάντα σε Kaggle & επιχειρηματικά προβλήματα (fraud, churn, credit scoring)
-* **Logistic Reg.:** Baseline & όταν χρειάζεται calibrated πιθανότητα (π.χ. πιστοληπτική ικανότητα)
+* **Decision Tree:** Εξηγησιμότητα κρίσιμη (ιατρική, νομική απόφαση) - * **Random Forest:** «Ασφαλής» επιλογή για tabular data — εξαιρετική ισορροπία
+* **XGBoost / LightGBM:** De facto πρότυπο βιομηχανίας για tabular data — υψηλότερη ακρίβεια από Random Forest, κερδίζει σχεδόν πάντα σε Kaggle & επιχειρηματικά προβλήματα (fraud, churn, credit scoring) - * **Logistic Reg.:** Baseline & όταν χρειάζεται calibrated πιθανότητα (π.χ. πιστοληπτική ικανότητα)
 * **SVM:** Υψηλοδιάστατα δεδομένα (text classification), μικρά datasets
 * **k-NN:** Απλή baseline, μικρά datasets, όταν τα δεδομένα δεν αλλάζουν συχνά
-* **Naive Bayes:** Ανάλυση κειμένου, spam filtering, πολύ λίγα δεδομένα
-* **K-Means:** Εξερεύνηση, segmentation, όταν δεν έχουμε labels
+* **Naive Bayes:** Ανάλυση κειμένου, spam filtering, πολύ λίγα δεδομένα - * **K-Means:** Εξερεύνηση, segmentation, όταν δεν έχουμε labels
 
 > Δεν υπάρχει «καλύτερος» αλγόριθμος — **No Free Lunch Theorem** (Wolpert, 1996): κάθε αλγόριθμος υπερέχει σε κάποια προβλήματα και υστερεί σε άλλα.
 
