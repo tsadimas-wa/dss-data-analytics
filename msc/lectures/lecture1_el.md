@@ -2,8 +2,9 @@
 marp: true
 theme: default
 paginate: true
+math: katex
 header: 'Ενότητα 1 & 2: Οργάνωση Επιχειρήσεων & Διοίκηση Λειτουργιών'
-footer: 'Πανεπιστήμιο Δυτικής Αττικής (ΠΑΔΑ) — ΠΜΣ Διοίκηση Επιχειρήσεων'
+footer: 'Πανεπιστήμιο Δυτικής Αττικής (ΠΑΔΑ) — Συστήματα Αποφάσεων, Διαχείριση Διεργασιών και Επιχειρηματική Ανάλυση'
 style: |
   section {
     font-size: 22px;
@@ -11,19 +12,54 @@ style: |
   section.small {
     font-size: 18px;
   }
+
   section.xsmall {
-    font-size: 15px;
+    font-size: 16px;
+  }
+
+  section.xxsmall {
+    font-size: 14px;
+  }
+
+
+  /* Two-column layout */
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  /* Slide με μόνο διάγραμμα — μεγάλο max-height εικόνας */
+  section.diagram img {
+    max-height: 500px !important;
+    max-width: 94% !important;
+    display: block;
+    margin: 0 auto;
+  }
+  /* Slide με διάγραμμα + κείμενο */
+  section.diagram-sm img {
+    max-height: 320px !important;
+    max-width: 94% !important;
+    display: block;
+    margin: 0 auto;
   }
 ---
 
-# ΠΜΣ — Διοίκηση Επιχειρήσεων
-## Ενότητα 1: Το Επιχειρηματικό Περιβάλλον, Οργάνωση και Διοίκηση
+<div style="text-align:center; margin-bottom:16px;">
 
-**Καθηγητής:** Ανάργυρος Τσαδήμας
-**Ίδρυμα:** Πανεπιστήμιο Δυτικής Αττικής (ΠΑΔΑ)
+![w:280](../img/shared/uniwa_logo.png)
+
+</div>
+
+# Συστήματα Αποφάσεων, Διαχείριση Διεργασιών και Επιχειρηματική Ανάλυση
+**Ενότητα 1: Το Επιχειρηματικό Περιβάλλον, Οργάνωση και Διοίκηση**
+Πανεπιστήμιο Δυτικής Αττικής
+
+**Διδάσκων:** Ανάργυρος Τσαδήμας (<tsadimas@uniwa.gr>)
 
 ---
 
+<!-- _class: xsmall -->
 # Ενότητα 1 — Περίγραμμα
 
 1. Η Επιχείρηση ως Οικονομικός Οργανισμός και το Περιβάλλον της
@@ -222,14 +258,21 @@ style: |
 
 ---
 
-# ΠΜΣ — Διοίκηση Επιχειρήσεων
-## Ενότητα 2: Στρατηγική και Διοίκηση Επιχειρησιακών Λειτουργιών
+<div style="text-align:center; margin-bottom:16px;">
 
-**Καθηγητής:** Ανάργυρος Τσαδήμας
-**Ίδρυμα:** Πανεπιστήμιο Δυτικής Αττικής (ΠΑΔΑ)
+![w:280](../img/shared/uniwa_logo.png)
+
+</div>
+
+# Συστήματα Αποφάσεων, Διαχείριση Διεργασιών και Επιχειρηματική Ανάλυση
+**Ενότητα 2: Στρατηγική και Διοίκηση Επιχειρησιακών Λειτουργιών**
+Πανεπιστήμιο Δυτικής Αττικής
+
+**Διδάσκων:** Ανάργυρος Τσαδήμας (<tsadimas@uniwa.gr>)
 
 ---
 
+<!-- _class: xsmall -->
 # Ενότητα 2 — Περίγραμμα
 
 1. Εισαγωγή στη Διοίκηση Λειτουργιών (Operations Management)
