@@ -46,75 +46,79 @@ def save(fig, path):
 # ── 1. Alphabet / Google ──────────────────────────────────────────────────────
 
 def make_alphabet():
-    fig, ax = plt.subplots(figsize=(13, 7))
+    fig, ax = plt.subplots(figsize=(15, 8.5))
     fig.patch.set_facecolor(BG)
     ax.set_facecolor(BG)
-    ax.set_xlim(0, 13); ax.set_ylim(0, 7)
+    ax.set_xlim(0, 15); ax.set_ylim(0, 8.5)
     ax.axis('off')
     ax.set_title("Alphabet Inc. — Εταιρική Δομή (Holding)", color=TITLE,
                  fontsize=13, fontweight='bold', pad=12)
 
-    # CEO top
-    draw_box(ax, 6.5, 6.3, 2.8, 0.7,
-             "Sundar Pichai\nCEO, Alphabet & Google",
-             color='#1a3e6e', fontsize=8.5)
+    # ── CEO ──
+    draw_box(ax, 7.5, 7.8, 3.2, 0.72,
+             "Sundar Pichai — CEO, Alphabet & Google",
+             color='#1a3e6e', fontsize=9)
 
-    # Level 2: Google + Other Bets
-    draw_box(ax, 3.5, 5.0, 2.6, 0.65,
-             "Google LLC\n(Core Business)", color='#1565C0', fontsize=8.5)
-    draw_box(ax, 9.5, 5.0, 2.6, 0.65,
-             "Other Bets\n(Moonshots)", color='#6A1B9A', fontsize=8.5)
+    # ── Level 2: Google LLC | Other Bets ──
+    # Google centered over left cluster (x≈3.5), Other Bets over right (x≈11.5)
+    draw_box(ax, 3.5, 6.5, 2.8, 0.68,
+             "Google LLC\n(Core Business)", color='#1565C0', fontsize=9)
+    draw_box(ax, 11.5, 6.5, 2.8, 0.68,
+             "Other Bets\n(Moonshots)", color='#6A1B9A', fontsize=9)
+    draw_line(ax, 7.5, 7.44, 3.5, 6.84)
+    draw_line(ax, 7.5, 7.44, 11.5, 6.84)
 
-    draw_line(ax, 6.5, 5.95, 3.5, 5.33)
-    draw_line(ax, 6.5, 5.95, 9.5, 5.33)
-
-    # Google divisions
-    google_divs = [
-        (1.1, "Search &\nAds",     '#1976D2'),
-        (2.8, "YouTube",           '#1976D2'),
-        (4.5, "Android /\nChrome", '#1976D2'),
-        (6.2, "Google\nCloud",     '#0277BD'),
-        (7.9, "Maps &\nHardware",  '#1976D2'),
+    # ── Google divisions: 5 boxes, step = 1.4, box_w = 1.25 ──
+    # centers: 0.8, 2.2, 3.6, 5.0, 6.4  → gap = 0.15 between each
+    gdiv = [
+        (0.8,  "Search &\nAds",     '#1976D2'),
+        (2.2,  "YouTube",           '#1976D2'),
+        (3.6,  "Android /\nChrome", '#1976D2'),
+        (5.0,  "Google Cloud",      '#0277BD'),
+        (6.4,  "Maps &\nHardware",  '#1976D2'),
     ]
-    for x, label, col in google_divs:
-        draw_box(ax, x, 3.7, 1.5, 0.7, label, color=col, fontsize=7.5)
-        draw_line(ax, 3.5, 4.68, x, 4.05)
+    for x, label, col in gdiv:
+        draw_box(ax, x, 5.1, 1.25, 0.7, label, color=col, fontsize=7.8)
+        draw_line(ax, 3.5, 6.16, x, 5.45)
 
-    # Other Bets
-    other_bets = [
-        (8.5,  "Waymo\n(Self-driving)", '#8E24AA'),
-        (10.0, "Verily\n(Life Sciences)",'#8E24AA'),
-        (11.5, "DeepMind\n(AI Research)",'#7B1FA2'),
+    # ── Other Bets: 3 boxes, step = 1.7, box_w = 1.4 ──
+    # centers: 9.9, 11.6, 13.3 → gap = 0.3
+    obets = [
+        (9.9,  "Waymo\n(Self-driving)", '#8E24AA'),
+        (11.6, "Verily\n(Life Sciences)",'#8E24AA'),
+        (13.3, "DeepMind\n(AI Research)",'#7B1FA2'),
     ]
-    for x, label, col in other_bets:
-        draw_box(ax, x, 3.7, 1.4, 0.7, label, color=col, fontsize=7.5)
-        draw_line(ax, 9.5, 4.68, x, 4.05)
+    for x, label, col in obets:
+        draw_box(ax, x, 5.1, 1.4, 0.7, label, color=col, fontsize=7.8)
+        draw_line(ax, 11.5, 6.16, x, 5.45)
 
-    # Google support functions
+    # ── Support functions: 4 boxes under Google, step = 1.65, box_w = 1.5 ──
+    # centers: 0.9, 2.55, 4.2, 5.85 → gap = 0.15
     support = [
-        (1.8, "Finance &\nStrategy",   '#455A64'),
-        (3.8, "People\nOps (HR)",      '#455A64'),
-        (5.8, "Legal &\nCompliance",   '#455A64'),
-        (7.8, "Engineering\n& Research",'#455A64'),
+        (0.9,  "Finance &\nStrategy"),
+        (2.55, "People\nOps (HR)"),
+        (4.2,  "Legal &\nCompliance"),
+        (5.85, "Engineering\n& Research"),
     ]
-    for x, label, col in support:
-        draw_box(ax, x, 2.3, 1.5, 0.65, label, color=col, fontsize=7.2)
+    for x, label in support:
+        draw_box(ax, x, 3.6, 1.5, 0.7, label, color='#455A64', fontsize=7.5)
 
-    ax.text(4.5, 1.6, "Υπηρεσίες Υποστήριξης (Google LLC)",
+    ax.text(3.4, 2.95,
+            "── Υπηρεσίες Υποστήριξης Google LLC ──",
             ha='center', va='center', fontsize=7.5, color=ANNOT, style='italic')
 
-    # Legend
+    # ── Legend — πάνω δεξιά, εκτός κουτιών ──
     legend_items = [
         mpatches.Patch(color='#1565C0', label='Google Core'),
         mpatches.Patch(color='#0277BD', label='Google Cloud'),
         mpatches.Patch(color='#8E24AA', label='Other Bets'),
         mpatches.Patch(color='#455A64', label='Support Functions'),
     ]
-    ax.legend(handles=legend_items, loc='lower right', fontsize=7.5,
+    ax.legend(handles=legend_items, loc='upper right', fontsize=8,
               facecolor='#f5f5f5', labelcolor='#222222', edgecolor='#cccccc',
-              framealpha=1.0)
+              framealpha=1.0, bbox_to_anchor=(0.99, 0.52))
 
-    ax.text(0.1, 0.15,
+    ax.text(0.01, 0.02,
             "Πηγή: Alphabet Inc. 10-K Annual Report 2023 · alphabet.com",
             ha='left', va='bottom', fontsize=6.5, color=SOURCE,
             transform=ax.transAxes)
