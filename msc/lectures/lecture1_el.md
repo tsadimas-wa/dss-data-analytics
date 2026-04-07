@@ -953,6 +953,30 @@ $$\text{Ηγεσία} = \text{Διάθεση} \times \text{Ικανότητα} \
 
 ---
 
+<!-- _class: xsmall -->
+
+# Ενότητα 1 — Βιβλιογραφία
+
+**Κύριο Σύγγραμμα**
+
+> **Robbins, S.P. & Coulter, M.** (2018). *Management*, 14th ed. Pearson.
+> Το πλέον διαδεδομένο εγχειρίδιο διοίκησης παγκοσμίως — καλύπτει PESTEL, SWOT, οργανωτικές δομές, θεωρίες management, HRM, ηγεσία, κινητοποίηση.
+
+**Συμπληρωματικές Πηγές**
+
+| Συγγραφέας | Έργο | Θέμα |
+|---|---|---|
+| Chandler, A. | *Strategy and Structure* (1962). MIT Press | Τμηματική δομή |
+| Mintzberg, H. | *The Structuring of Organizations* (1979). Prentice Hall | Δομές & ρόλοι |
+| Porter, M.E. | *Competitive Strategy* (1980). Free Press | Ανταγωνιστική στρατηγική |
+| Taylor, F.W. | *Principles of Scientific Management* (1911) | Επιστημονική Διοίκηση |
+| Davis, S. & Lawrence, P. | *Matrix* (1977). Addison-Wesley | Μητρωική δομή |
+| Katzenbach, J. & Smith, D. | *The Wisdom of Teams* (1993). Harvard Business Review Press | Εργασιακές ομάδες |
+| Blake, R. & Mouton, J. | *The Managerial Grid* (1964). Gulf Publishing | Ηγεσία |
+| Maslow, A. | *Motivation and Personality* (1954). Harper & Row | Ιεραρχία αναγκών |
+
+---
+
 <div style="text-align:center; margin-bottom:16px;">
 
 ![w:280](../img/shared/uniwa_logo.png)
@@ -1553,3 +1577,29 @@ $$EOQ = \sqrt{\frac{2 \cdot D \cdot S}{H}}$$
 | Six Sigma / DMAIC | Define-Measure-Analyze-Improve-Control | George (2002) |
 | TQM | Πελάτης, Kaizen, Δεδομένα, SPC | Deming (1986) |
 | KPIs Λειτουργιών | OEE, Cycle Time, OTIF, Inventory Turnover | Slack et al. (2019) |
+
+---
+
+<!-- _class: xsmall -->
+
+# Ενότητα 2 — Βιβλιογραφία
+
+**Κύριο Σύγγραμμα**
+
+> **Slack, N., Brandon-Jones, A. & Johnston, R.** (2019). *Operations Management*, 9th ed. Pearson.
+> Θεμελιώδες εγχειρίδιο Διοίκησης Λειτουργιών — καλύπτει σχεδιασμό παραγωγής, capacity, αποθέματα, ποιότητα, SCM και KPIs.
+
+**Συμπληρωματικές Πηγές**
+
+| Συγγραφέας | Έργο | Θέμα |
+|---|---|---|
+| Porter, M.E. | *Competitive Advantage* (1985). Free Press | Αλυσίδα Αξίας |
+| Hayes, R. & Wheelwright, S. | "Link Manufacturing Process and Product Life Cycles", *HBR* (1979) | Product-Process Matrix |
+| Chopra, S. & Meindl, P. | *Supply Chain Management*, 5th ed. (2013). Pearson | SCM & 5 Drivers |
+| Lee, H., Padmanabhan, V. & Whang, S. | "The Bullwhip Effect in Supply Chains", *Sloan Management Review* (1997) | Bullwhip Effect |
+| Vollmann, T. et al. | *Manufacturing Planning & Control Systems*, 5th ed. (2005). McGraw-Hill | MRP/ERP |
+| Ohno, T. | *Toyota Production System* (1988). Productivity Press | Lean / 7 Muda |
+| Liker, J. | *The Toyota Way* (2004). McGraw-Hill | 14 Toyota Principles |
+| George, M. | *Lean Six Sigma* (2002). McGraw-Hill | DMAIC |
+| Chase, R., Aquilano, N. & Jacobs, R. | *Operations Management*, 11th ed. (2006). McGraw-Hill | Τύποι παραγωγής, Forecasting |
+| Harrington, H.J. | *Business Process Improvement* (1991). McGraw-Hill | Process Mapping |
