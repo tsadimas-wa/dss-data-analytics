@@ -1,0 +1,55 @@
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#dbeafe', 'primaryTextColor': '#1e293b', 'primaryBorderColor': '#3b82f6', 'lineColor': '#64748b', 'fontSize': '14px'}}}%%
+graph LR
+    subgraph INPUT["🔵 Είσοδος"]
+        direction TB
+        x1["x₁ tenure"]
+        x2["x₂ charges"]
+        x3["x₃ tickets"]
+    end
+
+    subgraph HIDDEN1["🟢 Κρυφό 1 — <b>ReLU</b>"]
+        direction TB
+        h1["νευρ. 1<br/>ReLU"]
+        h2["νευρ. 2<br/>ReLU"]
+        h3["νευρ. 3<br/>ReLU"]
+        h4["νευρ. 4<br/>ReLU"]
+    end
+
+    subgraph HIDDEN2["🟢 Κρυφό 2 — <b>ReLU</b>"]
+        direction TB
+        h5["νευρ. 5<br/>ReLU"]
+        h6["νευρ. 6<br/>ReLU"]
+    end
+
+    subgraph OUTPUT["🟡 Έξοδος — <b>Sigmoid</b>"]
+        direction TB
+        o1["P(Churn)<br/>Sigmoid<br/><i>= 0.73</i>"]
+    end
+
+    x1 --> h1 & h2 & h3 & h4
+    x2 --> h1 & h2 & h3 & h4
+    x3 --> h1 & h2 & h3 & h4
+
+    h1 --> h5 & h6
+    h2 --> h5 & h6
+    h3 --> h5 & h6
+    h4 --> h5 & h6
+
+    h5 --> o1
+    h6 --> o1
+
+    style INPUT fill:#dbeafe,stroke:#3b82f6,stroke-width:2px
+    style HIDDEN1 fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+    style HIDDEN2 fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+    style OUTPUT fill:#fefce8,stroke:#d97706,stroke-width:2px
+
+    style x1 fill:#dbeafe,stroke:#3b82f6
+    style x2 fill:#dbeafe,stroke:#3b82f6
+    style x3 fill:#dbeafe,stroke:#3b82f6
+    style h1 fill:#dcfce7,stroke:#16a34a
+    style h2 fill:#dcfce7,stroke:#16a34a
+    style h3 fill:#dcfce7,stroke:#16a34a
+    style h4 fill:#dcfce7,stroke:#16a34a
+    style h5 fill:#dcfce7,stroke:#16a34a
+    style h6 fill:#dcfce7,stroke:#16a34a
+    style o1 fill:#fef3c7,stroke:#d97706,stroke-width:2px
