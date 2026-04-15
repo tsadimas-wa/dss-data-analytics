@@ -1,0 +1,32 @@
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '16px', 'primaryColor': '#dbeafe', 'primaryTextColor': '#1e293b', 'lineColor': '#64748b'}, 'flowchart': {'nodeSpacing': 20, 'rankSpacing': 40, 'padding': 12}}}%%
+graph LR
+    subgraph TRAIN["🟦 Εκπαίδευση"]
+        direction TB
+        A["Epoch 1\nLoss = 0.8"] --> B["Epoch 20\nLoss = 0.3"] --> C["Epoch 50\nLoss = 0.1"]
+    end
+
+    subgraph VAL["🟥 Validation"]
+        direction TB
+        D["Epoch 1\nLoss = 0.8"] --> E["Epoch 20\nLoss = 0.35"] --> F["Epoch 50\nLoss = 0.6 ↑"]
+    end
+
+    subgraph STOP["⛔ Early Stopping"]
+        direction TB
+        G["Epoch 20\nΒέλτιστο σημείο\nVal loss ελάχιστο"]
+    end
+
+    B -.->|"εδώ σταματάμε"| G
+    E -.->|"εδώ αρχίζει\noverfitting"| G
+    C -.->|"training\nσυνεχίζει ↘"| F
+
+    style TRAIN fill:#dbeafe,stroke:#3b82f6,stroke-width:2px
+    style VAL fill:#fee2e2,stroke:#ef4444,stroke-width:2px
+    style STOP fill:#fef3c7,stroke:#d97706,stroke-width:3px
+
+    style A fill:#dbeafe,stroke:#3b82f6
+    style B fill:#93c5fd,stroke:#2563eb,stroke-width:2px
+    style C fill:#60a5fa,stroke:#1e40af
+    style D fill:#fee2e2,stroke:#ef4444
+    style E fill:#fca5a5,stroke:#dc2626,stroke-width:2px
+    style F fill:#f87171,stroke:#b91c1c,color:#fff
+    style G fill:#fef3c7,stroke:#d97706,stroke-width:3px
