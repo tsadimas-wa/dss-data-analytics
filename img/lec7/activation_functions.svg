@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340" font-family="Georgia, serif">
+
+  <!-- ===== TITLES ===== -->
+  <text x="90"  y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">Step</text>
+  <text x="90"  y="30" text-anchor="middle" font-size="9"  fill="#dc2626">~~δεν χρησιμοποιείται~~</text>
+
+  <text x="270" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#d97706">Sigmoid</text>
+  <text x="270" y="30" text-anchor="middle" font-size="9"  fill="#d97706">έξοδος (0, 1)</text>
+
+  <text x="450" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#3b82f6">Tanh</text>
+  <text x="450" y="30" text-anchor="middle" font-size="9"  fill="#3b82f6">έξοδος (-1, +1)</text>
+
+  <text x="630" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#16a34a">ReLU</text>
+  <text x="630" y="30" text-anchor="middle" font-size="9"  fill="#16a34a">κρυφά επίπεδα (default)</text>
+
+  <text x="810" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#7c3aed">Softmax</text>
+  <text x="810" y="30" text-anchor="middle" font-size="9"  fill="#7c3aed">πολυκλασική έξοδος</text>
+
+  <!-- ===== PANEL BACKGROUNDS ===== -->
+  <rect x="10"  y="35" width="160" height="210" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+  <rect x="190" y="35" width="160" height="210" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+  <rect x="370" y="35" width="160" height="210" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+  <rect x="550" y="35" width="160" height="210" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <rect x="730" y="35" width="160" height="210" rx="6" fill="#faf5ff" stroke="#d8b4fe" stroke-width="1"/>
+
+  <!-- ==================================================
+       STEP panel — cx=90
+       Plot area: x=[15,165], y=[45,235]
+       f: 0→y=225, 1→y=65
+       z: -3→x=20, 0→x=90, +3→x=160
+  ================================================== -->
+  <!-- z-axis (f=0 reference) at y=225 -->
+  <line x1="15"  y1="225" x2="165" y2="225" stroke="#94a3b8" stroke-width="0.8"/>
+  <!-- vertical z=0 axis -->
+  <line x1="90"  y1="45"  x2="90"  y2="235" stroke="#94a3b8" stroke-width="0.8"/>
+  <!-- tick f=1 -->
+  <line x1="87" y1="65"  x2="93" y2="65"  stroke="#94a3b8" stroke-width="0.7"/>
+  <text x="84"  y="69"  font-size="8" fill="#64748b" text-anchor="end">1</text>
+  <!-- tick f=0 -->
+  <text x="84"  y="229" font-size="8" fill="#64748b" text-anchor="end">0</text>
+  <!-- axis labels -->
+  <text x="168" y="229" font-size="9" fill="#94a3b8">z</text>
+  <!-- Step curve: z<0 → f=0 (y=225), z>0 → f=1 (y=65) -->
+  <line x1="20"  y1="225" x2="90"  y2="225" stroke="#dc2626" stroke-width="2.5"/>
+  <line x1="90"  y1="65"  x2="160" y2="65"  stroke="#dc2626" stroke-width="2.5"/>
+  <line x1="90"  y1="225" x2="90"  y2="65"  stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <circle cx="90" cy="225" r="3.5" fill="white" stroke="#dc2626" stroke-width="1.5"/>
+  <circle cx="90" cy="65"  r="3.5" fill="#dc2626"/>
+  <!-- annotation -->
+  <text x="90" y="252" text-anchor="middle" font-size="9" fill="#dc2626">f'(z) = 0 παντού</text>
+  <text x="90" y="264" text-anchor="middle" font-size="9" fill="#dc2626">→ Gradient Descent τυφλό</text>
+
+  <!-- ==================================================
+       SIGMOID panel — cx=270
+       Plot area: x=[195,345], y=[45,235]
+       f(z) ∈ (0,1): f=0 → y=225 (bottom), f=1 → y=65 (top)
+       y = 225 - σ(z)*160
+       f=0.5 → y=145 (NOT center of panel — shows asymmetry vs step)
+       z: -3→x=200, 0→x=270, +3→x=340  (scale: 23.3px/unit)
+       Actually let's use x=195+z*25+75 so z=-3→x=195, z=0→x=270, z=3→x=345
+  ================================================== -->
+  <!-- f=0 axis at BOTTOM y=225 — sigmoid never goes below this -->
+  <line x1="195" y1="225" x2="345" y2="225" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="348" y="229" font-size="8" fill="#d97706">0</text>
+  <!-- f=1 line at top y=65 — sigmoid asymptote -->
+  <line x1="195" y1="65"  x2="345" y2="65"  stroke="#d97706" stroke-width="1"   stroke-dasharray="3,3"/>
+  <text x="348" y="69"  font-size="8" fill="#d97706">1</text>
+  <!-- f=0.5 reference at y=145 (where sigmoid crosses z=0) -->
+  <line x1="195" y1="145" x2="345" y2="145" stroke="#94a3b8" stroke-width="0.7" stroke-dasharray="2,3"/>
+  <text x="193" y="149" font-size="7" fill="#94a3b8" text-anchor="end">0.5</text>
+  <!-- vertical z=0 axis -->
+  <line x1="270" y1="45"  x2="270" y2="235" stroke="#94a3b8" stroke-width="0.8"/>
+  <text x="348" y="220" font-size="9" fill="#94a3b8">z</text>
+  <!-- Sigmoid curve — y = 225 - σ(z)*160, x = 195 + (z+3)*25 -->
+  <!-- z: -3,-2.5,-2,-1.5,-1,-0.5,0,0.5,1,1.5,2,2.5,3 -->
+  <!-- σ: .047,.076,.119,.182,.269,.378,.500,.622,.731,.818,.881,.924,.953 -->
+  <!-- y: 217.5,212.8,206.0,196.9,182.0,164.5,145.0,125.5,108.0,94.1,84.0,76.2,72.5 -->
+  <polyline points="
+    195,217.5
+    207.5,212.8
+    220,206.0
+    232.5,196.9
+    245,182.0
+    257.5,164.5
+    270,145.0
+    282.5,125.5
+    295,108.0
+    307.5,94.1
+    320,84.0
+    332.5,76.2
+    345,72.5
+  " fill="none" stroke="#d97706" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- shading: sigmoid is entirely above f=0 line -->
+  <rect x="195" y="216" width="150" height="9" fill="#d97706" fill-opacity="0.12"/>
+  <text x="270" y="252" text-anchor="middle" font-size="9" fill="#d97706">Ποτέ κάτω από το 0</text>
+  <text x="270" y="264" text-anchor="middle" font-size="9" fill="#d97706">vanishing gradient για |z|≫0</text>
+
+  <!-- ==================================================
+       TANH panel — cx=450
+       f(z) ∈ (-1,+1): f=-1→y=225, f=0→y=145 (CENTER), f=+1→y=65
+       y = 145 - tanh(z)*80
+       z: -3→x=375, 0→x=450, +3→x=525  (scale: 25px/unit)
+  ================================================== -->
+  <!-- f=0 axis at CENTER y=145 — tanh crosses zero here -->
+  <line x1="375" y1="145" x2="525" y2="145" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="373" y="149" font-size="8" fill="#3b82f6" text-anchor="end">0</text>
+  <!-- f=+1 asymptote -->
+  <line x1="375" y1="65"  x2="525" y2="65"  stroke="#3b82f6" stroke-width="1"   stroke-dasharray="3,3"/>
+  <text x="527" y="69"  font-size="8" fill="#3b82f6">+1</text>
+  <!-- f=-1 asymptote -->
+  <line x1="375" y1="225" x2="525" y2="225" stroke="#3b82f6" stroke-width="1"   stroke-dasharray="3,3"/>
+  <text x="527" y="229" font-size="8" fill="#3b82f6">−1</text>
+  <!-- vertical z=0 axis -->
+  <line x1="450" y1="45"  x2="450" y2="235" stroke="#94a3b8" stroke-width="0.8"/>
+  <text x="527" y="149" font-size="9" fill="#94a3b8">z</text>
+  <!-- Tanh curve — y = 145 - tanh(z)*80 -->
+  <!-- tanh: -.995,-.987,-.964,-.905,-.762,-.462,0,.462,.762,.905,.964,.987,.995 -->
+  <!-- y: 224.6,223.9,222.1,217.4,205.9,181.9,145.0,108.1,84.1,72.6,67.9,66.1,65.4 -->
+  <polyline points="
+    375,224.6
+    387.5,223.9
+    400,222.1
+    412.5,217.4
+    425,205.9
+    437.5,181.9
+    450,145.0
+    462.5,108.1
+    475,84.1
+    487.5,72.6
+    500,67.9
+    512.5,66.1
+    525,65.4
+  " fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- shade negative region to emphasize goes below 0 -->
+  <rect x="375" y="145" width="150" height="80" fill="#3b82f6" fill-opacity="0.07"/>
+  <text x="450" y="252" text-anchor="middle" font-size="9" fill="#3b82f6">Συμμετρική γύρω από f=0</text>
+  <text x="450" y="264" text-anchor="middle" font-size="9" fill="#3b82f6">vanishing gradient στα άκρα</text>
+
+  <!-- ==================================================
+       ReLU panel — cx=630
+       f(z)=max(0,z): f=0→y=225, f=3→y=65 (scale: 53.3px/unit)
+       y = 225 - max(0,z)*53.3
+       z: -3→x=555, 0→x=630, +3→x=705
+  ================================================== -->
+  <!-- f=0 at y=225 -->
+  <line x1="555" y1="225" x2="705" y2="225" stroke="#94a3b8" stroke-width="0.8"/>
+  <text x="553" y="229" font-size="8" fill="#64748b" text-anchor="end">0</text>
+  <text x="553" y="70"  font-size="8" fill="#64748b" text-anchor="end">3</text>
+  <line x1="627" y1="65"  x2="633" y2="65"  stroke="#94a3b8" stroke-width="0.7"/>
+  <!-- vertical z=0 axis -->
+  <line x1="630" y1="45"  x2="630" y2="235" stroke="#94a3b8" stroke-width="0.8"/>
+  <text x="708" y="229" font-size="9" fill="#94a3b8">z</text>
+  <!-- dead zone shading (z<0) -->
+  <rect x="555" y="45" width="75" height="180" fill="#dc2626" fill-opacity="0.07"/>
+  <text x="592" y="100" text-anchor="middle" font-size="8" fill="#dc2626" font-style="italic">νεκρή</text>
+  <text x="592" y="111" text-anchor="middle" font-size="8" fill="#dc2626" font-style="italic">ζώνη</text>
+  <text x="592" y="122" text-anchor="middle" font-size="8" fill="#dc2626" font-style="italic">f=0 πάντα</text>
+  <!-- ReLU curve: flat at y=225 for z<0, linear for z>0 -->
+  <line x1="555" y1="225" x2="630" y2="225" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="630" y1="225" x2="705" y2="65"  stroke="#16a34a" stroke-width="2.5"/>
+  <text x="630" y="252" text-anchor="middle" font-size="9" fill="#16a34a">Γρήγορη, χωρίς vanishing</text>
+  <text x="630" y="264" text-anchor="middle" font-size="9" fill="#16a34a">gradient για z &gt; 0</text>
+
+  <!-- ==================================================
+       SOFTMAX bar chart — cx=810
+       3 classes: dog 0.70, cat 0.20, bird 0.10
+  ================================================== -->
+  <text x="810" y="55" text-anchor="middle" font-size="9" fill="#6b7280" font-style="italic">z = [2.0, 1.0, 0.5]</text>
+  <!-- bars — max height 140px for prob=1.0 -->
+  <!-- dog 0.70 → h=98, top=235-98=137 -->
+  <rect x="758" y="137" width="35" height="98"  fill="#7c3aed" rx="3"/>
+  <text x="775" y="133" text-anchor="middle" font-size="10" font-weight="bold" fill="#7c3aed">0.70</text>
+  <!-- cat 0.20 → h=28, top=235-28=207 -->
+  <rect x="803" y="207" width="35" height="28"  fill="#a78bfa" rx="3"/>
+  <text x="820" y="203" text-anchor="middle" font-size="10" font-weight="bold" fill="#7c3aed">0.20</text>
+  <!-- bird 0.10 → h=14, top=235-14=221 -->
+  <rect x="848" y="221" width="35" height="14"  fill="#c4b5fd" rx="3"/>
+  <text x="865" y="217" text-anchor="middle" font-size="10" font-weight="bold" fill="#7c3aed">0.10</text>
+  <!-- labels -->
+  <text x="775" y="245" text-anchor="middle" font-size="11">🐶</text>
+  <text x="820" y="245" text-anchor="middle" font-size="11">🐱</text>
+  <text x="865" y="245" text-anchor="middle" font-size="11">🐦</text>
+  <!-- sum -->
+  <text x="810" y="258" text-anchor="middle" font-size="9" fill="#7c3aed">0.70+0.20+0.10 = 1.0</text>
+  <text x="810" y="270" text-anchor="middle" font-size="9" fill="#7c3aed">→ κατανομή πιθανοτήτων</text>
+
+</svg>

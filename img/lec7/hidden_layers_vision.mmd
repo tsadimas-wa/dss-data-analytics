@@ -1,0 +1,41 @@
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '18px', 'primaryColor': '#dbeafe', 'primaryTextColor': '#1e293b', 'primaryBorderColor': '#3b82f6', 'lineColor': '#64748b'}, 'flowchart': {'nodeSpacing': 30, 'rankSpacing': 50, 'padding': 15}}}%%
+graph LR
+    subgraph INPUT["📷  Εικόνα"]
+        img["Pixels\n224×224"]
+    end
+
+    subgraph L1["Επίπεδο 1"]
+        e1["Ακμές\nΓραμμές"]
+    end
+
+    subgraph L2["Επίπεδο 2"]
+        e2["Σχήματα\nΚύκλοι\nΓωνίες"]
+    end
+
+    subgraph L3["Επίπεδο 3"]
+        e3["Μέρη\nΜάτι\nΜύτη"]
+    end
+
+    subgraph L4["Επίπεδο 4"]
+        e4["Ολόκληρο\nΠρόσωπο"]
+    end
+
+    subgraph OUT["✅  Έξοδος"]
+        o["P = 0.92\nΠρόσωπο"]
+    end
+
+    img --> e1 --> e2 --> e3 --> e4 --> o
+
+    style INPUT fill:#f1f5f9,stroke:#94a3b8,stroke-width:1px
+    style L1 fill:#dbeafe,stroke:#3b82f6,stroke-width:2px
+    style L2 fill:#bfdbfe,stroke:#2563eb,stroke-width:2px
+    style L3 fill:#93c5fd,stroke:#1d4ed8,stroke-width:2px
+    style L4 fill:#60a5fa,stroke:#1e40af,stroke-width:2px,color:#fff
+    style OUT fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+
+    style img fill:#f1f5f9,stroke:#94a3b8
+    style e1 fill:#dbeafe,stroke:#3b82f6
+    style e2 fill:#bfdbfe,stroke:#2563eb
+    style e3 fill:#93c5fd,stroke:#1d4ed8
+    style e4 fill:#60a5fa,stroke:#1e40af,color:#fff
+    style o fill:#dcfce7,stroke:#16a34a

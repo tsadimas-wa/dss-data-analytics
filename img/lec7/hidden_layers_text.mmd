@@ -1,0 +1,41 @@
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '18px', 'primaryColor': '#fef3c7', 'primaryTextColor': '#1e293b', 'primaryBorderColor': '#d97706', 'lineColor': '#64748b'}, 'flowchart': {'nodeSpacing': 30, 'rankSpacing': 50, 'padding': 15}}}%%
+graph LR
+    subgraph INPUT["📝  Κείμενο"]
+        txt["Λέξεις\ntokens"]
+    end
+
+    subgraph L1["Επίπεδο 1"]
+        t1["Λέξεις\nΣύνταξη"]
+    end
+
+    subgraph L2["Επίπεδο 2"]
+        t2["Φράσεις\nΝόημα"]
+    end
+
+    subgraph L3["Επίπεδο 3"]
+        t3["Συναίσθημα\nΠρόθεση"]
+    end
+
+    subgraph L4["Επίπεδο 4"]
+        t4["Πλαίσιο\nΣυμφραζόμενα"]
+    end
+
+    subgraph OUT["✅  Έξοδος"]
+        o["P = 0.87\nΘετικό"]
+    end
+
+    txt --> t1 --> t2 --> t3 --> t4 --> o
+
+    style INPUT fill:#f1f5f9,stroke:#94a3b8,stroke-width:1px
+    style L1 fill:#fefce8,stroke:#d97706,stroke-width:2px
+    style L2 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L3 fill:#fde68a,stroke:#b45309,stroke-width:2px
+    style L4 fill:#fcd34d,stroke:#92400e,stroke-width:2px
+    style OUT fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+
+    style txt fill:#f1f5f9,stroke:#94a3b8
+    style t1 fill:#fefce8,stroke:#d97706
+    style t2 fill:#fef3c7,stroke:#d97706
+    style t3 fill:#fde68a,stroke:#b45309
+    style t4 fill:#fcd34d,stroke:#92400e
+    style o fill:#dcfce7,stroke:#16a34a
