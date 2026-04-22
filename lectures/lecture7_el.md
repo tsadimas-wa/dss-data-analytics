@@ -62,9 +62,9 @@ style: |
 # Περιεχόμενα Ενότητας
 
 1. **Εισαγωγή:** Η Εξέλιξη της Μηχανικής Μάθησης
-2. **Βασικές Αρχές Deep Learning** — Perceptron, MLP *(Multi-Layer Perceptron)*, Backpropagation *(Οπισθοδιάδοση Σφάλματος)*
-3. **Generative AI & LLMs** *(Large Language Models)* — Transformer, ChatGPT, Copilot
-4. **Explainable AI (XAI)** — LIME *(Local Interpretable Model-agnostic Explanations)*, SHAP *(SHapley Additive exPlanations)*
+2. **Βασικές Αρχές Deep Learning** — Perceptron, MLP *(Multi-Layer Perceptron)*, Backpropagation, Overfitting, Transfer Learning
+3. **Generative AI & LLMs** *(Large Language Models)* — Transformer, Attention, Prompt Engineering, ChatGPT, Copilot
+4. **Explainable AI (XAI)** — Feature Importance, LIME, SHAP, Counterfactual, Εργαλεία XAI, EU AI Act
 5. **Σύνοψη & Συμπεράσματα**
 
 ---
@@ -243,6 +243,47 @@ style: |
 - **CNN** *(Convolutional Neural Network)*: σαρώνει τοπικά μοτίβα — ιδανικό για εικόνες
 - **RNN** *(Recurrent Neural Network)*: θυμάται προηγούμενες εισόδους — για ακολουθίες
 - **Transformer**: αντικατέστησε το RNN — βλέπει ολόκληρη την ακολουθία ταυτόχρονα
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: small -->
+# Χειροκίνητα vs Αυτόματα Χαρακτηριστικά
+
+<div class="columns">
+
+<div>
+
+**Χειροκίνητα (Hand-crafted features)**
+
+Ο ειδικός αποφασίζει *ποια* χαρακτηριστικά είναι σημαντικά και τα υπολογίζει ρητά.
+
+| Πεδίο | Παράδειγμα |
+|---|---|
+| Εικόνα προσώπου | Απόσταση ματιών, γωνία μύτης |
+| Κείμενο | Αριθμός αρνητικών λέξεων |
+| Ήχος | Συχνότητα, ρυθμός ομιλίας |
+
+**Πρόβλημα:** απαιτεί domain expertise, δεν κλιμακώνεται σε εκατομμύρια features.
+
+</div>
+
+<div>
+
+**Αυτόματα (Learned features)**
+
+Το νευρωνικό δίκτυο *μαθαίνει* ποια χαρακτηριστικά είναι χρήσιμα απευθείας από τα δεδομένα.
+
+```
+Pixel → ακμές → σχήματα → μάτια → πρόσωπο
+```
+
+Κάθε επίπεδο εξάγει ολοένα πιο αφηρημένα χαρακτηριστικά — χωρίς ανθρώπινη παρέμβαση.
+
+> **Αυτό είναι το κλειδί του Deep Learning:** η ιεραρχική, αυτόματη εξαγωγή χαρακτηριστικών που επιτρέπει επεξεργασία εικόνας, κειμένου και ήχου σε πρακτική κλίμακα.
 
 </div>
 
@@ -523,6 +564,57 @@ $10 \times 64 + 64 \times 32 + 32 \times 1 = 2.720$ βάρη
 ---
 
 <!-- _class: xxsmall -->
+# Συναρτήσεις Ενεργοποίησης — ReLU ως Προεπιλογή & Εξαιρέσεις
+
+Η ReLU **δεν είναι υποχρεωτική** στα κρυφά επίπεδα — είναι **υπερπαράμετρος** (απόφαση του Data Scientist). Είναι όμως η πιο συνηθισμένη επιλογή για δύο λόγους:
+
+<div class="columns">
+
+<div>
+
+**Γιατί η ReLU κυριαρχεί:**
+
+* **Λύνει το Vanishing Gradient:** κλίση = 1 για $z>0$ → το σήμα σφάλματος περνά ατόφιο προς τα πίσω, επιτρέποντας εκπαίδευση βαθιών δικτύων
+* **Υπολογιστική ταχύτητα:** $\max(0,z)$ είναι αστραπιαία πράξη έναντι του $e^{-z}$ της Sigmoid/Tanh
+
+**Πότε ΔΕΝ χρησιμοποιούμε ReLU:**
+
+**1. Dying ReLU (Νεκροί Νευρώνες)**
+
+Αν το $z$ ενός νευρώνα γίνει αρνητικό για όλα τα δεδομένα → έξοδος = 0, κλίση = 0 → δεν μαθαίνει ποτέ ξανά.
+
+* **Leaky ReLU:** αφήνει μικρή «διαρροή» ($0.01 \cdot z$) για $z<0$ → ο νευρώνας μπορεί να «ξυπνήσει»
+* **ELU (Exponential Linear Unit) / SELU (Scaled Exponential Linear Unit)):** πιο ομαλές παραλλαγές με θεωρητικά πλεονεκτήματα, υψηλότερο υπολογιστικό κόστος
+
+</div>
+
+<div>
+
+**2. Ρηχά δίκτυα ή παλαιότερη βιβλιογραφία**
+
+Σε δίκτυα με 1-2 κρυφά επίπεδα, το Vanishing Gradient δεν είναι κρίσιμο. Συχνά βλέπουμε **Tanh** — είναι μηδενοκεντρική (έξοδος στο $(-1,1)$), κάτι που βοηθά το Gradient Descent.
+
+**3. Συγκεκριμένες αρχιτεκτονικές**
+
+Στα **RNN** (προκάτοχοι Transformer για κείμενο/χρονοσειρές), η **Tanh** ήταν σχεδόν ο κανόνας στον πυρήνα λόγω του τρόπου ελέγχου της «μνήμης».
+
+**Επίπεδο Εξόδου — ο αυστηρός κανόνας:**
+
+| Ζητούμενο | Συνάρτηση |
+|---|---|
+| Πιθανότητα Ναι/Όχι (Churn) | **Sigmoid** → $(0,1)$ |
+| Πολυκλασική (Σκύλος/Γάτα/Πουλί) | **Softmax** → άθροισμα = 1 |
+| Αριθμός / Παλινδρόμηση (τιμή σπιτιού) | **Καμία** (Linear) ή ReLU αν έξοδος $\geq 0$ |
+
+> Στο output layer **ποτέ** ReLU για ταξινόμηση — χάνουμε την ερμηνεία ως πιθανότητα.
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: small -->
 # Τι «Βλέπουν» τα Κρυφά Επίπεδα;
 
 Κάθε κρυφό επίπεδο μαθαίνει **πιο αφηρημένες αναπαραστάσεις** από το προηγούμενο.
@@ -634,40 +726,54 @@ $$w \leftarrow w - \eta \cdot \frac{\partial \mathcal{L}}{\partial w}$$
 
 ---
 
-<!-- _class: xsmall -->
+<!-- _class: xxsmall -->
 # Overfitting & Regularization στα Neural Networks
 
 Τα NN με πολλές παραμέτρους **απομνημονεύουν** τα training data — το ίδιο πρόβλημα με τα Decision Trees, αλλά πολύ πιο έντονο.
 
-<div class="columns">
-
-<div>
-
-**Πώς το αντιμετωπίζουμε:**
-
 **Dropout** *(αποσύνδεση)*:
-Κατά την εκπαίδευση, «σβήνουμε» τυχαία ένα ποσοστό νευρώνων σε κάθε βήμα → το δίκτυο δεν μπορεί να «εξαρτηθεί» από συγκεκριμένους νευρώνες → αναγκάζεται να μάθει πιο γενικά χαρακτηριστικά. Αναλογία: σαν να προετοιμάζεσαι για εξετάσεις χωρίς να ξέρεις ποιες ερωτήσεις θα βγουν.
+Κατά την εκπαίδευση, «σβήνουμε» τυχαία ένα ποσοστό νευρώνων σε κάθε βήμα → το δίκτυο αναγκάζεται να μάθει πιο γενικά χαρακτηριστικά. Αναλογία: σαν να προετοιμάζεσαι για εξετάσεις χωρίς να ξέρεις ποιες ερωτήσεις θα βγουν.
 
 ```python
 model.add(Dense(64, activation='relu'))
 model.add(Dropout(0.3))  # 30% νευρώνες OFF
 ```
 
-**Early Stopping:**
-Σταματάμε την εκπαίδευση όταν το validation loss αρχίζει να ανεβαίνει — ακόμα και αν το training loss συνεχίζει να πέφτει.
+**Early Stopping:** Σταματάμε την εκπαίδευση όταν το validation loss αρχίζει να ανεβαίνει — ακόμα και αν το training loss συνεχίζει να πέφτει.
+
+**Άλλες τεχνικές:**
+* **L2 Regularization (Weight Decay):** τιμωρεί μεγάλα βάρη — αποτρέπει υπερβολική εξάρτηση από λίγα features
+* **Batch Normalization:** κανονικοποιεί τις εξόδους κάθε επιπέδου — σταθεροποιεί τη μάθηση και επιτρέπει υψηλότερο learning rate
+* **Data Augmentation:** δημιουργεί τεχνητά νέα δεδομένα από υπάρχοντα (εικόνες: περιστροφή, zoom, αντιστροφή) — αυξάνει την ποικιλία χωρίς νέες μετρήσεις
+
+---
+
+<!-- _class: xxsmall -->
+# Overfitting — Ανάγνωση του Διαγράμματος
+
+<div class="columns">
+
+<div>
+
+![w:500](../img/lec7/overfitting_curve.svg)
 
 </div>
 
 <div>
 
-**Το κλασικό διάγραμμα:**
+Δύο παράλληλες διαδρομές — **Training** (μπλε) και **Validation** (κόκκινο) — σε τρία σημεία εκπαίδευσης:
 
-![w:450](../img/lec7/overfitting_curve.svg)
+| Epoch | Training Loss | Validation Loss |
+|---|---|---|
+| 1 | 0.8 | 0.8 |
+| 20 | 0.3 | 0.35 ← βέλτιστο ⛔ |
+| 50 | 0.1 ↘ | 0.6 ↑ |
 
-**Άλλες τεχνικές:**
-* **L2 Regularization (Weight Decay):** τιμωρεί μεγάλα βάρη — αποτρέπει υπερβολική εξάρτηση από λίγα features
-* **Batch Normalization:** κανονικοποιεί τις εξόδους κάθε επιπέδου κατά την εκπαίδευση — σταθεροποιεί τη μάθηση και επιτρέπει υψηλότερο learning rate
-* **Data Augmentation:** δημιουργεί τεχνητά νέα δεδομένα από υπάρχοντα (εικόνες: περιστροφή, zoom, αντιστροφή) — αυξάνει την ποικιλία χωρίς νέες μετρήσεις
+Στο **Epoch 20** το validation loss φτάνει στο ελάχιστό του — **εκεί σταματάμε** (Early Stopping).
+
+Στο **Epoch 50** το training loss συνεχίζει να πέφτει (0.1), αλλά το validation **ανεβαίνει** (0.6): το μοντέλο **απομνημονεύει** τα training data αντί να γενικεύει.
+
+> **Κλειδί:** Χρειαζόμαστε πάντα ξεχωριστό **validation set** — χωρίς αυτό δεν μπορούμε να εντοπίσουμε το overfitting.
 
 </div>
 
@@ -763,43 +869,57 @@ model.add(Dropout(0.3))  # 30% νευρώνες OFF
 
 ---
 
-<!-- _class: xsmall -->
+<!-- _class: xxsmall -->
 # Attention Mechanism — Η Καρδιά του Transformer
 
-**Πρόβλημα με τα παλιά RNN:** Η πληροφορία «ξεχνιέται» σε μεγάλες ακολουθίες — δεν μπορούν να συνδέσουν λέξεις που είναι μακριά.
+**Πρόβλημα RNN:** Διαβάζει λέξη-λέξη και «ξεχνά» ό,τι είπε νωρίς — δεν μπορεί να συνδέσει λέξεις που απέχουν πολύ.
+
+**Λύση Transformer:** Βλέπει **ολόκληρη την πρόταση ταυτόχρονα** και αποφασίζει ποιες λέξεις σχετίζονται με ποιες.
 
 <div class="columns">
 
 <div>
 
-**Η ιδέα του Attention:**
+**Παράδειγμα — αναφορά αντωνυμίας:**
 
-Για κάθε λέξη, το μοντέλο υπολογίζει πόση «προσοχή» να δώσει σε **κάθε άλλη λέξη** της πρότασης.
+> «Ο **πελάτης** είπε ότι δεν θέλει να ακυρώσει, αλλά **αυτός** τελικά έφυγε.»
 
-**Παράδειγμα:**
+Για να καταλάβει το «**αυτός**», το μοντέλο πρέπει να κοιτάξει **πίσω** στο «πελάτης» — ανεξαρτήτως απόστασης. Το RNN το «ξεχνά». Το Transformer το βλέπει αμέσως.
 
-> «Ο πελάτης **αυτός** δεν ανανέωσε **το** συμβόλαιό **του** παρά τη **χαμηλή** τιμή.»
+**Πώς το κάνει — με βαθμολογία:**
 
-Για να ερμηνεύσει το «του», το μοντέλο πρέπει να «δει» το «πελάτης» — ανεξαρτήτως απόστασης.
+Για κάθε λέξη, το μοντέλο βαθμολογεί πόσο «σχετίζεται» με κάθε άλλη λέξη της πρότασης:
+
+```
+«αυτός» ←→ «πελάτης»  : 0.85  ✅ υψηλή προσοχή
+«αυτός» ←→ «θέλει»    : 0.10
+«αυτός» ←→ «ακυρώσει» : 0.05
+```
+
+Η βαθμολογία προκύπτει από το **γινόμενο των διανυσμάτων** κάθε λέξης — διανύσματα που μαθαίνονται αυτόματα κατά την εκπαίδευση, ώστε λέξεις με σχέση (αντωνυμία ↔ ουσιαστικό) να αποκτούν παρόμοιες τιμές.
+
+Το αποτέλεσμα: η αναπαράσταση του «αυτός» **ενσωματώνει** πληροφορία από το «πελάτης».
 
 </div>
 
 <div>
 
-**Self-Attention (απλοποιημένο):**
+**Αναλογία — Google Search:**
 
-$$\text{Attention}(Q,K,V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V$$
+| Βήμα | Search | Attention |
+|---|---|---|
+| Τι ψάχνω | «Μηχανική Μάθηση» | λέξη-στόχος («αυτός») |
+| Τι συγκρίνω | Τίτλοι αποτελεσμάτων | Όλες οι λέξεις της πρότασης |
+| Τι παίρνω | Περιεχόμενο σελίδας | Νόημα της σχετικής λέξης |
 
-*($d_k$: διάσταση του διανύσματος Key — διαιρούμε για να αποφύγουμε πολύ μεγάλες τιμές που «επιπεδώνουν» το softmax)*
+**Multi-Head Attention:**
 
-> **Αναλογία Βιβλιοθήκης:**
-* **Q** (Query): **εσύ στον βιβλιοθηκάριο** — «Βιβλία για Μηχανική Μάθηση» *(τι ψάχνω)*
-* **K** (Key): **τίτλοι στη ράχη** — «Τεχνητή Νοημοσύνη», «Μαγειρική»… *(με τι συγκρίνω)*
-* **V** (Value): **περιεχόμενο βιβλίου** — η πληροφορία που παίρνω αν ταιριάξει το Key *(τι μεταδίδω)*
+Αντί για μία «ματιά», το μοντέλο κοιτάζει **ταυτόχρονα από πολλές οπτικές**:
+* Head 1 → ποιο υποκείμενο αντιστοιχεί στο ρήμα;
+* Head 2 → ποιες λέξεις είναι αντίθετες σε νόημα;
+* Head 3 → ποιες λέξεις εμφανίζονται συχνά μαζί;
 
-**Multi-Head Attention:** πολλά parallel attention heads → κάθε ένα «κοιτά» διαφορετικές σχέσεις (σύνταξη, νόημα, συνεκφορές).
-
-> Αυτό επιτρέπει στα LLMs να «κατανοούν» μεγάλα κείμενα με μακρινές εξαρτήσεις.
+> Αυτό είναι που επιτρέπει στο ChatGPT να «κατανοεί» ένα email 500 λέξεων και να απαντά συνεκτικά.
 
 </div>
 
@@ -862,6 +982,53 @@ tenure, MonthlyCharges και Contract.
 | **≥ 0.8** | Δημιουργικό — επιλέγει λιγότερο πιθανές λέξεις | Brainstorming, marketing, παραγωγή ιδεών |
 
 > ⚠️ Υψηλό temperature → μεγαλύτερος κίνδυνος **hallucinations** (το μοντέλο «εφευρίσκει» πληροφορίες).
+
+---
+
+<!-- _class: xsmall -->
+# Temperature — Μπορώ να το Ρυθμίσω;
+
+Εξαρτάται από το εργαλείο — τα consumer interfaces συνήθως **δεν** εκθέτουν τη ρύθμιση.
+
+<div class="columns">
+
+<div>
+
+**Απευθείας chat (ChatGPT, Claude.ai) — ΌΧΙ**
+
+Χρησιμοποιούν προεπιλεγμένη τιμή (~0.7–1.0) χωρίς να την εμφανίζουν στον χρήστη.
+
+**Μέσω API — ΝΑΙ**
+
+```python
+client.messages.create(
+    model="claude-sonnet-4-6",
+    temperature=0.0,   # ντετερμινιστικό
+    messages=[...]
+)
+```
+
+</div>
+
+<div>
+
+**Εργαλεία με ρυθμίσεις:**
+
+| Εργαλείο | Temperature |
+|---|---|
+| ChatGPT API Playground | ✅ ρυθμιζόμενο |
+| Claude.ai | ❌ κρυφό |
+| Ollama *(local models)* | ✅ ρυθμιζόμενο |
+| LM Studio | ✅ ρυθμιζόμενο |
+| OpenWebUI | ✅ ρυθμιζόμενο |
+
+> **Πρακτική εναλλακτική:** Αντί να ρυθμίσεις temperature, περίγραψέ το στο prompt:
+> * «Απάντησε αυστηρά χωρίς εικασίες» → συμπεριφορά low temperature
+> * «Δώσε μου 5 δημιουργικές ιδέες» → συμπεριφορά high temperature
+
+</div>
+
+</div>
 
 ---
 
@@ -1085,8 +1252,15 @@ $$20\% + 40\% + 25\% + 10\% - 15\% = \mathbf{80\%}\ \checkmark$$
 
 ---
 
-<!-- _class: small -->
+<!-- _class: xxsmall -->
 # Σύγκριση XAI Μεθόδων
+
+**Feature Importance** *(Σπουδαιότητα Χαρακτηριστικών)* — η απλούστερη μέθοδος: μετράει πόσο συνέβαλε κάθε feature στις αποφάσεις του μοντέλου **συνολικά**, σε όλο το dataset. Στα Decision Trees/Random Forests υπολογίζεται από το Gini Impurity (πόσο «καθαρίζει» το σύνολο κάθε feature όταν χρησιμοποιείται για split). Δεν εξηγεί *μεμονωμένες* προβλέψεις — μόνο τη γενική συμπεριφορά του μοντέλου.
+
+```python
+rf.feature_importances_  # → [0.45, 0.30, 0.15, 0.10]
+# tenure: 45%, MonthlyCharges: 30%, ...
+```
 
 | | LIME | SHAP | Feature Importance |
 |---|---|---|---|
@@ -1105,6 +1279,145 @@ $$20\% + 40\% + 25\% + 10\% - 15\% = \mathbf{80\%}\ \checkmark$$
 
 ---
 
+<!-- _class: xsmall -->
+# XAI — Αντιπαραδειγματικές Εξηγήσεις (Counterfactual)
+
+**Ερώτηση που ενδιαφέρει τον τελικό χρήστη:** όχι «γιατί απορρίφθηκα» αλλά «**τι πρέπει να αλλάξω** για να εγκριθώ;»
+
+<div class="columns">
+
+<div>
+
+**SHAP / LIME (για data scientists):**
+> «Το tenure συνέβαλε −0.3 στην απόφαση»
+
+**Counterfactual (για τον Manager / πελάτη):**
+> «Αν το tenure ήταν ≥ 12 μήνες **ή** οι μηνιαίες χρεώσεις < €40, η πρόβλεψη θα ήταν No Churn»
+
+Ο χρήστης λαμβάνει **συγκεκριμένη οδηγία δράσης** — όχι απλώς εξήγηση.
+
+**Παράδειγμα — Πιστοληπτική αξιολόγηση:**
+
+| Χαρακτηριστικό | Τρέχουσα τιμή | Απαιτούμενη αλλαγή |
+|---|---|---|
+| Εισόδημα | €1.200/μήνα | ≥ €1.500 |
+| Ληξιπρόθεσμα | 2 | 0 |
+| Διάρκεια σχέσης | 4 μήνες | ≥ 12 μήνες |
+
+</div>
+
+<div>
+
+**Σύνδεση με EU AI Act:**
+
+Το άρθρο 86 απαιτεί για high-risk AI (δάνεια, πρόσληψη, ιατρική) το δικαίωμα σε **«meaningful explanation»** — counterfactuals είναι η πιο αποδεκτή μορφή γιατί:
+* Είναι κατανοητά από μη-ειδικούς
+* Δείχνουν τι μπορεί να αλλάξει ο χρήστης
+* Δεν αποκαλύπτουν εμπορικά μυστικά του μοντέλου
+
+> **Βιβλιοθήκη:** `alibi` (Python) — `CounterfactualProto`, `CEM`
+
+```python
+from alibi.explainers import CounterfactualProto
+cf = CounterfactualProto(model, shape)
+explanation = cf.explain(instance)
+# → τι πρέπει να αλλάξει για διαφορετική απόφαση
+```
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: xsmall -->
+# XAI — Εργαλεία & Βιβλιοθήκες
+
+<div class="columns">
+
+<div>
+
+| Εργαλείο | Εταιρεία | Τι κάνει |
+|---|---|---|
+| **SHAP** | Open-source | SHAP values για οποιοδήποτε μοντέλο |
+| **LIME** | Open-source | Τοπικές εξηγήσεις model-agnostic |
+| **InterpretML** | Microsoft | SHAP + EBM (Explainable Boosting Machine) |
+| **Captum** | Meta (PyTorch) | XAI για νευρωνικά δίκτυα |
+| **Alibi** | Seldon | Counterfactuals, anchors, concept drift |
+| **What-If Tool** | Google | Διαδραστική οπτικοποίηση με TensorFlow |
+| **ELI5** | Open-source | Απλές εξηγήσεις για sklearn μοντέλα |
+
+</div>
+
+<div>
+
+**Επίπεδα ωριμότητας:**
+
+```
+Production-ready:
+  SHAP ──────────────── ✅ de facto standard
+  InterpretML ────────── ✅ enterprise support
+
+Research / Experimental:
+  Alibi ──────────────── 🔬 counterfactuals
+  Captum ─────────────── 🔬 deep learning
+  What-If Tool ───────── 🔬 visual exploration
+```
+
+**Για το εργαστήριο μας:** `shap` — εγκατάσταση με `pip install shap`, ενσωμάτωση με sklearn σε 3 γραμμές κώδικα.
+
+> **Πρακτική συμβουλή:** Ξεκίνα πάντα με SHAP — καλύπτει το 80% των αναγκών. Πήγαινε σε Alibi/Captum μόνο αν χρειάζεσαι counterfactuals ή εξηγήσεις νευρωνικών.
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: xsmall -->
+# XAI σε Πραγματικά Συστήματα
+
+<div class="columns">
+
+<div>
+
+**FICO Explainable AI — Credit Scoring**
+
+Η FICO (εταιρεία πιστοληπτικής αξιολόγησης) ενσωμάτωσε XAI στο σύστημα FICO Score. Για κάθε απόρριψη δανείου εκδίδει αυτόματα **«reason codes»**:
+> «Απόρριψη λόγω: (1) υψηλό ποσοστό χρήσης πίστωσης, (2) σύντομο ιστορικό, (3) πολλές πρόσφατες αιτήσεις»
+
+**IBM OpenScale (Watson)**
+
+Platform για monitoring και XAI production μοντέλων — ανιχνεύει bias, drift και παράγει εξηγήσεις αυτόματα για κάθε πρόβλεψη.
+
+**Google — Explainable AI Platform (Vertex AI)**
+
+Ενσωματωμένο SHAP και Integrated Gradients για μοντέλα στο Google Cloud — παράγει feature attributions σε κάθε API call.
+
+</div>
+
+<div>
+
+**Κλινικές Εφαρμογές**
+
+Νοσοκομεία στις ΗΠΑ (π.χ. Beth Israel Deaconess) χρησιμοποιούν XAI για πρόβλεψη sepsis — το μοντέλο εξηγεί ποιοι δείκτες οδήγησαν στην προειδοποίηση, ώστε ο γιατρός να αποφασίσει αν θα παρέμβει.
+
+**Νομικό πλαίσιο στην ΕΕ:**
+
+| Κανονισμός | Απαίτηση |
+|---|---|
+| **GDPR Art. 22** | Δικαίωμα εξήγησης σε αυτοματοποιημένες αποφάσεις |
+| **EU AI Act (2024)** | Εξηγήσιμη απόφαση για high-risk AI |
+| **PSD2 (τράπεζες)** | Αιτιολόγηση απόρριψης πίστωσης |
+
+> **Συμπέρασμα για DSS:** Το XAI δεν είναι προαιρετικό χαρακτηριστικό — για πολλές εφαρμογές είναι **νομική υποχρέωση**.
+
+</div>
+
+</div>
+
+---
+
 # Ακρίβεια vs Ερμηνευσιμότητα
 
 **Το κεντρικό δίλημμα της Μηχανικής Μάθησης στην πράξη:**
@@ -1113,20 +1426,7 @@ $$20\% + 40\% + 25\% + 10\% - 15\% = \mathbf{80\%}\ \checkmark$$
 
 <div>
 
-```
-Ερμηνευσιμότητα
-        ↑
-        │ Decision Tree
-        │ Logistic Reg.
-        │ Naive Bayes
-        │
-        │    Random Forest
-        │    Gradient Boosting
-        │
-        │           SVM
-        │           Neural Network
-        └─────────────────────→ Ακρίβεια
-```
+![w:600](../img/lec7/accuracy_vs_interpretability.svg)
 
 </div>
 
@@ -1153,13 +1453,15 @@ $$20\% + 40\% + 25\% + 10\% - 15\% = \mathbf{80\%}\ \checkmark$$
 <div>
 
 **Deep Learning:**
-* Perceptron → MLP → Deep Networks
+* Perceptron → MLP → Deep Networks (ReLU, Softmax, Sigmoid)
 * Forward Propagation, Loss, Backpropagation, Gradient Descent
-* Αναγκαίο για μη-δομημένα δεδομένα (εικόνα, κείμενο)
+* Overfitting → Dropout, Early Stopping, Regularization
+* Transfer Learning — fine-tune αντί εκπαίδευσης από μηδέν
 
 **Generative AI:**
-* LLMs: next-token prediction σε τεράστια κλίμακα
-* Εφαρμογές DSS: copilot, ανάλυση κειμένου, αυτοματισμός
+* LLMs: next-token prediction — Transformer & Attention Mechanism
+* Prompt Engineering: zero-shot, few-shot, chain-of-thought
+* Temperature: ντετερμινιστικό (0.0) vs δημιουργικό (≥0.8)
 * Κίνδυνοι: hallucinations, bias, data privacy
 
 </div>
@@ -1167,13 +1469,16 @@ $$20\% + 40\% + 25\% + 10\% - 15\% = \mathbf{80\%}\ \checkmark$$
 <div>
 
 **Explainable AI:**
-* White-box vs Black-box — νομική και ηθική διάσταση
+* White-box vs Black-box — ακρίβεια vs ερμηνευσιμότητα
+* Feature Importance: γρήγορη καθολική επισκόπηση
 * LIME: τοπική εξήγηση μέσω απλού μοντέλου
 * SHAP: δίκαιη κατανομή βάσει Θεωρίας Παιγνίων
+* Counterfactual: «τι πρέπει να αλλάξω;» — απαίτηση EU AI Act
+* Εργαλεία: SHAP, InterpretML, Alibi, Captum
 
 **Κεντρικό μήνυμα:**
 
-> Δεν υπάρχει «καλύτερο» μοντέλο — η επιλογή εξαρτάται από το **πρόβλημα**, τα **δεδομένα**, και τις **απαιτήσεις εξηγησιμότητας**.
+> Δεν υπάρχει «καλύτερο» μοντέλο — η επιλογή εξαρτάται από το **πρόβλημα**, τα **δεδομένα**, και τις **απαιτήσεις εξηγησιμότητας**. Για high-risk AI, η εξηγησιμότητα είναι **νομική υποχρέωση**.
 
 </div>
 
@@ -1184,16 +1489,16 @@ $$20\% + 40\% + 25\% + 10\% - 15\% = \mathbf{80\%}\ \checkmark$$
 <!-- _class: xsmall -->
 # Εργαστήριο: XAI με SHAP στο Churn Dataset
 
-**Στόχος:** Εφαρμογή SHAP σε εκπαιδευμένο Decision Tree / Random Forest για ερμηνεία προβλέψεων.
+**Στόχος:** Σύγκριση Feature Importance → SHAP → LIME για ερμηνεία προβλέψεων churn.
 
 <div class="columns">
 
 <div>
 
-**Βήμα 1 — Εγκατάσταση & Εκπαίδευση:**
+**Βήμα 1 — Εκπαίδευση μοντέλου:**
 
 ```python
-pip install shap
+pip install shap lime
 
 from sklearn.ensemble import RandomForestClassifier
 rf = RandomForestClassifier(
@@ -1201,38 +1506,83 @@ rf = RandomForestClassifier(
 rf.fit(X_train, y_train)
 ```
 
-**Βήμα 2 — SHAP Explainer:**
+**Βήμα 2 — Feature Importance (baseline):**
+
+```python
+import pandas as pd
+fi = pd.Series(rf.feature_importances_,
+               index=FEATURES).sort_values()
+fi.plot(kind='barh')
+# Ερώτηση: ποια features «μετράνε» γενικά;
+```
+
+**Βήμα 3 — SHAP (global + local):**
 
 ```python
 import shap
 explainer = shap.TreeExplainer(rf)
 shap_values = explainer.shap_values(X_test)
+
+shap.summary_plot(shap_values[1], X_test,
+                  feature_names=FEATURES)
+shap.waterfall_plot(shap.Explanation(
+    values=shap_values[1][0],
+    base_values=explainer.expected_value[1],
+    data=X_test.iloc[0]))
 ```
 
 </div>
 
 <div>
 
-**Βήμα 3 — Οπτικοποιήσεις:**
+**Βήμα 4 — LIME (σύγκριση με SHAP):**
 
 ```python
-# Global: ποια features έχουν σημασία;
-shap.summary_plot(shap_values[1],
-                  X_test,
-                  feature_names=FEATURES)
+from lime.lime_tabular import LimeTabularExplainer
+lime_exp = LimeTabularExplainer(
+    X_train.values,
+    feature_names=FEATURES,
+    class_names=['No Churn','Churn'],
+    mode='classification')
 
-# Local: γιατί αυτός ο πελάτης;
-shap.waterfall_plot(
-    shap.Explanation(
-        values=shap_values[1][0],
-        base_values=explainer.expected_value[1],
-        data=X_test.iloc[0]))
+exp = lime_exp.explain_instance(
+    X_test.iloc[0].values,
+    rf.predict_proba)
+exp.show_in_notebook()
 ```
 
+**Ερωτήματα σύγκρισης:**
+
+| Ερώτηση | Εργαλείο |
+|---|---|
+| Ποια features έχουν γενικά σημασία; | Feature Importance |
+| Γιατί αυτός ο πελάτης ακυρώνει; | SHAP waterfall |
+| Ποιες λέξεις/τιμές έγειραν τη ζυγαριά; | LIME |
+| Συμφωνούν SHAP & LIME για τον ίδιο πελάτη; | Σύγκριση |
+
 **Αναμενόμενα αποτελέσματα:**
-* `tenure` και `MonthlyCharges` → κορυφαία features
-* Waterfall plot για 1 πελάτη → ποιοι παράγοντες ωθούν προς Ακύρωση
+* `tenure` και `MonthlyCharges` → κορυφαία features και στις 3 μεθόδους
+* SHAP & LIME συχνά συμφωνούν στα top-2, διαφέρουν σε μικρότερα features
 
 </div>
 
 </div>
+
+---
+
+<!-- _class: small -->
+# AI-based DSS στη Βιομηχανία 4.0
+
+> Soori et al. (2026). *AI-based decision support systems in Industry 4.0, a review.* [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2949948824000374)
+
+**Βασικά ευρήματα:**
+
+* Τα AI-based DSS είναι κρίσιμα για την ενσωμάτωση και επεξεργασία δεδομένων από **IoT και αισθητήρες** στη βιομηχανική παραγωγή
+* Βασικές εφαρμογές: **προγνωστική συντήρηση**, **ποιοτικός έλεγχος** (οπτική επιθεώρηση), **βελτιστοποίηση εφοδιαστικής αλυσίδας** και **ενεργειακή διαχείριση**
+* Τα μοντέλα **Machine Learning και Deep Learning**, σε συνδυασμό με NLP, επιτρέπουν αυτόνομη λήψη αποφάσεων σε πραγματικό χρόνο
+* Τα AI-driven DSS μειώνουν κόστος, αυξάνουν την αξιοπιστία και βελτιώνουν την αποδοτικότητα της παραγωγής
+
+**Προκλήσεις υλοποίησης:**
+
+* Ποιότητα δεδομένων και τεχνική ενσωμάτωση σε υφιστάμενα συστήματα
+* Ανθρώπινοι παράγοντες — αποδοχή και εμπιστοσύνη από τους χρήστες
