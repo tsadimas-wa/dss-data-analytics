@@ -1446,6 +1446,8 @@ Platform για monitoring και XAI production μοντέλων — ανιχν
 
 ---
 
+<!-- _class: small -->
+
 # Σύνοψη Ενότητας 7
 
 <div class="columns">
