@@ -1608,7 +1608,7 @@ Platform για monitoring και XAI production μοντέλων — ανιχν
 
 ---
 
-<!-- _class: xsmall -->
+<!-- _class: xxsmall -->
 # Εργαστήριο: XAI με SHAP στο Churn Dataset
 
 **Στόχος:** Σύγκριση Feature Importance → SHAP → LIME για ερμηνεία προβλέψεων churn.
