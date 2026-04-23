@@ -727,6 +727,7 @@ $$w \leftarrow w - \eta \cdot \frac{\partial \mathcal{L}}{\partial w}$$
 ---
 
 <!-- _class: xxsmall -->
+
 # Overfitting & Regularization στα Neural Networks
 
 Τα NN με πολλές παραμέτρους **απομνημονεύουν** τα training data — το ίδιο πρόβλημα με τα Decision Trees, αλλά πολύ πιο έντονο.
