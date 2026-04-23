@@ -420,7 +420,7 @@ $\max(0,z)$: αν $z>0$ περνά αναλλοίωτο, αλλιώς 0.
 
 # Συναρτήσεις Ενεργοποίησης — Γραφική Παράσταση
 
-![w:900](../img/lec7/activation_functions.svg)
+![w:1200](../img/lec7/activation_functions.svg)
 
 ---
 
