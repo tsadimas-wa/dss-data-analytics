@@ -1711,6 +1711,9 @@ exp.show_in_notebook()
 
 ---
 
+<!-- _class: xxsmall -->
 # An Industry 4.0 predictive maintenance decision support system based on IoT and machine learning 
 
-![w:900](https://ars.els-cdn.com/content/image/1-s2.0-S2949948824000374-gr3.jpg)
+![w:800](https://ars.els-cdn.com/content/image/1-s2.0-S2949948824000374-gr3.jpg)
+
+source: [From knowledge-based to big data analytic model: a novel IoT and machine learning based decision support system for predictive maintenance in Industry 4.0](https://link.springer.com/article/10.1007/s10845-022-01960-x?utm_source=getftr&utm_medium=getftr&utm_campaign=getftr_pilot&getft_integrator=sciencedirect_contenthosting)
