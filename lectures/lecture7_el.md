@@ -1707,3 +1707,10 @@ exp.show_in_notebook()
 
 * Ποιότητα δεδομένων και τεχνική ενσωμάτωση σε υφιστάμενα συστήματα
 * Ανθρώπινοι παράγοντες — αποδοχή και εμπιστοσύνη από τους χρήστες
+
+
+---
+
+# An Industry 4.0 predictive maintenance decision support system based on IoT and machine learning 
+
+![w:900](https://ars.els-cdn.com/content/image/1-s2.0-S2949948824000374-gr3.jpg)
