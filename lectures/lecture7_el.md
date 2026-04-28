@@ -7,6 +7,7 @@ header: 'Ενότητα 7: Νευρωνικά Δίκτυα, Generative AI & Εξ
 footer: 'Πανεπιστήμιο Δυτικής Αττικής (ΠΑΔΑ) — Ευφυή Συστήματα & ΣΥΑ'
 style: |
   section {
+    font-family: 'Liberation Sans', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
     font-size: 22px;
   }
   section.small {
