@@ -90,7 +90,7 @@ step_badge(ax, x1 - BW/2 - 0.45, y_top, '1', BLUE_D)
 arrow_h(ax, x1 + BW/2, x2 - BW/2, y_top, BLUE_D, 'εξάγει →')
 
 box(ax, x2, y_top, BW, BH,
-    'Ευκαιρίες (O)', 'Απειλές (T)',
+    'Ευκαιρίες (O)', '& Απειλές (T)',
     BLUE_L, BLUE_D, fontsize_t=13, fontsize_s=11)
 
 # ── Step 2: Εσωτερικός Έλεγχος ───────────────────────────────────────────────
