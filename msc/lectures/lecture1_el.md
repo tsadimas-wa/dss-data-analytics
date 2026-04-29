@@ -258,30 +258,49 @@ style: |
 
 ---
 
-# 1.2 PESTEL: Πότε & Πώς Χρησιμοποιείται
+# 1.2 PESTEL: Πότε & Πώς Χρησιμοποιείται;
 
 <!-- _class: small -->
 
-**Πότε:** είσοδος σε νέα αγορά, στρατηγικός σχεδιασμός, αξιολόγηση επενδύσεων, σενάρια κρίσης.
+<div class="columns">
+<div>
 
-**Τρία βήματα εφαρμογής:**
+**Πότε το χρειαζόμαστε;**
 
-1. **Scan** — αναγνώρισε όλους τους παράγοντες που επηρεάζουν τον κλάδο σου
-2. **Assess** — βαθμολόγησε Επίδραση (1–5) × Πιθανότητα (1–5) → ιεράρχησε
-3. **Act** — μετέφερε τους σημαντικούς παράγοντες στο SWOT (Ο/Τ)
+- 🌍 **Είσοδος σε νέα αγορά** — πριν επενδύσουμε σε άλλη χώρα ή κλάδο
+- 📈 **Στρατηγικός Σχεδιασμός** — για τον καθορισμό μακροπρόθεσμου πλάνου
+- 💰 **Αξιολόγηση Επενδύσεων** — για την κατανόηση του ρίσκου
+- 🚨 **Σενάρια Κρίσης** — για προετοιμασία απέναντι σε απρόβλεπτες αλλαγές
 
-**Κοινές παγίδες:**
-- Πολύ γενικές καταχωρήσεις («η οικονομία είναι κακή») — χρειάζεται **συγκεκριμένα δεδομένα**
-- Στατική ανάλυση — το PESTEL πρέπει να **ανανεώνεται** (τουλάχιστον ετήσια)
-- Παράβλεψη αλληλεπιδράσεων (π.χ. τεχνολογία + νομικό = ρύθμιση AI)
+</div>
+<div>
 
-> *Πηγή: Johnson, G., Scholes, K. & Whittington, R. (2008). Exploring Corporate Strategy. 8th ed. Prentice Hall.*
+**Η Μεθοδολογία 3 Βημάτων:**
+
+🔍 **Scan** — Αναγνώρισε όλους τους εξωτερικούς παράγοντες που επηρεάζουν τον κλάδο σου σήμερα και στο μέλλον.
+
+⚖️ **Assess** — Ιεράρχησε με τον τύπο:
+**Σημαντικότητα = Επίδραση (1–5) × Πιθανότητα (1–5)**
+
+🎬 **Act** — Μετέφερε μόνο τους κρίσιμους παράγοντες (υψηλότερο σκορ) στη SWOT ως **Ευκαιρίες (O)** ή **Απειλές (T)**.
+
+</div>
+</div>
+
+**⚠️ Κοινές Παγίδες:**
+- **Αοριστολογία:** όχι «η οικονομία είναι κακή» — αλλά «πληθωρισμός στο 9%»
+- **Στατικότητα:** το PESTEL ανανεώνεται τουλάχιστον **ετήσια**
+- **Απομόνωση:** μην αγνοείς αλληλεπιδράσεις (π.χ. νέα τεχνολογία AI → άμεσοι νέοι νομικοί κανόνες)
+
+> *Πηγή: Johnson, Scholes & Whittington (2008). Exploring Corporate Strategy.*
 
 ---
 
 # 1.2 PESTEL: Case Study — Tesla στην Ευρώπη (~2023)
 
 <!-- _class: casestudy xxsmall -->
+<img src="../img/logos/tesla.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+
 
 
 | Παράγοντας | Δεδομένο / Τάση | Επίδραση στην Tesla | O/T | Σημ. (1–5) |
@@ -384,6 +403,8 @@ style: |
 <!-- _class: casestudy xsmall -->
 
 # 1.3 Case Study: SWOT — Tesla στην Ευρώπη (~2023)
+<img src="../img/logos/tesla.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+
 
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:6px;">
 <div style="background:#dcfce7; border-radius:6px; padding:8px;">
@@ -426,9 +447,26 @@ style: |
 
 ---
 
+<!-- _class: casestudy xxsmall -->
+
+# 1.3 Case Study: Στρατηγική Σύνθεση TOWS — Tesla στην Ευρώπη
+<img src="../img/logos/tesla.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+
+
+> Η **SWOT** μας λέει *πού βρισκόμαστε*. Η **TOWS** μας λέει *τι πρέπει να κάνουμε* — συνδυάζει τα τεταρτημόρια για να παράγει στρατηγικές δράσεις.
+
+|  | 🌟 **Ευκαιρίες (O)**<br>EU Green Deal, Τέλος ICE 2035 | ⚠️ **Απειλές (T)**<br>BYD/NIO, Υψηλά Επιτόκια, AI Act |
+|---|---|---|
+| 💪 **Δυνάμεις (S)**<br>Gigafactory Βερολίνου, Υψηλά Περιθώρια, Software | **SO — Επίθεση / Ανάπτυξη**<br>Αξιοποίηση του Gigafactory για μαζική παραγωγή που καλύπτει την τεράστια ζήτηση που δημιουργεί το τέλος ICE το 2035 | **ST — Αξιοποίηση Δυνάμεων**<br>Χρήση υψηλών περιθωρίων για μείωση τιμών — χτυπά τον κινεζικό ανταγωνισμό (BYD) και αντισταθμίζει την πτώση αγοραστικής δύναμης λόγω επιτοκίων |
+| 📉 **Αδυναμίες (W)**<br>Γερασμένη Γκάμα, Quality Control, Υψηλές Τιμές Service | **WO — Βελτίωση / Ευθυγράμμιση**<br>Νέο «budget» μοντέλο (π.χ. Model 2) για να αξιοποιηθούν οι κρατικές επιδοτήσεις Green Deal που στοχεύουν στη μάζα | **WT — Άμυνα / Επιβίωση**<br>Ριζική βελτίωση Quality Control στο Βερολίνο + αυστηρή προσαρμογή λογισμικού στον AI Act για αποφυγή προστίμων |
+
+> 💡 **Παρατηρήστε:** μια αδυναμία (Γερασμένη Γκάμα) **μετατρέπεται σε project ανάπτυξης** (Νέο budget μοντέλο) όταν συνδυαστεί με μια ευκαιρία (EU Green Deal) — αυτή είναι η δύναμη της TOWS.
+
+---
+
 # 1.4 Ανταγωνιστική Ανάλυση: 5 Δυνάμεις Porter
 
-<!-- _class: xxsmall -->
+<!-- _class: xsmall -->
 
 Ο **Porter (1980)** περιέγραψε τις 5 δυνάμεις που καθορίζουν την **ελκυστικότητα (κερδοφορία) ενός κλάδου** — το βασικότερο εργαλείο για να εντοπίσουμε τις **Απειλές (T)** στη SWOT.
 
@@ -473,6 +511,8 @@ style: |
 # 1.4 Case Study: Netflix
 
 <!-- _class: casestudy xsmall -->
+<img src="../img/logos/netflix.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+
 
 <div class="columns">
 <div>
@@ -513,6 +553,8 @@ style: |
 # 1.4 Case Study: Skroutz
 
 <!-- _class: casestudy xsmall -->
+<img src="../img/logos/skroutz.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+
 
 <div class="columns">
 <div>
@@ -1344,6 +1386,8 @@ style: |
 # 5.2 Όταν ο Έλεγχος Αποτυγχάνει: VW Dieselgate (2015)
 
 <!-- _class: casestudy xsmall -->
+<img src="../img/logos/vw.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+
 
 **Τι Έγινε:** Η Volkswagen εγκατέστησε λογισμικό που ανίχνευε επίσημα tests εκπομπών και βελτίωνε τεχνητά τα αποτελέσματα. 11 εκ. αυτοκίνητα παγκοσμίως είχαν πλαστά δεδομένα.
 
@@ -1489,6 +1533,8 @@ $$\text{Ηγεσία} = \text{Διάθεση} \times \text{Ικανότητα} \
 # 6.2 Case Study: Η Παρακίνηση σε Κρίση (1/3)
 
 <!-- _class: casestudy small -->
+<img src="../img/logos/fintech.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+
 
 **Το Σενάριο:** Fintech startup, Αθήνα, 45 άτομα. Σε 12 μήνες: **40% turnover** στους developers.
 
@@ -1508,6 +1554,8 @@ $$\text{Ηγεσία} = \text{Διάθεση} \times \text{Ικανότητα} \
 # 6.2 Case Study: Η Παρακίνηση σε Κρίση (2/3)
 
 <!-- _class: casestudy small -->
+<img src="../img/logos/fintech.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+
 
 **Το Σύγχρονο Τοπίο (Post-Pandemic 2020+):**
 
@@ -1529,6 +1577,8 @@ $$\text{Ηγεσία} = \text{Διάθεση} \times \text{Ικανότητα} \
 # 6.2 Case Study: Η Παρακίνηση σε Κρίση (3/3)
 
 <!-- _class: casestudy small -->
+<img src="../img/logos/fintech.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+
 
 **Το Αποτέλεσμα:**
 
