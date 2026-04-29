@@ -43,6 +43,30 @@ style: |
   .ipo-output  { background: #e8f5e9; }
   .ipo-sep { font-size: 1.6em; align-self: center; color: #888; flex-shrink: 0; }
 
+  /* SWOT 2×2 grid */
+  .swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .swot-box { border-radius: 6px; padding: 8px; }
+  .swot-s { background: #dcfce7; }
+  .swot-o { background: #dbeafe; }
+  .swot-w { background: #fff7ed; }
+  .swot-t { background: #fef2f2; }
+  .swot-label {
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: white;
+  }
+  .swot-s-label { background: #15803d; }
+  .swot-o-label { background: #1d4ed8; }
+  .swot-w-label { background: #c2410c; }
+  .swot-t-label { background: #dc2626; }
+
   /* Slide με μόνο διάγραμμα — μεγάλο max-height εικόνας */
   section.diagram img {
     max-height: 500px !important;
@@ -431,9 +455,9 @@ style: |
 <img class="slide-logo" src="../img/logos/tesla.png">
 
 
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:6px;">
-<div style="background:#dcfce7; border-radius:6px; padding:8px;">
-<div style="background:#15803d; color:white; border-radius:4px; padding:3px 8px; font-weight:bold; margin-bottom:4px;">💪 Δυνάμεις (Strengths) — Εσωτερικά</div>
+<div class="swot-grid">
+<div class="swot-box swot-s">
+<div class="swot-label swot-s-label">💪 Δυνάμεις (Strengths) — Εσωτερικά</div>
 
 - Ισχυρό brand name & φανατικό κοινό
 - Gigafactory Βερολίνου → μειωμένα κόστη logistics
@@ -441,15 +465,15 @@ style: |
 - Υψηλά περιθώρια κέρδους ανά όχημα
 
 </div>
-<div style="background:#dbeafe; border-radius:6px; padding:8px;">
-<div style="background:#1d4ed8; color:white; border-radius:4px; padding:3px 8px; font-weight:bold; margin-bottom:4px;">🌟 Ευκαιρίες (Opportunities) — Εξωτερικά</div>
+<div class="swot-box swot-o">
+<div class="swot-label swot-o-label">🌟 Ευκαιρίες (Opportunities) — Εξωτερικά</div>
 
 - **[5/5]** EU Green Deal: επιδοτήσεις & αύξηση ζήτησης EV
 - **[5/5]** Νομοθεσία ΕΕ: τέλος πωλήσεων ICE το 2035
 
 </div>
-<div style="background:#fff7ed; border-radius:6px; padding:8px;">
-<div style="background:#c2410c; color:white; border-radius:4px; padding:3px 8px; font-weight:bold; margin-bottom:4px;">📉 Αδυναμίες (Weaknesses) — Εσωτερικά</div>
+<div class="swot-box swot-w">
+<div class="swot-label swot-w-label">📉 Αδυναμίες (Weaknesses) — Εσωτερικά</div>
 
 - Περιορισμένη / «γερασμένη» γκάμα μοντέλων
 - Ζητήματα quality control σε ορισμένες παρτίδες
@@ -457,8 +481,8 @@ style: |
 - Υψηλές τιμές ανταλλακτικών & περιορισμένο service
 
 </div>
-<div style="background:#fef2f2; border-radius:6px; padding:8px;">
-<div style="background:#dc2626; color:white; border-radius:4px; padding:3px 8px; font-weight:bold; margin-bottom:4px;">⚠️ Απειλές (Threats) — Εξωτερικά</div>
+<div class="swot-box swot-t">
+<div class="swot-label swot-t-label">⚠️ Απειλές (Threats) — Εξωτερικά</div>
 
 - **[4/5]** Κινεζικός ανταγωνισμός στην Ευρώπη (BYD, NIO)
 - **[4/5]** Υψηλά επιτόκια → μειωμένη αγοραστική δύναμη
