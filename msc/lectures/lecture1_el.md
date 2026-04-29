@@ -3,6 +3,7 @@ marp: true
 theme: default
 paginate: true
 math: katex
+html: true
 header: 'Ενότητα 1: Οργάνωση Επιχειρήσεων & Διοίκηση'
 footer: 'Πανεπιστήμιο Δυτικής Αττικής (ΠΑΔΑ) — Συστήματα Αποφάσεων, Διαχείριση Διεργασιών και Επιχειρηματική Ανάλυση'
 style: |
@@ -28,6 +29,19 @@ style: |
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
+
+  /* IPO model (three boxes in a row) */
+  .ipo-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 6px;
+  }
+  .ipo-box { flex: 1; border-radius: 8px; padding: 10px; }
+  .ipo-input   { background: #e8f4f8; }
+  .ipo-process { background: #fff8e1; }
+  .ipo-output  { background: #e8f5e9; }
+  .ipo-sep { font-size: 1.6em; align-self: center; color: #888; flex-shrink: 0; }
 
   /* Slide με μόνο διάγραμμα — μεγάλο max-height εικόνας */
   section.diagram img {
@@ -78,6 +92,16 @@ style: |
   }
   section.casestudy header, section.casestudy footer {
     color: #9a3412;
+  }
+  /* Company logo — top-right corner of case study slides */
+  .slide-logo {
+    position: absolute;
+    top: 58px;
+    right: 20px;
+    width: 62px;
+    border-radius: 50%;
+    opacity: 0.92;
+    z-index: 10;
   }
 ---
 
@@ -144,8 +168,8 @@ style: |
 
 **Το Μοντέλο Μετασχηματισμού (IPO Model):**
 
-<div style="display:flex; gap:10px; align-items:flex-start; margin-top:6px;">
-<div style="flex:1; background:#e8f4f8; border-radius:8px; padding:10px;">
+<div class="ipo-row">
+<div class="ipo-box ipo-input">
 
 **📥 Εισροές (Inputs)**
 
@@ -154,8 +178,8 @@ style: |
 - **Τεχνογνωσία:** Δεδομένα & Πληροφορίες
 
 </div>
-<div style="font-size:1.8em; align-self:center; color:#888; flex-shrink:0;">→</div>
-<div style="flex:1; background:#fff8e1; border-radius:8px; padding:10px;">
+<div class="ipo-sep">→</div>
+<div class="ipo-box ipo-process">
 
 **⚙️ Μετασχηματισμός**
 
@@ -164,8 +188,8 @@ style: |
 - **Διαχείριση:** Συντονισμός ενεργειών
 
 </div>
-<div style="font-size:1.8em; align-self:center; color:#888; flex-shrink:0;">→</div>
-<div style="flex:1; background:#e8f5e9; border-radius:8px; padding:10px;">
+<div class="ipo-sep">→</div>
+<div class="ipo-box ipo-output">
 
 **📤 Εκροές (Outputs)**
 
@@ -300,7 +324,7 @@ style: |
 # 1.2 PESTEL: Case Study — Tesla στην Ευρώπη (~2023)
 
 <!-- _class: casestudy xxsmall -->
-<img src="../img/logos/tesla.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+<img class="slide-logo" src="../img/logos/tesla.png">
 
 
 
@@ -328,7 +352,7 @@ style: |
 
 # 1.2 PESTEL — Γράφημα
 
-![](../img/pestel.png)
+![h:450](../img/pestel.png)
 
 ---
 
@@ -404,7 +428,7 @@ style: |
 <!-- _class: casestudy xsmall -->
 
 # 1.3 Case Study: SWOT — Tesla στην Ευρώπη (~2023)
-<img src="../img/logos/tesla.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+<img class="slide-logo" src="../img/logos/tesla.png">
 
 
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:6px;">
@@ -451,7 +475,7 @@ style: |
 <!-- _class: casestudy xxsmall -->
 
 # 1.3 Case Study: Στρατηγική Σύνθεση TOWS — Tesla στην Ευρώπη
-<img src="../img/logos/tesla.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+<img class="slide-logo" src="../img/logos/tesla.png">
 
 
 > Η **SWOT** μας λέει *πού βρισκόμαστε*. Η **TOWS** μας λέει *τι πρέπει να κάνουμε* — συνδυάζει τα τεταρτημόρια για να παράγει στρατηγικές δράσεις.
@@ -512,7 +536,7 @@ style: |
 # 1.4 Case Study: Netflix
 
 <!-- _class: casestudy xsmall -->
-<img src="../img/logos/netflix.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+<img class="slide-logo" src="../img/logos/netflix.png">
 
 
 <div class="columns">
@@ -554,7 +578,7 @@ style: |
 # 1.4 Case Study: Skroutz
 
 <!-- _class: casestudy xsmall -->
-<img src="../img/logos/skroutz.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+<img class="slide-logo" src="../img/logos/skroutz.png">
 
 
 <div class="columns">
@@ -1451,7 +1475,7 @@ style: |
 # 5.2 Όταν ο Έλεγχος Αποτυγχάνει: VW Dieselgate (2015)
 
 <!-- _class: casestudy xsmall -->
-<img src="../img/logos/vw.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+<img class="slide-logo" src="../img/logos/vw.png">
 
 
 **Τι Έγινε:** Η Volkswagen εγκατέστησε λογισμικό που ανίχνευε επίσημα tests εκπομπών και βελτίωνε τεχνητά τα αποτελέσματα. 11 εκ. αυτοκίνητα παγκοσμίως είχαν πλαστά δεδομένα.
@@ -1598,7 +1622,7 @@ $$\text{Ηγεσία} = \text{Διάθεση} \times \text{Ικανότητα} \
 # 6.2 Case Study: Η Παρακίνηση σε Κρίση (1/3)
 
 <!-- _class: casestudy small -->
-<img src="../img/logos/fintech.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+<img class="slide-logo" src="../img/logos/fintech.png">
 
 
 **Το Σενάριο:** Fintech startup, Αθήνα, 45 άτομα. Σε 12 μήνες: **40% turnover** στους developers.
@@ -1619,7 +1643,7 @@ $$\text{Ηγεσία} = \text{Διάθεση} \times \text{Ικανότητα} \
 # 6.2 Case Study: Η Παρακίνηση σε Κρίση (2/3)
 
 <!-- _class: casestudy small -->
-<img src="../img/logos/fintech.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+<img class="slide-logo" src="../img/logos/fintech.png">
 
 
 **Το Σύγχρονο Τοπίο (Post-Pandemic 2020+):**
@@ -1642,7 +1666,7 @@ $$\text{Ηγεσία} = \text{Διάθεση} \times \text{Ικανότητα} \
 # 6.2 Case Study: Η Παρακίνηση σε Κρίση (3/3)
 
 <!-- _class: casestudy small -->
-<img src="../img/logos/fintech.png" style="position:absolute; top:58px; right:20px; width:62px; border-radius:50%; opacity:0.92; z-index:10;">
+<img class="slide-logo" src="../img/logos/fintech.png">
 
 
 **Το Αποτέλεσμα:**
