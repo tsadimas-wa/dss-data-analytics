@@ -42,6 +42,7 @@ style: |
     max-width: 94% !important;
     display: block;
     margin: 0 auto;
+    font-size: 14px;
   }
   /* Case Study slides */
   section.casestudy {
@@ -758,7 +759,17 @@ style: |
 
 # 2.2 Λειτουργική Δομή — Οργανόγραμμα: Apple Inc.
 
-![](../img/orgcharts/apple_org.png)
+![h:320](../img/orgcharts/apple_org.png)
+
+<!-- _class: xxsmall-->
+**Χαρακτηριστικά Λειτουργικής Δομής Apple**
+
+- Ο CEO λαμβάνει τελικές αποφάσεις σε όλες τις λειτουργίες
+- Κάθε SVP ελέγχει μία λειτουργία παγκοσμίως (όχι ανά προϊόν)
+- Δεν υπάρχουν «divisions» — το iPhone δεν έχει δικό του P&L
+- Ευνοεί βαθιά τεχνολογική εξειδίκευση & ενιαία εμπειρία χρήστη
+
+> 💡 **P&L** *(Profit & Loss)*: Κατάσταση αποτελεσμάτων ενός τμήματος — **Έσοδα − Κόστη = Κέρδος/Ζημία**. «Έχει δικό του P&L» σημαίνει ότι το τμήμα λογοδοτεί αυτόνομα για τα κέρδη και τις ζημίες του.
 
 ---
 
@@ -790,6 +801,12 @@ style: |
 # 2.2 Τμηματική Δομή — Οργανόγραμμα: Samsung Electronics
 
 ![](../img/orgcharts/divisional_org.png)
+
+<!-- _class: xxsmall-->
+**Κάθε Division: αυτόνομος P&L · δικά της λειτουργικά τμήματα (HR, Finance, R&D)**
+
+- **(+)** Εστίαση & ευελιξία ανά αγορά
+- **(-)** Αλληλεπικάλυψη λειτουργιών (διπλά κόστη)
 
 ---
 
@@ -852,11 +869,37 @@ style: |
 
 ---
 
-<!-- _class: diagram -->
+<!-- _class: diagram-sm -->
 
 # 2.2 Επίπεδη Δομή — Οργανόγραμμα: Valve Corporation
 
-![](../img/orgcharts/flat_org.png)
+![h:350](../img/orgcharts/flat_org.png)
+
+*Δεν υπάρχουν middle managers — κάθε εργαζόμενος επιλέγει το project που θέλει να δουλέψει*
+
+<!-- _class: xxsmall -->
+<div class="columns">
+<div>
+
+**Valve — Χαρακτηριστικά**
+
+- Span of Control: Απεριόριστο (flat hierarchy)
+- Αποφάσεις μέσω consensus μεταξύ peers
+- Κινητά γραφεία (desks on wheels)
+- Ετήσιες αξιολογήσεις peer-to-peer
+
+</div>
+<div>
+
+**Spotify Squad Model (παρόμοιο)**
+
+- Squads (~8 ατ.) = αυτόνομες μονάδες
+- Tribes = συλλογή Squads κοινού σκοπού
+- Chapters = ειδικότητα cross-tribes
+- Guilds = οριζόντιες κοινότητες ενδιαφέροντος
+
+</div>
+</div>
 
 ---
 
@@ -870,7 +913,7 @@ style: |
 
 # 2.3 Συγκριτική Επισκόπηση Δομών
 
-<!-- _class: xxsmall -->
+<!-- _class: small -->
 
 | Δομή | Πηγή / Θεωρητικός | Ιδανική Συνθήκη | Παράδειγμα |
 |---|---|---|---|
@@ -889,7 +932,18 @@ style: |
 
 # 2.3 Οργανόγραμμα: Alphabet / Google — Holding Δομή
 
-![](../img/orgcharts/alphabet_org.png)
+![w:1200](../img/orgcharts/alphabet_org.png)
+
+---
+
+# 2.3 Alphabet / Google — Holding Δομή
+
+**Holding:** Η μητρική (Alphabet) κατέχει μετοχές των θυγατρικών αλλά **δεν παρεμβαίνει** στις καθημερινές λειτουργίες τους — κάθε θυγατρική έχει δικό της management και P&L. Το πλεονέκτημα: **απομόνωση ρίσκου** — αν αποτύχει μια θυγατρική (π.χ. Waymo), δεν «μολύνει» τα υπόλοιπα.
+
+| Θυγατρική | Ρόλος |
+|---|---|
+| **Google LLC** | Κύρια εσοδογόνος (Search, YouTube, Cloud) |
+| **Other Bets** | Μακροπρόθεσμες επενδύσεις υψηλού ρίσκου (Waymo, DeepMind, Verily) |
 
 ---
 
@@ -898,6 +952,17 @@ style: |
 # 2.3 Οργανόγραμμα: Amazon — Divisional + Two-Pizza Teams
 
 ![](../img/orgcharts/amazon_org.png)
+
+---
+
+# 2.3 Amazon — Divisional + Two-Pizza Teams
+
+**Divisional:** Κάθε business unit (AWS, Retail, Advertising…) λειτουργεί αυτόνομα με δικό του P&L και management.
+
+![w:200](../img/mpezos.jpg)
+
+🍕 **Two-Pizza Rule (Bezos):** Κάθε ομάδα πρέπει να μπορεί να ταϊστεί με **2 πίτσες** (~6–10 άτομα). Μικρή ομάδα = γρήγορες αποφάσεις + πλήρες ownership του service — χωρίς γραφειοκρατία.
+
 
 ---
 

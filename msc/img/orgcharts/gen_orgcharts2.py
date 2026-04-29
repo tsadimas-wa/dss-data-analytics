@@ -43,10 +43,10 @@ def save(fig, path):
 # ── 1. Divisional — Samsung ───────────────────────────────────────────────────
 
 def make_divisional():
-    fig, ax = plt.subplots(figsize=(14, 7.5))
+    fig, ax = plt.subplots(figsize=(14, 5))
     fig.patch.set_facecolor(BG)
     ax.set_facecolor(BG)
-    ax.set_xlim(0, 14); ax.set_ylim(0, 7.5)
+    ax.set_xlim(0, 14); ax.set_ylim(3.0, 7.5)
     ax.axis('off')
     ax.set_title("Τμηματική Δομή (Divisional) — Samsung Electronics",
                  color=TITLE, fontsize=13, fontweight='bold', pad=12)
@@ -95,19 +95,6 @@ def make_divisional():
     for x, label in vd:
         draw_box(ax, x, 4.0, 1.2, 0.7, label, color='#388E3C', fontsize=7.5)
         draw_line(ax, 11.6, 5.11, x, 4.35)
-
-    # Shared services note
-    note = FancyBboxPatch((1.5, 1.2), 11.0, 1.7,
-                          boxstyle="round,pad=0.06",
-                          facecolor='#F5F5F5', edgecolor='#BDBDBD', linewidth=1,
-                          zorder=2)
-    ax.add_patch(note)
-    ax.text(7.0, 2.7, "Κάθε Division: αυτόνομος P&L · δικά της λειτουργικά τμήματα (HR, Finance, R&D)",
-            ha='center', fontsize=8.5, color='#333333', fontweight='bold', zorder=3)
-    ax.text(7.0, 2.25,
-            "(+) Εστίαση & ευελιξία ανά αγορά          "
-            "(-) Αλληλεπικάλυψη λειτουργιών (διπλά κόστη)",
-            ha='center', fontsize=8, color='#555555', zorder=3)
 
     ax.text(0.01, 0.01,
             "Πηγή: Samsung Electronics Annual Report 2023 · Chandler (1962), Strategy and Structure",
@@ -194,10 +181,10 @@ def make_matrix():
 # ── 3. Flat — Valve Corporation ───────────────────────────────────────────────
 
 def make_flat():
-    fig, ax = plt.subplots(figsize=(16, 8))
+    fig, ax = plt.subplots(figsize=(16, 5))
     fig.patch.set_facecolor(BG)
     ax.set_facecolor(BG)
-    ax.set_xlim(0, 16); ax.set_ylim(0, 8)
+    ax.set_xlim(0, 16); ax.set_ylim(4.8, 8)
     ax.axis('off')
     ax.set_title("Επίπεδη Δομή (Flat) — Valve Corporation",
                  color=TITLE, fontsize=13, fontweight='bold', pad=12)
@@ -221,40 +208,6 @@ def make_flat():
     for x, label, col in nodes:
         draw_box(ax, x, 5.6, 1.7, 0.82, label, color=col, fontsize=8)
         draw_line(ax, 8.0, 7.04, x, 6.01)
-
-    # "No managers" annotation — well below node boxes
-    ax.text(8.0, 4.6,
-            "Δεν υπάρχουν middle managers — κάθε εργαζόμενος επιλέγει το project που θέλει να δουλέψει",
-            ha='center', fontsize=8.5, color='#555555', style='italic')
-
-    # Two info boxes — separated clearly below the italic text
-    note = FancyBboxPatch((0.4, 1.1), 6.8, 2.9,
-                          boxstyle="round,pad=0.08",
-                          facecolor='#ECEFF1', edgecolor='#90A4AE', linewidth=1.2,
-                          zorder=2)
-    ax.add_patch(note)
-    ax.text(3.8, 3.7, "Valve — Χαρακτηριστικά",
-            ha='center', fontsize=9.5, color='#37474F', fontweight='bold', zorder=3)
-    ax.text(3.8, 3.15,
-            "Span of Control: Απεριόριστο (flat hierarchy)\n"
-            "Αποφάσεις μέσω consensus μεταξύ peers\n"
-            "Κινητά γραφεία (desks on wheels)\n"
-            "Ετήσιες αξιολογήσεις peer-to-peer",
-            ha='center', fontsize=8.2, color='#444444', linespacing=1.6, zorder=3)
-
-    note2 = FancyBboxPatch((8.8, 1.1), 6.8, 2.9,
-                           boxstyle="round,pad=0.08",
-                           facecolor='#FFF3E0', edgecolor='#FFB74D', linewidth=1.2,
-                           zorder=2)
-    ax.add_patch(note2)
-    ax.text(12.2, 3.7, "Spotify Squad Model (παρόμοιο)",
-            ha='center', fontsize=9.5, color='#E65100', fontweight='bold', zorder=3)
-    ax.text(12.2, 3.15,
-            "Squads (~8 ατ.) = αυτόνομες μονάδες\n"
-            "Tribes = συλλογή Squads κοινού σκοπού\n"
-            "Chapters = ειδικότητα cross-tribes\n"
-            "Guilds = οριζόντιες κοινότητες ενδιαφέροντος",
-            ha='center', fontsize=8.2, color='#444444', linespacing=1.6, zorder=3)
 
     ax.text(0.01, 0.01,
             "Πηγή: Valve Employee Handbook (2012) · Peters & Waterman (1982) In Search of Excellence",

@@ -208,10 +208,10 @@ def make_amazon():
 # ── 3. Apple ─────────────────────────────────────────────────────────────────
 
 def make_apple():
-    fig, ax = plt.subplots(figsize=(13, 7))
+    fig, ax = plt.subplots(figsize=(13, 5))
     fig.patch.set_facecolor(BG)
     ax.set_facecolor(BG)
-    ax.set_xlim(0, 13); ax.set_ylim(0, 7)
+    ax.set_xlim(0, 13); ax.set_ylim(2.8, 7)
     ax.axis('off')
     ax.set_title("Apple Inc. — Λειτουργική Δομή (Functional)", color=TITLE,
                  fontsize=13, fontweight='bold', pad=12)
@@ -263,25 +263,6 @@ def make_apple():
     for x, lbl in svc_teams:
         draw_box(ax, x, 3.7, 0.9, 0.55, lbl, color='#1B5E20', fontsize=6.8)
         draw_line(ax, 10.0, 4.58, x, 3.98)
-
-    # Annotation box
-    note_bg = FancyBboxPatch((3.2, 1.1), 6.6, 1.9,
-                             boxstyle="round,pad=0.06",
-                             facecolor='#F5F5F5', edgecolor='#BDBDBD', linewidth=1,
-                             zorder=2)
-    ax.add_patch(note_bg)
-    ax.text(6.5, 2.8,
-            "Χαρακτηριστικά Λειτουργικής Δομής Apple",
-            ha='center', fontsize=8.5, color='#212121', fontweight='bold', zorder=3)
-    lines = [
-        "• Ο CEO λαμβάνει τελικές αποφάσεις σε όλες τις λειτουργίες",
-        "• Κάθε SVP ελέγχει μία λειτουργία παγκοσμίως (όχι ανά προϊόν)",
-        "• Δεν υπάρχουν «divisions» — το iPhone δεν έχει δικό του P&L",
-        "• Ευνοεί βαθιά τεχνολογική εξειδίκευση & ενιαία εμπειρία χρήστη",
-    ]
-    for i, line in enumerate(lines):
-        ax.text(3.5, 2.5 - i * 0.32, line, ha='left', fontsize=7.2,
-                color='#333333', zorder=3)
 
     ax.text(0.1, 0.02,
             "Πηγή: Apple Inc. Proxy Statement 2023 · Isaacson W. (2011) Steve Jobs · Lashinsky A. (2012) Inside Apple",
