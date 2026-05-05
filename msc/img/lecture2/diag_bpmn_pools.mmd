@@ -1,0 +1,17 @@
+flowchart TB
+    subgraph Pool1["Pool: Εταιρεία μας"]
+        subgraph Lane1["Lane: Πωλητής"]
+            A["Task A"] --> B["Task B"]
+        end
+        subgraph Lane2["Lane: Λογιστήριο"]
+            C["Task C"]
+        end
+    end
+    B --> C
+    subgraph Pool2["Pool: Πελάτης (εξωτερικός)"]
+        D[" "]
+    end
+    style Pool1 fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
+    style Pool2 fill:#FFF9C4,stroke:#F9A825,stroke-width:2px
+    style Lane1 fill:#BBDEFB,stroke:#1976D2
+    style Lane2 fill:#BBDEFB,stroke:#1976D2

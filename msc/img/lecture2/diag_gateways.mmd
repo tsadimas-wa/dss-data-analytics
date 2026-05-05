@@ -1,0 +1,13 @@
+flowchart TD
+    subgraph XOR["XOR — Αποκλειστική Επιλογή"]
+        Q1["Ελήφθη παραγγελία"] --> G1{"Υπάρχει στοκ;"}
+        G1 -->|"Ναι"| XA["Αποστολή"]
+        G1 -->|"Όχι"| XB["Back-order"]
+    end
+    subgraph AND["AND — Παράλληλη Εκτέλεση"]
+        Q2["Επιβεβαίωση παραγγελίας"] --> G2{"AND +"}
+        G2 --> YA["Έκδοση τιμολογίου"]
+        G2 --> YB["Ετοιμασία δέματος"]
+    end
+    style XOR fill:#FFF9C4,stroke:#F9A825
+    style AND fill:#E8F5E9,stroke:#388E3C

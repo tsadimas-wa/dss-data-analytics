@@ -1,0 +1,10 @@
+flowchart LR
+    S([Παραγγελία]) --> P1[Πωλήσεις] --> P2[Αποθήκη] --> P3[Λογ.] --> E([Είσπραξη])
+    subgraph OTC["Order-to-Cash Process"]
+        P1
+        P2
+        P3
+    end
+    style S fill:#A5D6A7,stroke:#2E7D32
+    style E fill:#EF9A9A,stroke:#C62828
+    style OTC fill:#E8F5E9,stroke:#388E3C

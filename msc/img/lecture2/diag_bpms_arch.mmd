@@ -1,0 +1,10 @@
+flowchart LR
+    A["**Modeling Layer**\nBusiness Analyst → BPMN Diagram"]
+    --> B["**Repository**\nProcess definitions · versions · history"]
+    --> C["**Engine** (Μηχανή Εκτέλεσης)\nΔρομολόγηση Tasks σε Providers"]
+    --> D["**Resource Providers**\nPeople · IT Systems · External APIs"]
+    D -.->|"monitoring data"| A
+    style A fill:#1565C0,color:#ffffff,stroke:#0D47A1,stroke-width:2px
+    style B fill:#2E7D32,color:#ffffff,stroke:#1B5E20,stroke-width:2px
+    style C fill:#E65100,color:#ffffff,stroke:#BF360C,stroke-width:2px
+    style D fill:#6A1B9A,color:#ffffff,stroke:#4A148C,stroke-width:2px

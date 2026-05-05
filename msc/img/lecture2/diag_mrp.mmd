@@ -1,0 +1,6 @@
+flowchart LR
+    A["MPS\n100 ποδήλατα"] --> B["BOM — ανά ποδήλατο\n2 τροχοί · 1 πλαίσιο\n2 φρένα · 1 τιμόνι"]
+    B --> C["Inventory Check\nΤροχοί: 50 → +150\nΠλαίσια: 100 → +0 ✓\nΦρένα: 80 → +120\nΤιμόνια: 20 → +80"]
+    C --> D["Planned Orders\nΑυτόματη αποστολή\nστους προμηθευτές"]
+    style A fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
+    style D fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px

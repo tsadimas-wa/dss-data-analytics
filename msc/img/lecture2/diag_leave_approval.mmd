@@ -1,0 +1,17 @@
+flowchart LR
+    subgraph Upallilos["Lane: Υπάλληλος"]
+        direction TB
+        S(["○ Αίτημα"]) --> F["Συμπλήρωση\nΦόρμας"]
+    end
+    subgraph Manager_["Lane: Manager"]
+        direction TB
+        E["Έλεγχος\nΑίτησης"] --> G{"Εγκρίνεται;"}
+        G -->|"ΝΑΙ"| HR["Ενημέρωση HR"] --> EndOK(["● Εγκρίθηκε"])
+        G -->|"ΟΧΙ"| EndRej(["● Απορρίφθηκε"])
+    end
+    F --> E
+    style S fill:#A5D6A7,stroke:#2E7D32
+    style EndOK fill:#A5D6A7,stroke:#2E7D32
+    style EndRej fill:#EF9A9A,stroke:#C62828
+    style Upallilos fill:#E3F2FD,stroke:#1565C0
+    style Manager_ fill:#FFF9C4,stroke:#F9A825
