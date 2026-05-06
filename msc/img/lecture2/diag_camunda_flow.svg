@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="390" viewBox="0 0 560 390">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- A: Camunda Modeler -->
+  <rect x="200" y="18" width="160" height="34" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="280" y="40" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1e40af">Camunda Modeler</text>
+
+  <!-- Arrow A→B -->
+  <line x1="280" y1="52" x2="280" y2="84" stroke="#777" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="288" y="72" font-family="sans-serif" font-size="10" fill="#777" font-style="italic">Σχεδιασμός</text>
+
+  <!-- B: process.bpmn (stadium) -->
+  <rect x="210" y="86" width="140" height="32" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="280" y="107" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#166534">process.bpmn</text>
+
+  <!-- Arrow B→C -->
+  <line x1="280" y1="118" x2="280" y2="158" stroke="#777" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- D: REST API Call (left) -->
+  <rect x="10" y="193" width="118" height="34" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="69" y="211" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e40af">REST API</text>
+  <text x="69" y="224" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e40af">Call</text>
+
+  <!-- Arrow D→C -->
+  <line x1="128" y1="210" x2="184" y2="210" stroke="#777" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="156" y="204" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#777" font-style="italic">Εκκίνηση</text>
+  <text x="156" y="216" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#777" font-style="italic">Διεργασίας</text>
+
+  <!-- C: Spring Boot App (diamond) center=(280,210) half-w=96 half-h=52 -->
+  <polygon points="280,158 376,210 280,262 184,210" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="280" y="206" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#9a3412">Spring Boot</text>
+  <text x="280" y="221" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#9a3412">App</text>
+
+  <!-- Arrow C→E -->
+  <line x1="376" y1="210" x2="430" y2="210" stroke="#777" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="403" y="205" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#777" font-style="italic">εκτελεί</text>
+
+  <!-- E: User Task (right) -->
+  <rect x="432" y="193" width="110" height="34" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="487" y="215" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1e40af">User Task</text>
+
+  <!-- Arrow C→F (καλεί) — left lane -->
+  <line x1="273" y1="262" x2="273" y2="315" stroke="#777" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="248" y="293" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#777" font-style="italic">καλεί</text>
+
+  <!-- Arrow F→C (ολοκληρώνει) — right lane -->
+  <line x1="287" y1="315" x2="287" y2="262" stroke="#777" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="328" y="293" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#777" font-style="italic">ολοκληρώνει</text>
+
+  <!-- F: Java Worker -->
+  <rect x="210" y="317" width="140" height="34" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="280" y="339" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1e40af">Java Worker</text>
+</svg>
