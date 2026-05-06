@@ -1,0 +1,30 @@
+flowchart TB
+    subgraph Inputs["Sprint Δεδομένα"]
+        direction LR
+        A["🗓 Διαθέσιμος Χρόνος\nSprint = 2 εβδομάδες\n= 80 ώρες (1 dev)"]
+        B["📋 Ζήτηση Πελάτη\n8 features\nανά Sprint"]
+    end
+
+    T["⏱ <b>Takt Time</b>\n= 80 ÷ 8\n= <b>10 ώρες / feature</b>\n(ο «μετρονόμος» της ομάδας)"]
+
+    subgraph Scenarios["Σύγκριση Cycle Time vs Takt Time"]
+        direction LR
+        S1["⚠️ <b>Cycle > Takt</b>\n15h &gt; 10h\nBacklog αυξάνεται\nΟ developer «χρωστάει»"]
+        S2["✅ <b>Cycle = Takt</b>\n10h = 10h\nΤέλεια ισορροπία\nΑκριβής ικανοποίηση"]
+        S3["💡 <b>Cycle &lt; Takt</b>\n6h &lt; 10h\nΕλεύθερη χωρητικότητα\nΔυνατότητα βελτίωσης"]
+    end
+
+    A --> T
+    B --> T
+    T --> S1
+    T --> S2
+    T --> S3
+
+    style T fill:#FFF9C4,stroke:#F9A825,stroke-width:3px
+    style S1 fill:#FFCCBC,stroke:#BF360C,stroke-width:2px
+    style S2 fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px
+    style S3 fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
+    style A fill:#F3E5F5,stroke:#6A1B9A
+    style B fill:#F3E5F5,stroke:#6A1B9A
+    style Inputs fill:#EDE7F6,stroke:#6A1B9A,stroke-width:2px
+    style Scenarios fill:#FAFAFA,stroke:#9E9E9E,stroke-width:2px
