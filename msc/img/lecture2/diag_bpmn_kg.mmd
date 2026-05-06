@@ -1,0 +1,38 @@
+flowchart LR
+    subgraph BPMN["🔵  BPMN — Διαδικαστική Γνώση  (Πώς;)"]
+        direction TB
+        S(["○  Αίτηση\nΔανείου"])
+        T1["Παραλαβή\nΑίτησης"]
+        T2["⚡ Αξιολόγηση\nΡίσκου"]
+        GW{"Εγκρίνεται;"}
+        E1(["●  Έγκριση"])
+        E2(["●  Απόρριψη"])
+        S --> T1 --> T2 --> GW
+        GW -->|"ΝΑΙ ✓"| E1
+        GW -->|"ΟΧΙ ✗"| E2
+    end
+
+    subgraph KG["🟣  Knowledge Graph — Δηλωτική Γνώση  (Τι;)"]
+        direction TB
+        P["👤 Πελάτης\nΓ. Παπαδόπουλος"]
+        H["📋 Ιστορικό\nΠληρωμών\n2 καθυστερήσεις"]
+        C["🏢 Εταιρεία\nABC Ltd · 3ετής"]
+        R["⚠️ Κανόνας\nΥψηλό Ρίσκο\nαν ≥ 1 καθυστ."]
+        P -->|"έχει"| H
+        P -->|"εργάζεται σε"| C
+        R -->|"αξιολογεί"| P
+    end
+
+    T2 -.->|"ερωτά: υψηλό ρίσκο;"| R
+    R -.->|"απαντά: ΝΑΙ"| T2
+
+    style S fill:#A5D6A7,stroke:#2E7D32,stroke-width:2px
+    style E1 fill:#A5D6A7,stroke:#2E7D32,stroke-width:2px
+    style E2 fill:#EF9A9A,stroke:#C62828,stroke-width:2px
+    style T2 fill:#FFF9C4,stroke:#F9A825,stroke-width:3px
+    style R fill:#FFCCBC,stroke:#BF360C,stroke-width:2px
+    style P fill:#D1C4E9,stroke:#6A1B9A
+    style H fill:#D1C4E9,stroke:#6A1B9A
+    style C fill:#D1C4E9,stroke:#6A1B9A
+    style BPMN fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
+    style KG fill:#EDE7F6,stroke:#6A1B9A,stroke-width:2px
