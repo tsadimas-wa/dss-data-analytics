@@ -1,0 +1,37 @@
+flowchart LR
+    subgraph Politis["Lane: Πολίτης"]
+        direction TB
+        S(["○ Έναρξη"])
+        B["Σύνδεση gov.gr\nΥποβολή αίτησης"]
+        H["Ανάκτηση εγγράφου\nαπό Θυρίδα Πολίτη"]
+        EndOK(["● Επιτυχής\nΟλοκλήρωση"])
+        S --> B
+        H --> EndOK
+    end
+    subgraph GovGr["Lane: gov.gr — Σύστημα"]
+        direction TB
+        C["⚙ Παραλαβή &\nΠρωτοκόλληση\nΠροώθηση αίτησης"]
+        G["⚙ Τοποθέτηση στη\nΘυρίδα Πολίτη\nΕιδοποίηση SMS/Email"]
+    end
+    subgraph Ypiresia["Lane: Αρμόδια Υπηρεσία"]
+        direction TB
+        D["Έλεγχος αίτησης\nγια πληρότητα"]
+        E{"Αίτηση\nέγκυρη;"}
+        F["Έκδοση αντιγράφου\nΕθν. Ποινικό Μητρώο"]
+        EndRej(["● Απόρριψη"])
+        D --> E
+        E -->|"ΝΑΙ"| F
+        E -->|"ΟΧΙ"| EndRej
+    end
+    B --> C
+    C --> D
+    F --> G
+    G --> H
+    style S fill:#A5D6A7,stroke:#2E7D32,stroke-width:2px
+    style EndOK fill:#A5D6A7,stroke:#2E7D32,stroke-width:2px
+    style EndRej fill:#EF9A9A,stroke:#C62828,stroke-width:2px
+    style C fill:#C8E6C9,stroke:#2E7D32
+    style G fill:#C8E6C9,stroke:#2E7D32
+    style Politis fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
+    style GovGr fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px
+    style Ypiresia fill:#FFF9C4,stroke:#F9A825,stroke-width:2px
