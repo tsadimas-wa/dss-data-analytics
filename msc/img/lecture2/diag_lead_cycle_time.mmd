@@ -1,16 +1,31 @@
-gantt
-    title Feature «Dark Mode» — Software Kanban (Παράδειγμα)
-    dateFormat YYYY-MM-DD
-    axisFormat Ημ. %d
+flowchart LR
+    START(["Αίτημα Πελάτη\nDay 1"])
+    END_(["Deploy & Παράδοση\nDay 10"])
 
-    section Lead Time  ←────── 9 εργάσιμες ημέρες ──────→
-    Αίτημα Πελάτη (User Story)   :milestone, 2024-01-01, 0d
-    Deploy & Παράδοση            :milestone, 2024-01-10, 0d
+    subgraph LEAD["Lead Time — 9 εργάσιμες ημέρες"]
+        direction LR
 
-    section Queue Time  (3 ημ.) — αναμονή στο backlog
-    ⏳ Αναμονή στο Backlog        :crit, q, 2024-01-01, 3d
+        subgraph QUEUE["Queue Time"]
+            Q["Backlog\n3 ημέρες\nκαμία ανάπτυξη"]
+        end
 
-    section Cycle Time  ←── 6 ημέρες ──→  (ομάδα αναλαμβάνει)
-    💻 In Progress — Coding       :active, dev, 2024-01-04, 4d
-    🔍 Code Review                :review, 2024-01-08, 1d
-    ✅ Testing & CI/CD Deploy     :test, 2024-01-09, 1d
+        subgraph CYCLE["Cycle Time — 6 ημέρες"]
+            direction LR
+            D["In Progress\nCoding\n4 ημέρες"] --> R["Code\nReview\n1 ημ."] --> T["Testing\n& Deploy\n1 ημ."]
+        end
+
+        Q --> D
+    end
+
+    START --> Q
+    T --> END_
+
+    style START fill:#A5D6A7,stroke:#2E7D32,stroke-width:2px
+    style END_ fill:#A5D6A7,stroke:#2E7D32,stroke-width:2px
+    style Q fill:#FFECB3,stroke:#F57F17,stroke-width:2px
+    style D fill:#BBDEFB,stroke:#1565C0,stroke-width:2px
+    style R fill:#C5CAE9,stroke:#3949AB,stroke-width:2px
+    style T fill:#C8E6C9,stroke:#388E3C,stroke-width:2px
+    style QUEUE fill:#FFF8E1,stroke:#F9A825,stroke-width:2px
+    style CYCLE fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
+    style LEAD fill:#F5F5F5,stroke:#9E9E9E,stroke-width:2px
