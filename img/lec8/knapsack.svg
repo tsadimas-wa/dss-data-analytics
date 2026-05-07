@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 258" width="560" height="258">
+  <defs>
+    <marker id="arr-g" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="560" height="258" fill="#f8f9fa" rx="8"/>
+
+  <!-- Column headers -->
+  <text x="100" y="18" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#374151">Αντικείμενα</text>
+  <text x="219" y="18" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#374151">Γονίδιο</text>
+  <text x="410" y="18" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#374151">Αποτέλεσμα Επιλογής</text>
+
+  <!-- Separator lines -->
+  <line x1="197" y1="22" x2="197" y2="230" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="245" y1="22" x2="245" y2="230" stroke="#d1d5db" stroke-width="1"/>
+
+  <!-- ── ROW 1: Laptop  W=3, V=9  gene=1 ── -->
+  <rect x="8"   y="26" width="185" height="28" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="18"  y="44" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#1e40af">Laptop</text>
+  <text x="105" y="44" font-family="Arial,sans-serif" font-size="11" fill="#1d4ed8">W: 3 kg</text>
+  <text x="158" y="44" font-family="Arial,sans-serif" font-size="11" fill="#1d4ed8">V: 9€</text>
+  <!-- gene cell -->
+  <rect x="202" y="26" width="34" height="28" rx="4" fill="#22c55e" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="219" y="44" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="white">1</text>
+  <!-- arrow -->
+  <line x1="238" y1="40" x2="262" y2="40" stroke="#16a34a" stroke-width="1.8" marker-end="url(#arr-g)"/>
+  <!-- result -->
+  <rect x="267" y="26" width="282" height="28" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="277" y="44" font-family="Arial,sans-serif" font-size="12" fill="#166534">✓  Laptop — W: 3 kg, V: 9€</text>
+
+  <!-- ── ROW 2: Βιβλίο  W=4, V=5  gene=0 ── -->
+  <rect x="8"   y="62" width="185" height="28" rx="5" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="18"  y="80" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#6b7280">Βιβλίο</text>
+  <text x="105" y="80" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">W: 4 kg</text>
+  <text x="158" y="80" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">V: 5€</text>
+  <rect x="202" y="62" width="34" height="28" rx="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="219" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#9ca3af">0</text>
+  <text x="277" y="80" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">— (αποκλείεται)</text>
+
+  <!-- ── ROW 3: Κάμερα  W=2, V=7  gene=1 ── -->
+  <rect x="8"   y="98" width="185" height="28" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="18"  y="116" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#1e40af">Κάμερα</text>
+  <text x="105" y="116" font-family="Arial,sans-serif" font-size="11" fill="#1d4ed8">W: 2 kg</text>
+  <text x="158" y="116" font-family="Arial,sans-serif" font-size="11" fill="#1d4ed8">V: 7€</text>
+  <rect x="202" y="98" width="34" height="28" rx="4" fill="#22c55e" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="219" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="white">1</text>
+  <line x1="238" y1="112" x2="262" y2="112" stroke="#16a34a" stroke-width="1.8" marker-end="url(#arr-g)"/>
+  <rect x="267" y="98" width="282" height="28" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="277" y="116" font-family="Arial,sans-serif" font-size="12" fill="#166534">✓  Κάμερα — W: 2 kg, V: 7€</text>
+
+  <!-- ── ROW 4: Tablet  W=5, V=3  gene=1 ── -->
+  <rect x="8"   y="134" width="185" height="28" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="18"  y="152" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#1e40af">Tablet</text>
+  <text x="105" y="152" font-family="Arial,sans-serif" font-size="11" fill="#1d4ed8">W: 5 kg</text>
+  <text x="158" y="152" font-family="Arial,sans-serif" font-size="11" fill="#1d4ed8">V: 3€</text>
+  <rect x="202" y="134" width="34" height="28" rx="4" fill="#22c55e" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="219" y="152" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="white">1</text>
+  <line x1="238" y1="148" x2="262" y2="148" stroke="#16a34a" stroke-width="1.8" marker-end="url(#arr-g)"/>
+  <rect x="267" y="134" width="282" height="28" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="277" y="152" font-family="Arial,sans-serif" font-size="12" fill="#166534">✓  Tablet — W: 5 kg, V: 3€</text>
+
+  <!-- ── ROW 5: Ρολόι  W=1, V=4  gene=0 ── -->
+  <rect x="8"   y="170" width="185" height="28" rx="5" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="18"  y="188" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#6b7280">Ρολόι</text>
+  <text x="105" y="188" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">W: 1 kg</text>
+  <text x="158" y="188" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">V: 4€</text>
+  <rect x="202" y="170" width="34" height="28" rx="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="219" y="188" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#9ca3af">0</text>
+  <text x="277" y="188" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">— (αποκλείεται)</text>
+
+  <!-- Summary bar -->
+  <rect x="267" y="206" width="282" height="44" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="277" y="222" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#713f12">Fitness:</text>
+  <text x="277" y="240" font-family="Arial,sans-serif" font-size="12" fill="#713f12">Βάρος: 3+2+5 = 10/10 kg ✓   Αξία: 9+7+3 = 19€</text>
+
+  <!-- Chromosome label bottom-left -->
+  <rect x="8" y="206" width="185" height="44" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="100" y="222" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#4c1d95">Χρωμόσωμα:</text>
+  <text x="100" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#6d28d9">[ 1,  0,  1,  1,  0 ]</text>
+</svg>
