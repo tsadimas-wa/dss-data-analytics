@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="430" viewBox="0 0 720 430">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="450" viewBox="0 0 760 450">
   <defs>
     <marker id="arr-blue"   markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#3b82f6"/></marker>
     <marker id="arr-orange" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#f97316"/></marker>
@@ -7,100 +7,103 @@
   </defs>
 
   <!-- Background -->
-  <rect x="10" y="10" width="700" height="410" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-
-  <!-- Title -->
-  <text x="360" y="38" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1e293b">PSO — Κίνηση Σωματιδίου</text>
+  <rect x="8" y="8" width="744" height="434" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
 
   <!-- Axes -->
-  <line x1="60" y1="320" x2="660" y2="320" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr-blue)"/>
-  <line x1="60" y1="320" x2="60"  y2="60"  stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr-blue)"/>
-  <text x="665" y="325" font-family="sans-serif" font-size="11" fill="#64748b">x₁</text>
-  <text x="55"  y="55"  text-anchor="end" font-family="sans-serif" font-size="11" fill="#64748b">x₂</text>
+  <line x1="70" y1="360" x2="700" y2="360" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+  <line x1="70" y1="360" x2="70"  y2="55"  stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+  <text x="705" y="365" font-family="sans-serif" font-size="12" fill="#64748b">x₁</text>
+  <text x="65"  y="52"  text-anchor="end" font-family="sans-serif" font-size="12" fill="#64748b">x₂</text>
 
-  <!-- Contour ellipses -->
-  <ellipse cx="490" cy="155" rx="170" ry="110" fill="none" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <ellipse cx="490" cy="155" rx="110" ry="70"  fill="none" stroke="#ddd6fe" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <ellipse cx="490" cy="155" rx="55"  ry="35"  fill="none" stroke="#c4b5fd" stroke-width="1.5"/>
-  <ellipse cx="490" cy="155" rx="20"  ry="13"  fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <!-- Contour ellipses — global optimum at (560, 140) -->
+  <ellipse cx="560" cy="140" rx="155" ry="100" fill="none" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <ellipse cx="560" cy="140" rx="100" ry="65"  fill="none" stroke="#ddd6fe" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <ellipse cx="560" cy="140" rx="50"  ry="33"  fill="none" stroke="#c4b5fd" stroke-width="1.5"/>
+  <ellipse cx="560" cy="140" rx="18"  ry="12"  fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
 
   <!-- Global optimum star + label -->
-  <text x="490" y="162" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#7c3aed">★</text>
-  <rect x="512" y="131" width="63" height="16" rx="3" fill="white" opacity="0.9"/>
-  <text x="514" y="144" font-family="sans-serif" font-size="11" fill="#6d28d9">Βέλτιστο</text>
+  <text x="560" y="147" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#7c3aed">★</text>
+  <rect x="582" y="118" width="70" height="18" rx="3" fill="white" opacity="0.95"/>
+  <text x="584" y="132" font-family="sans-serif" font-size="12" fill="#6d28d9">Βέλτιστο</text>
 
-  <!-- Background particles -->
-  <circle cx="200" cy="260" r="10" fill="#94a3b8" stroke="#64748b" stroke-width="1.5"/>
-  <circle cx="320" cy="200" r="10" fill="#94a3b8" stroke="#64748b" stroke-width="1.5"/>
-  <circle cx="580" cy="270" r="10" fill="#94a3b8" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Background particles (other swarm members) -->
+  <circle cx="470" cy="300" r="9" fill="#94a3b8" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="620" cy="255" r="9" fill="#94a3b8" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="110" cy="315" r="9" fill="#94a3b8" stroke="#64748b" stroke-width="1.5"/>
 
-  <!-- ===== Arrows (drawn before circles so circles appear on top) ===== -->
+  <!-- ===== ARROWS (drawn before circles so circles appear on top) ===== -->
 
-  <!-- Blue dashed: inertia w·vᵢᵗ -->
-  <line x1="198" y1="175" x2="236" y2="192" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arr-blue)" stroke-dasharray="5,3"/>
-  <!-- Orange: pull toward pbest -->
-  <line x1="250" y1="185" x2="338" y2="154" stroke="#f97316" stroke-width="2.5" marker-end="url(#arr-orange)"/>
-  <!-- Red: pull toward gbest -->
-  <line x1="252" y1="194" x2="448" y2="180" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arr-red)"/>
-  <!-- Green: new velocity vᵢᵗ⁺¹ -->
-  <line x1="253" y1="184" x2="327" y2="159" stroke="#16a34a" stroke-width="3" marker-end="url(#arr-green)"/>
+  <!-- Blue dashed: inertia w·vᵢᵗ — short arrow showing previous velocity direction -->
+  <line x1="164" y1="272" x2="208" y2="249" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arr-blue)" stroke-dasharray="5,3"/>
 
-  <!-- Arrow labels — all with white background -->
+  <!-- Orange: cognitive pull toward pbest (410,145) -->
+  <line x1="164" y1="273" x2="399" y2="151" stroke="#f97316" stroke-width="2.5" marker-end="url(#arr-orange)"/>
 
-  <!-- w·vᵢᵗ: upper-left of blue arrow -->
-  <rect x="162" y="149" width="42" height="16" rx="3" fill="white" opacity="0.9"/>
-  <text x="164" y="162" font-family="sans-serif" font-size="11" fill="#1d4ed8">w·vᵢᵗ</text>
+  <!-- Red: social pull toward gbest (520,215) -->
+  <line x1="166" y1="277" x2="507" y2="217" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arr-red)"/>
 
-  <!-- c₁r₁(pbest−xᵢ): above orange arrow midpoint -->
-  <rect x="243" y="133" width="122" height="16" rx="3" fill="white" opacity="0.9"/>
-  <text x="245" y="146" font-family="sans-serif" font-size="11" fill="#c2410c">c₁r₁(pbest − xᵢᵗ)</text>
+  <!-- Green: resultant new velocity vᵢᵗ⁺¹ toward new position (255,245) -->
+  <line x1="165" y1="274" x2="240" y2="250" stroke="#16a34a" stroke-width="3" marker-end="url(#arr-green)"/>
 
-  <!-- vᵢᵗ⁺¹: left of green arrow (below blue label, avoid overlap) -->
-  <rect x="218" y="168" width="40" height="16" rx="3" fill="white" opacity="0.9"/>
-  <text x="220" y="181" font-family="sans-serif" font-size="11" fill="#15803d">vᵢᵗ⁺¹</text>
+  <!-- ===== Arrow labels (all with white backgrounds) ===== -->
 
-  <!-- c₂r₂(gbest−xᵢ): below red arrow -->
-  <rect x="315" y="197" width="126" height="16" rx="3" fill="white" opacity="0.9"/>
-  <text x="317" y="210" font-family="sans-serif" font-size="11" fill="#b91c1c">c₂r₂(gbest − xᵢᵗ)</text>
+  <!-- w·vᵢᵗ: above the blue arrow -->
+  <rect x="172" y="236" width="48" height="18" rx="3" fill="white" opacity="0.95"/>
+  <text x="174" y="250" font-family="sans-serif" font-size="13" fill="#1d4ed8">w·vᵢᵗ</text>
 
-  <!-- ===== Particle circles (on top of arrows) ===== -->
+  <!-- c₁r₁(pbest−xᵢᵗ): above orange arrow, well clear of i' -->
+  <rect x="228" y="183" width="148" height="18" rx="3" fill="white" opacity="0.95"/>
+  <text x="230" y="197" font-family="sans-serif" font-size="13" fill="#c2410c">c₁r₁(pbest − xᵢᵗ)</text>
 
-  <!-- Current position xᵢᵗ -->
-  <circle cx="240" cy="190" r="14" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2.5"/>
-  <text x="240" y="195" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="white">i</text>
-  <rect x="227" y="204" width="26" height="16" rx="3" fill="white" opacity="0.9"/>
-  <text x="240" y="217" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1d4ed8">xᵢᵗ</text>
+  <!-- vᵢᵗ⁺¹: below green arrow -->
+  <rect x="185" y="260" width="48" height="18" rx="3" fill="white" opacity="0.95"/>
+  <text x="187" y="274" font-family="sans-serif" font-size="13" fill="#15803d">vᵢᵗ⁺¹</text>
 
-  <!-- Personal best pbest -->
-  <circle cx="350" cy="150" r="11" fill="#f97316" stroke="#c2410c" stroke-width="2"/>
-  <text x="350" y="155" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="white">pb</text>
-  <rect x="364" y="133" width="42" height="16" rx="3" fill="white" opacity="0.9"/>
-  <text x="366" y="146" font-family="sans-serif" font-size="11" fill="#c2410c">pbest</text>
+  <!-- c₂r₂(gbest−xᵢᵗ): below red arrow midpoint -->
+  <rect x="292" y="264" width="148" height="18" rx="3" fill="white" opacity="0.95"/>
+  <text x="294" y="278" font-family="sans-serif" font-size="13" fill="#b91c1c">c₂r₂(gbest − xᵢᵗ)</text>
 
-  <!-- Global best gbest -->
-  <circle cx="460" cy="175" r="11" fill="#ef4444" stroke="#b91c1c" stroke-width="2"/>
-  <text x="460" y="180" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="white">gb</text>
-  <rect x="474" y="158" width="42" height="16" rx="3" fill="white" opacity="0.9"/>
-  <text x="476" y="171" font-family="sans-serif" font-size="11" fill="#b91c1c">gbest</text>
+  <!-- ===== PARTICLE CIRCLES (drawn on top of arrows) ===== -->
 
-  <!-- New position xᵢᵗ⁺¹ (dashed border = predicted) -->
-  <circle cx="340" cy="155" r="13" fill="#16a34a" stroke="#15803d" stroke-width="2.5" stroke-dasharray="4,2"/>
-  <text x="340" y="160" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="white">i'</text>
-  <rect x="322" y="125" width="36" height="16" rx="3" fill="white" opacity="0.9"/>
-  <text x="340" y="138" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#15803d">xᵢᵗ⁺¹</text>
+  <!-- Current position xᵢᵗ — lower left -->
+  <circle cx="150" cy="280" r="17" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2.5"/>
+  <text x="150" y="286" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">i</text>
+  <rect x="133" y="299" width="34" height="18" rx="3" fill="white" opacity="0.95"/>
+  <text x="150" y="313" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1d4ed8">xᵢᵗ</text>
 
-  <!-- ===== Legend box (separated from formula area) ===== -->
-  <rect x="530" y="295" width="172" height="72" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="538" y1="310" x2="558" y2="310" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="5,3"/>
-  <text x="562" y="314" font-family="sans-serif" font-size="11" fill="#1d4ed8">Αδράνεια (w·v)</text>
-  <line x1="538" y1="326" x2="558" y2="326" stroke="#f97316" stroke-width="2.5"/>
-  <text x="562" y="330" font-family="sans-serif" font-size="11" fill="#c2410c">Ατομική εμπειρία</text>
-  <line x1="538" y1="342" x2="558" y2="342" stroke="#ef4444" stroke-width="2.5"/>
-  <text x="562" y="346" font-family="sans-serif" font-size="11" fill="#b91c1c">Κοινωνική εμπειρία</text>
-  <line x1="538" y1="358" x2="558" y2="358" stroke="#16a34a" stroke-width="3"/>
-  <text x="562" y="362" font-family="sans-serif" font-size="11" fill="#15803d">Νέα ταχύτητα</text>
+  <!-- Personal best pbest — upper middle -->
+  <circle cx="410" cy="145" r="14" fill="#f97316" stroke="#c2410c" stroke-width="2"/>
+  <text x="410" y="151" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="white">pb</text>
+  <rect x="427" y="126" width="54" height="18" rx="3" fill="white" opacity="0.95"/>
+  <text x="429" y="140" font-family="sans-serif" font-size="13" fill="#c2410c">pbest</text>
 
-  <!-- ===== Formula — well below legend ===== -->
-  <text x="310" y="385" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#475569">vᵢᵗ⁺¹ = w·vᵢᵗ + c₁r₁(pbest − xᵢᵗ) + c₂r₂(gbest − xᵢᵗ)</text>
-  <text x="310" y="404" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#475569">xᵢᵗ⁺¹ = xᵢᵗ + vᵢᵗ⁺¹</text>
+  <!-- Global best gbest — right middle -->
+  <circle cx="520" cy="215" r="14" fill="#ef4444" stroke="#b91c1c" stroke-width="2"/>
+  <text x="520" y="221" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="white">gb</text>
+  <rect x="537" y="196" width="54" height="18" rx="3" fill="white" opacity="0.95"/>
+  <text x="539" y="210" font-family="sans-serif" font-size="13" fill="#b91c1c">gbest</text>
+
+  <!-- New position xᵢᵗ⁺¹ — dashed border, middle area -->
+  <circle cx="255" cy="245" r="14" fill="#16a34a" stroke="#15803d" stroke-width="2.5" stroke-dasharray="4,2"/>
+  <text x="255" y="251" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="white">i'</text>
+  <rect x="238" y="210" width="54" height="18" rx="3" fill="white" opacity="0.95"/>
+  <text x="265" y="224" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#15803d">xᵢᵗ⁺¹</text>
+
+  <!-- ===== Legend strip at bottom ===== -->
+  <rect x="30" y="375" width="700" height="64" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+
+  <line x1="50"  y1="394" x2="76"  y2="394" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <text x="81"  y="398" font-family="sans-serif" font-size="11" fill="#1d4ed8">Αδράνεια (w·v)</text>
+
+  <line x1="202" y1="394" x2="228" y2="394" stroke="#f97316" stroke-width="2.5"/>
+  <text x="233" y="398" font-family="sans-serif" font-size="11" fill="#c2410c">Ατομική εμπειρία</text>
+
+  <line x1="384" y1="394" x2="410" y2="394" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="415" y="398" font-family="sans-serif" font-size="11" fill="#b91c1c">Κοινωνική εμπειρία</text>
+
+  <line x1="563" y1="394" x2="589" y2="394" stroke="#16a34a" stroke-width="3"/>
+  <text x="594" y="398" font-family="sans-serif" font-size="11" fill="#15803d">Νέα ταχύτητα</text>
+
+  <!-- Formulas inside legend box -->
+  <text x="380" y="425" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">vᵢᵗ⁺¹ = w·vᵢᵗ + c₁r₁(pbest − xᵢᵗ) + c₂r₂(gbest − xᵢᵗ)   |   xᵢᵗ⁺¹ = xᵢᵗ + vᵢᵗ⁺¹</text>
 </svg>
