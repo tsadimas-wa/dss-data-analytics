@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="288" viewBox="0 0 700 288">
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0,9 3.5,0 7" fill="#555"/>
+    </marker>
+    <marker id="arr-green" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0,9 3.5,0 7" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- ══ PANEL 1 — Πληθυσμός ══ -->
+  <rect x="8"   y="8" width="188" height="272" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.8"/>
+  <text x="102" y="30" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1e40af">Πληθυσμός</text>
+
+  <!-- Population rows: A-F -->
+  <!-- A: f=8, normal -->
+  <rect x="18"  y="40"  width="168" height="27" rx="4" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <text x="28"  y="57"  font-family="sans-serif" font-size="12" font-weight="bold" fill="#1e40af">A</text>
+  <text x="44"  y="57"  font-family="monospace"  font-size="11" fill="#374151">10011</text>
+  <text x="150" y="57"  font-family="sans-serif" font-size="11" fill="#374151">f = 8</text>
+
+  <!-- B: f=6, drawn (amber) -->
+  <rect x="18"  y="73"  width="168" height="27" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="28"  y="90"  font-family="sans-serif" font-size="12" font-weight="bold" fill="#92400e">B</text>
+  <text x="44"  y="90"  font-family="monospace"  font-size="11" fill="#374151">01110</text>
+  <text x="150" y="90"  font-family="sans-serif" font-size="11" fill="#374151">f = 6</text>
+
+  <!-- C: f=6, normal -->
+  <rect x="18"  y="106" width="168" height="27" rx="4" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <text x="28"  y="123" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1e40af">C</text>
+  <text x="44"  y="123" font-family="monospace"  font-size="11" fill="#374151">10001</text>
+  <text x="150" y="123" font-family="sans-serif" font-size="11" fill="#374151">f = 6</text>
+
+  <!-- D: f=5, drawn (amber) -->
+  <rect x="18"  y="139" width="168" height="27" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="28"  y="156" font-family="sans-serif" font-size="12" font-weight="bold" fill="#92400e">D</text>
+  <text x="44"  y="156" font-family="monospace"  font-size="11" fill="#374151">00101</text>
+  <text x="150" y="156" font-family="sans-serif" font-size="11" fill="#374151">f = 5</text>
+
+  <!-- E: f=7, drawn + WINNER (gold) -->
+  <rect x="18"  y="172" width="168" height="27" rx="4" fill="#fef08a" stroke="#ca8a04" stroke-width="2"/>
+  <text x="28"  y="189" font-family="sans-serif" font-size="12" font-weight="bold" fill="#713f12">E</text>
+  <text x="44"  y="189" font-family="monospace"  font-size="11" fill="#374151">11010</text>
+  <text x="150" y="189" font-family="sans-serif" font-size="11" fill="#374151">f = 7</text>
+
+  <!-- F: f=3, normal -->
+  <rect x="18"  y="205" width="168" height="27" rx="4" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <text x="28"  y="222" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1e40af">F</text>
+  <text x="44"  y="222" font-family="monospace"  font-size="11" fill="#374151">00011</text>
+  <text x="150" y="222" font-family="sans-serif" font-size="11" fill="#374151">f = 3</text>
+
+  <!-- Legend inside panel 1 -->
+  <rect x="18"  y="240" width="10" height="10" rx="2" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="32"  y="250" font-family="sans-serif" font-size="10" fill="#92400e">Επιλέχτηκαν τυχαία</text>
+
+  <!-- ══ ARROW 1: pop → tournament ══ -->
+  <line x1="196" y1="144" x2="214" y2="144" stroke="#555" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="205" y="133" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">τυχαία</text>
+  <text x="205" y="142" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">k=3</text>
+  <text x="205" y="151" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">↕</text>
+
+  <!-- ══ PANEL 2 — Τουρνουά k=3 ══ -->
+  <rect x="218" y="8" width="222" height="272" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.8"/>
+  <text x="329" y="30" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#92400e">Τουρνουά (k = 3)</text>
+
+  <!-- E: winner — gold, larger, star -->
+  <rect x="228" y="42"  width="202" height="58" rx="6" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5"/>
+  <text x="244" y="63"  font-family="sans-serif" font-size="14" font-weight="bold" fill="#713f12">E</text>
+  <text x="262" y="63"  font-family="monospace"  font-size="13" fill="#374151">11010</text>
+  <text x="244" y="82"  font-family="sans-serif" font-size="13" font-weight="bold" fill="#92400e">f = 7</text>
+  <!-- Star symbol -->
+  <text x="406" y="70"  text-anchor="middle" font-family="sans-serif" font-size="22" fill="#ca8a04">★</text>
+  <!-- "Νικητής" label -->
+  <rect x="370" y="80" width="54" height="16" rx="4" fill="#ca8a04"/>
+  <text x="397" y="92" text-anchor="middle" font-family="sans-serif" font-size="10" fill="white" font-weight="bold">Νικητής</text>
+
+  <!-- Divider + "vs" -->
+  <line x1="228" y1="112" x2="430" y2="112" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- B: loser -->
+  <rect x="228" y="120" width="202" height="44" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="244" y="139" font-family="sans-serif" font-size="13" font-weight="bold" fill="#92400e">B</text>
+  <text x="262" y="139" font-family="monospace"  font-size="11" fill="#374151">01110</text>
+  <text x="244" y="156" font-family="sans-serif" font-size="11" fill="#6b7280">f = 6  (χάνει)</text>
+
+  <line x1="228" y1="176" x2="430" y2="176" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- D: loser -->
+  <rect x="228" y="184" width="202" height="44" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="244" y="203" font-family="sans-serif" font-size="13" font-weight="bold" fill="#92400e">D</text>
+  <text x="262" y="203" font-family="monospace"  font-size="11" fill="#374151">00101</text>
+  <text x="244" y="220" font-family="sans-serif" font-size="11" fill="#6b7280">f = 5  (χάνει)</text>
+
+  <!-- Note at bottom of panel 2 -->
+  <text x="329" y="250" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#92400e">Συγκρίνουμε fitness —</text>
+  <text x="329" y="263" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#92400e">ο καλύτερος κερδίζει πάντα.</text>
+
+  <!-- ══ ARROW 2: tournament → winner ══ -->
+  <line x1="440" y1="144" x2="456" y2="144" stroke="#16a34a" stroke-width="2" marker-end="url(#arr-green)"/>
+
+  <!-- ══ PANEL 3 — Επιλεγμένος Γονέας ══ -->
+  <rect x="460" y="8" width="232" height="272" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="576" y="30" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#166534">Επιλεγμένος Γονέας</text>
+
+  <!-- Winner box -->
+  <rect x="472" y="48" width="208" height="52" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <text x="492" y="69" font-family="sans-serif" font-size="16" font-weight="bold" fill="#166534">E</text>
+  <text x="514" y="69" font-family="monospace"  font-size="14" fill="#374151">11010</text>
+  <text x="492" y="90" font-family="sans-serif" font-size="14" font-weight="bold" fill="#15803d">f = 7</text>
+  <text x="650" y="72" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#16a34a">★</text>
+
+  <!-- Properties of tournament vs roulette -->
+  <line x1="472" y1="115" x2="680" y2="115" stroke="#86efac" stroke-width="1"/>
+  <text x="576" y="134" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#166534">Τουρνουά vs Ρουλέτα</text>
+
+  <text x="476" y="154" font-family="sans-serif" font-size="10" fill="#374151">✔ Δεν χρειάζεται η συνολική</text>
+  <text x="476" y="167" font-family="sans-serif" font-size="10" fill="#374151">   fitness του πληθυσμού</text>
+  <text x="476" y="184" font-family="sans-serif" font-size="10" fill="#374151">✔ Εύκολα παραλληλοποιήσιμο</text>
+  <text x="476" y="201" font-family="sans-serif" font-size="10" fill="#374151">✔ k μεγάλο → πιο ελιτίστικο</text>
+  <text x="476" y="218" font-family="sans-serif" font-size="10" fill="#374151">✔ k=1 → τυχαία επιλογή</text>
+
+  <line x1="472" y1="228" x2="680" y2="228" stroke="#86efac" stroke-width="1"/>
+  <text x="576" y="247" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#166534">Επαναλαμβάνουμε για κάθε</text>
+  <text x="576" y="260" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#166534">νέο γονέα που χρειαζόμαστε.</text>
+</svg>
