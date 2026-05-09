@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="540" viewBox="0 0 520 540">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="265" viewBox="0 0 760 265">
   <defs>
     <marker id="arr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
       <polygon points="0 0, 9 3.5, 0 7" fill="#555"/>
@@ -8,61 +8,74 @@
     </marker>
   </defs>
 
-  <!-- ① Αρχικός Πληθυσμός -->
-  <rect x="150" y="20" width="200" height="40" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
-  <text x="250" y="38" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1e40af">① Αρχικός Πληθυσμός</text>
-  <text x="250" y="53" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3b82f6">(Initialize Population)</text>
+  <!-- ══════ TOP ROW (cy=78) ══════ -->
 
-  <!-- Arrow 1→2 -->
-  <line x1="250" y1="60" x2="250" y2="98" stroke="#555" stroke-width="1.8" marker-end="url(#arr)"/>
+  <!-- ① Αρχικοποίηση -->
+  <rect x="10" y="56" width="130" height="44" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="75" y="74" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e40af">① Αρχικοποίηση</text>
+  <text x="75" y="89" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3b82f6">(Initialize)</text>
+
+  <!-- Arrow ①→② -->
+  <line x1="140" y1="78" x2="172" y2="78" stroke="#555" stroke-width="1.8" marker-end="url(#arr)"/>
 
   <!-- ② Αξιολόγηση Fitness -->
-  <rect x="150" y="100" width="200" height="40" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
-  <text x="250" y="118" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#713f12">② Αξιολόγηση Fitness</text>
-  <text x="250" y="133" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#a16207">(Evaluate Fitness)</text>
+  <rect x="172" y="56" width="152" height="44" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="248" y="74" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#713f12">② Αξιολόγηση</text>
+  <text x="248" y="89" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a16207">Fitness</text>
 
-  <!-- Arrow 2→3 -->
-  <line x1="250" y1="140" x2="250" y2="178" stroke="#555" stroke-width="1.8" marker-end="url(#arr)"/>
+  <!-- Arrow ②→◇ -->
+  <line x1="324" y1="78" x2="342" y2="78" stroke="#555" stroke-width="1.8" marker-end="url(#arr)"/>
 
-  <!-- ③ Decision diamond: Βέλτιστο; center=(250,205) half-w=75 half-h=32 -->
-  <polygon points="250,175 325,207 250,239 175,207" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
-  <text x="250" y="203" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#9d174d">Βέλτιστο;</text>
-  <text x="250" y="218" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#be185d">(Stop condition?)</text>
+  <!-- ◇ Κριτήριο Τερματισμού center=(425,78) half-w=82 half-h=32 -->
+  <polygon points="425,46 507,78 425,110 343,78" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+  <text x="425" y="74" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#9d174d">Κριτήριο</text>
+  <text x="425" y="87" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#9d174d">Τερματισμού;</text>
 
-  <!-- ΝΑΙ branch → right → Τέλος -->
-  <line x1="325" y1="207" x2="400" y2="207" stroke="#16a34a" stroke-width="1.8" marker-end="url(#arr-green)"/>
-  <text x="358" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#16a34a" font-weight="bold">ΝΑΙ</text>
-  <ellipse cx="448" cy="207" rx="44" ry="22" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
-  <text x="448" y="211" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#166534">Τέλος</text>
+  <!-- ΝΑΙ → Τέλος -->
+  <line x1="507" y1="78" x2="556" y2="78" stroke="#16a34a" stroke-width="1.8" marker-end="url(#arr-green)"/>
+  <text x="530" y="71" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#16a34a" font-weight="bold">ΝΑΙ</text>
+  <ellipse cx="608" cy="78" rx="52" ry="24" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="608" y="83" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#166534">Τέλος</text>
 
-  <!-- ΟΧΙ label + Arrow 3→4 -->
-  <line x1="250" y1="239" x2="250" y2="278" stroke="#555" stroke-width="1.8" marker-end="url(#arr)"/>
-  <text x="262" y="262" font-family="sans-serif" font-size="11" fill="#dc2626" font-weight="bold">ΟΧΙ</text>
+  <!-- ══════ OXI: ◇ bottom → down → left → down to ③ ══════ -->
+  <polyline points="425,110 425,158 157,158 157,190" fill="none"
+            stroke="#555" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="438" y="138" font-family="sans-serif" font-size="11" fill="#dc2626" font-weight="bold">ΟΧΙ</text>
 
-  <!-- ④ Επιλογή -->
-  <rect x="155" y="280" width="190" height="40" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
-  <text x="250" y="298" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#4c1d95">④ Επιλογή</text>
-  <text x="250" y="313" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6d28d9">(Selection)</text>
+  <!-- ══════ BOTTOM ROW (cy=212), left→right ══════ -->
 
-  <!-- Arrow 4→5 -->
-  <line x1="250" y1="320" x2="250" y2="358" stroke="#555" stroke-width="1.8" marker-end="url(#arr)"/>
+  <!-- ③ Επιλογή -->
+  <rect x="97" y="190" width="120" height="44" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="157" y="208" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#4c1d95">③ Επιλογή</text>
+  <text x="157" y="224" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6d28d9">(Selection)</text>
 
-  <!-- ⑤ Διασταύρωση -->
-  <rect x="155" y="360" width="190" height="40" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
-  <text x="250" y="378" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#4c1d95">⑤ Διασταύρωση</text>
-  <text x="250" y="393" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6d28d9">(Crossover)</text>
+  <!-- Arrow ③→④ -->
+  <line x1="217" y1="212" x2="247" y2="212" stroke="#555" stroke-width="1.8" marker-end="url(#arr)"/>
 
-  <!-- Arrow 5→6 -->
-  <line x1="250" y1="400" x2="250" y2="438" stroke="#555" stroke-width="1.8" marker-end="url(#arr)"/>
+  <!-- ④ Διασταύρωση -->
+  <rect x="247" y="190" width="126" height="44" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="310" y="208" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#4c1d95">④ Διασταύρωση</text>
+  <text x="310" y="224" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6d28d9">(Crossover)</text>
 
-  <!-- ⑥ Μετάλλαξη -->
-  <rect x="155" y="440" width="190" height="40" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
-  <text x="250" y="458" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#4c1d95">⑥ Μετάλλαξη</text>
-  <text x="250" y="473" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6d28d9">(Mutation)</text>
+  <!-- Arrow ④→⑤ -->
+  <line x1="373" y1="212" x2="403" y2="212" stroke="#555" stroke-width="1.8" marker-end="url(#arr)"/>
 
-  <!-- Loop back arrow: bottom of ⑥ → left side → up → back to ② -->
-  <path d="M 155 460 Q 65 460 65 120 Q 65 100 150 100"
-        stroke="#555" stroke-width="1.8" fill="none" marker-end="url(#arr)" stroke-dasharray="6,3"/>
-  <text x="42" y="295" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555" font-style="italic">Νέα</text>
-  <text x="42" y="308" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555" font-style="italic">Γενιά</text>
+  <!-- ⑤ Μετάλλαξη -->
+  <rect x="403" y="190" width="120" height="44" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="463" y="208" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#4c1d95">⑤ Μετάλλαξη</text>
+  <text x="463" y="224" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6d28d9">(Mutation)</text>
+
+  <!-- Arrow ⑤→⑥ -->
+  <line x1="523" y1="212" x2="553" y2="212" stroke="#555" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- ⑥ Αντικατάσταση -->
+  <rect x="553" y="190" width="136" height="44" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="621" y="208" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#166534">⑥ Αντικατάσταση</text>
+  <text x="621" y="224" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#16a34a">(New Generation)</text>
+
+  <!-- ══════ LOOP BACK: ⑥ right → far right → up → left → top of ② ══════ -->
+  <polyline points="689,212 738,212 738,30 248,30 248,56" fill="none"
+            stroke="#555" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#arr)"/>
+  <text x="493" y="22" text-anchor="middle" font-family="sans-serif"
+        font-size="11" fill="#555" font-style="italic">Νέα Γενιά</text>
 </svg>
