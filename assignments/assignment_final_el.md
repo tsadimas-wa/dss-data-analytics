@@ -18,11 +18,11 @@
 1.  **Εμπλουτισμός (Instantiation):**
     *   Προσθέστε τουλάχιστον **15 νέα στιγμιότυπα (Individuals)** στην υπάρχουσα οντολογία.
     *   Φροντίστε να καλύπτουν διαφορετικές κλάσεις και να συνδέονται μεταξύ τους με Object Properties.
-    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.6 — Στιγμιότυπα](../labs/lab_protege_el.md#56-δημιουργία-στιγμιότυπων-individuals) · [Lec 4 — TBox/ABox](../lectures/lecture4_el.md)
+    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.6 — Στιγμιότυπα](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#56-δημιουργία-στιγμιότυπων-individuals) · [Lec 4 — TBox/ABox](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/lectures/lecture4_el.md)
 2.  **Εξαγωγή Γνώσης (Inference):** Χρησιμοποιήστε έναν Reasoner για να εξάγετε νέα, έμμεση γνώση.
-    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.7 — Reasoner](../labs/lab_protege_el.md#57-εκτέλεση-reasoner--επαλήθευση) · [Εργαστήριο Protégé §6.6 — Reasoner από Python](../labs/lab_protege_el.md#66-εξαγωγή-έμμεσων-προαπαιτουμένων-transitivity-με-reasoner) · [owlready2 docs](https://owlready2.readthedocs.io/en/latest/reasoning.html)
+    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.7 — Reasoner](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#57-εκτέλεση-reasoner--επαλήθευση) · [Εργαστήριο Protégé §6.6 — Reasoner από Python](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#66-εξαγωγή-έμμεσων-προαπαιτουμένων-transitivity-με-reasoner) · [owlready2 docs](https://owlready2.readthedocs.io/en/latest/reasoning.html)
 3.  **Ερωτήματα (Querying):** Προετοιμάστε ερωτήματα SPARQL που θα ανακτούν τη γνώση που χρειάζεται το ΣΥΑ σας.
-    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.9 — SPARQL στο Protégé](../labs/lab_protege_el.md#59-εκτέλεση-ερωτημάτων-sparql-μέσα-από-το-protégé) · [Εργαστήριο Protégé §6.8 — SPARQL από Python](../labs/lab_protege_el.md#68-sparql-ερωτήματα) · [SPARQL 1.1 Reference](https://www.w3.org/TR/sparql11-query/)
+    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.9 — SPARQL στο Protégé](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#59-εκτέλεση-ερωτημάτων-sparql-μέσα-από-το-protégé) · [Εργαστήριο Protégé §6.8 — SPARQL από Python](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#68-sparql-ερωτήματα) · [SPARQL 1.1 Reference](https://www.w3.org/TR/sparql11-query/)
 
 ### Επιλογή Α.2: Σχεδιασμός & Ανάπτυξη Νέας Οντολογίας από το Μηδέν
 **Στόχος:** Να σχεδιάσετε και να αναπτύξετε μια νέα οντολογία για ένα πεδίο της επιλογής σας (π.χ. E-commerce, Τουρισμός, Υγεία, Logistics).
@@ -31,17 +31,17 @@
 1.  **Ιεραρχία Κλάσεων (Class Hierarchy):**
     *   Δημιουργήστε τουλάχιστον **10-15 Κλάσεις (Classes)**.
     *   Πρέπει να έχουν λογική ιεραρχία (Superclasses - Subclasses) και Disjoint κανόνες όπου χρειάζεται.
-    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.1 — Σχεδιασμός](../labs/lab_protege_el.md#51-σχεδιασμός-οντολογίας) · [Εργαστήριο Protégé §5.3 — Κλάσεις](../labs/lab_protege_el.md#53-δημιουργία-κλάσεων) · [Protégé User Guide](https://protegewiki.stanford.edu/wiki/Protege4UserDocs)
+    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.1 — Σχεδιασμός](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#51-σχεδιασμός-οντολογίας) · [Εργαστήριο Protégé §5.3 — Κλάσεις](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#53-δημιουργία-κλάσεων) · [Protégé User Guide](https://protegewiki.stanford.edu/wiki/Protege4UserDocs)
 2.  **Ιδιότητες (Properties):**
     *   Ορίστε τουλάχιστον **7 Object Properties** (π.χ. `works_in`, `has_manager`) με τα αντίστοιχα Domain, Range και Inverse properties.
     *   Ορίστε τουλάχιστον **5 Data Properties** (π.χ. `has_age`, `has_price`).
-    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.4 — Object Properties](../labs/lab_protege_el.md#54-δημιουργία-object-properties) · [Εργαστήριο Protégé §5.5 — Data Properties](../labs/lab_protege_el.md#55-δημιουργία-data-properties) · [OWL 2 Property docs](https://www.w3.org/TR/owl2-primer/#Property_Restrictions)
+    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.4 — Object Properties](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#54-δημιουργία-object-properties) · [Εργαστήριο Protégé §5.5 — Data Properties](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#55-δημιουργία-data-properties) · [OWL 2 Property docs](https://www.w3.org/TR/owl2-primer/#Property_Restrictions)
 3.  **Στιγμιότυπα (Individuals):**
     *   Εισάγετε τουλάχιστον **10 ρεαλιστικά στιγμιότυπα** στο σύστημά σας και συνδέστε τα μεταξύ τους.
-    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.6 — Individuals](../labs/lab_protege_el.md#56-δημιουργία-στιγμιότυπων-individuals) · [Εργαστήριο Protégé §6.9 — Νέο Individual από Python](../labs/lab_protege_el.md#69-δημιουργία-νέου-individual-από-python)
+    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.6 — Individuals](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#56-δημιουργία-στιγμιότυπων-individuals) · [Εργαστήριο Protégé §6.9 — Νέο Individual από Python](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#69-δημιουργία-νέου-individual-από-python)
 4.  **Κανόνας SWRL (Προαιρετικό αλλά συνιστάται):**
     *   Δημιουργήστε **τουλάχιστον 1 κανόνα SWRL** τύπου "IF... THEN..." που να εξάγει νέα γνώση ή να ταξινομεί στιγμιότυπα σε μια κλάση.
-    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.8 — SWRL Rules](../labs/lab_protege_el.md#58-συγγραφή-κανόνων-λογικής-swrl-rules) · [SWRL Reference](https://www.w3.org/Submission/SWRL/)
+    > 📌 **Βοήθεια:** [Εργαστήριο Protégé §5.8 — SWRL Rules](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#58-συγγραφή-κανόνων-λογικής-swrl-rules) · [SWRL Reference](https://www.w3.org/Submission/SWRL/)
 
 ---
 
@@ -56,9 +56,9 @@
     3.  **ΣΥΑ:** Το σύστημα παρουσιάζει και τα δύο: "Το ML μοντέλο προβλέπει 85% πιθανότητα αθέτησης. Αυτό συνάδει με τη βάση γνώσης μας, καθώς ο πελάτης ταξινομείται ως `HighRisk` επειδή δεν έχει σταθερή εργασία." Χρησιμοποιήστε **XAI** (SHAP/LIME) για να εξηγήσετε την πρόβλεψη του ML.
 
 > 📌 **Βοήθεια:**
-> *   Decision Trees & Random Forest: [Lab 6](../labs/lab6_el.ipynb) · [Lec 6](../lectures/lecture6_el.md) · [scikit-learn docs](https://scikit-learn.org/stable/supervised_learning.html)
-> *   XGBoost: [Lab 7](../labs/lab7_el.ipynb) · [XGBoost docs](https://xgboost.readthedocs.io/en/stable/)
-> *   SHAP/LIME (XAI): [Lab 7 §3](../labs/lab7_el.ipynb) · [Lec 7](../lectures/lecture7_el.md) · [SHAP docs](https://shap.readthedocs.io/en/latest/) · [LIME docs](https://lime-ml.readthedocs.io/en/latest/)
+> *   Decision Trees & Random Forest: [Lab 6](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab6_el.ipynb) · [Lec 6](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/lectures/lecture6_el.md) · [scikit-learn docs](https://scikit-learn.org/stable/supervised_learning.html)
+> *   XGBoost: [Lab 7](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab7_el.ipynb) · [XGBoost docs](https://xgboost.readthedocs.io/en/stable/)
+> *   SHAP/LIME (XAI): [Lab 7 §3](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab7_el.ipynb) · [Lec 7](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/lectures/lecture7_el.md) · [SHAP docs](https://shap.readthedocs.io/en/latest/) · [LIME docs](https://lime-ml.readthedocs.io/en/latest/)
 
 ### Ιδέα 2: ΣΥΑ με Ασαφή Λογική (Fuzzy Logic)
 *   **Περιγραφή:** Χρησιμοποιήστε ένα Σύστημα Ασαφούς Συμπερασμού (Fuzzy Inference System) για να αξιολογήσετε ποιοτικά, ασαφή κριτήρια.
@@ -68,7 +68,7 @@
     3.  **ΣΥΑ:** Ο χρήστης ζητά τους καλύτερους προμηθευτές. Το σύστημα ανακτά τους υποψήφιους από την οντολογία, τους "βαθμολογεί" μέσω του FIS και τους παρουσιάζει καταταγμένους.
 
 > 📌 **Βοήθεια:**
-> *   Fuzzy Logic / FIS: [Lab 5](../labs/lab5_el.ipynb) · [Lec 5](../lectures/lecture5_el.md)
+> *   Fuzzy Logic / FIS: [Lab 5](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab5_el.ipynb) · [Lec 5](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/lectures/lecture5_el.md)
 > *   scikit-fuzzy: [scikit-fuzzy docs](https://scikit-fuzzy.readthedocs.io/en/latest/) · [API Reference](https://scikit-fuzzy.readthedocs.io/en/latest/api/skfuzzy.control.html)
 
 ### Ιδέα 3: ΣΥΑ με Βελτιστοποίηση (Evolutionary Algorithms)
@@ -79,7 +79,7 @@
     3.  **ΣΥΑ:** Ο χρήστης ορίζει τον στόχο ("παράδωσε όλα τα ευπαθή προϊόντα"). Το σύστημα κάνει query στην οντολογία για να βρει τις σχετικές τοποθεσίες και τα διαθέσιμα οχήματα. Αυτή η λίστα τροφοδοτεί τον GA/ACO, ο οποίος επιστρέφει τον βέλτιστο χάρτη διαδρομής.
 
 > 📌 **Βοήθεια:**
-> *   Γενετικοί Αλγόριθμοι / ACO: [Lab 8](../labs/lab8_el.ipynb) · [Lec 8](../lectures/lecture8_el.md)
+> *   Γενετικοί Αλγόριθμοι / ACO: [Lab 8](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab8_el.ipynb) · [Lec 8](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/lectures/lecture8_el.md)
 > *   PyGAD: [PyGAD docs](https://pygad.readthedocs.io/en/latest/) · [PyGAD API](https://pygad.readthedocs.io/en/latest/pygad.html)
 
 ### Ιδέα 4: ΣΥΑ με Παραγωγική ΤΝ (Generative AI)
@@ -90,7 +90,7 @@
     3.  **ΣΥΑ (RAG):** Ο manager θέλει να στείλει ένα email σε όλους τους "Tech Enthusiasts". Το σύστημα ανακτά από την οντολογία τη λίστα αυτών των πελατών και τις πρόσφατες αγορές τους. Στη συνέχεια, κατασκευάζει ένα prompt για το LLM: *"Είσαι ειδικός marketing. Γράψε ένα email για έναν πελάτη που πρόσφατα αγόρασε 'Gaming Laptop' και είναι 'Tech Enthusiast'. Πρότεινέ του ένα 'Μηχανικό Πληκτρολόγιο' που είναι σε προσφορά."*
 
 > 📌 **Βοήθεια:**
-> *   LLMs & RAG (θεωρία): [Lec 7 — Generative AI & RAG](../lectures/lecture7_el.md)
+> *   LLMs & RAG (θεωρία): [Lec 7 — Generative AI & RAG](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/lectures/lecture7_el.md)
 > *   OpenAI API: [openai Python library](https://platform.openai.com/docs/quickstart) · [API Reference](https://platform.openai.com/docs/api-reference/chat)
 > *   Anthropic (Claude) API: [Getting started](https://docs.anthropic.com/en/api/getting-started) · [Messages API](https://docs.anthropic.com/en/api/messages)
 > *   Prompt Engineering: [OpenAI Prompt Guide](https://platform.openai.com/docs/guides/prompt-engineering)
@@ -125,7 +125,7 @@
 4. **Εκτέλεση Επέκτασης:** Κλήση της μεθόδου (ML πρόβλεψη / Fuzzy υπολογισμός / LLM API).
 5. **Παρουσίαση:** Εκτύπωση της τελικής υποστήριξης απόφασης στην οθόνη για τον τελικό χρήστη.
 
-> 📌 **Βοήθεια:** [Εργαστήριο Protégé §6 — Python & owlready2](../labs/lab_protege_el.md#6-χρήση-της-οντολογίας-από-python) · [Εργαστήριο Protégé §6.10 — Πλήρες Script](../labs/lab_protege_el.md#610-πλήρες-script) · [owlready2 docs](https://owlready2.readthedocs.io/en/latest/)
+> 📌 **Βοήθεια:** [Εργαστήριο Protégé §6 — Python & owlready2](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#6-χρήση-της-οντολογίας-από-python) · [Εργαστήριο Protégé §6.10 — Πλήρες Script](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab_protege_el.md#610-πλήρες-script) · [owlready2 docs](https://owlready2.readthedocs.io/en/latest/)
 
 ---
 
@@ -133,7 +133,7 @@
 
 Το παρακάτω διάγραμμα απεικονίζει τη γενική αρχιτεκτονική του Συστήματος Υποστήριξης Αποφάσεων που καλείστε να υλοποιήσετε. Ο κεντρικός "εγκέφαλος" είναι το Python script σας, το οποίο ενορχηστρώνει τη ροή δεδομένων μεταξύ της Βάσης Γνώσης και της εξειδικευμένης μεθόδου που θα επιλέξετε.
 
-![Γενική Αρχιτεκτονική ΣΥΑ](../img/assignments/dss_architecture.svg)
+![Γενική Αρχιτεκτονική ΣΥΑ](https://raw.githubusercontent.com/tsadimas-wa/dss-data-analytics/main/img/assignments/dss_architecture.svg)
 
 ---
 
