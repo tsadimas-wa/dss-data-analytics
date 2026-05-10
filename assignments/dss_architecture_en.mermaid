@@ -1,0 +1,43 @@
+flowchart TD
+    USER["Manager / User"]
+
+    subgraph DSS["Decision Support System"]
+        APP["DSS Application\nPython Script"]
+
+        subgraph CORE["Mandatory Core — Part A"]
+            KB["Knowledge Base\nOntology + Reasoner"]
+        end
+
+        subgraph EXT["Extension — Part B"]
+            ML["Idea 1\nML Model + XAI"]
+            FZ["Idea 2\nFuzzy Inference System"]
+            GA["Idea 3\nEvolutionary Algorithm"]
+            LLM["Idea 4\nLLM API / RAG"]
+        end
+    end
+
+    USER -- "Query" --> APP
+    APP -- "1. SPARQL Query" --> KB
+    KB -- "2. Knowledge Inference" --> APP
+
+    APP -. "3a. Data" .-> ML
+    ML -. "4a. Prediction + Explanation" .-> APP
+
+    APP -. "3b. Quantitative Data" .-> FZ
+    FZ -. "4b. Fuzzy Score" .-> APP
+
+    APP -. "3c. Constraints" .-> GA
+    GA -. "4c. Optimal Solution" .-> APP
+
+    APP -. "3d. Prompt + Context" .-> LLM
+    LLM -. "4d. Generated Text" .-> APP
+
+    APP -- "5. Final Recommendation" --> USER
+
+    style USER fill:#cce5ff,stroke:#4a90d9,stroke-width:2px
+    style APP  fill:#fff3cd,stroke:#e6a817,stroke-width:2px
+    style KB   fill:#d4edda,stroke:#3a8a4a,stroke-width:2px
+    style ML   fill:#f8d7da,stroke:#c0392b,stroke-width:1px
+    style FZ   fill:#f8d7da,stroke:#c0392b,stroke-width:1px
+    style GA   fill:#f8d7da,stroke:#c0392b,stroke-width:1px
+    style LLM  fill:#f8d7da,stroke:#c0392b,stroke-width:1px
