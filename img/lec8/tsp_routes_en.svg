@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280">
+
+  <!-- Background -->
+  <rect width="600" height="280" fill="#f8f9fa" rx="10"/>
+
+  <!-- Left panel -->
+  <rect x="8" y="8" width="285" height="264" fill="white" rx="8" stroke="#e74c3c" stroke-width="1.5"/>
+
+  <!-- Right panel -->
+  <rect x="307" y="8" width="285" height="264" fill="white" rx="8" stroke="#2ecc71" stroke-width="1.5"/>
+
+  <!-- ===== LEFT PANEL: bad tour A→C→E→B→D→A ===== -->
+  <!-- Cities: A(130,95) B(230,70) C(265,170) D(190,245) E(65,195) -->
+
+  <text x="150" y="29" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#c0392b">Bad Route</text>
+  <text x="150" y="44" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#888">(2 crossings — distance 904)</text>
+
+  <!-- Tour edges -->
+  <g stroke="#e74c3c" stroke-width="2.5" fill="none">
+    <line x1="130" y1="95" x2="265" y2="170"/>
+    <line x1="265" y1="170" x2="65"  y2="195"/>
+    <line x1="65"  y1="195" x2="230" y2="70"/>
+    <line x1="230" y1="70"  x2="190" y2="245"/>
+    <line x1="190" y1="245" x2="130" y2="95"/>
+  </g>
+
+  <!-- Crossing markers (white blot + X lines) -->
+  <!-- Crossing 1: A→C ∩ E→B  at ≈ (169, 116) -->
+  <circle cx="169" cy="116" r="9" fill="white"/>
+  <line x1="163" y1="110" x2="175" y2="122" stroke="#c0392b" stroke-width="2.5"/>
+  <line x1="175" y1="110" x2="163" y2="122" stroke="#c0392b" stroke-width="2.5"/>
+
+  <!-- Crossing 2: C→E ∩ B→D  at ≈ (205, 177) -->
+  <circle cx="205" cy="177" r="9" fill="white"/>
+  <line x1="199" y1="171" x2="211" y2="183" stroke="#c0392b" stroke-width="2.5"/>
+  <line x1="211" y1="171" x2="199" y2="183" stroke="#c0392b" stroke-width="2.5"/>
+
+  <!-- City nodes (draw after edges so they appear on top) -->
+  <!-- A — start/end: double ring -->
+  <circle cx="130" cy="95" r="18" fill="none" stroke="#f39c12" stroke-width="2"/>
+  <circle cx="130" cy="95" r="14" fill="#2980b9" stroke="white" stroke-width="2"/>
+  <text x="130" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="white">A</text>
+  <!-- B -->
+  <circle cx="230" cy="70" r="14" fill="#2980b9" stroke="white" stroke-width="2"/>
+  <text x="230" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="white">B</text>
+  <!-- C -->
+  <circle cx="265" cy="170" r="14" fill="#2980b9" stroke="white" stroke-width="2"/>
+  <text x="265" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="white">C</text>
+  <!-- D -->
+  <circle cx="190" cy="245" r="14" fill="#2980b9" stroke="white" stroke-width="2"/>
+  <text x="190" y="250" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="white">D</text>
+  <!-- E -->
+  <circle cx="65"  cy="195" r="14" fill="#2980b9" stroke="white" stroke-width="2"/>
+  <text x="65"  y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="white">E</text>
+
+  <!-- Tour order labels -->
+  <circle cx="180" cy="84"  r="11" fill="white"/>
+  <text x="180" y="89"  text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#c0392b">①</text>
+  <circle cx="283" cy="140" r="11" fill="white"/>
+  <text x="283" y="145" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#c0392b">②</text>
+  <circle cx="100" cy="160" r="11" fill="white"/>
+  <text x="100" y="165" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#c0392b">③</text>
+  <circle cx="240" cy="160" r="11" fill="white"/>
+  <text x="240" y="165" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#c0392b">④</text>
+  <circle cx="150" cy="177" r="11" fill="white"/>
+  <text x="150" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#c0392b">⑤</text>
+
+
+  <!-- ===== RIGHT PANEL: good tour A→B→C→D→E→A ===== -->
+  <!-- Same cities offset +299: A(429,95) B(529,70) C(564,170) D(489,245) E(364,195) -->
+
+  <text x="449" y="29" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#27ae60">Optimal Route</text>
+  <text x="449" y="44" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#888">(no crossings — distance 569)</text>
+
+  <!-- Tour edges -->
+  <g stroke="#27ae60" stroke-width="2.5" fill="none">
+    <line x1="429" y1="95"  x2="529" y2="70"/>
+    <line x1="529" y1="70"  x2="564" y2="170"/>
+    <line x1="564" y1="170" x2="489" y2="245"/>
+    <line x1="489" y1="245" x2="364" y2="195"/>
+    <line x1="364" y1="195" x2="429" y2="95"/>
+  </g>
+
+  <!-- City nodes -->
+  <!-- A — start/end: double ring -->
+  <circle cx="429" cy="95" r="18" fill="none" stroke="#f39c12" stroke-width="2"/>
+  <circle cx="429" cy="95" r="14" fill="#2980b9" stroke="white" stroke-width="2"/>
+  <text x="429" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="white">A</text>
+  <!-- B -->
+  <circle cx="529" cy="70"  r="14" fill="#2980b9" stroke="white" stroke-width="2"/>
+  <text x="529" y="75"  text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="white">B</text>
+  <!-- C -->
+  <circle cx="564" cy="170" r="14" fill="#2980b9" stroke="white" stroke-width="2"/>
+  <text x="564" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="white">C</text>
+  <!-- D -->
+  <circle cx="489" cy="245" r="14" fill="#2980b9" stroke="white" stroke-width="2"/>
+  <text x="489" y="250" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="white">D</text>
+  <!-- E -->
+  <circle cx="364" cy="195" r="14" fill="#2980b9" stroke="white" stroke-width="2"/>
+  <text x="364" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="white">E</text>
+
+  <!-- Tour order labels -->
+  <circle cx="477" cy="67"  r="11" fill="white"/>
+  <text x="477" y="72"  text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#27ae60">①</text>
+  <circle cx="561" cy="123" r="11" fill="white"/>
+  <text x="561" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#27ae60">②</text>
+  <circle cx="541" cy="210" r="11" fill="white"/>
+  <text x="541" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#27ae60">③</text>
+  <circle cx="416" cy="223" r="11" fill="white"/>
+  <text x="416" y="228" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#27ae60">④</text>
+  <circle cx="383" cy="135" r="11" fill="white"/>
+  <text x="383" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#27ae60">⑤</text>
+
+  <!-- Legend bottom-left -->
+  <circle cx="22"  cy="270" r="7"  fill="none" stroke="#f39c12" stroke-width="1.5"/>
+  <circle cx="22"  cy="270" r="4"  fill="#2980b9"/>
+  <text   x="32"  y="274" font-family="Arial,sans-serif" font-size="10" fill="#555">= Start / End</text>
+
+</svg>

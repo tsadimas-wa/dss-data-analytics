@@ -558,7 +558,7 @@ MC > 70;
 
 > The tree was trained on a real dataset of thousands of customers. With more data no single attribute splits perfectly on its own — the algorithm adds levels and surfaces a different root (here: **Tenure < 12**).
 
-![w:1000](../img/lec6/decision_tree.png)
+![w:1000](../img/lec6/decision_tree_en.png)
 
 
 
@@ -715,7 +715,7 @@ $$H(t) = -\sum_c p_c \log_2 p_c \qquad G(t) = 1 - \sum_c p_c^2 \qquad E(t) = 1 -
 
 
 
-![w:550](../img/lec6/entr-gini.png)
+![w:550](../img/lec6/entr-gini_en.png)
 
 > **Classification Error** $E(t)$: the probability of making a mistake if we always predict the majority class — maximum 0.5 when classes are equally distributed, 0 at a pure node. In practice it is used less than Gini/Entropy because it is less sensitive to node composition.
 
@@ -1054,7 +1054,7 @@ A classifier does not simply say "Churn/Stay" — it outputs a **probability**, 
 
 <div>
 
-![w:550](../img/lec6/roc_curve.png)
+![w:550](../img/lec6/roc_curve_en.png)
 
 </div>
 
@@ -1086,7 +1086,7 @@ A classifier does not simply say "Churn/Stay" — it outputs a **probability**, 
 
 <!-- _class: xxsmall -->
 
-![w:750](../img/lec6/score_dist_roc.png)
+![w:750](../img/lec6/score_dist_roc_en.png)
 
 > **Each panel:** blue = Stay, red = Churn. The threshold (vertical line) defines the 4 regions: **TN** (blue left), **TP** (red right), **FN** (red left — missed), **FP** (blue right — false alarm).
 > **Bottom right:** each threshold gives a point (FPR, TPR) — the ROC is the collection of **all** of them.
@@ -1378,7 +1378,7 @@ Sometimes the data cannot be separated linearly. The **kernel** "lifts" them int
 
 # Supervised Learning: SVM — Visual Illustration
 
-![w:950](../img/lec6/svm_illustration.png)
+![w:950](../img/lec6/svm_illustration_en.png)
 
 > **Left:** Linear SVM — the line maximises the distance (margin) from the **support vectors** (points with a black outline).
 > **Right:** Kernel Trick (RBF) — data that cannot be separated with a straight line are "lifted" into a higher dimension where separation is feasible.
@@ -1429,7 +1429,7 @@ $$P(y=1) = \frac{1}{1 + e^{-(w_0 + w_1 x_1 + \ldots + w_n x_n)}}$$
 
 <!-- _class: xsmall -->
 
-![w:950](../img/lec6/logistic_illustration.png)
+![w:950](../img/lec6/logistic_illustration_en.png)
 
 > **Left:** The sigmoid function converts any number to a probability $[0,1]$. Below 0.5 → Stay, above → Churn.
 > **Right:** In the 2D feature space, the model draws a **straight line** as the decision boundary — the colour shows the predicted probability.
@@ -1478,7 +1478,7 @@ $$P(y=1) = \frac{1}{1 + e^{-(w_0 + w_1 x_1 + \ldots + w_n x_n)}}$$
 
 # Supervised Learning: k-NN — Visual Illustration
 
-![w:950](../img/lec6/knn_illustration.png)
+![w:950](../img/lec6/knn_illustration_en.png)
 
 > **Left (k=1):** The model "hugs" every point — complex boundary, overfitting. The orange zone shows the 5 nearest neighbours of the new sample (★).
 > **Right (k=9):** With a larger k, the boundary smooths out — better generalisation.
@@ -1526,7 +1526,7 @@ $$P(\text{class} \mid \mathbf{x}) = \frac{P(\mathbf{x} \mid \text{class}) \cdot 
 
 <!-- _class: small -->
 
-![w:950](../img/lec6/naive_bayes_illustration.png)
+![w:950](../img/lec6/naive_bayes_illustration_en.png)
 
 > **Left:** For each feature value, the model compares P(x|Stay) vs P(x|Churn) — it selects the class with the higher probability.
 > **Right:** Spam filter — words like "free" appear much more often in spam, while "invoice" appears in normal emails.
@@ -1560,7 +1560,7 @@ Try $K=1,2,...,10$ and measure the **sum of distances** of each point from its c
 
 <!-- _class: xxsmall -->
 
-![w:850](../img/lec6/kmeans_illustration.png)
+![w:850](../img/lec6/kmeans_illustration_en.png)
 
 > **Top:** 4 convergence steps — the centroids (✕) move until they stabilise.
 > **Bottom left:** Final grouping into 3 segments. **Bottom right:** Elbow Method — at K=3 the improvement "levels off".

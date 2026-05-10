@@ -112,7 +112,7 @@ It belongs to the **NP-Hard** category — exhaustive search becomes infeasible 
 <!-- _class: diagram-sm -->
 # TSP — Why the Order of Visits Matters
 
-![w:900](../img/lec8/tsp_routes.svg)
+![w:900](../img/lec8/tsp_routes_en.svg)
 
 Same **5 cities**, two different visiting orders → **+59% difference in distance**.
 Routes with **crossings** are always sub-optimal — but with 20+ cities we cannot check all options.
@@ -315,7 +315,7 @@ Genetic Algorithms (GAs) are a category of Evolutionary Algorithms that mimic th
 <!-- _class: diagram -->
 # Genetic Algorithms — The Cycle of Evolution
 
-![Genetic Algorithm Cycle](../img/lec8/ga_cycle.svg)
+![Genetic Algorithm Cycle](../img/lec8/ga_cycle_en.svg)
 
 ---
 
@@ -398,7 +398,7 @@ The algorithm applies operators (crossover, mutation) to the **genotypes**. When
 **Knapsack — binary vector**
 Each `1`/`0` gene corresponds to an item (in / out).
 
-![Knapsack encoding](../img/lec8/knapsack.svg)
+![Knapsack encoding](../img/lec8/knapsack_en.svg)
 
 </div>
 <div>
@@ -406,7 +406,7 @@ Each `1`/`0` gene corresponds to an item (in / out).
 **TSP — permutation**
 The order of the genes defines the order in which cities are visited.
 
-![TSP encoding](../img/lec8/tsp_encoding.svg)
+![TSP encoding](../img/lec8/tsp_encoding_en.svg)
 
 </div>
 </div>
@@ -546,7 +546,7 @@ The choice of the appropriate crossover operator is critical and depends directl
 <!-- _class: diagram -->
 # Genetic Algorithms — Operators Visually
 
-![w:1000](../img/lec8/ga_operators.svg)
+![w:1000](../img/lec8/ga_operators_en.svg)
 
 ---
 
@@ -556,7 +556,7 @@ The choice of the appropriate crossover operator is critical and depends directl
 <div class="columns">
 <div>
 
-![h:400](../img/lec8/roulette_selection.svg)
+![h:400](../img/lec8/roulette_selection_en.svg)
 
 </div>
 <div>
@@ -587,7 +587,7 @@ The choice of the appropriate crossover operator is critical and depends directl
 <!-- _class: diagram -->
 # Tournament Selection — Visually
 
-![w:900](../img/lec8/tournament_selection.svg)
+![w:900](../img/lec8/tournament_selection_en.svg)
 
 ---
 
@@ -620,7 +620,7 @@ During evolution, the population tends to become increasingly homogeneous as bet
 <div class="columns">
 <div>
 
-![TSP GA](../img/lec8/tsp_ga_example.svg)
+![TSP GA](../img/lec8/tsp_ga_example_en.svg)
 
 </div>
 <div>
@@ -780,7 +780,7 @@ After all ants have completed their routes, the pheromone is updated in two phas
 <!-- _class: diagram -->
 # ACO — Pheromone Visualisation
 
-![ACO Pheromone Visualization](../img/lec8/aco_pheromone.svg)
+![ACO Pheromone Visualization](../img/lec8/aco_pheromone_en.svg)
 
 > 🔗 Interactive simulation: [poolik.github.io/visual-aco](https://poolik.github.io/visual-aco/#/visualisation)
 
@@ -853,7 +853,7 @@ After computing the new velocity, the position is updated: $x_{i}^{t+1} = x_i^t 
 <!-- _class: diagram -->
 # PSO — Visualisation of Particle Movement
 
-![PSO Particle Movement](../img/lec8/pso_movement.svg)
+![PSO Particle Movement](../img/lec8/pso_movement_en.svg)
 
 ---
 

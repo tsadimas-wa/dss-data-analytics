@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="335" viewBox="0 0 760 335">
+
+  <!-- Left panel: bad initial route -->
+  <rect x="10" y="10" width="365" height="268" rx="10" fill="#fff5f5" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="192" y="30" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#dc2626">Initial Route (Gen 0)</text>
+  <text x="192" y="46" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b7280">Chromosome: [A, C, B, D]</text>
+
+  <!-- Bad route edges (dashed red): A→C, C→B, B→D, D→A -->
+  <!-- Cities: A(75,188) B(177,83) C(314,120) D(254,236) -->
+  <line x1="75" y1="188" x2="314" y2="120" stroke="#ef4444" stroke-width="2" stroke-dasharray="7,4"/>
+  <line x1="314" y1="120" x2="177" y2="83"  stroke="#ef4444" stroke-width="2" stroke-dasharray="7,4"/>
+  <line x1="177" y1="83"  x2="254" y2="236" stroke="#ef4444" stroke-width="2" stroke-dasharray="7,4"/>
+  <line x1="254" y1="236" x2="75"  y2="188" stroke="#ef4444" stroke-width="2" stroke-dasharray="7,4"/>
+
+  <!-- Crossing mark at ~(210,155) -->
+  <circle cx="210" cy="155" r="13" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="210" y="161" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#dc2626">✕</text>
+  <rect x="225" y="147" width="78" height="16" rx="3" fill="white" opacity="0.92"/>
+  <text x="227" y="160" font-family="sans-serif" font-size="11" fill="#dc2626">crossing!</text>
+
+  <!-- City nodes LEFT (drawn on top of edges) -->
+  <circle cx="75"  cy="188" r="17" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="75"  y="194" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">A</text>
+  <circle cx="177" cy="83"  r="17" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="177" y="89"  text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">B</text>
+  <circle cx="314" cy="120" r="17" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="314" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">C</text>
+  <circle cx="254" cy="236" r="17" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="254" y="242" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">D</text>
+
+  <!-- Left footer bar -->
+  <rect x="15" y="255" width="355" height="19" rx="4" fill="#fee2e2"/>
+  <text x="192" y="268" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#dc2626">Distance: 745 km  ·  f = 1/745 ≈ 0.00134</text>
+
+  <!-- Right panel: optimal evolved route -->
+  <rect x="385" y="10" width="365" height="268" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="568" y="30" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#15803d">Optimal Route (Gen N)</text>
+  <text x="568" y="46" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b7280">Chromosome: [A, B, C, D]</text>
+
+  <!-- Optimal route edges (solid green): A→B, B→C, C→D, D→A -->
+  <!-- Cities: A(452,188) B(554,83) C(691,120) D(631,236) -->
+  <line x1="452" y1="188" x2="554" y2="83"  stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="554" y1="83"  x2="691" y2="120" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="691" y1="120" x2="631" y2="236" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="631" y1="236" x2="452" y2="188" stroke="#16a34a" stroke-width="2.5"/>
+
+  <!-- Distance labels on right panel edges -->
+  <!-- A→B midpoint (503,136) -->
+  <rect x="466" y="122" width="48" height="16" rx="3" fill="white" opacity="0.92"/>
+  <text x="468" y="135" font-family="sans-serif" font-size="11" fill="#15803d">140 km</text>
+  <!-- B→C midpoint (622,102) -->
+  <rect x="606" y="86"  width="48" height="16" rx="3" fill="white" opacity="0.92"/>
+  <text x="608" y="99"  font-family="sans-serif" font-size="11" fill="#15803d">140 km</text>
+  <!-- C→D midpoint (661,178) -->
+  <rect x="673" y="163" width="48" height="16" rx="3" fill="white" opacity="0.92"/>
+  <text x="675" y="176" font-family="sans-serif" font-size="11" fill="#15803d">130 km</text>
+  <!-- D→A midpoint (541,212) -->
+  <rect x="521" y="218" width="48" height="16" rx="3" fill="white" opacity="0.92"/>
+  <text x="523" y="231" font-family="sans-serif" font-size="11" fill="#15803d">190 km</text>
+
+  <!-- City nodes RIGHT (drawn on top of edges) -->
+  <circle cx="452" cy="188" r="17" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+  <text x="452" y="194" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">A</text>
+  <circle cx="554" cy="83"  r="17" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+  <text x="554" y="89"  text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">B</text>
+  <circle cx="691" cy="120" r="17" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+  <text x="691" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">C</text>
+  <circle cx="631" cy="236" r="17" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+  <text x="631" y="242" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">D</text>
+
+  <!-- Right footer bar -->
+  <rect x="390" y="255" width="355" height="19" rx="4" fill="#dcfce7"/>
+  <text x="568" y="268" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#15803d">Distance: 600 km  ·  f = 1/600 ≈ 0.00167  ✓ Optimal</text>
+
+  <!-- Bottom: distance matrix strip -->
+  <rect x="10" y="285" width="740" height="44" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="380" y="303" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#374151">Distance Matrix (km):</text>
+  <text x="380" y="321" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">d(A,B)=140  ·  d(B,C)=140  ·  d(C,D)=130  ·  d(D,A)=190  ·  d(A,C)=245  ·  d(B,D)=170</text>
+</svg>

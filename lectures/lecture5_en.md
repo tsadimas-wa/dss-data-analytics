@@ -542,7 +542,7 @@ Result
 ## Defuzzification — Mamdani vs Sugeno/Singleton
 <!-- _class: xsmall -->
 
-![Mamdani vs Singleton](../lectures_material/mamdani_vs_singleton.png)
+![Mamdani vs Singleton](../lectures_material/mamdani_vs_singleton_en.png)
 
 ---
 

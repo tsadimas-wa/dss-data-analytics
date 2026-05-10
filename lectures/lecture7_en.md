@@ -323,7 +323,7 @@ $$\underbrace{x_i}_{\text{dendrites}} \xrightarrow{\times\, w_i}_{\text{synapse}
 
 ![h:230](../img/lec7/biological-neuron-1.png)
 
-![h:230](../img/lec7/perceptron_diagram.svg)
+![h:230](../img/lec7/perceptron_diagram_en.svg)
 
 </div>
 
@@ -420,7 +420,7 @@ Same vanishing gradient problem → replaced by ReLU.
 
 # Activation Functions — Graph
 
-![w:1200](../img/lec7/activation_functions.svg)
+![w:1200](../img/lec7/activation_functions_en.svg)
 
 ---
 
@@ -534,7 +534,7 @@ There is no line that correctly separates all 4 points — XOR is **non-linearly
 
 <div>
 
-![w:580](../img/lec7/mlp_diagram.svg)
+![w:580](../img/lec7/mlp_diagram_en.svg)
 
 **Number of parameters (churn prediction):**
 $10 \times 64 + 64 \times 32 + 32 \times 1 = 2,720$ weights
@@ -555,7 +555,7 @@ $10 \times 64 + 64 \times 32 + 32 \times 1 = 2,720$ weights
 
 Each **layer** uses one function (not each neuron separately):
 
-![h:420](../img/lec7/activation_per_layer.svg)
+![h:420](../img/lec7/activation_per_layer_en.svg)
 
 > **Rule:** All hidden layers → **ReLU** (same everywhere). Only the output changes depending on what we want: **Sigmoid** (probability 0-1), **Softmax** (multiple classes), or **none** (regression).
 
@@ -623,11 +623,11 @@ Each hidden layer learns **more abstract representations** than the previous one
 
 **Face recognition (CNN):**
 
-![w:580](../img/lec7/hidden_layers_vision.svg)
+![w:580](../img/lec7/hidden_layers_vision_en.svg)
 
 **Text analysis (Transformer):**
 
-![w:580](../img/lec7/hidden_layers_text.svg)
+![w:580](../img/lec7/hidden_layers_text_en.svg)
 
 </div>
 
@@ -763,7 +763,7 @@ model.add(Dropout(0.3))  # 30% neurons OFF
 
 <div>
 
-![w:500](../img/lec7/overfitting_curve.svg)
+![w:500](../img/lec7/overfitting_curve_en.svg)
 
 </div>
 
@@ -1545,7 +1545,7 @@ Hospitals in the US (e.g. Beth Israel Deaconess) use XAI for sepsis prediction �
 
 <div>
 
-![w:600](../img/lec7/accuracy_vs_interpretability.svg)
+![w:600](../img/lec7/accuracy_vs_interpretability_en.svg)
 
 </div>
 

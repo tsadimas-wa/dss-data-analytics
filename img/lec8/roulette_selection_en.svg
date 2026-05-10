@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="710" height="430" viewBox="0 0 710 430">
+  <rect width="710" height="430" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="355" y="24" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="bold" fill="#1e293b">Roulette Selection — f(x)=x²  (Goldberg 1989, N=4)</text>
+  <path d="M 205,212 L 205.00,60.00 A 152,152 0 0,1 324.52,118.09 Z" fill="#3b82f6" stroke="white" stroke-width="2.5"/>
+  <path d="M 205,212 L 324.52,118.09 A 152,152 0 0,1 90.35,311.80 Z" fill="#ef4444" stroke="white" stroke-width="2.5"/>
+  <path d="M 205,212 L 90.35,311.80 A 152,152 0 0,1 63.33,267.07 Z" fill="#22c55e" stroke="white" stroke-width="2.5"/>
+  <path d="M 205,212 L 63.33,267.07 A 152,152 0 0,1 205.00,60.00 Z" fill="#f97316" stroke="white" stroke-width="2.5"/>
+  <circle cx="205" cy="212" r="152" fill="none" stroke="#475569" stroke-width="2"/>
+  <line x1="205.0" y1="60.0" x2="205.0" y2="54.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="231.4" y1="62.3" x2="232.4" y2="56.4" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="257.0" y1="69.2" x2="259.0" y2="63.5" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="281.0" y1="80.4" x2="284.0" y2="75.2" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="302.7" y1="95.6" x2="306.6" y2="91.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="321.4" y1="114.3" x2="326.0" y2="110.4" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="336.6" y1="136.0" x2="341.8" y2="133.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="347.8" y1="160.0" x2="353.5" y2="158.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="354.7" y1="185.6" x2="360.6" y2="184.6" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="357.0" y1="212.0" x2="363.0" y2="212.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="354.7" y1="238.4" x2="360.6" y2="239.4" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="347.8" y1="264.0" x2="353.5" y2="266.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="336.6" y1="288.0" x2="341.8" y2="291.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="321.4" y1="309.7" x2="326.0" y2="313.6" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="302.7" y1="328.4" x2="306.6" y2="333.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="281.0" y1="343.6" x2="284.0" y2="348.8" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="257.0" y1="354.8" x2="259.0" y2="360.5" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="231.4" y1="361.7" x2="232.4" y2="367.6" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="205.0" y1="364.0" x2="205.0" y2="370.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="178.6" y1="361.7" x2="177.6" y2="367.6" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="153.0" y1="354.8" x2="151.0" y2="360.5" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="129.0" y1="343.6" x2="126.0" y2="348.8" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="107.3" y1="328.4" x2="103.4" y2="333.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="88.6" y1="309.7" x2="84.0" y2="313.6" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="73.4" y1="288.0" x2="68.2" y2="291.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="62.2" y1="264.0" x2="56.5" y2="266.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="55.3" y1="238.4" x2="49.4" y2="239.4" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="53.0" y1="212.0" x2="47.0" y2="212.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="55.3" y1="185.6" x2="49.4" y2="184.6" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="62.2" y1="160.0" x2="56.5" y2="158.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="73.4" y1="136.0" x2="68.2" y2="133.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="88.6" y1="114.3" x2="84.0" y2="110.4" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="107.3" y1="95.6" x2="103.4" y2="91.0" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="129.0" y1="80.4" x2="126.0" y2="75.2" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="153.0" y1="69.2" x2="151.0" y2="63.5" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="178.6" y1="62.3" x2="177.6" y2="56.4" stroke="#94a3b8" stroke-width="1"/>
+  <text x="246.9" y="119.9" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="white">I1</text>
+  <text x="246.9" y="134.9" text-anchor="middle" font-family="sans-serif" font-size="12" fill="white">14.4%</text>
+  <text x="266.0" y="279.8" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="white">I2</text>
+  <text x="266.0" y="294.8" text-anchor="middle" font-family="sans-serif" font-size="12" fill="white">49.2%</text>
+  <line x1="71.5" y1="292.7" x2="34.0" y2="350.0" stroke="#15803d" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <rect x="4" y="340" width="70" height="20" rx="4" fill="#22c55e" stroke="white" stroke-width="1"/>
+  <text x="39" y="354" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="bold" fill="white">I3 · 5.5%</text>
+  <text x="126.0" y="151.9" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="white">I4</text>
+  <text x="126.0" y="166.9" text-anchor="middle" font-family="sans-serif" font-size="12" fill="white">30.9%</text>
+  <circle cx="205" cy="212" r="20" fill="white" stroke="#64748b" stroke-width="2"/>
+  <text x="205" y="216" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#64748b">spin</text>
+  <defs><marker id="mah" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#0f172a"/></marker></defs>
+  <line x1="205" y1="212" x2="308.55" y2="269.74" stroke="#0f172a" stroke-width="4" marker-end="url(#mah)" stroke-linecap="round"/>
+  <rect x="394" y="36" width="302" height="384" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="394" y="36" width="302" height="26" rx="8" fill="#1e293b"/>
+  <text x="398" y="53" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="white">Individual</text>
+  <text x="446" y="53" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="white">Chrom.</text>
+  <text x="506" y="53" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="white">x</text>
+  <text x="542" y="53" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="white">f(x)</text>
+  <text x="588" y="53" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="white">P</text>
+  <text x="662" y="53" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="white">Exp.</text>
+  <rect x="394" y="62" width="302" height="54" fill="#f8fafc"/>
+  <rect x="399" y="70" width="14" height="14" rx="3" fill="#3b82f6"/>
+  <text x="417" y="84" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1d4ed8">I1</text>
+  <text x="446" y="84" font-family="monospace" font-size="11.5" fill="#374151">01101</text>
+  <text x="506" y="84" font-family="sans-serif" font-size="12" fill="#374151">13</text>
+  <text x="542" y="84" font-family="sans-serif" font-size="12" fill="#374151">169</text>
+  <rect x="588" y="71" width="60" height="14" rx="3" fill="#e2e8f0"/>
+  <rect x="588" y="71" width="17" height="14" rx="3" fill="#3b82f6" opacity="0.9"/>
+  <text x="588" y="102" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1d4ed8">14.4%</text>
+  <text x="662" y="84" font-family="sans-serif" font-size="12" fill="#374151">0.58</text>
+  <rect x="394" y="116" width="302" height="54" fill="white"/>
+  <rect x="399" y="124" width="14" height="14" rx="3" fill="#ef4444"/>
+  <text x="417" y="138" font-family="sans-serif" font-size="13" font-weight="bold" fill="#b91c1c">I2</text>
+  <text x="446" y="138" font-family="monospace" font-size="11.5" fill="#374151">11000</text>
+  <text x="506" y="138" font-family="sans-serif" font-size="12" fill="#374151">24</text>
+  <text x="542" y="138" font-family="sans-serif" font-size="12" fill="#374151">576</text>
+  <rect x="588" y="125" width="60" height="14" rx="3" fill="#e2e8f0"/>
+  <rect x="588" y="125" width="59" height="14" rx="3" fill="#ef4444" opacity="0.9"/>
+  <text x="588" y="156" font-family="sans-serif" font-size="10" font-weight="bold" fill="#b91c1c">49.2%</text>
+  <text x="662" y="138" font-family="sans-serif" font-size="12" fill="#374151">1.97</text>
+  <rect x="394" y="170" width="302" height="54" fill="#f8fafc"/>
+  <rect x="399" y="178" width="14" height="14" rx="3" fill="#22c55e"/>
+  <text x="417" y="192" font-family="sans-serif" font-size="13" font-weight="bold" fill="#15803d">I3</text>
+  <text x="446" y="192" font-family="monospace" font-size="11.5" fill="#374151">01000</text>
+  <text x="506" y="192" font-family="sans-serif" font-size="12" fill="#374151">8</text>
+  <text x="542" y="192" font-family="sans-serif" font-size="12" fill="#374151">64</text>
+  <rect x="588" y="179" width="60" height="14" rx="3" fill="#e2e8f0"/>
+  <rect x="588" y="179" width="6" height="14" rx="3" fill="#22c55e" opacity="0.9"/>
+  <text x="588" y="210" font-family="sans-serif" font-size="10" font-weight="bold" fill="#15803d">5.5%</text>
+  <text x="662" y="192" font-family="sans-serif" font-size="12" fill="#374151">0.22</text>
+  <rect x="394" y="224" width="302" height="54" fill="white"/>
+  <rect x="399" y="232" width="14" height="14" rx="3" fill="#f97316"/>
+  <text x="417" y="246" font-family="sans-serif" font-size="13" font-weight="bold" fill="#c2410c">I4</text>
+  <text x="446" y="246" font-family="monospace" font-size="11.5" fill="#374151">10011</text>
+  <text x="506" y="246" font-family="sans-serif" font-size="12" fill="#374151">19</text>
+  <text x="542" y="246" font-family="sans-serif" font-size="12" fill="#374151">361</text>
+  <rect x="588" y="233" width="60" height="14" rx="3" fill="#e2e8f0"/>
+  <rect x="588" y="233" width="37" height="14" rx="3" fill="#f97316" opacity="0.9"/>
+  <text x="588" y="264" font-family="sans-serif" font-size="10" font-weight="bold" fill="#c2410c">30.9%</text>
+  <text x="662" y="246" font-family="sans-serif" font-size="12" fill="#374151">1.23</text>
+  <line x1="394" y1="62" x2="696" y2="62" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="394" y1="116" x2="696" y2="116" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="394" y1="170" x2="696" y2="170" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="394" y1="224" x2="696" y2="224" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="394" y1="278" x2="696" y2="278" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="394" y="280" width="302" height="140" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="545" y="295" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1d4ed8">P(i) = f(i) / Σf     ·     Exp. = P(i) × N</text>
+  <text x="545" y="311" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#374151">I2 = 2× larger x than I1 → gets 3.4× selection probability</text>
+  <text x="545" y="326" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#b91c1c">→ Selection Pressure</text>
+</svg>
