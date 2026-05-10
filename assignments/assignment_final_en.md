@@ -143,7 +143,7 @@ You must submit a compressed `.zip` file containing **all** of the following:
 
 1.  **The Ontology file:** In `.owl` or `.rdf` format, exported from Protégé.
 2.  **The Python script/notebook (`.py` or `.ipynb`):** The code implementing the complete Decision Support System.
-3.  **Technical Report (PDF, 4–6 pages):** A report that must include:
+3.  **Technical Report (PDF, minimum 20 pages):** A thorough report that must include:
     *   **Introduction:** Description of the problem your DSS solves and the approach you followed.
     *   **System Architecture:** A diagram showing how the components are connected (e.g. Ontology, ML Model, Fuzzy System).
     *   **Knowledge Modelling:** Description of the ontology (main classes, properties, rules).
