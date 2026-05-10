@@ -12,7 +12,7 @@
 Για τη δημιουργία της Βάσης Γνώσης, μπορείτε να επιλέξετε **μία** από τις παρακάτω δύο οδούς:
 
 ### Επιλογή Α.1: Αξιοποίηση & Επέκταση Υπάρχουσας Οντολογίας
-**Στόχος:** Να επεκτείνετε μια υπάρχουσα οντολογία (π.χ. αυτή που δημιουργήσαμε στο εργαστήριο) και να τη χρησιμοποιήσετε ως τη βάση του ΣΥΑ σας.
+**Στόχος:** Να επεκτείνετε την οντολογία που παραδώσατε στην **1η Εργασία** και να τη χρησιμοποιήσετε ως τη βάση του ΣΥΑ σας.
 
 **Απαιτήσεις:**
 1.  **Εμπλουτισμός (Instantiation):**
@@ -90,7 +90,7 @@
     3.  **ΣΥΑ (RAG):** Ο manager θέλει να στείλει ένα email σε όλους τους "Tech Enthusiasts". Το σύστημα ανακτά από την οντολογία τη λίστα αυτών των πελατών και τις πρόσφατες αγορές τους. Στη συνέχεια, κατασκευάζει ένα prompt για το LLM: *"Είσαι ειδικός marketing. Γράψε ένα email για έναν πελάτη που πρόσφατα αγόρασε 'Gaming Laptop' και είναι 'Tech Enthusiast'. Πρότεινέ του ένα 'Μηχανικό Πληκτρολόγιο' που είναι σε προσφορά."*
 
 > 📌 **Βοήθεια:**
-> *   LLMs & RAG (θεωρία): [Lec 7 — Generative AI & RAG](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/lectures/lecture7_el.md)
+> *   LLMs & RAG: [Lab 7 §4](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/labs/lab7_el.ipynb) · [Lec 7 — Generative AI & RAG](https://github.com/tsadimas-wa/dss-data-analytics/blob/main/lectures/lecture7_el.md)
 > *   OpenAI API: [openai Python library](https://platform.openai.com/docs/quickstart) · [API Reference](https://platform.openai.com/docs/api-reference/chat)
 > *   Anthropic (Claude) API: [Getting started](https://docs.anthropic.com/en/api/getting-started) · [Messages API](https://docs.anthropic.com/en/api/messages)
 > *   Prompt Engineering: [OpenAI Prompt Guide](https://platform.openai.com/docs/guides/prompt-engineering)
@@ -174,6 +174,6 @@
 
 ## Υποβολή
 
-Η παράδοση της εργασίας (το συμπιεσμένο αρχείο `.zip`) θα γίνει στο eclass, στον ακόλουθο σύνδεσμο: Υποβολή Εργασίας.
+Η παράδοση της εργασίας (το συμπιεσμένο αρχείο `.zip`) θα γίνει στο eclass, στον ακόλουθο σύνδεσμο: [Υποβολή Εργασίας](https://eclass.uniwa.gr/modules/work/index.php?course=ICE254&id=53401).
 
 **Προθεσμία υποβολής:** 21 Ιουνίου 2026
