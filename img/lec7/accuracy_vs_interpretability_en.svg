@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420">
+  <defs>
+    <marker id="arrowX" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrowY" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Plot area background -->
+  <rect x="70" y="30" width="500" height="340" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Grid lines horizontal -->
+  <line x1="70" y1="115" x2="570" y2="115" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="70" y1="200" x2="570" y2="200" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="70" y1="285" x2="570" y2="285" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Grid lines vertical -->
+  <line x1="195" y1="30" x2="195" y2="370" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="320" y1="30" x2="320" y2="370" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="445" y1="30" x2="445" y2="370" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Trend curve (trade-off) -->
+  <path d="M 120,340 Q 300,180 540,55" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="7,5" fill="none"/>
+
+  <!-- Zone labels -->
+  <text x="82" y="50" font-size="11" fill="#15803d" font-style="italic" font-family="sans-serif">✅ White-box</text>
+  <text x="440" y="368" font-size="11" fill="#b91c1c" font-style="italic" font-family="sans-serif">❌ Black-box</text>
+
+  <!-- XAI annotation -->
+  <text x="310" y="175" font-size="10" fill="#7c3aed" font-family="sans-serif">← XAI adds</text>
+  <text x="310" y="188" font-size="10" fill="#7c3aed" font-family="sans-serif">interpretability</text>
+  <line x1="307" y1="178" x2="294" y2="200" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#arrowXAI)"/>
+
+  <!-- Axes -->
+  <line x1="70" y1="370" x2="572" y2="370" stroke="#64748b" stroke-width="2" marker-end="url(#arrowX)"/>
+  <line x1="70" y1="370" x2="70" y2="28" stroke="#64748b" stroke-width="2" marker-end="url(#arrowY)"/>
+
+  <!-- Axis labels -->
+  <text x="320" y="410" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155" font-family="sans-serif">Accuracy</text>
+  <text x="18" y="200" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155" font-family="sans-serif" transform="rotate(-90,18,200)">Interpretability</text>
+
+  <!-- ===== WHITE-BOX MODELS (green) ===== -->
+
+  <!-- Decision Tree: acc=0.28, int=0.93 → x=210, y=54 -->
+  <circle cx="210" cy="54" r="24" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="210" y="50" text-anchor="middle" font-size="9.5" fill="#15803d" font-weight="bold" font-family="sans-serif">Decision</text>
+  <text x="210" y="62" text-anchor="middle" font-size="9.5" fill="#15803d" font-weight="bold" font-family="sans-serif">Tree</text>
+
+  <!-- Logistic Reg.: acc=0.40, int=0.85 → x=270, y=81 -->
+  <circle cx="270" cy="81" r="24" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="270" y="77" text-anchor="middle" font-size="9.5" fill="#15803d" font-weight="bold" font-family="sans-serif">Logistic</text>
+  <text x="270" y="89" text-anchor="middle" font-size="9.5" fill="#15803d" font-weight="bold" font-family="sans-serif">Reg.</text>
+
+  <!-- Naive Bayes: acc=0.18, int=0.76 → x=160, y=111 -->
+  <circle cx="160" cy="111" r="24" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="160" y="107" text-anchor="middle" font-size="9.5" fill="#15803d" font-weight="bold" font-family="sans-serif">Naive</text>
+  <text x="160" y="119" text-anchor="middle" font-size="9.5" fill="#15803d" font-weight="bold" font-family="sans-serif">Bayes</text>
+
+  <!-- ===== MEDIUM MODELS (amber) ===== -->
+
+  <!-- Random Forest: acc=0.70, int=0.46 → x=420, y=214 -->
+  <circle cx="420" cy="214" r="24" fill="#fef9c3" stroke="#ca8a04" stroke-width="2.5"/>
+  <text x="420" y="210" text-anchor="middle" font-size="9.5" fill="#92400e" font-weight="bold" font-family="sans-serif">Random</text>
+  <text x="420" y="222" text-anchor="middle" font-size="9.5" fill="#92400e" font-weight="bold" font-family="sans-serif">Forest</text>
+
+  <!-- Gradient Boosting: acc=0.78, int=0.34 → x=460, y=254 -->
+  <circle cx="460" cy="254" r="24" fill="#fef9c3" stroke="#ca8a04" stroke-width="2.5"/>
+  <text x="460" y="250" text-anchor="middle" font-size="9.5" fill="#92400e" font-weight="bold" font-family="sans-serif">Gradient</text>
+  <text x="460" y="262" text-anchor="middle" font-size="9.5" fill="#92400e" font-weight="bold" font-family="sans-serif">Boosting</text>
+
+  <!-- ===== BLACK-BOX MODELS (red) ===== -->
+
+  <!-- SVM: acc=0.84, int=0.22 → x=490, y=295 -->
+  <circle cx="490" cy="295" r="24" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="490" y="299" text-anchor="middle" font-size="10" fill="#b91c1c" font-weight="bold" font-family="sans-serif">SVM</text>
+
+  <!-- Neural Network: acc=0.92, int=0.09 → x=530, y=339 -->
+  <circle cx="530" cy="339" r="24" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="530" y="335" text-anchor="middle" font-size="9.5" fill="#b91c1c" font-weight="bold" font-family="sans-serif">Neural</text>
+  <text x="530" y="347" text-anchor="middle" font-size="9.5" fill="#b91c1c" font-weight="bold" font-family="sans-serif">Network</text>
+</svg>

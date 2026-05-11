@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="790.5" height="700.322" viewBox="0 0 790.5 700.322">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#283a97"></stop>
+      <stop offset="1" stop-color="#141d4c"></stop>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e96616"></stop>
+      <stop offset="1" stop-color="#883e11"></stop>
+    </linearGradient>
+  </defs>
+  <g id="Group_118" transform="translate(-564.75 -289.123)">
+    <path id="Subtraction_8" d="M3166.7-4619.679H2473.3l84.875-171.444h523.65Zm-86.36-174.444h-520.68l71.783-145h377.114Zm-73.269-148H2632.929l76.734-155h220.675l76.734,155h0Zm-78.219-158h-217.7L2820-5320Z" transform="translate(-1811.45 5609.123)" fill="url(#linear-gradient)"></path>
+    <path id="Union_13" d="M2145.8-4620.123V-5265.7l-28.8-.557L2170.74-5320l55.861,55.861-28.8-.557v644.573Z" transform="translate(-1552.25 5609.123)" fill="url(#linear-gradient-2)"></path>
+    <text id="Descriptive_Analytics_What_happened_" transform="translate(1008.55 898)" fill="#fff" font-size="20" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">
+      <tspan x="-94.97" y="0">Descriptive Analytics</tspan>
+      <tspan font-size="18" font-family="ProximaNova-RegularIt, Proxima Nova" font-weight="400" font-style="italic">
+        <tspan x="-67.923" y="24">What happened?</tspan>
+      </tspan>
+    </text>
+    <text id="HINDSIGHT" transform="translate(624.55 902.5) rotate(-90)" fill="#fff" font-size="15" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">
+      <tspan x="-40.193" y="0">HINDSIGHT</tspan>
+    </text>
+    <text id="INSIGHT" transform="translate(624.55 660) rotate(-90)" fill="#fff" font-size="15" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">
+      <tspan x="-29.325" y="0">INSIGHT</tspan>
+    </text>
+    <text id="FORESIGHT" transform="translate(624.55 432.5) rotate(-90)" fill="#fff" font-size="15" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">
+      <tspan x="-41.018" y="0">FORESIGHT</tspan>
+    </text>
+    <text id="Diagnostic_Analytics_Why_did_it_happen_" transform="translate(1008.55 739)" fill="#fff" font-size="20" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">
+      <tspan x="-92.14" y="0">Diagnostic Analytics</tspan>
+      <tspan font-size="18" font-family="ProximaNova-RegularIt, Proxima Nova" font-weight="400" font-style="italic">
+        <tspan x="-75.636" y="24">Why did it happen?</tspan>
+      </tspan>
+    </text>
+    <text id="Predictive_Analytics_What_will_happen_" transform="translate(1008.55 589)" fill="#fff" font-size="20" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">
+      <tspan x="-89.27" y="0">Predictive Analytics</tspan>
+      <tspan font-size="18" font-family="ProximaNova-RegularIt, Proxima Nova" font-weight="400" font-style="italic">
+        <tspan x="-72.36" y="24">What will happen?</tspan>
+      </tspan>
+    </text>
+    <text id="Prescriptive_Analytics_How_can_we_make_it_happen_" transform="translate(1008.55 424)" fill="#fff" font-size="20" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">
+      <tspan x="-53.68" y="0">Prescriptive</tspan>
+      <tspan x="-41.39" y="24">Analytics</tspan>
+      <tspan font-size="18" font-family="ProximaNova-RegularIt, Proxima Nova" font-weight="400" font-style="italic">
+        <tspan x="-49.068" y="48">How can we</tspan>
+        <tspan x="-65.655" y="72">make it happen?</tspan>
+      </tspan>
+    </text>
+  </g>
+</svg>

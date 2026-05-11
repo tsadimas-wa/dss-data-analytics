@@ -24,7 +24,7 @@
   <!-- Global optimum star + label -->
   <text x="560" y="147" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#7c3aed">★</text>
   <rect x="582" y="118" width="70" height="18" rx="3" fill="white" opacity="0.95"/>
-  <text x="584" y="132" font-family="sans-serif" font-size="12" fill="#6d28d9">Βέλτιστο</text>
+  <text x="584" y="132" font-family="sans-serif" font-size="12" fill="#6d28d9">Optimum</text>
 
   <!-- Background particles (other swarm members) -->
   <circle cx="470" cy="300" r="9" fill="#94a3b8" stroke="#64748b" stroke-width="1.5"/>
@@ -93,16 +93,16 @@
   <rect x="30" y="375" width="700" height="64" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
 
   <line x1="50"  y1="394" x2="76"  y2="394" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="5,3"/>
-  <text x="81"  y="398" font-family="sans-serif" font-size="11" fill="#1d4ed8">Αδράνεια (w·v)</text>
+  <text x="81"  y="398" font-family="sans-serif" font-size="11" fill="#1d4ed8">Inertia (w·v)</text>
 
   <line x1="202" y1="394" x2="228" y2="394" stroke="#f97316" stroke-width="2.5"/>
-  <text x="233" y="398" font-family="sans-serif" font-size="11" fill="#c2410c">Ατομική εμπειρία</text>
+  <text x="233" y="398" font-family="sans-serif" font-size="11" fill="#c2410c">Individual experience</text>
 
   <line x1="384" y1="394" x2="410" y2="394" stroke="#ef4444" stroke-width="2.5"/>
-  <text x="415" y="398" font-family="sans-serif" font-size="11" fill="#b91c1c">Κοινωνική εμπειρία</text>
+  <text x="415" y="398" font-family="sans-serif" font-size="11" fill="#b91c1c">Social experience</text>
 
   <line x1="563" y1="394" x2="589" y2="394" stroke="#16a34a" stroke-width="3"/>
-  <text x="594" y="398" font-family="sans-serif" font-size="11" fill="#15803d">Νέα ταχύτητα</text>
+  <text x="594" y="398" font-family="sans-serif" font-size="11" fill="#15803d">New velocity</text>
 
   <!-- Formulas inside legend box -->
   <text x="380" y="425" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">vᵢᵗ⁺¹ = w·vᵢᵗ + c₁r₁(pbest − xᵢᵗ) + c₂r₂(gbest − xᵢᵗ)   |   xᵢᵗ⁺¹ = xᵢᵗ + vᵢᵗ⁺¹</text>
