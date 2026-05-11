@@ -135,6 +135,7 @@ style: |
     -   Εκτελέσιμα Μοντέλα BPMN (Executable BPMN)
     -   Μηχανές Ροής Εργασιών (Workflow Engines) & BPMS (π.χ. Camunda)
     -   Σύνδεση BPMN με RPA (Robotic Process Automation)
+    -   **Case Study:** BPMN για Διακυβέρνηση Κόστους Cloud (FinOps on AWS)
 
 5.  **Εισαγωγή στο Process Mining**
     -   Ανακαλύπτοντας την πραγματική διεργασία από Event Logs
@@ -322,6 +323,71 @@ style: |
 
 ---
 
+<!-- _class: casestudy small -->
+
+# Case Study: BPMN στο Πεδίο — Διακυβέρνηση Cloud σε Φαρμακευτική Εταιρεία
+
+<div class="columns">
+<div>
+
+**Το Πρόβλημα ("Governance Vacuum")**
+- Κόστος cloud ανακαλυπτόταν μόνο στον **μηνιαίο λογαριασμό**
+- Terraform, Shopping Cart, AWS Console λειτουργούσαν **χωρίς έλεγχο προϋπολογισμού**
+- Πόροι χωρίς ετικέτες → αδύνατη παρακολούθηση & καθυστερημένη απόσυρση
+
+</div>
+<div>
+
+**Η Λύση με Εκτελέσιμο BPMN**
+- **4 BPMN workflows** αντιστοιχούν στους 3 FinOps pillars (Inform / Optimize / Operate)
+- Τα 3 ανομοιόμορφα μονοπάτια provisioning ενοποιούνται σε **μια τυποποιημένη ροή**
+- Αυτόματοι **guardrails** (cost tags, budget checks) σε κάθε κόμβο απόφασης
+- Νέοι ρόλοι: IT System Owner (ITSO), Cloud Center of Excellence (CoE) Engineer
+
+</div>
+</div>
+
+> **Αποτέλεσμα:** Η οικονομική ευθύνη γίνεται **λειτουργική προεπιλογή** — όχι μεταγενέστερη αναφορά.
+
+*Filiopoulou, Tsadimas, Dede et al. — "FinOps on AWS: A Model-Driven Cloud Sourcing Governance Framework", BMSD 2026*
+
+---
+
+<!-- _class: casestudy xsmall -->
+
+# Case Study: Τα BPMN Στοιχεία στην Πράξη
+
+Στο ενοποιημένο workflow provisioning αναγνωρίζεις τα ίδια στοιχεία που μελετήσαμε:
+
+| BPMN Στοιχείο | Χρήση στο Case Study |
+|---|---|
+| **Pools & Lanes** | Διαχωρισμός ρόλων: Tech Lead, IR Architect, IAI Engineer, DevOps Engineer |
+| **XOR Gateway** | Επιλογή μεθόδου: Terraform (IaC) / Shopping Cart / AWS Console |
+| **User Task** | Ανθρώπινες εγκρίσεις: Security Review, Stakeholder Notification |
+| **Service Task** | Αυτόματοι έλεγχοι: Integration Guardrails, εφαρμογή Cost Management Tags |
+| **End Event** | Ο πόρος εντάσσεται επίσημα στον κύκλο ζωής του συστήματος |
+
+<div class="columns">
+<div>
+
+**Γιατί είναι "εκτελέσιμο";**
+- Τα Service Tasks συνδέονται με **AWS APIs** (tag enforcement, budget alerts)
+- Η μηχανή BPMN **αδυνατεί** να προχωρήσει χωρίς οικονομική έγκριση
+- Κάθε instance καταγράφεται → **event log** για Process Mining (§5)
+
+</div>
+<div>
+
+**Σύνδεση με τη θεωρία (§4.1):**
+1. Business Analyst σχεδίασε τα BPMN διαγράμματα
+2. Developer "συνέδεσε" Service Tasks με AWS APIs
+3. Μηχανή BPMN ενορχηστρώνει τη ροή σε πραγματικό χρόνο
+
+</div>
+</div>
+
+---
+
 # 5. Εισαγωγή στο Process Mining
 
 ---
@@ -375,3 +441,4 @@ style: |
 - Dumas, M., La Rosa, M., Mendling, J., & Reijers, H. A. (2018). *Fundamentals of Business Process Management*. Springer.
 - Silver, B. (2011). *BPMN Method and Style*. Cody-Cassidy Press.
 - van der Aalst, W. (2016). *Process Mining: Data Science in Action*. Springer.
+- Filiopoulou, E., Tsadimas, A., Dede, G., Kalogirou, A., Karanikolas, N., & Nikolaidou, M. (2026). *FinOps on AWS: A Model-Driven Cloud Sourcing Governance Framework*. BMSD 2026.
