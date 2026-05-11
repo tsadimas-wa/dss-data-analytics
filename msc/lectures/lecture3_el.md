@@ -119,12 +119,13 @@ style: |
     -   Βασικά στοιχεία BPMN 2.0 (Events, Tasks, Gateways, Pools/Lanes)
 
 2.  **BPMN 2.0 — Εμβάθυνση**
+    -   **Ονοματολογία BPMN:** Κανόνες ονομασίας Activities & Events
     -   **Τύποι Tasks:** User, Service, Script, Manual, Business Rule
     -   **Τύποι Events:** Timer, Message, Conditional, Signal, Error
     -   **Sub-processes:** Collapsed, Expanded, Event-based
-    -   **Gateways για Προχωρημένους:** Event-based, Complex, Parallel Event-based
+    -   **Gateways για Προχωρημένους:** Inclusive (OR), Event-based, Complex
+    -   **Token & Process Instance:** Model vs. Instance
     -   **Δεδομένα:** Data Objects, Data Stores, Associations
-    -   **Choreography & Collaboration Diagrams**
 
 3.  **CMMN — Case Management Model and Notation**
     -   Γιατί το BPMN δεν αρκεί πάντα; (Δομημένες vs. Αδόμητες διεργασίες)
@@ -142,6 +143,7 @@ style: |
     -   Conformance Checking: Το μοντέλο vs. η πραγματικότητα
 
 6.  **Εργαστηριακός Οδηγός: Signavio**
+    -   Μετρικές Απόδοσης: Κόστος, Χρόνος, Ποιότητα (KPIs)
     -   Μοντελοποίηση, ανάλυση κόστους & προσομοίωση
 
 7.  **Σύνοψη & Βιβλιογραφία**
@@ -414,6 +416,51 @@ style: |
 ---
 
 # 6. Εργαστηριακός Οδηγός: Signavio
+
+---
+
+<!-- _class: small -->
+
+# 6.1 Μετρικές Απόδοσης (KPIs): Τι Μετράμε;
+
+Πριν μοντελοποιήσουμε ή προσομοιώσουμε, πρέπει να ξέρουμε **τι θέλουμε να βελτιώσουμε**.
+
+<div class="columns3">
+<div>
+
+**Κόστος**
+- Κόστος ανά εκτέλεση
+- Αξιοποίηση πόρων
+- Σπατάλες (waste)
+
+</div>
+<div>
+
+**Χρόνος**
+- Κύκλος εργασίας (cycle time)
+- Χρόνος αναμονής
+- Χρόνος που δεν προσθέτει αξία
+
+</div>
+<div>
+
+**Ποιότητα**
+- Ποσοστό σφαλμάτων
+- Παραβίαση συμφωνιών (SLA)
+- Σχόλια / ανατροφοδότηση πελατών
+
+</div>
+</div>
+
+> 💡 Στο Signavio ορίζουμε **Κόστος** και **Χρόνο** ανά Task — το εργαλείο υπολογίζει αυτόματα τη συνολική επίπτωση στη διεργασία.
+
+*Πηγή: Bardaki, K. — Διαχείριση Επιχειρησιακών Διαδικασιών, Χαροκόπειο Πανεπιστήμιο*
+
+---
+
+<!-- _class: small -->
+
+# 6.2 Οδηγός Signavio
 
 *(Αυτή η ενότητα θα καλυφθεί με live demo στο εργαστήριο)*
 
