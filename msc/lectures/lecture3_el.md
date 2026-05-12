@@ -195,7 +195,7 @@ style: |
 
 ---
 
-<!-- _class: small -->
+<!-- _class: xsmall -->
 
 # 2.1 Ονοματολογία BPMN: Κανόνες Ονομασίας
 
@@ -264,7 +264,7 @@ style: |
 
 ---
 
-<!-- _class: xsmall -->
+<!-- _class: small -->
 
 # 2.2.1 DMN — Decision Model and Notation
 
@@ -295,9 +295,13 @@ style: |
 </div>
 </div>
 
+---
+
 <!-- _class: diagram-sm -->
 
-![w:900](../img/lecture3/diag_dmn_example.png)
+# 2.2.1 DMN — Παράδειγμα: Αξιολόγηση Πιστωτικού Ρίσκου
+
+![w:1100](../img/lecture3/diag_dmn_example.png)
 
 > **Σύνδεση:** Το Business Rule Task (§2.2) καλεί τη μηχανή DMN → η μηχανή αξιολογεί τον πίνακα → επιστρέφει αποτέλεσμα στη ροή BPMN.
 
@@ -348,7 +352,7 @@ style: |
 
 ---
 
-<!-- _class: xsmall -->
+<!-- _class: xxsmall -->
 
 # 2.5 Gateways: Τυπική Σημασιολογία (Split & Join)
 
@@ -375,7 +379,12 @@ style: |
 > - Ή την **παρέλευση 7 ημερών** (Timer Event)
 > Όποιο συμβεί πρώτο, καθορίζει την επόμενη κίνηση.
 
+
+---
+
 <!-- _class: diagram -->
+
+# 2.5 Gateways — Σύγκριση: XOR / AND / OR
 
 ![w:1100](../img/lecture3/diag_gateway_semantics.png)
 
@@ -405,7 +414,11 @@ style: |
 </div>
 </div>
 
+---
+
 <!-- _class: diagram-sm -->
+
+# 2.5.1 Παράδειγμα: Αλληλογραφία Υπουργείου
 
 ![w:950](../img/lecture3/diag_iteration.png)
 
@@ -446,9 +459,11 @@ style: |
 </div>
 </div>
 
-**Παράδειγμα: Token σε Parallel Gateway (AND)**
+---
 
 <!-- _class: diagram-sm -->
+
+# 2.6 Παράδειγμα: Token σε Parallel Gateway (AND)
 
 ![w:900](../img/lecture3/diag_token_and.png)
 
@@ -486,9 +501,11 @@ style: |
 </div>
 </div>
 
-**Παράδειγμα: Ροή Δεδομένων σε Διεργασία «Επεξεργασία Παραγγελίας»**
+---
 
 <!-- _class: diagram-sm -->
+
+# 2.7 Παράδειγμα: Ροή Δεδομένων — Επεξεργασία Παραγγελίας
 
 ![w:1100](../img/lecture3/diag_data_flow.png)
 
@@ -530,7 +547,11 @@ style: |
 </div>
 </div>
 
+---
+
 <!-- _class: diagram-sm -->
+
+# 2.8 Παράδειγμα: Order-to-Cash — Πελάτης ↔ Πωλητής
 
 ![w:1100](../img/lecture3/diag_message_flow.png)
 
@@ -613,7 +634,11 @@ style: |
 
 > **Κλειδί:** Το CMMN παρέχει τη **δομή** (stages, tasks, sentries) αλλά αφήνει την **ευελιξία** στον knowledge worker. Το σύστημα ενεργοποιεί δυνατότητες — δεν επιβάλλει ακολουθία.
 
-<!-- _class: diagram -->
+---
+
+<!-- _class: casestudy diagram -->
+
+# Case Study: CMMN — Διάγραμμα Διαχείρισης Ασθενούς
 
 ![w:1100](../img/lecture3/diag_cmmn_hospital.png)
 
@@ -797,7 +822,11 @@ style: |
 </div>
 </div>
 
+---
+
 <!-- _class: diagram-sm -->
+
+# 5.1 Pipeline: Από Event Log σε Γνώση
 
 ![w:1000](../img/lecture3/diag_process_mining.png)
 
