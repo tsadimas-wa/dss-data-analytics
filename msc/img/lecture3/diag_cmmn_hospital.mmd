@@ -1,0 +1,36 @@
+flowchart TD
+    CF["🗂️ Case: Ασθενής Ε.Π.\n━━━━━━━━━━━━━━━━━━━━━━\n📋 Case File: Συμπτώματα · Εξετάσεις · Ιατρικό Ιστορικό · Εντολές"]
+
+    CF --> S1
+    subgraph S1["📋 Stage: Αξιολόγηση  [Sentry: πάντα]"]
+        direction LR
+        T1A["✅ Καταγραφή\nΣυμπτωμάτων"]
+        T1B["✅ Μέτρηση\nΖωτικών"]
+    end
+
+    S1 -->|"Sentry: Αξιολόγηση ✔"| S2
+    subgraph S2["🔬 Stage: Διάγνωση  [Sentry: μετά Αξιολόγηση]"]
+        direction LR
+        T2A["✅ Εξέταση\nΑίματος"]
+        T2B["⬜ Ακτινογραφία\n(optional)"]
+        T2C["⬜ Υπέρηχος\n(optional)"]
+    end
+
+    S2 -->|"Sentry: Επιβεβαιωμένη Διάγνωση"| S3
+    S2 -->|"Sentry: Απόφαση Νοσηλείας"| S4
+
+    subgraph S3["💊 Stage: Θεραπεία"]
+        direction LR
+        T3A["✅ Χορήγηση\nΦαρμάκου"]
+        T3B["⬜ Χειρουργείο\n(optional)"]
+    end
+
+    subgraph S4["📊 Stage: Παρακολούθηση"]
+        T4A["✅ Ημερήσιος\nΈλεγχος"]
+    end
+
+    style CF fill:#1565C0,color:#fff,stroke:#0D47A1
+    style S1 fill:#E8F5E9,stroke:#388E3C
+    style S2 fill:#E3F2FD,stroke:#1565C0
+    style S3 fill:#FFF3E0,stroke:#E65100
+    style S4 fill:#F3E5F5,stroke:#7B1FA2

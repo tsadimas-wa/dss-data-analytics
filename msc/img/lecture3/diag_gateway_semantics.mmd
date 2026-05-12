@@ -1,0 +1,31 @@
+flowchart TB
+    subgraph XG["XOR — «Ένα από τα N»"]
+        direction LR
+        XS{"✕"} -->|"cond A"| XA["Path A"]
+        XS -->|"cond B"| XB["Path B"]
+        XA --> XJ{"✕"}
+        XB --> XJ
+        note1["Split: ΕΝΑ μονοπάτι\nJoin: προχωρά όταν ΕΝΑΣ\nολοκληρώσει"]
+    end
+    subgraph AG["AND — «Όλα ταυτόχρονα»"]
+        direction LR
+        AS{"+"} --> AA["Path A"]
+        AS --> AB["Path B"]
+        AA --> AJ{"+"}
+        AB --> AJ
+        note2["Split: ΟΛΑ τα μονοπάτια\nJoin: προχωρά όταν ΟΛΟΙ\nολοκληρώσουν"]
+    end
+    subgraph OG["OR — «Ένα ή περισσότερα»"]
+        direction LR
+        OS{"∪"} -->|"αν cond A"| OA["Path A"]
+        OS -->|"αν cond B"| OB["Path B"]
+        OA --> OJ{"∪"}
+        OB --> OJ
+        note3["Split: ΟΣΑ πληρούν συνθήκη\nJoin: προχωρά όταν όλα τα\nENERGA ολοκληρώσουν"]
+    end
+    style XG fill:#E3F2FD,stroke:#1565C0
+    style AG fill:#E8F5E9,stroke:#2E7D32
+    style OG fill:#FFF3E0,stroke:#E65100
+    style note1 fill:transparent,stroke:transparent,color:#1565C0
+    style note2 fill:transparent,stroke:transparent,color:#2E7D32
+    style note3 fill:transparent,stroke:transparent,color:#E65100

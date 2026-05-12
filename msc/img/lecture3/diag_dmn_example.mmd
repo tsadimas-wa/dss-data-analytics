@@ -1,0 +1,47 @@
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '17px', 'fontFamily': 'Arial, sans-serif'}}}%%
+flowchart LR
+
+    subgraph BPMN["  BPMN — Εκτέλεση Διεργασίας  "]
+        direction TB
+        START(["Αίτηση Δανείου\nΕλήφθη"])
+        BRT["⚖️  Business Rule Task\n────────────────────────\nΑξιολόγηση\nΠιστωτικού Ρίσκου"]
+        G{" XOR "}
+        RA["✅  Εγκρίνετε\nΔάνειο"]
+        RB["⚠️  Ζητήστε\nΕγγύηση"]
+        RC["❌  Απορρίψτε\nΑίτηση"]
+        START --> BRT --> G
+        G -->|" ΧΑΜΗΛΟ "| RA
+        G -->|" ΜΕΣΟ "| RB
+        G -->|" ΥΨΗΛΟ "| RC
+    end
+
+    subgraph DMN["  DMN Decision Table — Αξιολόγηση Πιστωτικού Ρίσκου  "]
+        direction TB
+        R1["🟢  Κανόνας 1\n────────────────────────────────\nΕισόδημα ≥ 50.000 €\nΧρέος / Εισόδ.  <  30%\nΙστορικό:  Καλό\n════════════════════════════════\nΑΠΟΤΕΛΕΣΜΑ:  ΧΑΜΗΛΟ ΡΙΣΚΟ"]
+        R2["🟡  Κανόνας 2\n────────────────────────────────\nΕισόδημα ≥ 30.000 €\nΧρέος / Εισόδ.  30 – 50%\nΙστορικό:  Μέτριο\n════════════════════════════════\nΑΠΟΤΕΛΕΣΜΑ:  ΜΕΣΟ ΡΙΣΚΟ"]
+        R3["🔴  Κανόνας 3\n────────────────────────────────\nΕισόδημα  <  30.000 €\nΧρέος / Εισόδ.  >  50%\nΙστορικό:  Κακό\n════════════════════════════════\nΑΠΟΤΕΛΕΣΜΑ:  ΥΨΗΛΟ ΡΙΣΚΟ"]
+        R1 ~~~ R2 ~~~ R3
+    end
+
+    BRT <-->|" Input / Output "| DMN
+
+    classDef brt fill:#6A1B9A,color:#ffffff,stroke:#4A148C
+    classDef start fill:#4CAF50,color:#ffffff,stroke:#2E7D32
+    classDef ra fill:#E8F5E9,stroke:#2E7D32,color:#1B5E20
+    classDef rb fill:#FFF8E1,stroke:#F57F17,color:#E65100
+    classDef rc fill:#FFEBEE,stroke:#C62828,color:#B71C1C
+    classDef r1 fill:#E8F5E9,stroke:#2E7D32,color:#1B5E20
+    classDef r2 fill:#FFF8E1,stroke:#F57F17,color:#E65100
+    classDef r3 fill:#FFEBEE,stroke:#C62828,color:#B71C1C
+
+    class BRT brt
+    class START start
+    class RA ra
+    class RB rb
+    class RC rc
+    class R1 r1
+    class R2 r2
+    class R3 r3
+
+    style BPMN fill:#EFF6FF,stroke:#1565C0,color:#0D47A1
+    style DMN fill:#F9FBF9,stroke:#2E7D32,color:#1B5E20

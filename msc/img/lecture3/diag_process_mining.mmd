@@ -1,0 +1,21 @@
+flowchart LR
+    A["🖥️ Πληροφοριακά\nΣυστήματα\n(ERP · CRM · BPMS)"]
+    -->|"Event Logs\n(CSV / XES)"| B["📄 Event Log\nCase ID\nActivity\nTimestamp"]
+
+    B --> C["⚙️ Process Mining\nΑλγόριθμοι\n(Alpha · Fuzzy · Inductive)"]
+
+    C --> D1["🔍 Discovery\nΑυτόματο BPMN\nαπό δεδομένα"]
+    C --> D2["✅ Conformance\nΑπόκλιση\nμοντέλου/πραγματικότητας"]
+    C --> D3["📈 Enhancement\nBottlenecks\nΚόστος · Χρόνοι"]
+
+    D1 --> E["📊 Process\nDashboard"]
+    D2 --> E
+    D3 --> E
+
+    style A fill:#1565C0,color:#fff,stroke:#0D47A1
+    style B fill:#2E7D32,color:#fff,stroke:#1B5E20
+    style C fill:#E65100,color:#fff,stroke:#BF360C
+    style D1 fill:#6A1B9A,color:#fff,stroke:#4A148C
+    style D2 fill:#6A1B9A,color:#fff,stroke:#4A148C
+    style D3 fill:#6A1B9A,color:#fff,stroke:#4A148C
+    style E fill:#37474F,color:#fff,stroke:#263238

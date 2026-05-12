@@ -1,0 +1,43 @@
+flowchart TD
+    USER["Manager / Χρήστης"]
+
+    subgraph DSS["Σύστημα Υποστήριξης Αποφάσεων"]
+        APP["DSS Application\nPython Script"]
+
+        subgraph CORE["Υποχρεωτικός Πυρήνας — Μέρος Α"]
+            KB["Βάση Γνώσης\nΟντολογία + Reasoner"]
+        end
+
+        subgraph EXT["Επέκταση — Μέρος Β"]
+            ML["Ιδέα 1\nML Model + XAI"]
+            FZ["Ιδέα 2\nFuzzy Inference System"]
+            GA["Ιδέα 3\nEvolutionary Algorithm"]
+            LLM["Ιδέα 4\nLLM API / RAG"]
+        end
+    end
+
+    USER -- "Ερώτημα" --> APP
+    APP -- "1. SPARQL Query" --> KB
+    KB -- "2. Εξαγωγή Γνώσης" --> APP
+
+    APP -. "3a. Δεδομένα" .-> ML
+    ML -. "4a. Πρόβλεψη + Εξήγηση" .-> APP
+
+    APP -. "3b. Ποσοτικά Δεδομένα" .-> FZ
+    FZ -. "4b. Ασαφές Score" .-> APP
+
+    APP -. "3c. Περιορισμοί" .-> GA
+    GA -. "4c. Βέλτιστη Λύση" .-> APP
+
+    APP -. "3d. Prompt + Context" .-> LLM
+    LLM -. "4d. Παραγόμενο Κείμενο" .-> APP
+
+    APP -- "5. Τελική Σύσταση" --> USER
+
+    style USER fill:#cce5ff,stroke:#4a90d9,stroke-width:2px
+    style APP  fill:#fff3cd,stroke:#e6a817,stroke-width:2px
+    style KB   fill:#d4edda,stroke:#3a8a4a,stroke-width:2px
+    style ML   fill:#f8d7da,stroke:#c0392b,stroke-width:1px
+    style FZ   fill:#f8d7da,stroke:#c0392b,stroke-width:1px
+    style GA   fill:#f8d7da,stroke:#c0392b,stroke-width:1px
+    style LLM  fill:#f8d7da,stroke:#c0392b,stroke-width:1px
