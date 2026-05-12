@@ -1,0 +1,12 @@
+flowchart LR
+    T1["📥 Λήψη\nΠαραγγελίας"] -->|creates| D1[/"📄 Φόρμα\nΠαραγγελίας\n[Εισερχόμενη]"/]
+    D1 -->|input| T2["🔍 Επαλήθευση\nΔεδομένων"]
+    DS1[("🗄️ Βάση\nΠελατών")] -->|read| T2
+    T2 -->|creates| D2[/"📄 Επαληθευμένη\nΠαραγγελία\n[Εγκεκριμένη]"/]
+    D2 -->|input| T3["🧾 Εκδοση\nΤιμολογίου"]
+    T3 -->|write| DS2[("🗄️ ERP\nΣύστημα")]
+
+    style D1 fill:#FFF9C4,stroke:#F9A825,stroke-width:2px
+    style D2 fill:#FFF9C4,stroke:#F9A825,stroke-width:2px
+    style DS1 fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
+    style DS2 fill:#E3F2FD,stroke:#1565C0,stroke-width:2px

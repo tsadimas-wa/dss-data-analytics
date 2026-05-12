@@ -1,0 +1,15 @@
+flowchart LR
+    S((" ")) --> T1["Εγγραφή\nΑιτήματος"]
+    T1 --> T2["Έρευνα για\nΑπάντηση"]
+    T2 --> XJ{"XOR\nJoin"}
+    XJ --> T3["Προετοιμασία\nΑπάντησης"]
+    T3 --> T4["Επανεξέταση από\nΓραμματέα"]
+    T4 --> XS{"XOR\nSplit"}
+    XS -->|"❌ Δεν εγκρίθηκε"| XJ
+    XS -->|"✅ Εγκρίθηκε"| T5["Αποστολή\nΑπάντησης"]
+    T5 --> E(("|"))
+
+    style XJ fill:#FFD54F,stroke:#F57F17,color:#000
+    style XS fill:#FFD54F,stroke:#F57F17,color:#000
+    style S fill:#4CAF50,stroke:#388E3C,color:#fff
+    style E fill:#F44336,stroke:#C62828,color:#fff

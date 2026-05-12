@@ -1,0 +1,17 @@
+flowchart LR
+    S((" ")) --> T1["Λήψη\nΠαραγγελίας"]
+    T1 --> AND_S{" ＋ "}
+    AND_S -->|"token A"| T2["Εκδοση\nΤιμολογίου"]
+    AND_S -->|"token B"| T3["Ετοιμασία\nΔέματος"]
+    T2 --> AND_J{" ＋ "}
+    T3 --> AND_J
+    AND_J -->|"reunite"| T4["Αποστολή"]
+    T4 --> E(("|"))
+
+    style S fill:#000,color:#fff,stroke:#000,stroke-width:2px
+    style E fill:#000,color:#fff,stroke:#000,stroke-width:4px
+    style AND_S fill:#FFF9C4,stroke:#F9A825,stroke-width:2px
+    style AND_J fill:#FFF9C4,stroke:#F9A825,stroke-width:2px
+    linkStyle 1 stroke:#E65100,stroke-width:2px
+    linkStyle 2 stroke:#1565C0,stroke-width:2px,stroke-dasharray:4
+    linkStyle 3 stroke:#2E7D32,stroke-width:2px,stroke-dasharray:4

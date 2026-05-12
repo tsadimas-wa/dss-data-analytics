@@ -1,0 +1,37 @@
+flowchart TB
+    subgraph CUSTOMER["🧑 Pool: Πελάτης"]
+        direction LR
+        C1((" ")) --> C2["Αποστολή\nΠαραγγελίας"]
+        C4["Λήψη\nΑπόρριψης"] --> C5(("✕"))
+        C6["Λήψη\nΕπιβεβαίωσης"] --> C7["Λήψη\nΤιμολογίου"]
+        C7 --> C8["Λήψη\nΔελτίου Αποστολής"]
+        C8 --> C9(("✕"))
+    end
+
+    subgraph SELLER["🏢 Pool: Πωλητής"]
+        direction LR
+        S1["Λήψη\nΠαραγγελίας"] --> S2["Έλεγχος\nΑποθέματος"]
+        S2 --> G1{"XOR"}
+        G1 -->|"Δεν υπάρχει"| S3["Απόρριψη\nΠαραγγελίας"]
+        G1 -->|"Υπάρχει"| S4["Επιβεβαίωση\nΠαραγγελίας"]
+        S4 --> AND_S{"+"}
+        AND_S --> S5["Αποστολή\nΤιμολογίου"]
+        AND_S --> S6["Αποστολή\nΠροϊόντων"]
+        S5 --> AND_J{"+"}
+        S6 --> AND_J
+        AND_J --> S7["Αρχειοθέτηση\nΠαραγγελίας"]
+        S7 --> SE(("✕"))
+    end
+
+    C2 -.->|"✉ Παραγγελία"| S1
+    S3 -.->|"✉ Απόρριψη"| C4
+    S4 -.->|"✉ Επιβεβαίωση"| C6
+    S5 -.->|"✉ Τιμολόγιο"| C7
+    S6 -.->|"✉ Δελτίο Αποστολής"| C8
+
+    style CUSTOMER fill:#E3F2FD,stroke:#1565C0
+    style SELLER fill:#E8F5E9,stroke:#2E7D32
+    style C1 fill:#4CAF50,stroke:#388E3C,color:#fff
+    style C5 fill:#F44336,stroke:#C62828,color:#fff
+    style C9 fill:#F44336,stroke:#C62828,color:#fff
+    style SE fill:#F44336,stroke:#C62828,color:#fff

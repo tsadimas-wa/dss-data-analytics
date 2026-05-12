@@ -1,0 +1,19 @@
+flowchart TB
+    subgraph BPMN["BPMN Process"]
+        T1["Ελέγξτε\nΑίτηση Δανείου"] --> BRT["⚖️ Business Rule Task\n'Αξιολόγηση Πιστωτικού Ρίσκου'"]
+        BRT --> G{"XOR"}
+        G -->|"ΧΑΜΗΛΟ"| R1["Εγκρίνετε Δάνειο"]
+        G -->|"ΜΕΣΟ"| R2["Ζητήστε Εγγύηση"]
+        G -->|"ΥΨΗΛΟ"| R3["Απορρίψτε Αίτηση"]
+    end
+    subgraph DMN["DMN — Decision Table"]
+        DH["Έγκριση Δανείου"]
+        DT["| Εισόδημα | Χρέος/Εισόδημα | Ιστορικό || Αποτέλεσμα |
+| ≥ 50k€   | < 30%           | Καλό     || ΧΑΜΗΛΟ    |
+| ≥ 30k€   | 30-50%          | Μέτριο   || ΜΕΣΟ      |
+| < 30k€   | > 50%           | Κακό     || ΥΨΗΛΟ     |"]
+    end
+    BRT <-->|"Input/Output"| DMN
+    style BRT fill:#6A1B9A,color:#fff,stroke:#4A148C
+    style DMN fill:#E8F5E9,stroke:#2E7D32
+    style BPMN fill:#E3F2FD,stroke:#1565C0
