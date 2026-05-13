@@ -1242,12 +1242,12 @@ style: |
 **Γιατί είναι "εκτελέσιμο";**
 - Τα Service Tasks συνδέονται με **AWS APIs** (tag enforcement, budget alerts)
 - Η μηχανή BPMN **αδυνατεί** να προχωρήσει χωρίς οικονομική έγκριση
-- Κάθε instance καταγράφεται → **event log** για Process Mining (§5)
+- Κάθε instance καταγράφεται → **event log** για Process Mining (§6)
 
 </div>
 <div>
 
-**Σύνδεση με τη θεωρία (§4.1):**
+**Σύνδεση με τη θεωρία (§5.1):**
 1. Business Analyst σχεδίασε τα BPMN διαγράμματα
 2. Developer "συνέδεσε" Service Tasks με AWS APIs
 3. Μηχανή BPMN ενορχηστρώνει τη ροή σε πραγματικό χρόνο
@@ -1497,7 +1497,7 @@ style: |
 - Πώς τα **User Tasks** εμφανίζονται αυτόματα στο Tasklist για ανθρώπινη ολοκλήρωση
 - Πώς ένα **Connector** (π.χ. Slack) καλεί εξωτερική υπηρεσία χωρίς κώδικα
 
-> 💡 Αναλυτικός οδηγός βήμα-βήμα: `camunda.md`
+> 💡 Αναλυτικός οδηγός βήμα-βήμα: `Camunda.md`
 
 </div>
 </div>
