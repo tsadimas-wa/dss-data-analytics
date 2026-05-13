@@ -1289,7 +1289,7 @@ style: |
 -->
 ---
 
-<!-- _class: xsmall -->
+<!-- _class: xxsmall -->
 
 # 6.1 Τι είναι το Process Mining;
 
