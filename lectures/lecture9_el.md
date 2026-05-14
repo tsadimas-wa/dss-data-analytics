@@ -40,6 +40,9 @@ style: |
     display: block;
     margin: 0 auto;
   }
+  section.casestudy {
+    background-color: #fffde7;
+  }
 ---
 
 <div style="text-align:center; margin-bottom:16px;">
@@ -972,7 +975,7 @@ end
 <div>
 
 **FIPA ACL** (Agent Communication Language):
-```xml
+```
 (inform
   :sender Agent_A
   :receiver Agent_B
@@ -1305,7 +1308,7 @@ Answer:  «Η AAPL είναι $189.50»
 ---
 
 <!-- _class: xsmall -->
-# 9. LLM-based Agents — Η Αναβίωση του BDI (2/2)
+# LLM-based Agents — Η Αναγέννηση του BDI (2/2)
 
 Η θεωρία **BDI (Belief-Desire-Intention)** της δεκαετίας του '90 αποτελεί πλέον τον αρχιτεκτονικό χάρτη για την κατασκευή σύγχρονων AI Agents.
 
@@ -1341,7 +1344,7 @@ Answer:  «Η AAPL είναι $189.50»
 ---
 
 <!-- _class: casestudy xxsmall -->
-# 9. Από τα Copilots στους Αυτόνομους Πράκτορες (Case Study)
+# Από τα Copilots στους Αυτόνομους Πράκτορες (Case Study)
 
 
 
@@ -1573,7 +1576,7 @@ Answer:  «Η AAPL είναι $189.50»
 | **Μοντέλα MAS** | Blackboard (DB + KS) vs Message Passing (KQML/FIPA) |
 | **Επικοινωνία** | Σύγχρ./ασύγχρ., 1:1/1:N/N:N, KQML & FIPA ACL |
 | **Αλληλεπίδραση** | Contract Net Protocol, Διαπραγμάτευση — ATC, bots |
-| **AI Agents** | LLMs, ReAct, Agentic Workflows — Router, Swarm, GraphRAG |
+| **AI Agents** | LLMs, ReAct, Agentic Workflows (Ng) — Router, Swarm, GraphRAG, Magentic-One |
 | **GDSS** | Ανωνυμία, παράλληλη επικ., Delphi/NGT, μνήμη ομάδας |
 | **Συγκρούσεις** | Ψηφοφορία, MCDA, Argumentation, Συναίνεση |
 
