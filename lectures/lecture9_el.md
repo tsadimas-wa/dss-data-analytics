@@ -68,7 +68,7 @@ style: |
 6. **Πολυπρακτορικά Συστήματα (MAS)** — Χαρακτηριστικά, μοντέλα διασύνδεσης, επικοινωνία
 7. **Αλληλεπίδραση & Εφαρμογές** — Συνεργασία (Contract Net Protocol), Διαπραγμάτευση, Ανταγωνισμός, Interface/ATC/shopping agents
 8. **Group DSS (GDSS)** — Συστήματα Υποστήριξης Ομαδικών Αποφάσεων
-9. **Σύγχρονοι AI Agents** — LLMs ως «εγκέφαλος» πράκτορα, ReAct, Tools, Memory, AutoGPT, CrewAI
+9. **Σύγχρονοι AI Agents** — LLMs, ReAct, Tools, Memory, Copilot→SE Agent, Agentic Workflows (Ng), Μοτίβα Ενορχήστρωσης (Router, Swarm), GraphRAG
 10. **Επίλυση Συγκρούσεων** — Μηχανισμοί σε MAS και GDSS
 11. **Σύνοψη & Συμπεράσματα**
 
@@ -1131,6 +1131,54 @@ Answer:  «Η τιμή της AAPL είναι $189.50»
 - Συλλογική επίλυση → Emergent problem-solving
 
 > **Τάση:** Η γραμμή μεταξύ «εργαλείου AI» και «αυτόνομου agent» διαρκώς θολώνει. Οι SE Agents φέρνουν το μοντέλο BDI στην πράξη.
+
+</div>
+</div>
+
+---
+
+<!-- _class: xsmall -->
+# Agentic Workflows & Μοτίβα Ενορχήστρωσης
+
+<div class="columns">
+<div>
+
+**4 Θεμελιώδη Μοτίβα (Andrew Ng, 2024):**
+
+| Μοτίβο | Λειτουργία | Αποτέλεσμα |
+|---|---|---|
+| **Reflection** | Ο agent αξιολογεί & επανεξετάζει τη δική του έξοδο | Λιγότερα σφάλματα |
+| **Tool Use** | Κλήση εξωτερικών APIs / εργαλείων / βάσεων | Πρόσβαση σε πραγματικά δεδομένα |
+| **Planning** | Διάσπαση στόχου σε βήματα (CoT, ReAct, ToT) | Σύνθετες πολυβηματικές εργασίες |
+| **Multi-agent** | Πολλοί εξειδικευμένοι agents σε ρόλους | Παραλληλισμός & peer review |
+
+**Μοτίβο Router / Orchestrator:**
+Κεντρικός agent («Orchestrator») δέχεται αίτημα, αποφασίζει δυναμικά ποιον sub-agent ή εργαλείο να καλέσει — χωρίς σκληρή κωδικοποίηση λογικής (hardcoded if-else).
+
+</div>
+<div>
+
+**Μοτίβο Swarm (Αγέλη):**
+Δεν υπάρχει «κεντρικός» orchestrator — οι agents χειρίζονται τον έλεγχο δυναμικά μεταξύ τους (handoffs):
+
+```
+Χρήστης → Triage Agent
+  ├─ Billing issue  → Billing Agent
+  ├─ Tech problem   → Tech Agent
+  └─ Escalation     → Manager Agent
+```
+
+**GraphRAG (Microsoft, 2024):**
+
+| | Παραδοσιακό RAG | GraphRAG |
+|---|---|---|
+| **Αποθήκευση** | Vector chunks | Γράφος γνώσης |
+| **Αναζήτηση** | Semantic similarity | Graph traversal |
+| **Κατάλληλο για** | Spot queries | Σύνθεση πολλών πηγών |
+
+*Εφαρμογή:* ανάλυση νομικών/επιστημονικών κειμένων, εταιρική γνώση.
+
+> **Κλειδί:** Τα μοτίβα δεν αποκλείονται — σύγχρονα συστήματα συνδυάζουν Swarm + Reflection + Tool Use για μέγιστη αξιοπιστία.
 
 </div>
 </div>
