@@ -1187,6 +1187,6 @@ Answer:  «Η τιμή της AAPL είναι $189.50»
 | **Μοντέλα MAS** | Blackboard (κεντρ. DB + KS + control) vs Message Passing (αποκεντρ., KQML/FIPA) |
 | **Επικοινωνία** | Σύγχρονη/ασύγχρονη, 1:1/1:N/N:N, KQML & FIPA ACL, πρωτόκολλα FIPA |
 | **Αλληλεπίδραση & Εφαρμογές**| Συνεργασία (π.χ. Contract Net Protocol), Διαπραγμάτευση — ATC, bots, monitoring |
-| **Σύγχρονοι AI Agents** | LLMs ως «εγκέφαλος» (ReAct, Tools, Memory) — AutoGPT, Devin, CrewAI. |
+| **Σύγχρονοι AI Agents** | LLMs, Agentic Workflows (Ng), Μοτίβα Ενορχήστρωσης (Router, Swarm), GraphRAG. |
 | **GDSS** | Ανωνυμία, παράλληλη επικοινωνία, δομημένες τεχνικές (Delphi, NGT), μνήμη ομάδας |
 | **Επίλυση Συγκρούσεων** | Ψηφοφορία, MCDA, επιχειρηματολογία, μοντέλα συναίνεσης |
