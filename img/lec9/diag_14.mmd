@@ -1,0 +1,23 @@
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '19px', 'fontFamily': 'Arial, sans-serif', 'primaryColor': '#1565C0', 'primaryTextColor': '#fff', 'primaryBorderColor': '#0d47a1', 'lineColor': '#555', 'secondaryColor': '#e3f2fd'}}}%%
+flowchart LR
+    U(["👤 Εργασία"]) --> O
+
+    O["🎯 Orchestrator\nCoT / ReAct / ToT"]
+
+    O --> R["🔍 Researcher\nTool Use\nWeb · GraphRAG"]
+    O --> W["✍️ Writer\nReflection Loop"]
+    O --> C["🧐 Critic\nPeer Review"]
+
+    R --> O
+    W --> C
+    C -->|"Feedback"| W
+    C --> O
+
+    O --> Out(["✅ Αποτέλεσμα"])
+
+    style U fill:#fff9c4,stroke:#f9a825,color:#333
+    style O fill:#1565C0,stroke:#0d47a1,color:#fff
+    style R fill:#e3f2fd,stroke:#1976D2,color:#0d2137
+    style W fill:#e3f2fd,stroke:#1976D2,color:#0d2137
+    style C fill:#e3f2fd,stroke:#1976D2,color:#0d2137
+    style Out fill:#e8f5e9,stroke:#388E3C,color:#1b5e20

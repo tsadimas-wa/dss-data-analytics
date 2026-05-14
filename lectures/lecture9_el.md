@@ -1387,30 +1387,65 @@ Answer:  «Η AAPL είναι $189.50»
 ---
 
 <!-- _class: xsmall -->
-# Multi-Agent Ομάδες (AutoGen / Magentic-One)
+# Microsoft Magentic-One — Αρχιτεκτονική (1/2)
+
+**Magentic-One** (Microsoft, 2024): Γενικής χρήσης multi-agent σύστημα, χτισμένο πάνω στο AutoGen, για σύνθετες εργασίες Web & αρχείων.
 
 <div class="columns">
 <div>
 
-Αντί για ένα AI, μια **«Ομάδα»** ειδικευμένων πρακτόρων:
+**5 Εξειδικευμένοι Πράκτορες:**
 
 | Agent | Ρόλος |
 |---|---|
-| **Developer** | Γράφει τον κώδικα |
-| **Reviewer / Tester** | Ελέγχει & κάνει κριτική |
-| **Orchestrator** | Συντονίζει τη ροή εργασίας |
+| **Orchestrator** | Κεντρικός σχεδιασμός, ανάθεση, επανα-σχεδιασμός αν κολλήσει |
+| **WebSurfer** | Πλοήγηση & αλληλεπίδραση με ιστοσελίδες |
+| **FileSurfer** | Διαχείριση τοπικών αρχείων (PDF, PPTX, WAV…) |
+| **Coder** | Συγγραφή & ανάλυση κώδικα |
+| **ComputerTerminal** | Εκτέλεση κώδικα, εγκατάσταση βιβλιοθηκών |
 
-**Πλεονέκτημα:** Η αλληλεπίδραση μεταξύ πρακτόρων ελαχιστοποιεί τα **hallucinations** μέσω αμοιβαίας κριτικής (peer review).
+**Βασικά χαρακτηριστικά:**
+- **Open-source** στο Microsoft AutoGen framework
+- **Modular:** Προσθαφαίρεση agents χωρίς διακοπή
+- **Model-agnostic:** GPT-4o by default, αλλά αντικαταστάσιμο
 
 </div>
 <div>
 
-**Σύνδεση με κλασικά MAS:**
-- Κατανομή ρόλων → Contract Net Protocol
-- Κριτική κώδικα → Argumentation-based reasoning
-- Συλλογική επίλυση → Emergent problem-solving
+![w:540](../img/lec9/diag_13.png)
 
-> **Τάση:** Η γραμμή μεταξύ «εργαλείου AI» και «αυτόνομου agent» διαρκώς θολώνει. Οι SE Agents φέρνουν το μοντέλο BDI στην πράξη.
+</div>
+</div>
+
+---
+
+<!-- _class: xsmall -->
+# Magentic-One — Ροή Εργασίας & Αξιολόγηση (2/2)
+
+<div class="columns">
+<div>
+
+**Orchestrator: Task & Progress Ledger**
+
+| Ledger | Περιεχόμενο |
+|---|---|
+| **Task Ledger** | Γνωστά γεγονότα, υποθέσεις, εκτιμήσεις, σχέδιο εργασίας |
+| **Progress Ledger** | Εκκρεμή βήματα, επόμενος πράκτορας, έλεγχος ολοκλήρωσης |
+
+**Stall Detection:** Αν δεν υπάρχει πρόοδος για >2 κύκλους → Orchestrator αναθεωρεί το σχέδιο.
+
+**Benchmarks:** GAIA · AssistantBench · WebArena *(αξιολόγηση μέσω AutoGenBench)*
+
+**Σύνδεση με κλασικά MAS:**
+- Orchestrator ↔ Contract Net Protocol
+- Αμοιβαία κριτική agents ↔ Argumentation-based reasoning
+
+</div>
+<div>
+
+![w:520](../img/lec9/magentic.png)
+
+> **Τάση:** Η γραμμή μεταξύ «εργαλείου AI» και «αυτόνομου agent» διαρκώς θολώνει. Το Magentic-One φέρνει το μοντέλο BDI στην πράξη με Task/Progress Ledger ≈ Beliefs/Intentions.
 
 </div>
 </div>
@@ -1425,26 +1460,27 @@ Answer:  «Η AAPL είναι $189.50»
 
 **4 Θεμελιώδη Μοτίβα (Andrew Ng, 2024):**
 
-| Μοτίβο | Σύνοψη |
+| Μοτίβο | Τι κάνει |
 |---|---|
-| **Reflection** | Agent επανεξετάζει & βελτιώνει την έξοδό του |
-| **Tool Use** | Κλήση APIs / εργαλείων / βάσεων δεδομένων |
-| **Planning** | Διάσπαση στόχου: **CoT** (αλυσιδωτή σκέψη), **ReAct** (σκέψη+δράση), **Tree-of-Thoughts** (παράλληλα μονοπάτια) |
+| **Reflection** | Ο agent επανεξετάζει & βελτιώνει την έξοδό του πριν την παραδώσει |
+| **Tool Use** | Κλήση εξωτερικών APIs, εργαλείων, βάσεων δεδομένων |
+| **Planning** | Διάσπαση στόχου: CoT · ReAct · Tree-of-Thoughts |
 | **Multi-agent** | Εξειδικευμένοι agents σε ρόλους — peer review |
+
+**Δύο Μοτίβα Ενορχήστρωσης:**
+- **Router / Orchestrator:** Κεντρικός agent δρομολογεί δυναμικά αιτήματα — χωρίς hardcoded if-else
+- **Swarm (Αγέλη):** Αποκεντρωμένο — agents κάνουν handoffs απευθείας μεταξύ τους
 
 </div>
 <div>
 
-**Router / Orchestrator:**
-Κεντρικός agent δρομολογεί δυναμικά αιτήματα σε sub-agents — χωρίς hardcoded if-else.
+**Swarm — Ροή Handoffs:**
 
-**Swarm (Αγέλη):**
-Αποκεντρωμένο — agents κάνουν handoffs μεταξύ τους χωρίς κεντρικό συντονιστή:
-
-![w:460](../img/lec9/diag_10.png)
+![w:480](../img/lec9/diag_10.png)
 
 </div>
 </div>
+
 
 ---
 
@@ -1462,23 +1498,16 @@ Answer:  «Η AAPL είναι $189.50»
 | **Αναζήτηση** | Semantic similarity | Graph traversal |
 | **Κατάλληλο** | Spot queries | Σύνθεση πηγών |
 
-Αντί για απλή αναζήτηση παρόμοιων κειμένων, ο γράφος επιτρέπει **συλλογισμό πάνω σε σχέσεις** μεταξύ οντοτήτων.
+Αντί για απλή αναζήτηση παρόμοιων κειμένων, ο γράφος επιτρέπει **συλλογισμό πάνω σε σχέσεις** μεταξύ οντοτήτων — ιδανικό για ερωτήσεις που απαιτούν σύνθεση πολλών πηγών.
+
+> **Κλειδί:** Orchestrator + Reflection + Tool Use + Peer Review συνδυάζονται για μέγιστη αξιοπιστία.
 
 </div>
 <div>
 
-**Πώς συνδυάζονται τα μοτίβα:**
+**Συνδυασμός Μοτίβων σε Πράξη:**
 
-```
-Χρήστης → Orchestrator (Router)
-   ├─ Researcher Agent
-   │    └─ Tool Use (web search, RAG/GraphRAG)
-   ├─ Writer Agent
-   │    └─ Reflection (αυτο-αξιολόγηση)
-   └─ Critic Agent  ← Multi-agent peer review
-```
-
-> **Κλειδί:** Swarm + Reflection + Tool Use συνδυάζονται για μέγιστη αξιοπιστία.
+![w:520](../img/lec9/diag_14.png)
 
 </div>
 </div>
