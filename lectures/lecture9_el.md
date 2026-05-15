@@ -1564,6 +1564,65 @@ Answer:  «Η AAPL είναι $189.50»
 ---
 
 <!-- _class: xxsmall -->
+# Ανοιχτά Περιβάλλοντα Ανάπτυξης Πρακτόρων
+
+<div class="columns">
+<div>
+
+**Κλασικές Πλατφόρμες MAS**
+
+| Πλατφόρμα | Περιγραφή |
+|---|---|
+| **JADE** | FIPA-compliant middleware για MAS (Java) |
+| **Aglets** | Κινητοί πράκτορες, μεταφορά κώδικα (Java) |
+| **Voyager** | ORB + agent platform, RMI-based (Java) |
+| **Jess** | Rule engine Rete, επέκταση CLIPS (Java) |
+| **Jason** | AgentSpeak interpreter, BDI (Java) |
+| **REPAST** | Agent-based modeling & simulation |
+| **NetLogo** | Εκπαιδευτική προσομοίωση πρακτόρων |
+| **SPADE** | XMPP-based MAS (Python) |
+
+</div>
+<div>
+
+**Σύγχρονα AI Agent Frameworks**
+
+| Framework | Περιγραφή |
+|---|---|
+| **LangGraph** | Graph-based LLM agents, stateful workflows |
+| **CrewAI** | Multi-agent με ρόλους & εργασίες |
+| **AutoGen** | Conversational multi-agent (Microsoft) |
+| **Magentic-One** | Orchestrator + specialists (Microsoft) |
+| **LlamaIndex** | RAG + agentic pipelines |
+| **Mesa** | Agent-based modeling (Python) |
+| **AgentPy** | Επιστημονική προσομοίωση (Python) |
+| **Swarm** | Ελαφριά multi-agent ενορχήστρωση (OpenAI) |
+
+</div>
+</div>
+
+---
+
+<!-- _class: xxsmall -->
+# Εμπορικά Περιβάλλοντα Ανάπτυξης Πρακτόρων
+
+| Προϊόν / Εταιρεία | Περιγραφή |
+|---|---|
+| **ABE** | Agent Building Environment — πρώιμο εμπορικό εργαλείο MAS |
+| **AgentSoft** | Πλατφόρμα ανάπτυξης έξυπνων πρακτόρων |
+| **FTP Software** | Πράκτορες δικτύου για αυτοματισμό επικοινωνιών |
+| **Kyma Software** | Περιβάλλον ανάπτυξης κινητών πρακτόρων |
+| **Microsoft Agent** | Γραφικοί πράκτορες UI — Clippy κ.ά. (intdev/agent) |
+| **Mitsubishi** | Εμπορικές εφαρμογές κινητών πρακτόρων |
+| **Crystaliz** | Framework ευφυών πρακτόρων |
+| **IBM Aglets** | Κινητοί πράκτορες Java (trl.ibm.co.jp/aglets) — αργότερα OSS |
+| **General Magic Odyssey** | Πρωτοποριακή πλατφόρμα κινητών πρακτόρων (1990s) |
+
+> Τα περισσότερα εμπορικά περιβάλλοντα της δεκαετίας 1990–2000 έχουν αποσυρθεί. Η αγορά στράφηκε σε ανοιχτά frameworks (JADE, Jason) και πιο πρόσφατα σε LLM-based agent platforms.
+
+---
+
+<!-- _class: xxsmall -->
 # 11. Σύνοψη & Συμπεράσματα Ενότητας 9
 
 <div class="columns">
