@@ -3,7 +3,7 @@ marp: true
 theme: default
 paginate: true
 math: katex
-header: 'Ενότητα 3: Διαχείριση Επιχειρησιακών Διεργασιών (BPM) & Μοντελοποίηση'
+header: 'Ενότητα 4: Business Analytics, Big Data & Process Mining'
 footer: 'Πανεπιστήμιο Δυτικής Αττικής (ΠΑΔΑ) — Συστήματα Αποφάσεων, Διαχείριση Διεργασιών και Επιχειρηματική Ανάλυση'
 style: |
   section {
@@ -112,6 +112,18 @@ style: |
 
 ---
 
+<!-- _class: xsmall -->
+# Ενότητα 4 — Περίγραμμα
+
+1. **Εισαγωγή & Ιστορική Εξέλιξη** — Από τα MIS & DSS στη Σύγχρονη Τεχνητή Νοημοσύνη
+2. **Το Οικοσύστημα των Δεδομένων** — Data Warehouses, ERP & Κινητήριες Δυνάμεις DSS
+3. **Από τα RDBMS στα Big Data** — Τα 5 V's των Μεγάλων Δεδομένων
+4. **Ταξινομία της Αναλυτικής** — Descriptive, Predictive & Prescriptive Analytics
+5. **Process Mining** — Ανακάλυψη, Συμμόρφωση & Βελτίωση (Ξυπνώντας τα Δεδομένα)
+6. **Η Σύγκλιση (Convergence)** — AI, Data Science & Robotic Process Automation (RPA)
+
+---
+
 <!-- _class: xxsmall -->
 # Η Ιστορική Εξέλιξη: Από το Reporting στην Τεχνητή Νοημοσύνη
 
@@ -137,6 +149,34 @@ style: |
   Νέες πηγές μη-δομημένων δεδομένων (Social Media, RFID, IoT). Εισαγωγή νέων τεχνολογιών υλισμικού και λογισμικού (όπως Hadoop, MapReduce, NoSQL, MPP) για τη διαχείριση του τεράστιου όγκου και της πολυπλοκότητας.
 * **2020s+ — AI, Deep Learning & Αυτοματοποίηση:** 
   Streaming Analytics, ενσωμάτωση του IoT με Deep Learning (αναγνώριση εικόνας/φωνής), Smart Assistants (π.χ. Alexa) και παραγωγική ΤΝ (ChatGPT) που αλλάζουν ριζικά τον τρόπο αλληλεπίδρασης και λήψης αποφάσεων.
+
+</div>
+</div>
+
+---
+
+<!-- _class: xsmall -->
+# Επιχειρηματική Ευφυΐα (Business Intelligence - BI)
+
+Η **Επιχειρηματική Ευφυΐα (BI)** είναι ένας όρος-ομπρέλα που συνδυάζει αρχιτεκτονικές, εργαλεία, βάσεις και μεθοδολογίες για τη διαδραστική **μετατροπή δεδομένων σε πληροφορία, αποφάσεις και δράσεις**.
+
+<div class="columns">
+<div>
+
+**Εξέλιξη & Κινητήριες Δυνάμεις**
+* **Ιστορία:** Ξεκίνησε από τα στατικά MIS (70s) και τα EIS (80s). Ο όρος καθιερώθηκε από την Gartner (90s). Από το 2005+ ενσωματώνει δυνατότητες AI.
+* **Ανάγκη για Ταχύτητα:** Οι εξαιρετικά συμπιεσμένοι επιχειρηματικοί κύκλοι απαιτούν τη "σωστή πληροφορία, τη σωστή στιγμή, στο σωστό μέρος".
+* **Κανονιστική Συμμόρφωση:** Νομοθετικές απαιτήσεις (π.χ. Sarbanes-Oxley Act) υποχρεώνουν τις διοικήσεις να τεκμηριώνουν τις αποφάσεις τους με αξιόπιστα δεδομένα.
+
+</div>
+<div>
+
+**Η Αρχιτεκτονική του BI (4 Πυλώνες)**
+
+1. 🗄️ **Αποθήκη Δεδομένων (Data Warehouse - DW):** Η κεντρική, ενοποιημένη πηγή των ιστορικών και τρεχόντων δεδομένων.
+2. ⚙️ **Business Analytics:** Εργαλεία για επεξεργασία, εξόρυξη (data mining) και βαθιά ανάλυση των δεδομένων.
+3. 📈 **BPM (Business Performance Management):** Συστήματα για την παρακολούθηση και ανάλυση της επιχειρησιακής απόδοσης.
+4. 💻 **Διεπαφή Χρήστη (User Interface):** Διαδραστικά εργαλεία οπτικοποίησης (π.χ. Dashboards & Scorecards) για άμεση πρόσβαση από τους decision makers.
 
 </div>
 </div>
@@ -194,19 +234,35 @@ style: |
 
 ---
 
+<!-- _class: xsmall -->
 # 3. Η Ταξινομία της Αναλυτικής (Analytics Taxonomy)
 
-Πώς ωριμάζει μια εταιρεία; (Πλαίσιο: Sharda, Delen & Turban, 2023)
+Ο όρος **Αναλυτική (Analytics)** αντικαθιστά σταδιακά το BI. Σύμφωνα με την INFORMS, είναι ο συνδυασμός τεχνολογίας, διοικητικής επιστήμης και στατιστικής για την εξαγωγή στοχευμένων δράσεων. Χωρίζεται σε **3 αλληλένδετα επίπεδα**:
 
-* 📊 **Descriptive Analytics (Περιγραφική Ανάλυση)**
-  * *Ερωτήσεις:* «Τι συνέβη; Τι συμβαίνει τώρα;»
-  * *Τεχνολογίες:* Dashboards, Scorecards, Data Warehousing.
-* 🎯 **Predictive Analytics (Προβλεπτική Ανάλυση)**
-  * *Ερωτήσεις:* «Τι θα συμβεί; Γιατί θα συμβεί;»
-  * *Τεχνολογίες:* Data Mining, Text Mining, Machine Learning, Forecasting.
-* 🚀 **Prescriptive Analytics (Καθοδηγητική Ανάλυση)**
-  * *Ερωτήσεις:* «Τι πρέπει να κάνω; Γιατί πρέπει να το κάνω;»
-  * *Τεχνολογίες:* Optimization (Βελτιστοποίηση), Simulation, Expert Systems, AI.
+<div class="columns">
+<div>
+
+📊 **1. Περιγραφική Αναλυτική (Descriptive)**
+* **Ερωτήσεις:** *Τι συνέβη; Τι συμβαίνει τώρα;*
+* **Σκοπός:** Κατανόηση της τρέχουσας κατάστασης και των τάσεων μέσω της ενοποίησης ιστορικών δεδομένων (από DWs).
+* **Εργαλεία:** Αναφορές, Dashboards, Οπτικοποίηση Δεδομένων.
+* **Case Study (Silvaris):** Χρησιμοποίησε το Tableau για real-time οπτικοποίηση των logistics της, γλιτώνοντας 100άδες σελίδες αναφορών και βελτιώνοντας την στόχευση πελατών.
+
+</div>
+<div>
+
+🎯 **2. Προβλεπτική Αναλυτική (Predictive)**
+* **Ερωτήσεις:** *Τι θα συμβεί; Γιατί θα συμβεί;*
+* **Σκοπός:** Ακριβείς προβλέψεις για το μέλλον (π.χ. customer churn, ανταπόκριση σε προσφορές, πιστωτικό ρίσκο).
+* **Εργαλεία:** Data/Text Mining, Forecasting, Machine Learning (Αλγόριθμοι ταξινόμησης & ομαδοποίησης).
+
+🚀 **3. Καθοδηγητική Αναλυτική (Prescriptive)**
+* **Ερωτήσεις:** *Τι πρέπει να κάνω;*
+* **Σκοπός:** Λήψη των βέλτιστων δυνατών αποφάσεων (actionable insights) βάσει των προβλέψεων.
+* **Εργαλεία:** Βελτιστοποίηση (Optimization), Προσομοίωση, Έμπειρα Συστήματα.
+
+</div>
+</div>
 
 ---
 
@@ -232,3 +288,31 @@ style: |
   * Όταν το Predictive μοντέλο προβλέψει ένα bottleneck στη διαδικασία, τι γίνεται;
   * Το σύστημα πυροδοτεί **Αυτοματοποιημένες Αποφάσεις (Automated Decision Making)**.
 * **RPA (Robotic Process Automation):** Ψηφιακά «ρομποτάκια» που αναλαμβάνουν αυτόματα τα επαναλαμβανόμενα βήματα της διαδικασίας που εντοπίστηκαν μέσω του Process Mining, δουλεύοντας 24/7.
+
+---
+
+<!-- _class: xsmall -->
+# Ενότητα 4 — Σύνοψη
+
+| Θέμα | Βασικές Έννοιες |
+|---|---|
+| **Ιστορική Εξέλιξη & BI** | MIS, DSS, Data Warehouses, Business Intelligence, 4 Πυλώνες BI |
+| **Οικοσύστημα & DSS** | Κινητήριες δυνάμεις (Συνεργασία, Cognitive limits, Cloud, Big Data, AI) |
+| **Big Data** | Τα 5 V's: Volume, Velocity, Variety, Veracity, Value |
+| **Analytics Taxonomy** | Descriptive (Τι έγινε;), Predictive (Τι θα γίνει;), Prescriptive (Τι να κάνω;) |
+| **Process Mining** | Εξαγωγή γνώσης από Event Logs, Discovery, Conformance, Enhancement |
+| **Σύγκλιση (Convergence)**| Συνδυασμός AI, Predictive Models και RPA για αυτοματοποίηση αποφάσεων |
+
+---
+
+<!-- _class: xsmall -->
+# Ενότητα 4 — Βιβλιογραφία
+
+**Κύρια Συγγράμματα:**
+* **Sharda, R., Delen, D., & Turban, E.** (2023). *Analytics, Data Science, & Artificial Intelligence: Systems for Decision Support* (11th ed.). Pearson.
+
+**Συμπληρωματικές Πηγές:**
+* **Simon, H. A.** (1977). *The New Science of Management Decision*. Prentice-Hall. (Γνωστικά όρια στη λήψη αποφάσεων)
+* **van der Aalst, W.** (2016). *Process Mining: Data Science in Action*. Springer.
+* **Gorry, G. A., & Scott-Morton, M. S.** (1971). *A Framework for Management Information Systems*. Sloan Management Review.
+* **Keen, P. G. W., & Scott-Morton, M. S.** (1978). *Decision Support Systems: An Organizational Perspective*. Addison-Wesley.
