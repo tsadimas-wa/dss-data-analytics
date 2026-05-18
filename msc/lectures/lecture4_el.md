@@ -124,9 +124,9 @@ style: |
    — 3.2 Περιγραφική (Reporting & Visualization)
    — 3.3 Προβλεπτική (Data Mining, CRISP-DM)
    — 3.4 Καθοδηγητική (Prescriptive Analytics)
-   — 3.5 Text Mining & NLP (Predictive Analytics II)
+   — 3.5 Text Mining & NLP
    — 3.6 Deep Learning & Cognitive Computing
-   — 3.7 Μοντελοποίηση, Βελτιστοποίηση & Προσομοίωση (Prescriptive Analytics II)
+   — 3.7 Μοντελοποίηση, Βελτιστοποίηση & Προσομοίωση
 4. **Η Σύγκλιση (Convergence)**
    — AI, Automated Decision Making & RPA
 
