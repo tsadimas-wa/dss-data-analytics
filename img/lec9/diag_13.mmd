@@ -1,0 +1,25 @@
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '20px', 'fontFamily': 'Arial, sans-serif', 'primaryColor': '#7B2D8B', 'primaryTextColor': '#fff', 'primaryBorderColor': '#5a1f6b', 'lineColor': '#555', 'secondaryColor': '#f0e6f4', 'tertiaryColor': '#fff'}}}%%
+graph TD
+    User(["👤 Χρήστης / Εργασία"]) --> Orch
+
+    Orch["🎯 Orchestrator\n─────────────────\nΥψηλού επιπέδου σχεδιασμός\nΑνάθεση υπο-εργασιών\nΠαρακολούθηση προόδου\nΑνα-σχεδιασμός αν κολλήσει"]
+
+    Orch --> WS["🌐 WebSurfer\n─────────────────\nΠλοήγηση στο Web\nΣυμπλήρωση φορμών\nΑνάκτηση δεδομένων"]
+    Orch --> FS["📁 FileSurfer\n─────────────────\nΔιαχείριση αρχείων\nΑνάγνωση PDF/PPTX\nΤοπικές αναζητήσεις"]
+    Orch --> Cod["</> Coder\n─────────────────\nΣυγγραφή κώδικα\nΑνάλυση & debugging\nΤεκμηρίωση"]
+    Orch --> CT["⌨️ ComputerTerminal\n─────────────────\nΕκτέλεση κώδικα\nInstall βιβλιοθηκών\nΠρόσβαση σε console"]
+
+    WS --> Orch
+    FS --> Orch
+    Cod --> Orch
+    CT --> Orch
+
+    Orch --> Result(["✅ Αποτέλεσμα"])
+
+    style User fill:#fff9c4,stroke:#f0c000,color:#333
+    style Orch fill:#7B2D8B,stroke:#5a1f6b,color:#fff
+    style WS fill:#e8f4fd,stroke:#2196F3,color:#1a1a2e
+    style FS fill:#e8f4fd,stroke:#2196F3,color:#1a1a2e
+    style Cod fill:#e8f4fd,stroke:#2196F3,color:#1a1a2e
+    style CT fill:#e8f4fd,stroke:#2196F3,color:#1a1a2e
+    style Result fill:#e8f5e9,stroke:#4CAF50,color:#1b5e20
