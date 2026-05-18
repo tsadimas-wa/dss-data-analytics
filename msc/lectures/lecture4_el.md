@@ -128,7 +128,10 @@ style: |
    — 3.6 Deep Learning & Cognitive Computing
    — 3.7 Μοντελοποίηση, Βελτιστοποίηση & Προσομοίωση
 4. **Η Σύγκλιση (Convergence)**
-   — AI, Automated Decision Making & RPA
+   — 4.1 Actionable Intelligence & Automated Decision Making
+   — 4.2 Ευφυής Αυτοματοποίηση (RPA + AI)
+   — 4.3 Digital Twins & AI Agents
+   — 4.4 Generative AI & LLMs
 
 ---
 
@@ -1477,15 +1480,16 @@ style: |
 ---
 
 <!-- _class: xsmall -->
-# 4.1 Η Σύγκλιση: AI, Data Science & Αυτοματοποίηση
+# 4.1 Από την Ανάλυση στη Δράση: Actionable Intelligence
 
-Το τελικό στάδιο του ψηφιακού μετασχηματισμού:
+Το τελικό στάδιο του ψηφιακού μετασχηματισμού — όταν τα μοντέλα σταματούν να **αναφέρουν** και αρχίζουν να **ενεργούν**:
 
-* **Cognitive Analytics & AI:** Συστήματα που μαθαίνουν από τα δεδομένα και κατανοούν πλαίσιο (context).
+* **Cognitive Analytics & AI:** Συστήματα που μαθαίνουν από τα δεδομένα, κατανοούν πλαίσιο (context) και αναλαμβάνουν ρόλο αυτόνομου συνεργάτη.
 * **Από τη Γνώση στη Δράση (Actionable Insights):**
-  * Όταν το Predictive μοντέλο προβλέψει ένα bottleneck στη διαδικασία, τι γίνεται;
-  * Το σύστημα πυροδοτεί **Αυτοματοποιημένες Αποφάσεις (Automated Decision Making)**.
-* **RPA (Robotic Process Automation):** Ψηφιακά «ρομποτάκια» που αναλαμβάνουν αυτόματα τα επαναλαμβανόμενα βήματα που εντοπίζονται αναλυτικά από τα μοντέλα Predictive/Prescriptive, δουλεύοντας 24/7.
+  * Το Predictive μοντέλο εντοπίζει ένα επικείμενο πρόβλημα (π.χ. αύξηση αποχωρήσεων πελατών).
+  * Το Prescriptive μοντέλο προτείνει την καλύτερη απόκριση.
+  * Το σύστημα πυροδοτεί **Αυτοματοποιημένες Αποφάσεις (Automated Decision Making)** χωρίς ανθρώπινη παρέμβαση.
+* **RPA (Robotic Process Automation):** Ψηφιακοί πράκτορες που εκτελούν τις αποφάσεις των μοντέλων στα επιχειρησιακά συστήματα (ERP, CRM), δουλεύοντας 24/7 με ταχύτητα και συνέπεια.
 
 ---
 
@@ -1519,7 +1523,7 @@ style: |
 <!-- _class: xsmall -->
 # 4.3 Ψηφιακά Δίδυμα (Digital Twins) & AI Agents
 
-Η απόλυτη ενσωμάτωση των δεδομένων με την προσομοίωση και την καθοδηγητική αναλυτική.
+Η απόλυτη ενσωμάτωση των δεδομένων με την προσομοίωση και την καθοδηγητική αναλυτική. *(βλ. 3.7: Προσομοίωση ως βάση των Digital Twins)*
 
 <div class="columns">
 <div>
@@ -1542,6 +1546,33 @@ style: |
 ---
 
 <!-- _class: xsmall -->
+# 4.4 Γενετική Τεχνητή Νοημοσύνη (Generative AI) & LLMs
+
+Τα **Μεγάλα Γλωσσικά Μοντέλα (Large Language Models — LLMs)** αποτελούν τη νεότερη κορυφή της σύγκλισης: Deep Learning + Big Data + Cloud Computing.
+
+<div class="columns">
+<div>
+
+**Τι είναι τα LLMs;**
+* Μοντέλα βασισμένα σε **Transformer αρχιτεκτονική** (βλ. 3.6), εκπαιδευμένα σε τεράστια σύνολα κειμένου.
+* **Παραδείγματα:** GPT-4, Gemini, Claude, LLaMA.
+* **Ικανότητες:** Παραγωγή κειμένου, κώδικα, σύνοψη εγγράφων, ερωταπαντήσεις σε φυσική γλώσσα.
+* **Σύνδεση με Text Mining:** Τα LLMs «επιλύουν» αυτόματα πολλές κλασικές NLP εργασίες (βλ. 3.5).
+
+</div>
+<div>
+
+**Επίπτωση στα DSS**
+* **Conversational BI:** Ο χρήστης ρωτά σε φυσική γλώσσα — *"Ποιες περιοχές είχαν πτώση πωλήσεων τον Μάρτιο;"* — και λαμβάνει αυτόματα αναφορά.
+* **Augmented Analytics:** Το σύστημα εξηγεί τα αποτελέσματα μοντέλων Predictive/Prescriptive σε απλή γλώσσα (Explainable AI).
+* **Agentic AI:** LLMs ως «εγκέφαλος» AI Agents που σχεδιάζουν, εκτελούν και αξιολογούν δράσεις αυτόνομα (βλ. 4.3).
+
+</div>
+</div>
+
+---
+
+<!-- _class: xsmall -->
 # Ενότητα 4 — Σύνοψη
 
 | Θέμα | Βασικές Έννοιες |
@@ -1553,7 +1584,8 @@ style: |
 | **Prescriptive Analytics** | Βελτιστοποίηση, Προσομοίωση, Αυτοματοποιημένη Λήψη Αποφάσεων, Έμπειρα Συστήματα |
 | **Text Mining & NLP** | Εξόρυξη γνώσης από αδόμητο κείμενο, Sentiment Analysis, NER, TF-IDF |
 | **Deep Learning & Cognitive** | Νευρωνικά δίκτυα, CNNs, Transformers/LLMs, Cognitive Computing |
-| **Σύγκλιση (Convergence)**| Συνδυασμός AI, Predictive Models και RPA για αυτοματοποίηση αποφάσεων |
+| **Σύγκλιση (Convergence)**| Intelligent Automation (RPA+AI), Digital Twins, AI Agents, Hyperautomation |
+| **Generative AI & LLMs** | Transformers, GPT/Gemini/Claude, Conversational BI, Agentic AI, Explainable AI |
 
 ---
 
