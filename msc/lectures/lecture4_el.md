@@ -1293,7 +1293,7 @@ style: |
 
 <div>
 
-![w:500](../img/lec4/text-analytics.png)
+![w:600](../img/lec4/text-analytics.png)
 
 </div>
 
@@ -1412,7 +1412,7 @@ style: |
 <div class="columns">
 <div>
 
-![w:500](../img/lec4/deep-learning-venn.png)
+![w:600](../img/lec4/deep-learning-venn.png)
 
 </div>
 <div>
