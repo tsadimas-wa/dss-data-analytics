@@ -1800,20 +1800,25 @@ style: |
 
 ---
 
-<!-- _class: xsmall -->
+<!-- _class: xxsmall -->
 # Ενότητα 4 — Σύνοψη
 
 | Θέμα | Βασικές Έννοιες |
 |---|---|
-| **Ιστορική Εξέλιξη & BI** | MIS, DSS, Data Warehouses, Business Intelligence, 4 Πυλώνες BI |
-| **Οικοσύστημα & DSS** | Κινητήριες δυνάμεις (Συνεργασία, Cognitive limits, Cloud, Big Data, AI) |
-| **Big Data** | Τα 5 V's: Volume, Velocity, Variety, Veracity, Value |
-| **Analytics Taxonomy** | Descriptive (Τι έγινε;), Predictive (Τι θα γίνει;), Prescriptive (Τι να κάνω;) |
-| **Prescriptive Analytics** | Βελτιστοποίηση, Προσομοίωση, Αυτοματοποιημένη Λήψη Αποφάσεων, Έμπειρα Συστήματα |
-| **Text Mining & NLP** | Εξόρυξη γνώσης από αδόμητο κείμενο, Sentiment Analysis, NER, TF-IDF |
-| **Deep Learning & Cognitive** | Νευρωνικά δίκτυα, CNNs, Transformers/LLMs, Cognitive Computing |
-| **Σύγκλιση (Convergence)**| Intelligent Automation (RPA+AI), Digital Twins, AI Agents, Hyperautomation |
-| **Generative AI & LLMs** | Transformers, GPT/Gemini/Claude, Conversational BI, Agentic AI, Explainable AI |
+| **Ιστορική Εξέλιξη & BI** | MIS → DSS → DW → BI → AI · 4 Πυλώνες BI |
+| **Κινητήριες Δυνάμεις** | Cognitive Limits · Big Data · Cloud · AI · Mobile |
+| **Δεδομένα** | Analytics Readiness · Nominal/Ordinal/Interval/Ratio · Consolidation/Cleaning/Transformation/Reduction |
+| **Big Data** | 6 V's · Hadoop/MapReduce · Spark · NoSQL · Stream Analytics |
+| **Αποθήκη Δεδομένων** | ETL · DW (Inmon) · OLAP · Data Marts · 2/3-tier |
+| **Αναλυτική (Taxonomy)** | Descriptive (τι έγινε;) → Predictive (τι θα γίνει;) → Prescriptive (τι να κάνω;) |
+| **Περιγραφική** | KPIs · Dashboards · Balanced Scorecard · Visualization (Abela) |
+| **Προβλεπτική** | Data Mining · CRISP-DM · Classification / Clustering / Association |
+| **Καθοδηγητική** | Γραμμικός Προγραμματισμός · What-If · Sensitivity · Monte Carlo / DES |
+| **Text Mining & NLP** | TF-IDF · Sentiment Analysis · NER · Corpus → TDM |
+| **Deep Learning** | CNN · RNN/Transformer · Black-box · Cognitive Augmentation |
+| **Σύγκλιση** | RPA+AI · Digital Twins · AI Agents · Hyperautomation |
+| **Generative AI & LLMs** | GPT/Gemini/Claude · Conversational BI · Agentic AI · XAI |
+| **Εργαλεία** | KNIME · Python/R · Excel · Power BI / Tableau |
 
 <!-- Χρησιμοποιήστε τον πίνακα για ανασκόπηση. Ερώτηση: ποια τεχνολογία εντυπωσίασε περισσότερο; Τι αλλάζει η GenAI στην καθημερινή αναλυτική; -->
 
