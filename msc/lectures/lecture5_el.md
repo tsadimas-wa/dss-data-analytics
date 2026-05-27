@@ -30,6 +30,14 @@ style: |
     gap: 16px;
   }
 
+  /* Image-left / content-right (75/25) */
+  .columns-img {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
   /* IPO model (three boxes in a row) */
   .ipo-row {
     display: flex;
@@ -447,6 +455,7 @@ style: |
 
 ---
 
+<!-- _class: xxsmall -->
 # 2.4 Παραδοσιακά vs. Disruptive Ψηφιακά Μοντέλα
 
 [cite_start]Η ψηφιοποίηση επιτρέπει στις επιχειρήσεις να παρέχουν αγαθά και υπηρεσίες στον χρόνο, τον τόπο και με τον τρόπο που ακριβώς τα θέλει ο πελάτης, αλλάζοντας ριζικά τη λογική των εσόδων[cite: 200, 251].
@@ -478,6 +487,7 @@ style: |
 
 ---
 
+<!-- _class: xxsmall -->
 # 2.5 Business Process Reengineering (BPR)
 
 [cite_start]Το **Business Process Reengineering (BPR)** είναι ο ριζικός ανασχεδιασμός των βασικών διεργασιών μιας επιχείρησης με σκοπό την επίτευξη εντυπωσιακών βελτιώσεων σε απόδοση, κόστος και ταχύτητα[cite: 397, 399]. [cite_start]Δεν πρόκειται για μικρές, σταδιακές διορθώσεις, αλλά για θεμελιώδη αναθεώρηση από το μηδέν[cite: 399].
@@ -631,6 +641,7 @@ style: |
 
 ---
 
+<!-- _class: xsmall -->
 # 3.4 Δείκτες Ψηφιακής Ανάπτυξης & Η Θέση της Ελλάδας
 
 [cite_start]Οι χώρες αξιολογούνται διεθνώς με βάση σύνθετους δείκτες που μετρούν πόσο προηγμένες είναι οι οικονομίες, οι κυβερνήσεις και οι κοινωνίες τους[cite: 89, 90].
@@ -876,6 +887,7 @@ style: |
 
 ---
 
+<!-- _class: xsmall -->
 # Πυλώνας 4α — Αποσυνδεδεμένη Αρχιτεκτονική για Ευελιξία & Κλιμάκωση
 
 > *"We shape our buildings; thereafter they shape us."*
@@ -900,12 +912,13 @@ style: |
 <!-- _class: small -->
 # Οι 4 Θεμελιώδεις Μετατοπίσεις Αρχιτεκτονικής
 
-<div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 28px 20px; color: #64748b; font-style: italic; margin-bottom: 16px;">
+<div class="columns">
+<div>
 
-📌 **[Placeholder: Exhibit 17.1 — Four Foundational Shifts]**
-Διάγραμμα αρχιτεκτονικής πλατφόρμας: Systems of Engagement → APIs & Management Platform → Data Products / Analytics Core → Systems of Record, με τις 4 μετατοπίσεις.
+<img src="../img/lec5/book17-1.png" alt="Exhibit 17.1 — Οι 4 Θεμελιώδεις Μετατοπίσεις Αρχιτεκτονικής" style="width:100%; height:auto; object-fit:contain;">
 
 </div>
+<div>
 
 | # | Από → Προς | Σκοπός |
 |---|---|---|
@@ -914,8 +927,12 @@ style: |
 | 3 | Σταθερή → **Εξελισσόμενη** | Ευελιξία αντικατάστασης τεχνολογιών |
 | 4 | Batch → **Real-time** | Άμεσες αποφάσεις βάσει ροών δεδομένων |
 
+</div>
+</div>
+
 ---
 
+<!-- _class: xxsmall -->
 # Μετατόπιση 1: Point-to-Point → Αποσυνδεδεμένη (APIs)
 
 **Αποσύνδεση:** Κάθε ομάδα εκθέτει δεδομένα & λειτουργικότητα μέσω **API** — τα μεγάλα monolithic συστήματα διασπώνται σε **microservices**.
@@ -953,35 +970,56 @@ style: |
 ---
 
 <!-- _class: small -->
+
 # Σύγχρονη Αρχιτεκτονική Εφαρμογής — Overview
 
-<div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 24px 20px; color: #64748b; font-style: italic; margin-bottom: 12px;">
+<div class="columns">
 
-📌 **[Placeholder: Exhibit 17.2 — Modern Application Architecture Overview]**
-Consumer app αρχιτεκτονική για κατασκευαστή ιατρικών συσκευών:
-**Gateway & Front Door** → **GraphQL/API Layer** → **Data Products** (Customers, Products, Locations, AI Models) → **Data Lakehouse** (Raw → Curated → Consumption) → **Core Systems** (ERP, HR, Supply Chain)
+<div>
+
+
+![h:520](../img/lec5/book17-2.png)
+
 
 </div>
+
+<div>
 
 > Όλοι οι business leaders πρέπει να κατανοούν αυτό το επίπεδο abstraction · οι architects & engineers το λεπτομερές σχέδιο (Exhibit 17.3).
 
----
-
-<!-- _class: xxsmall -->
-# Σύγχρονη Αρχιτεκτονική — Λεπτομερές Σχέδιο
-
-<div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 18px 20px; color: #64748b; font-style: italic; margin-bottom: 10px;">
-
-📌 **[Placeholder: Exhibit 17.3 — Detailed Azure Architecture Schematic]**
-**Gateway:** Front Doors (CDN/WAF) ανά χώρα, API Management Services
-**Microservices (Function Apps):** Customer / Location / Product / Legal — κάθε ένα με Azure Cosmos DB storage + Event Hubs ingestion
-**Data Lakehouse:** DLT Ingest → Raw Data → Schema Validation → Curated Data → Transform Jobs → Consumption Data (SQL Endpoint)
-**Analytics/AI Modules** πάνω από το lakehouse
-**Core Systems:** SAP · PeopleSoft · NetSuite
 
 </div>
 
+</div>
+
+---
+
+<!-- _class: small -->
+
+
+
+# Σύγχρονη Αρχιτεκτονική — Λεπτομερές Σχέδιο
+
+
+<div class="columns">
+
+<div>
+
+
+![h:520](../img/lec5/book17-3.png)
+
+
+</div>
+
+<div>
+
 > ⚖️ *Οι εταιρείες πρέπει να λαμβάνουν υπόψη τους τοπικούς κανονισμούς για το πού αποθηκεύονται τα δεδομένα.*
+
+</div>
+
+</div>
+
+
 
 ---
 
@@ -1026,18 +1064,19 @@ Consumer app αρχιτεκτονική για κατασκευαστή ιατρ
 
 ---
 
-<!-- _class: small -->
+<!-- _class: xsmall -->
 # Μετατόπιση 4: Batch → Real-Time Επεξεργασία Δεδομένων
 
 **Εφαρμογές real-time:** 🚕 ακριβής πρόβλεψη άφιξης ταξί · 🏥 εξατομικευμένα ασφάλιστρα από smart devices · 🏭 πρόβλεψη βλαβών από sensor data
 
-<div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 18px 20px; color: #64748b; font-style: italic; margin-bottom: 10px;">
+<div class="columns">
 
-📌 **[Placeholder: Exhibit 17.4 — Messaging vs. Streaming Diagram]**
-**MESSAGING:** email → spam filter → junk folder (ανά μήνυμα)
-**STREAMING:** ομάδα συναλλαγών → fraud detection → block card (ανά ροή)
+<div>
+
+![w:700](../img/lec5/book17-4.png)
 
 </div>
+<div>
 
 | | **Messaging** | **Streaming** |
 |---|---|---|
@@ -1047,8 +1086,12 @@ Consumer app αρχιτεκτονική για κατασκευαστή ιατρ
 
 > ⚠️ Το real-time processing έχει σημαντικό κόστος για μεγάλα datasets — απαιτείται προσεκτική αξιολόγηση.
 
+</div>
+</div>
+
 ---
 
+<!-- _class: xsmall -->
 # Case Study: Emirates NBD — API Transformation
 
 **Πλαίσιο:** Τράπεζα στο Ντουμπάι, πλήρης αρχιτεκτονικός μετασχηματισμός μέσω APIs.
@@ -1089,6 +1132,7 @@ Consumer app αρχιτεκτονική για κατασκευαστή ιατρ
 
 ---
 
+<!-- _class: xsmall -->
 # Πυλώνας 4β — Χειρουργική Στρατηγική Cloud
 
 > *"Revelations are found in clouds."* — Serge King
@@ -1112,12 +1156,13 @@ Consumer app αρχιτεκτονική για κατασκευαστή ιατρ
 <!-- _class: small -->
 # Αρχιτεκτονικές Επιλογές για Digital Solutions
 
-<div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 22px 20px; color: #64748b; font-style: italic; margin-bottom: 12px;">
+<div class="columns">
+<div>
 
-📌 **[Placeholder: Exhibit 18.1 — Architectural Options]**
-Πίνακας από "Use as-is" έως "Build new cloud-native" με banking examples (KYC, credit decisioning, core banking) και engineering considerations ανά επίπεδο πολυπλοκότητας.
+<img src="../img/lec5/book18-1.png" alt="Exhibit 18.1 — Αρχιτεκτονικές Επιλογές για Digital Solutions" style="width:100%; height:auto; object-fit:contain;">
 
 </div>
+<div>
 
 | Επιλογή | Παράδειγμα (Banking) | Πότε να επιλεγεί |
 |---|---|---|
@@ -1128,17 +1173,21 @@ Consumer app αρχιτεκτονική για κατασκευαστή ιατρ
 
 > Όλες οι αρχιτεκτονικές επιλογές για ένα domain πρέπει να αποφασιστούν **ταυτόχρονα** — όχι τμηματικά — για να κατανοηθούν οι εξαρτήσεις και η βέλτιστη αλληλουχία.
 
+</div>
+</div>
+
 ---
 
 <!-- _class: small -->
 # Οι 6 Επιλογές Migration — «The 6 R's»
 
-<div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 18px 20px; color: #64748b; font-style: italic; margin-bottom: 12px;">
+<div class="columns">
+<div>
 
-📌 **[Placeholder: Exhibit 18.2 — Six Disposition/Migration Options]**
-Διάγραμμα 6 επιλογών: Retire · Repurchase · Rehost · Replatform · Refactor/Rearchitect · Retain
+<img src="../img/lec5/book18-2.png" alt="Exhibit 18.2 — Οι 6 Επιλογές Migration (6 R's)" style="width:100%; height:auto; object-fit:contain;">
 
 </div>
+<div>
 
 | # | Επιλογή | Περιγραφή | Αξία |
 |---|---|---|---|
@@ -1150,6 +1199,9 @@ Consumer app αρχιτεκτονική για κατασκευαστή ιατρ
 | 6 | **Retain** | Παραμένει on-premise | Όταν migration δεν αποδίδει |
 
 > ⚠️ Η απλή μετακίνηση (Rehost) **δεν αρκεί** — χρειάζεται Replatform ή Refactor για να αξιοποιηθούν τα οφέλη του cloud.
+
+</div>
+</div>
 
 ---
 
