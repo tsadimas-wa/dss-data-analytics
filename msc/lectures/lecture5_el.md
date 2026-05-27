@@ -769,3 +769,234 @@ style: |
 🎤 **Κλείσιμο ενότητας:**
 Ρωτήστε: "Αν έπρεπε να διαλέξετε μία μόνο τεχνολογία από αυτές που καλύψαμε σήμερα που θα έχει τη μεγαλύτερη επίδραση στη δουλειά σας τα επόμενα 5 χρόνια, ποια θα ήταν;" Αφήστε 2-3 φοιτητές να απαντήσουν. Δεν υπάρχει λάθος απάντηση — η συζήτηση αυτή δείχνει πόσο ευρύ και διεπιστημονικό είναι το πεδίο.
 -->
+
+---
+
+<!-- _class: small -->
+# Οι 6 Πυλώνες του Ψηφιακού Μετασχηματισμού
+
+Σύμφωνα με το McKinsey *Rewired* (2023), κάθε επιτυχημένος ψηφιακός μετασχηματισμός απαιτεί και τους **6 πυλώνες** — η απουσία έστω και ενός οδηγεί σε αποτυχία.
+
+| # | Πυλώνας | Σκοπός |
+|---|---|---|
+| 1 | 🗺️ **Ψηφιακός Οδικός Χάρτης** | Ευθυγράμμιση ηγεσίας σε όραμα, αξία και roadmap μετασχηματισμού |
+| 2 | 🧑‍💻 **Ταλέντο** | Ανάπτυξη ψηφιακών δεξιοτήτων και δημιουργία περιβάλλοντος που προσελκύει εξειδικευμένα στελέχη |
+| 3 | ⚙️ **Λειτουργικό Μοντέλο** | Ταχύτερη οργάνωση με agile ομάδες που συνδυάζουν business, IT και operations |
+| 4 | 🖥️ **Τεχνολογία** | Σύγχρονη αρχιτεκτονική (cloud, APIs, DevSecOps, MLOps) που επιτρέπει κλιμακούμενη καινοτομία |
+| 5 | 📊 **Δεδομένα** | Συνεχής εμπλουτισμός και εύκολη κατανάλωση δεδομένων ώστε να αποδεσμευτεί η δύναμη της AI |
+| 6 | 🚀 **Υιοθέτηση & Κλιμάκωση** | Μεγιστοποίηση αξίας μέσω υιοθέτησης από χρήστες και επέκτασης σε επίπεδο επιχείρησης |
+
+> *"No digital and AI transformation can be successful without addressing all of them."* — Lamarre et al. (2023)
+
+---
+
+# Κεφ. 17: Αποσυνδεδεμένη Αρχιτεκτονική για Ευελιξία & Κλιμάκωση
+
+> *"We shape our buildings; thereafter they shape us."*
+> — Winston Churchill
+
+**Από το βιβλίο:** Lamarre, Smaje & Zemmel — *Rewired: The McKinsey Guide to Outcompeting in the Age of Digital and AI* (2023)
+
+Μια **πλατφόρμα αρχιτεκτονικής** υποστηρίζει:
+* **Systems of Engagement** (front end) — mobile apps, web, branches
+* **Systems of Record** (back end) — ERP, CRM, core banking
+* **Data & Analytics** — AI/ML μοντέλα, real-time insights
+
+**Πρόβλημα με παλαιές αρχιτεκτονικές:**
+* Στενά συνδεδεμένα συστήματα (tightly coupled) → αλλαγή σε ένα επηρεάζει τα υπόλοιπα
+* Αδυναμία εκατοντάδων agile ομάδων να εργαστούν ανεξάρτητα
+* Αργή κύκλοι ανάπτυξης (months to deploy, weeks to test)
+
+**Λύση:** Κατανεμημένη και **αποσυνδεδεμένη αρχιτεκτονική** — modular, επαναχρησιμοποιήσιμα components.
+
+---
+
+<!-- _class: small -->
+# Οι 4 Θεμελιώδεις Μετατοπίσεις Αρχιτεκτονικής (Exhibit 17.1)
+
+<div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 28px 20px; color: #64748b; font-style: italic; margin-bottom: 16px;">
+
+📌 **[Placeholder: Exhibit 17.1 — Four Foundational Shifts]**
+Διάγραμμα αρχιτεκτονικής πλατφόρμας: Systems of Engagement → APIs & Management Platform → Data Products / Analytics Core → Systems of Record, με τις 4 μετατοπίσεις.
+
+</div>
+
+| # | Από → Προς | Σκοπός |
+|---|---|---|
+| 1 | Point-to-point → **Αποσυνδεδεμένη** | Ανεξάρτητη εξέλιξη εφαρμογών |
+| 2 | Manual → **Αυτοματοποιημένη (as code)** | Ταχύτητα, αξιοπιστία, επαναληψιμότητα |
+| 3 | Σταθερή → **Εξελισσόμενη** | Ευελιξία αντικατάστασης τεχνολογιών |
+| 4 | Batch → **Real-time** | Άμεσες αποφάσεις βάσει ροών δεδομένων |
+
+---
+
+# Μετατόπιση 1: Point-to-Point → Αποσυνδεδεμένη (APIs)
+
+**Αποσύνδεση:** Κάθε ομάδα εκθέτει δεδομένα & λειτουργικότητα μέσω **API** — τα μεγάλα monolithic συστήματα διασπώνται σε **microservices**.
+
+<div class="columns">
+
+<div>
+
+### APIs & Microservices
+* Κανένας δεν έχει άμεση πρόσβαση στα δεδομένα άλλης ομάδας
+* Κάθε service εξελίσσεται ανεξάρτητα
+* External APIs → ecosystem innovation
+
+**Ο κανόνας του Bezos (Amazon):**
+> *"All teams will expose their data and functionality through service interfaces. There will be no other form of interprocess communication allowed. Anyone who doesn't do this will be fired."*
+
+</div>
+
+<div>
+
+### API Management Platform
+* Δημιουργία & δημοσίευση APIs
+* Πολιτικές χρήσης, έλεγχος πρόσβασης
+* Μέτρηση χρήσης & επιδόσεων
+* **Developer portal** για ανακάλυψη & επαναχρησιμοποίηση
+
+⚠️ **Κίνδυνος:** Υπερπολλαπλασιασμός APIs — εξίσου κακός με point-to-point. Απαιτείται governance & taxonomy.
+
+**Παράδειγμα:** Φαρμακευτική εταιρεία → εσωτερικό "data marketplace" μέσω APIs → επιτάχυνση AI/analytics innovations.
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: small -->
+# Σύγχρονη Αρχιτεκτονική Εφαρμογής — Overview (Exhibit 17.2)
+
+<div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 24px 20px; color: #64748b; font-style: italic; margin-bottom: 12px;">
+
+📌 **[Placeholder: Exhibit 17.2 — Modern Application Architecture Overview]**
+Consumer app αρχιτεκτονική για κατασκευαστή ιατρικών συσκευών:
+**Gateway & Front Door** → **GraphQL/API Layer** → **Data Products** (Customers, Products, Locations, AI Models) → **Data Lakehouse** (Raw → Curated → Consumption) → **Core Systems** (ERP, HR, Supply Chain)
+
+</div>
+
+> Όλοι οι business leaders πρέπει να κατανοούν αυτό το επίπεδο abstraction · οι architects & engineers το λεπτομερές σχέδιο (Exhibit 17.3).
+
+---
+
+<!-- _class: xxsmall -->
+# Σύγχρονη Αρχιτεκτονική — Λεπτομερές Σχέδιο (Exhibit 17.3)
+
+<div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 18px 20px; color: #64748b; font-style: italic; margin-bottom: 10px;">
+
+📌 **[Placeholder: Exhibit 17.3 — Detailed Azure Architecture Schematic]**
+**Gateway:** Front Doors (CDN/WAF) ανά χώρα, API Management Services
+**Microservices (Function Apps):** Customer / Location / Product / Legal — κάθε ένα με Azure Cosmos DB storage + Event Hubs ingestion
+**Data Lakehouse:** DLT Ingest → Raw Data → Schema Validation → Curated Data → Transform Jobs → Consumption Data (SQL Endpoint)
+**Analytics/AI Modules** πάνω από το lakehouse
+**Core Systems:** SAP · PeopleSoft · NetSuite
+
+</div>
+
+> ⚖️ *Οι εταιρείες πρέπει να λαμβάνουν υπόψη τους τοπικούς κανονισμούς για το πού αποθηκεύονται τα δεδομένα.*
+
+---
+
+<!-- _class: small -->
+# Μετατόπιση 2 & 3: Αυτοματοποίηση & Εξελισσόμενη Αρχιτεκτονική
+
+<div class="columns">
+
+<div>
+
+### Μετατόπιση 2: Manual → Automated (as Code)
+**Infrastructure as Code (IaC):**
+* Κωδικοποίηση όλων των υποδομών σε config files
+* "Single source of truth" — audit trail + rollback
+* Επαναχρησιμοποιήσιμα code blocks για κοινές ρυθμίσεις
+* *Εργαλεία:* Terraform, Ansible, Pulumi, CloudFormation
+
+**CI/CD pipelines:**
+* Αυτόματο build → test → validate → deploy
+* Από 1 release/μήνα → πολλαπλά releases/ημέρα με χαμηλότερο ρίσκο
+
+> *"The cost of manually provisioning infrastructure cannot be underestimated — it is slow, cumbersome, and error prone."*
+
+</div>
+
+<div>
+
+### Μετατόπιση 3: Fixed → Evolving
+Δεν υπάρχει τέλεια, προσχεδιασμένη αρχιτεκτονική — η τεχνολογία αλλάζει συνεχώς.
+
+**Πώς επιτυγχάνεται η ευελιξία:**
+* **Modular architecture** — best-of-breed & open-source components
+* **Σαφή standards** — αποτροπή proliferation εργαλείων
+* **Well-designed interfaces** — ελαχιστοποίηση πολυπλοκότητας
+* Enterprise architects **ενσωματωμένοι** στις agile ομάδες (όχι ivory tower)
+
+> Πρέπει να κατανοεί τόσο **cutting-edge tools** όσο και **τι χρειάζεται για delivery** στην παραγωγή.
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: small -->
+# Μετατόπιση 4: Batch → Real-Time Επεξεργασία Δεδομένων
+
+**Εφαρμογές real-time:** 🚕 ακριβής πρόβλεψη άφιξης ταξί · 🏥 εξατομικευμένα ασφάλιστρα από smart devices · 🏭 πρόβλεψη βλαβών από sensor data
+
+<div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 18px 20px; color: #64748b; font-style: italic; margin-bottom: 10px;">
+
+📌 **[Placeholder: Exhibit 17.4 — Messaging vs. Streaming Diagram]**
+**MESSAGING:** email → spam filter → junk folder (ανά μήνυμα)
+**STREAMING:** ομάδα συναλλαγών → fraud detection → block card (ανά ροή)
+
+</div>
+
+| | **Messaging** | **Streaming** |
+|---|---|---|
+| **Μονάδα** | Μεμονωμένο event | Ροή ομάδων events |
+| **Χρήση** | Triggers, ειδοποιήσεις, decoupled actions | Analytics, fraud detection, IoT |
+| **Εργαλεία** | Kafka, RabbitMQ, Amazon SQS | Kafka, Kinesis, Apache Spark, Flink |
+
+> ⚠️ Το real-time processing έχει σημαντικό κόστος για μεγάλα datasets — απαιτείται προσεκτική αξιολόγηση.
+
+---
+
+# Case Study: Emirates NBD — API Transformation
+
+**Πλαίσιο:** Τράπεζα στο Ντουμπάι, πλήρης αρχιτεκτονικός μετασχηματισμός μέσω APIs.
+
+**Τα βήματα:**
+1. Ιεράρχηση υπαρχόντων services σε **banking domains** και **non-banking** (campaigns, OCR)
+2. Αξιολόγηση προτεραιότητας βάσει **σχετικότητας με roadmap** και **πολυπλοκότητας**
+3. Ορισμός **operating model, governance, API taxonomy** και standards
+4. Επιλογή **API management platform** + proof of concept
+5. 3 **agile squads** αποκλειστικά για APIs ανά domain
+6. **Developer portal** με τεκμηρίωση και δυνατότητες αναζήτησης
+
+**Αποτέλεσμα:** ~**800 microservices** · διπλασιασμός API output με DevOps automation
+
+> *"Completely redesigning the integration architecture, setting up an API management platform and developer portal are very complex tasks. We needed both experienced engineers and experienced product owners."*
+> — Saud Al Dhawyani, CTO, Emirates NBD
+
+---
+
+
+<!-- _class: small -->
+# Σύνοψη Κεφ. 17 — Αποσυνδεδεμένη Αρχιτεκτονική
+
+| Μετατόπιση | Τεχνική | Επιχειρηματικό Όφελος |
+|---|---|---|
+| **Point-to-point → Decoupled** | APIs, Microservices, API Gateway | Παράλληλη εργασία εκατοντάδων ομάδων |
+| **Manual → Automated** | IaC, CI/CD | Πολλαπλά releases/ημέρα, χαμηλότερο ρίσκο |
+| **Fixed → Evolving** | Modular, open-source | Αντικατάσταση τεχνολογιών χωρίς "big bang" |
+| **Batch → Real-time** | Messaging & Streaming | Fraud detection, IoT, personalization |
+
+**Βασικές αρχές:**
+* Η αρχιτεκτονική δεν είναι μόνο τεχνική απόφαση — είναι **επιχειρηματική στρατηγική**
+* Χωρίς decoupling, οι agile ομάδες δεν μπορούν να κινηθούν γρήγορα
+* Τα APIs πρέπει να **διαχειρίζονται** (governance) — ο υπερπολλαπλασιασμός τους είναι εξίσου πρόβλημα με τα silos
+* Enterprise architects ανήκουν **μέσα** στις agile ομάδες, όχι σε silos
+
+> *(Lamarre, Smaje & Zemmel, McKinsey "Rewired", 2023, Κεφάλαιο 17)*
