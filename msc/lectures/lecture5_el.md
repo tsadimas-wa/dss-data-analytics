@@ -1000,3 +1000,134 @@ Consumer app αρχιτεκτονική για κατασκευαστή ιατρ
 * Enterprise architects ανήκουν **μέσα** στις agile ομάδες, όχι σε silos
 
 > *(Lamarre, Smaje & Zemmel, McKinsey "Rewired", 2023, Κεφάλαιο 17)*
+
+---
+
+# Κεφ. 18: Χειρουργική Προσέγγιση στο Cloud
+
+> *"Revelations are found in clouds."* — Serge King
+
+**Βασική θέση:** Τα αποτελέσματα μεγάλης κλίμακας cloud migrations συχνά **απογοητεύουν** — υψηλά κόστη, παρατεταμένες υλοποιήσεις, περιορισμένη αξία.
+
+**Γιατί αποτυγχάνουν οι μεγάλες migrations:**
+* Μετακίνηση εφαρμογών που δεν συνδέονται με τις επιχειρηματικές προτεραιότητες
+* "Lift and shift" χωρίς εκμετάλλευση cloud-native δυνατοτήτων
+* Απουσία FinOps — πληρώνεις για capacity που δεν χρησιμοποιείς
+
+**Σωστή προσέγγιση — 3 αρχές:**
+1. **Ξεκίνα από την αξία** — ποιοι business domains είναι προτεραιότητα στο digital roadmap;
+2. **Επανασχεδίασε domain & τεχνολογία ταυτόχρονα** — δύο παράλληλα workstreams
+3. **Χειρουργική μετακίνηση** — μόνο οι εφαρμογές που χρειάζεται, με τη σωστή στρατηγική
+
+> *Παράδειγμα:* Ασφαλιστική εταιρεία → παράλληλο redesign onboarding process + cloud modernization → από χαρτί & silos σε ενιαίο omnichannel digital onboarding.
+
+---
+
+<!-- _class: small -->
+# Αρχιτεκτονικές Επιλογές για Digital Solutions (Exhibit 18.1)
+
+<div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 22px 20px; color: #64748b; font-style: italic; margin-bottom: 12px;">
+
+📌 **[Placeholder: Exhibit 18.1 — Architectural Options]**
+Πίνακας από "Use as-is" έως "Build new cloud-native" με banking examples (KYC, credit decisioning, core banking) και engineering considerations ανά επίπεδο πολυπλοκότητας.
+
+</div>
+
+| Επιλογή | Παράδειγμα (Banking) | Πότε να επιλεγεί |
+|---|---|---|
+| **Χρήση as-is** (wrapper) | KYC application μέσω API | Λειτουργεί καλά, χαμηλή αξία migration |
+| **Νέο cloud-native feature** | Credit decisioning engine | Αντικατάσταση τμήματος core system |
+| **Migrate & refactor** | Credit risk assessment | Επιτάχυνση time-to-market |
+| **Αντικατάσταση core system** | Νέο core banking σύστημα | Μείωση unit cost + νέες δυνατότητες |
+
+> Όλες οι αρχιτεκτονικές επιλογές για ένα domain πρέπει να αποφασιστούν **ταυτόχρονα** — όχι τμηματικά — για να κατανοηθούν οι εξαρτήσεις και η βέλτιστη αλληλουχία.
+
+---
+
+<!-- _class: small -->
+# Οι 6 Επιλογές Migration — "The 6 R's" (Exhibit 18.2)
+
+<div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 18px 20px; color: #64748b; font-style: italic; margin-bottom: 12px;">
+
+📌 **[Placeholder: Exhibit 18.2 — Six Disposition/Migration Options]**
+Διάγραμμα 6 επιλογών: Retire · Repurchase · Rehost · Replatform · Refactor/Rearchitect · Retain
+
+</div>
+
+| # | Επιλογή | Περιγραφή | Αξία |
+|---|---|---|---|
+| 1 | **Retire** | Εφαρμογές που δεν χρειάζονται πλέον | Μείωση κόστους |
+| 2 | **Repurchase** | Αντικατάσταση με cloud-native SaaS | Μοντέρνες δυνατότητες χωρίς dev |
+| 3 | **Rehost** ("lift & shift") | Μετακίνηση χωρίς αλλαγές κώδικα | Γρήγορη πρόοδος, **χαμηλή αξία** |
+| 4 | **Replatform** | Αλλαγή data layer, χωρίς rearchitect | Γρήγορη αξία από cloud capabilities |
+| 5 | **Refactor/Rearchitect** | Cloud-native αρχιτεκτονική | **Μέγιστη αξία**, υψηλό κόστος |
+| 6 | **Retain** | Παραμένει on-premise | Όταν migration δεν αποδίδει |
+
+> ⚠️ Η απλή μετακίνηση (Rehost) **δεν αρκεί** — χρειάζεται Replatform ή Refactor για να αξιοποιηθούν τα οφέλη του cloud.
+
+---
+
+<!-- _class: small -->
+# Cloud Foundation & FinOps
+
+<div class="columns">
+
+<div>
+
+### 3 Θεμελιώδη Στοιχεία Cloud Foundation
+Απαιτούνται **εξειδικευμένοι cloud architects** για σωστή κατασκευή:
+
+**1. Base Cloud Capabilities**
+Network connectivity, firewall, identity management, enterprise logging & monitoring (ELMA), security enforcement
+
+**2. Isolation Zones (Landing Zones)**
+Cloud περιβάλλοντα όπου ζουν οι εφαρμογές — παρέχουν redundancy. Κρίσιμη απόφαση: πόσα zones; Πολλά → πολυπλοκότητα · Ένα → κίνδυνος επηρεασμού όλων.
+
+**3. Application Patterns**
+Επαναχρησιμοποιήσιμα code artifacts για standardized deployment. *Παράδειγμα:* Μία τράπεζα με **10 patterns** κάλυψε το **95%** των use cases.
+
+📊 **Αποτέλεσμα:** **8x** επιτάχυνση migration · **50%** μείωση κόστους μ장期
+
+</div>
+
+<div>
+
+### FinOps — Πλήρης Έλεγχος Cloud Κόστους
+> *"Πλήρωσε μόνο για capacity που χρειάζεσαι."*
+
+**Τι κάνει η FinOps ομάδα:**
+* Εντοπισμός compute & network αναγκών (analytics για demand forecasting)
+* Μετάφραση αναγκών σε βέλτιστα cloud offerings & τιμολόγηση
+* Αυτόματα dashboards για tracking cloud spend
+* Enterprise-wide financial discipline
+
+**Σύνθεση:** Technical + Financial + Sourcing talent
+
+**Αποταμιεύσεις:** έως **20%** μείωση cloud spend
+
+> *"A top-notch team of cloud architects and FinOps experts can navigate the necessary choices and tradeoffs — and pay for themselves many times over."*
+> — Lamarre et al. (2023)
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: small -->
+# Σύνοψη Κεφ. 18 — Cloud με Χειρουργική Ακρίβεια
+
+| Αρχή | Πρακτική Εφαρμογή |
+|---|---|
+| **Ξεκίνα από αξία** | Προτεραιοποίηση domains βάσει digital roadmap |
+| **Ταυτόχρονος σχεδιασμός** | Business redesign + tech migration παράλληλα |
+| **Σωστή επιλογή migration** | Rehost → γρήγορο · Refactor → μέγιστη αξία |
+| **Cloud Foundation πρώτα** | Base capabilities + Isolation zones + App patterns |
+| **FinOps** | Continuous cost optimization, έως 20% εξοικονόμηση |
+
+**Βασικά μαθήματα:**
+* Το cloud δεν είναι φθηνότερο data center — είναι **force multiplier για καινοτομία**
+* Αξιολόγησε και μοντερνοποίησε **όλες** τις εφαρμογές ενός domain ταυτόχρονα — όχι τμηματικά
+* Επιλογή CSP: **εταιρικό standard**, όχι αποφάσεις ανά ομάδα
+
+> *(Lamarre, Smaje & Zemmel, McKinsey "Rewired", 2023, Κεφάλαιο 18)*
