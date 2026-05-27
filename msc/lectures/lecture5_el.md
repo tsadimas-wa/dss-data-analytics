@@ -162,15 +162,22 @@ style: |
    — 2.1 Ορισμός & Ιστορική Εξέλιξη
    — 2.2 Μοντέλα e-Commerce (B2C, B2B, B2G, C2C)
    — 2.3 Κύρια Χαρακτηριστικά & Επιχειρηματικά Οφέλη
+   — 2.4 Disruptive Ψηφιακά Μοντέλα (Subscription, Freemium, Ecosystem, κ.λπ.)
+   — 2.5 Business Process Reengineering (BPR): Ο Κινητήρας του Μετασχηματισμού
 3. **e-Governance & Ευρωπαϊκό Πλαίσιο Διαλειτουργικότητας (EIF)**
    — 3.1 e-Government vs. e-Governance
    — 3.2 Στάδια Ωριμότητας Ηλεκτρονικής Διακυβέρνησης
    — 3.3 Ευρωπαϊκό Πλαίσιο Διαλειτουργικότητας (EIF)
+   — 3.4 Δείκτες Ψηφιακής Ανάπτυξης & Η Θέση της Ελλάδας (DESI, GDI, IDI)
 4. **Smart Cities (Έξυπνες Πόλεις)**
    — 4.1 Ορισμός & Βασικοί Πυλώνες
    — 4.2 Αρχιτεκτονική & Τεχνολογική Υποδομή
    — 4.3 Εφαρμογές & Παραδείγματα
    — 4.4 Προκλήσεις & Αρχές Σχεδίασης
+5. **McKinsey Rewired — Τεχνολογική Αρχιτεκτονική**
+   — Οι 6 Πυλώνες Ψηφιακού Μετασχηματισμού
+   — Πυλώνας 4α: Αποσυνδεδεμένη Αρχιτεκτονική (APIs, IaC, Real-time)
+   — Πυλώνας 4β: Χειρουργική Στρατηγική Cloud (6 R's, Cloud Foundation, FinOps)
 
 <!--
 🗣️ **Επισκόπηση:**
@@ -440,6 +447,69 @@ style: |
 
 ---
 
+# 2.4 Παραδοσιακά vs. Disruptive Ψηφιακά Μοντέλα
+
+[cite_start]Η ψηφιοποίηση επιτρέπει στις επιχειρήσεις να παρέχουν αγαθά και υπηρεσίες στον χρόνο, τον τόπο και με τον τρόπο που ακριβώς τα θέλει ο πελάτης, αλλάζοντας ριζικά τη λογική των εσόδων[cite: 200, 251].
+
+<div class="columns">
+<div>
+
+**Κύριοι Τύποι Ψηφιακών Μοντέλων**
+* [cite_start]📅 **Subscription:** Μηνιαία συνδρομή για συνεχή πρόσβαση (π.χ. Netflix)[cite: 211, 212].
+* [cite_start]🎁 **Freemium:** Δωρεάν βασική έκδοση, χρέωση για premium χαρακτηριστικά (π.χ. LinkedIn, Dropbox)[cite: 213, 215].
+* [cite_start]📢 **Free ("The User is the Product"):** Έσοδα 100% από διαφήμιση και data (π.χ. Google ~77%, Facebook ~97%)[cite: 217, 219, 222].
+* [cite_start]🚗 **On-Demand & Access over Ownership:** Πληρωμή για προσωρινή πρόσβαση/χρήση, χωρίς ιδιοκτησία (π.χ. Uber, Airbnb)[cite: 227, 228, 231, 245].
+* [cite_start]🌐 **Ecosystem:** Σουίτα αλληλένδετων προϊόντων/υπηρεσιών που αυξάνουν την αξία τους όσο περισσότερα κατέχεις (π.χ. Apple, Google)[cite: 232, 247, 248].
+
+</div>
+<div>
+
+**Πίνακας Μεταβολής (Traditional vs. Disruptive)**
+
+| Διάσταση | Παραδοσιακό Μοντέλο | Disruptive Ψηφιακό Μοντέλο |
+| :--- | :--- | :--- |
+| **Πηγή Εσόδων** | [cite_start]Εφάπαξ πώληση προϊόντος [cite: 251] | [cite_start]Επαναλαμβανόμενα / Data / Πλατφόρμα [cite: 251] |
+| **Asset Ownership** | [cite_start]Η εταιρεία κατέχει τα assets [cite: 251] | [cite_start]Πρόσβαση έναντι Ιδιοκτησίας (Uber, Airbnb) [cite: 251] |
+| **Κλιμακωσιμότητα** | [cite_start]Περιορισμένη από φυσικά assets [cite: 251] | [cite_start]Άπειρη ψηφιακή κλιμακωσιμότητα (Infinite) [cite: 251] |
+| **Lock-in Πελάτη** | [cite_start]Χαμηλό κόστος αλλαγής [cite: 251] | [cite_start]Ecosystem lock-in (Apple, Google) [cite: 251] |
+
+</div>
+</div>
+
+---
+
+# 2.5 Business Process Reengineering (BPR)
+
+[cite_start]Το **Business Process Reengineering (BPR)** είναι ο ριζικός ανασχεδιασμός των βασικών διεργασιών μιας επιχείρησης με σκοπό την επίτευξη εντυπωσιακών βελτιώσεων σε απόδοση, κόστος και ταχύτητα[cite: 397, 399]. [cite_start]Δεν πρόκειται για μικρές, σταδιακές διορθώσεις, αλλά για θεμελιώδη αναθεώρηση από το μηδέν[cite: 399].
+
+<div class="columns">
+<div>
+
+**Γιατί το BPR είναι κεντρικό στον Ψηφιακό Μετασχηματισμό;**
+* [cite_start]Αποτελεί τον **επιχειρησιακό κινητήρα** (operational engine).
+* [cite_start]Μόλις οριστεί η στρατηγική και το ψηφιακό επιχειρηματικό μοντέλο, το BPR είναι η μεθοδολογία που θα επανασχεδιάσει τις διεργασίες, ώστε οι τεχνολογίες (ERP, CRM, AI, cloud) να αναπτυχθούν αποτελεσματικά[cite: 485].
+* [cite_start]**Μετατρέπει την ψηφιακή φιλοδοξία σε επιχειρησιακή πραγματικότητα**[cite: 485].
+
+</div>
+<div>
+
+**Τα 8 Στάδια του Κύκλου BPR (McKinsey/BPR Model)**
+1. [cite_start]Ανάπτυξη Οράματος & Στόχων (*Define success*) [cite: 401, 402]
+2. [cite_start]Κατανόηση Υπαρχουσών Διεργασιών (*Map AS-IS*) [cite: 403, 417]
+3. [cite_start]Αναγνώριση Διεργασιών για Ανασχεδιασμό (*Find bottlenecks*) [cite: 406, 429]
+4. [cite_start]Προσδιορισμός Μοχλών Αλλαγής (*Select technologies: AI, chatbots*) [cite: 439, 441, 442]
+5. [cite_start]Υλοποίηση Νέας Διεργασίας (*Redesign & deploy TO-BE*) [cite: 440, 450]
+6. [cite_start]Επιχειρησιακή Λειτουργία (*Test and go live*) [cite: 407, 460]
+7. [cite_start]Αξιολόγηση Νέας Διεργασίας (*Measure against KPIs*) [cite: 404, 465]
+8. [cite_start]Εκτέλεση Συνεχούς Βελτίωσης (*Keep refining over time*) [cite: 400, 473]
+
+</div>
+</div>
+
+---
+
+
+
 <!-- _class: small -->
 # 3. e-Governance & Ευρωπαϊκό Πλαίσιο Διαλειτουργικότητας
 
@@ -558,6 +628,22 @@ style: |
 🗣️ **Σύνδεση με SEMIC & Joinup:**
 Η ΕΕ έχει δημιουργήσει πλατφόρμες συνεργασίας για την εφαρμογή του EIF: το SEMIC.eu για σημασιολογική διαλειτουργικότητα και το Joinup.ec.europa.eu για ανοιχτό λογισμικό δημόσιου τομέα.
 -->
+
+---
+
+# 3.4 Δείκτες Ψηφιακής Ανάπτυξης & Η Θέση της Ελλάδας
+
+[cite_start]Οι χώρες αξιολογούνται διεθνώς με βάση σύνθετους δείκτες που μετρούν πόσο προηγμένες είναι οι οικονομίες, οι κυβερνήσεις και οι κοινωνίες τους[cite: 89, 90].
+
+* 🇪🇺 **DESI (Digital Economy and Society Index — EU):**
+  * [cite_start]Η Ελλάδα κατατάσσεται στην **25η θέση** εντός της ΕΕ με σκορ **38.9** (κάτω από τον ευρωπαϊκό μέσο όρο)[cite: 114, 116, 122]. 
+  * [cite_start]Οι πυλώνες που προσμετρώνται είναι: *Human Capital, Connectivity, Integration of Digital Technology,* και *Digital Public Services*[cite: 118, 120].
+* 🌐 **GDI (Global Digitalization Index — Huawei):**
+  * [cite_start]Χωρίζει τις χώρες σε *Frontrunners* (USA, Singapore), *Adopters* (Spain, Italy, Greece) και *Starters* (Vietnam, Bangladesh)[cite: 125].
+  * [cite_start]Η Ελλάδα βρίσκεται στο cluster των **Adopters** με σκορ **49.9** (με άριστα το 100)[cite: 125].
+* 📞 **IDI (ICT Development Index — ITU):**
+  * [cite_start]Μετρά την *Universal Connectivity* (πρόσβαση/κόστος) και την *Meaningful Connectivity* (ποιότητα/ψηφιακές δεξιότητες)[cite: 131, 134, 135].
+  * [cite_start]Η Ελλάδα καταλαμβάνει την **27η θέση** ανάμεσα σε 164 οικονομίες παγκοσμίως[cite: 138, 139].
 
 ---
 
@@ -790,7 +876,7 @@ style: |
 
 ---
 
-# Κεφ. 17: Αποσυνδεδεμένη Αρχιτεκτονική για Ευελιξία & Κλιμάκωση
+# Πυλώνας 4α — Αποσυνδεδεμένη Αρχιτεκτονική για Ευελιξία & Κλιμάκωση
 
 > *"We shape our buildings; thereafter they shape us."*
 > — Winston Churchill
@@ -812,7 +898,7 @@ style: |
 ---
 
 <!-- _class: small -->
-# Οι 4 Θεμελιώδεις Μετατοπίσεις Αρχιτεκτονικής (Exhibit 17.1)
+# Οι 4 Θεμελιώδεις Μετατοπίσεις Αρχιτεκτονικής
 
 <div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 28px 20px; color: #64748b; font-style: italic; margin-bottom: 16px;">
 
@@ -867,7 +953,7 @@ style: |
 ---
 
 <!-- _class: small -->
-# Σύγχρονη Αρχιτεκτονική Εφαρμογής — Overview (Exhibit 17.2)
+# Σύγχρονη Αρχιτεκτονική Εφαρμογής — Overview
 
 <div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 24px 20px; color: #64748b; font-style: italic; margin-bottom: 12px;">
 
@@ -882,7 +968,7 @@ Consumer app αρχιτεκτονική για κατασκευαστή ιατρ
 ---
 
 <!-- _class: xxsmall -->
-# Σύγχρονη Αρχιτεκτονική — Λεπτομερές Σχέδιο (Exhibit 17.3)
+# Σύγχρονη Αρχιτεκτονική — Λεπτομερές Σχέδιο
 
 <div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 18px 20px; color: #64748b; font-style: italic; margin-bottom: 10px;">
 
@@ -984,7 +1070,7 @@ Consumer app αρχιτεκτονική για κατασκευαστή ιατρ
 
 
 <!-- _class: small -->
-# Σύνοψη Κεφ. 17 — Αποσυνδεδεμένη Αρχιτεκτονική
+# Σύνοψη: Αποσυνδεδεμένη Αρχιτεκτονική
 
 | Μετατόπιση | Τεχνική | Επιχειρηματικό Όφελος |
 |---|---|---|
@@ -1003,7 +1089,7 @@ Consumer app αρχιτεκτονική για κατασκευαστή ιατρ
 
 ---
 
-# Κεφ. 18: Χειρουργική Προσέγγιση στο Cloud
+# Πυλώνας 4β — Χειρουργική Στρατηγική Cloud
 
 > *"Revelations are found in clouds."* — Serge King
 
@@ -1024,7 +1110,7 @@ Consumer app αρχιτεκτονική για κατασκευαστή ιατρ
 ---
 
 <!-- _class: small -->
-# Αρχιτεκτονικές Επιλογές για Digital Solutions (Exhibit 18.1)
+# Αρχιτεκτονικές Επιλογές για Digital Solutions
 
 <div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 22px 20px; color: #64748b; font-style: italic; margin-bottom: 12px;">
 
@@ -1045,7 +1131,7 @@ Consumer app αρχιτεκτονική για κατασκευαστή ιατρ
 ---
 
 <!-- _class: small -->
-# Οι 6 Επιλογές Migration — "The 6 R's" (Exhibit 18.2)
+# Οι 6 Επιλογές Migration — «The 6 R's»
 
 <div style="border: 2px dashed #94a3b8; border-radius: 8px; background: #f8fafc; text-align: center; padding: 18px 20px; color: #64748b; font-style: italic; margin-bottom: 12px;">
 
@@ -1086,7 +1172,7 @@ Cloud περιβάλλοντα όπου ζουν οι εφαρμογές — π�
 **3. Application Patterns**
 Επαναχρησιμοποιήσιμα code artifacts για standardized deployment. *Παράδειγμα:* Μία τράπεζα με **10 patterns** κάλυψε το **95%** των use cases.
 
-📊 **Αποτέλεσμα:** **8x** επιτάχυνση migration · **50%** μείωση κόστους μ장期
+📊 **Αποτέλεσμα:** **8x** επιτάχυνση migration · **50%** μείωση κόστους μακροπρόθεσμα
 
 </div>
 
@@ -1115,7 +1201,7 @@ Cloud περιβάλλοντα όπου ζουν οι εφαρμογές — π�
 ---
 
 <!-- _class: small -->
-# Σύνοψη Κεφ. 18 — Cloud με Χειρουργική Ακρίβεια
+# Σύνοψη: Cloud με Χειρουργική Ακρίβεια
 
 | Αρχή | Πρακτική Εφαρμογή |
 |---|---|
