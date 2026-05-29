@@ -172,12 +172,14 @@ style: |
    — e-Government vs. e-Governance · Στάδια Ωριμότητας · EIF · Δείκτες (DESI, GDI, IDI)
 4. **Smart Cities (Έξυπνες Πόλεις)**
    — Πυλώνες · Αρχιτεκτονική · Εφαρμογές · Προκλήσεις
-5. **McKinsey Rewired — Τεχνολογική Αρχιτεκτονική**
+5. **Οικοσύστημα Εργαλείων & Τεχνολογιών Ψηφιακού Μετασχηματισμού**
+   — BPM & Hyperautomation · Data & Analytics · Cloud Native · IoT Platforms · Digital Twins · CRM/ERP & Collaboration
+6. **McKinsey Rewired — Τεχνολογική Αρχιτεκτονική**
    — 6 Πυλώνες · Αποσυνδεδεμένη Αρχιτεκτονική · Στρατηγική Cloud
 
 <!--
 🗣️ **Επισκόπηση:**
-Παρατηρήστε τη λογική ιεράρχηση: ξεκινάμε από το επίπεδο της **παραγωγής** (Industry 4.0), ανεβαίνουμε στο επίπεδο της **επιχείρησης** (e-Business), έπειτα στο επίπεδο του **κράτους** (e-Governance) και τελικά στο επίπεδο της **πόλης** (Smart Cities). Κάθε επίπεδο χρειάζεται τα εργαλεία του προηγούμενου.
+Παρατηρήστε τη λογική ιεράρχηση: ξεκινάμε από το επίπεδο της **παραγωγής** (Industry 4.0), ανεβαίνουμε στο επίπεδο της **επιχείρησης** (e-Business), έπειτα στο επίπεδο του **κράτους** (e-Governance) και τελικά στο επίπεδο της **πόλης** (Smart Cities). Στο τέλος ενοποιούμε όλα αυτά στο **οικοσύστημα εργαλείων** (Ενότητα 5) και στο **McKinsey πλαίσιο** (Ενότητα 6). Κάθε ενότητα χτίζει πάνω στην προηγούμενη.
 -->
 
 ---
@@ -1311,6 +1313,9 @@ Strategy & Organization · Product · Technology · Data Integration · Logistic
 🌆 **Smart Cities:**
 Οι πόλεις αξιοποιούν IoT, AI και Big Data για να βελτιστοποιήσουν ενέργεια, κυκλοφορία, διακυβέρνηση και ποιότητα ζωής — πάντα με επίκεντρο τον πολίτη.
 
+🛠️ **Οικοσύστημα Εργαλείων ΨΜ:**
+Τα εργαλεία οργανώνονται σε 5 πυλώνες: **BPM & Hyperautomation** (SAP Signavio, Camunda, UiPath), **Data & Analytics** (Snowflake, Power BI), **Cloud Native** (containers, microservices, K8s, CI/CD, observability), **IoT & Digital Twins** (ThingWorx, NVIDIA Omniverse), **CRM/ERP & Collaboration** (Salesforce, Microsoft 365).
+
 </div>
 <div>
 
@@ -1324,15 +1329,11 @@ Strategy & Organization · Product · Technology · Data Integration · Logistic
 * **Αναλυτική** (Business Analytics → Ενότητα 4)
 * **Διεργασίες** (BPM → Ενότητα 3)
 * **Αποφάσεις** (DSS → Ενότητα 2)
+* **Εργαλεία** (Cloud Native, BPM tools, BI → Ενότητα 5)
 
-…αλλά σε **διαφορετικές κλίμακες** και **πλαίσια εφαρμογής**.
+…σε **διαφορετικές κλίμακες** και **πλαίσια εφαρμογής**, ενωμένα από το **McKinsey Rewired** πλαίσιο.
 
 > 💡 **Η Μεγάλη Εικόνα:** Δεν κατασκευάζουμε απλώς "έξυπνα" εργαλεία. Χτίζουμε **ψηφιακά οικοσυστήματα** που αλλάζουν τον τρόπο που ζούμε, εργαζόμαστε και κυβερνόμαστε.
-
-<!--
-🗣️ **Κλείσιμο ενότητας:**
-Ρωτήστε: "Αν έπρεπε να διαλέξετε μία μόνο τεχνολογία από αυτές που καλύψαμε σήμερα που θα έχει τη μεγαλύτερη επίδραση στη δουλειά σας τα επόμενα 5 χρόνια, ποια θα ήταν;" Αφήστε 2-3 φοιτητές να απαντήσουν. Δεν υπάρχει λάθος απάντηση — η συζήτηση αυτή δείχνει πόσο ευρύ και διεπιστημονικό είναι το πεδίο.
--->
 
 </div>
 </div>
@@ -2099,6 +2100,68 @@ Cloud περιβάλλοντα όπου ζουν οι εφαρμογές — π�
 Είναι μια νέα πειθαρχία που ενώνει τα Οικονομικά (Finance) με τα Operations (DevOps). Στο παραδοσιακό IT, αγόραζες έναν server και τέλος. Στο Cloud, κάθε δευτερόλεπτο που τρέχει ένα πρόγραμμα χρεώνεσαι. Αν ένας προγραμματιστής ξεχάσει έναν server ανοιχτό το Σαββατοκύριακο, η εταιρεία χάνει χιλιάδες ευρώ. Η ομάδα FinOps βάζει τα όρια και ελέγχει τα κόστη.
 -->
 
+
+---
+
+<!-- _class: xsmall -->
+# FinOps — Πλαίσιο, Πρακτικές & Εργαλεία
+
+<div class="columns">
+<div>
+
+### Κύκλος Ζωής FinOps *(FinOps Foundation)*
+
+| Φάση | Στόχος | Παραδείγματα |
+|---|---|---|
+| 📊 **Inform** | Ορατότητα & κατανομή κόστους | Tagging, dashboards, unit economics |
+| ⚙️ **Optimize** | Μείωση δαπανών | Rightsizing, Reserved Instances, Spot |
+| 🔄 **Operate** | Αυτοματοποίηση & governance | Budgets, alerts, policies, automation |
+
+### Τεχνικές Εξοικονόμησης
+* 🏷️ **Cost Tagging** — resource → team / product / environment
+* 📏 **Rightsizing** — αυτόματη μείωση oversized instances
+* 🔒 **Reserved Instances / Savings Plans** — έως **72%** vs on-demand
+* 🎯 **Spot / Preemptible Instances** — έως **90%** για fault-tolerant workloads
+* 🗑️ **Waste Elimination** — zombie VMs, idle DBs, orphaned snapshots
+
+### Μοντέλο Ομάδας
+| Μοντέλο | Χαρακτηριστικό |
+|---|---|
+| Κεντρικό | FinOps ομάδα ελέγχει όλα |
+| Ομοσπονδιακό | Κάθε team έχει FinOps champion |
+| **Υβριδικό** ✅ | Κεντρικά standards + τοπική ευθύνη |
+
+</div>
+<div>
+
+### Εργαλεία ανά Πλατφόρμα
+
+| Cloud | Native Tool | 3rd Party |
+|---|---|---|
+| **AWS** | Cost Explorer, Savings Plans, Trusted Advisor | Apptio Cloudability |
+| **Azure** | Cost Management + Billing, Advisor | CloudHealth (VMware) |
+| **GCP** | Cloud Billing, Recommender | Spot.io (Flexera) |
+| **Multi-cloud** | — | Harness Cloud Cost, Finout |
+
+### Βασικά KPI FinOps
+| Μετρική | Τι μετράει |
+|---|---|
+| **Cloud Waste %** | % δαπανών χωρίς παραγόμενη αξία |
+| **RI Coverage %** | % workloads σε reserved capacity |
+| **Unit Cost** | Κόστος ανά customer / transaction |
+| **Forecast Accuracy** | % απόκλιση budget vs actual |
+
+> 📌 **Show-back vs Charge-back**
+> *Show-back:* ενημέρωση ομάδων για το κόστος τους
+> *Charge-back:* χρέωση budget από εσωτερικό P&L κάθε ομάδας
+
+</div>
+</div>
+
+<!--
+🗣️ **FinOps Lifecycle:**
+Η FinOps Foundation (finops.org) ορίζει τρεις φάσεις που επαναλαμβάνονται: Inform (κάνω ορατό το κόστος), Optimize (μειώνω το κόστος), Operate (αυτοματοποιώ). Η ωριμότητα μετριέται στο πόσο γρήγορα διανύεις αυτόν τον κύκλο. Παράδειγμα real-world: μια μεγάλη τράπεζα ανακάλυψε ότι 30% των cloud resources της ήταν "zombies" — services που κανείς δεν χρησιμοποιούσε αλλά έπαιρναν πληρωμή. Με FinOps τα εξάλειψε σε 3 μήνες.
+-->
 ---
 
 <!-- _class: small -->
