@@ -2199,7 +2199,7 @@ Cloud περιβάλλοντα όπου ζουν οι εφαρμογές — π�
 ---
 
 <!-- _class: xsmall -->
-# FinOps — Πλαίσιο, Πρακτικές & Εργαλεία
+# FinOps — Κύκλος Ζωής, Τεχνικές & Μοντέλο Ομάδας (1/2)
 
 <div class="columns">
 <div>
@@ -2211,6 +2211,11 @@ Cloud περιβάλλοντα όπου ζουν οι εφαρμογές — π�
 | 📊 **Inform** | Ορατότητα & κατανομή κόστους | Tagging, dashboards, unit economics |
 | ⚙️ **Optimize** | Μείωση δαπανών | Rightsizing, Reserved Instances, Spot |
 | 🔄 **Operate** | Αυτοματοποίηση & governance | Budgets, alerts, policies, automation |
+
+> Οι τρεις φάσεις επαναλαμβάνονται σε συνεχή κύκλο. Η ωριμότητα μετριέται στο πόσο γρήγορα τον διανύεις.
+
+</div>
+<div>
 
 ### Τεχνικές Εξοικονόμησης
 * 🏷️ **Cost Tagging** — resource → team / product / environment
@@ -2227,6 +2232,19 @@ Cloud περιβάλλοντα όπου ζουν οι εφαρμογές — π�
 | **Υβριδικό** ✅ | Κεντρικά standards + τοπική ευθύνη |
 
 </div>
+</div>
+
+<!--
+🗣️ **FinOps Lifecycle:**
+Η FinOps Foundation (finops.org) ορίζει τρεις φάσεις: Inform (ορατότητα), Optimize (μείωση), Operate (αυτοματοποίηση). Παράδειγμα: μια τράπεζα ανακάλυψε ότι 30% των cloud resources ήταν "zombies" — με FinOps τα εξάλειψε σε 3 μήνες.
+-->
+
+---
+
+<!-- _class: xsmall -->
+# FinOps — Εργαλεία, KPIs & Μοντέλα Χρέωσης (2/2)
+
+<div class="columns">
 <div>
 
 ### Εργαλεία ανά Πλατφόρμα
@@ -2238,6 +2256,9 @@ Cloud περιβάλλοντα όπου ζουν οι εφαρμογές — π�
 | **GCP** | Cloud Billing, Recommender | Spot.io (Flexera) |
 | **Multi-cloud** | — | Harness Cloud Cost, Finout |
 
+</div>
+<div>
+
 ### Βασικά KPI FinOps
 | Μετρική | Τι μετράει |
 |---|---|
@@ -2246,16 +2267,20 @@ Cloud περιβάλλοντα όπου ζουν οι εφαρμογές — π�
 | **Unit Cost** | Κόστος ανά customer / transaction |
 | **Forecast Accuracy** | % απόκλιση budget vs actual |
 
-> 📌 **Show-back vs Charge-back**
-> *Show-back:* ενημέρωση ομάδων για το κόστος τους
-> *Charge-back:* χρέωση budget από εσωτερικό P&L κάθε ομάδας
+
 
 </div>
 </div>
+
+### Show-back vs Charge-back
+| Μοντέλο | Περιγραφή |
+|---|---|
+| **Show-back** | Ενημέρωση ομάδων για το κόστος τους — χωρίς εσωτερική χρέωση |
+| **Charge-back** | Χρέωση budget από εσωτερικό P&L κάθε ομάδας |
 
 <!--
-🗣️ **FinOps Lifecycle:**
-Η FinOps Foundation (finops.org) ορίζει τρεις φάσεις που επαναλαμβάνονται: Inform (κάνω ορατό το κόστος), Optimize (μειώνω το κόστος), Operate (αυτοματοποιώ). Η ωριμότητα μετριέται στο πόσο γρήγορα διανύεις αυτόν τον κύκλο. Παράδειγμα real-world: μια μεγάλη τράπεζα ανακάλυψε ότι 30% των cloud resources της ήταν "zombies" — services που κανείς δεν χρησιμοποιούσε αλλά έπαιρναν πληρωμή. Με FinOps τα εξάλειψε σε 3 μήνες.
+🗣️ **Show-back vs Charge-back:**
+Το Show-back είναι το πρώτο βήμα: δείχνεις στις ομάδες τι κοστίζουν χωρίς να τις χρεώνεις — αυτό αλλάζει συμπεριφορά. Το Charge-back πηγαίνει ένα βήμα παραπέρα: κάθε ομάδα πληρώνει από τον δικό της budget, άρα έχει άμεσο κίνητρο να ελέγξει τα cloud costs.
 -->
 ---
 
