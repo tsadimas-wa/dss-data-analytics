@@ -1370,7 +1370,7 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 ---
 
-<!-- _class: xsmall -->
+<!-- _class: xxsmall -->
 # Σύνοψη Ενότητας 5
 
 <div class="columns">
@@ -1772,13 +1772,16 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 ---
 
-<!-- _class: small -->
+<!-- _class: xxsmall -->
 # Οι 4 Θεμελιώδεις Μετατοπίσεις Αρχιτεκτονικής
 
 <div class="columns">
 <div>
 
-<img src="../img/lec5/book17-1.png" alt="Exhibit 17.1 — Οι 4 Θεμελιώδεις Μετατοπίσεις Αρχιτεκτονικής" style="width:100%; height:auto; object-fit:contain;">
+![w:800](../img/lec5/book17-1.png)
+
+
+
 
 </div>
 <div>
@@ -2062,13 +2065,16 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 ---
 
-<!-- _class: small -->
+<!-- _class: xxsmall -->
 # Αρχιτεκτονικές Επιλογές για Digital Solutions
 
 <div class="columns">
 <div>
 
-<img src="../img/lec5/book18-1.png" alt="Exhibit 18.1 — Αρχιτεκτονικές Επιλογές για Digital Solutions" style="width:100%; height:auto; object-fit:contain;">
+
+![w:700](../img/lec5/book18-1.png)
+
+
 
 </div>
 <div>
@@ -2092,13 +2098,14 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 ---
 
-<!-- _class: small -->
+<!-- _class: xxsmall -->
 # Οι 6 Επιλογές Migration — «The 6 R's»
 
 <div class="columns">
 <div>
 
-<img src="../img/lec5/book18-2.png" alt="Exhibit 18.2 — Οι 6 Επιλογές Migration (6 R's)" style="width:100%; height:auto; object-fit:contain;">
+![w:700](../img/lec5/book18-2.png)
+
 
 </div>
 <div>
@@ -2206,6 +2213,9 @@ Cloud περιβάλλοντα όπου ζουν οι εφαρμογές — π�
 * 🎯 **Spot / Preemptible Instances** — έως **90%** για fault-tolerant workloads
 * 🗑️ **Waste Elimination** — zombie VMs, idle DBs, orphaned snapshots
 
+</div>
+</div>
+
 ### Μοντέλο Ομάδας
 | Μοντέλο | Χαρακτηριστικό |
 |---|---|
@@ -2213,8 +2223,7 @@ Cloud περιβάλλοντα όπου ζουν οι εφαρμογές — π�
 | Ομοσπονδιακό | Κάθε team έχει FinOps champion |
 | **Υβριδικό** ✅ | Κεντρικά standards + τοπική ευθύνη |
 
-</div>
-</div>
+
 
 <!--
 🗣️ **FinOps Lifecycle:**
