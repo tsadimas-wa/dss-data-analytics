@@ -1130,6 +1130,101 @@ Strategy & Organization · Product · Technology · Data Integration · Logistic
 
 ---
 
+<!-- _class: casestudy xsmall -->
+# 📋 Case Study: e-KYC ΗΑΕ & Norbloc — Πλαίσιο & Αρχιτεκτονική (1/2)
+
+<div class="columns">
+<div>
+
+### Πρόβλημα
+Κάθε τράπεζα στα ΗΑΕ διενεργούσε **ξεχωριστά** KYC/KYB:
+* Πολλαπλές, επαναλαμβανόμενες διαδικασίες due diligence
+* Υψηλό λειτουργικό κόστος για τράπεζες & FinTech
+* Αργό onboarding → αρνητική εμπειρία πελάτη
+* Αδυναμία κεντρικού ελέγχου AML/CFT
+
+**Πρωτοβουλία:** *Financial Infrastructure Transformation (FIT) Programme* — **CBUAE**
+
+### Λύση
+🏛️ **Εθνική Ενιαία Πλατφόρμα e-KYC**
+* Τεχνολογικός εταίρος: **Norbloc AB** (Σουηδία)
+* DLT-based federated identity platform
+* Αρχιτεκτονική **Privacy-by-Design**
+* Αυτοματοποίηση KYC & KYB workflows
+
+</div>
+<div>
+
+### Τεχνολογική Αρχιτεκτονική
+
+| Στοιχείο | Τεχνολογία / Αρχή |
+|---|---|
+| **Data Sharing** | DLT (Distributed Ledger) — federated |
+| **Identity** | Privacy-by-Design, consent-based |
+| **Compliance** | AML/CFT automated checks |
+| **Integration** | APIs → τράπεζες, FinTech, κυβ. μητρώα |
+| **Governance** | CBUAE κεντρικός ρυθμιστής |
+
+### Βασικές Αρχές
+* 🔐 Τα δεδομένα **παραμένουν αποκεντρωμένα** — κανείς δεν τα "κατέχει"
+* ✋ Πρόσβαση **μόνο με ρητή συγκατάθεση** πελάτη
+* 🔗 Σύνδεση με κυβερνητικές πηγές δεδομένων σε **real-time**
+* 🛡️ Δεν υπάρχει single point of failure ή central privacy risk
+
+</div>
+</div>
+
+<!--
+🗣️ **Πλαίσιο:**
+Το πρόβλημα του KYC στα ΗΑΕ ήταν τυπικό του χρηματοπιστωτικού τομέα παγκοσμίως: κάθε τράπεζα κάνει τη δική της due diligence από μηδέν, ακόμα και για τον ίδιο πελάτη. Η Norbloc λύνει αυτό με DLT — τα δεδομένα μένουν στις τράπεζες που τα έχουν, αλλά μπορούν να μοιραστούν ασφαλώς με τη συγκατάθεση του πελάτη.
+-->
+
+---
+
+<!-- _class: casestudy xsmall -->
+# 📋 Case Study: e-KYC ΗΑΕ & Norbloc — Αποτελέσματα & Αντίκτυπος (2/2)
+
+<div class="columns">
+<div>
+
+### Αποτελέσματα
+* ✅ Εξάλειψη **αλληλεπικαλυπτόμενων** KYC διαδικασιών σε εθνικό επίπεδο
+* ✅ **Ταχύτερο** digital onboarding φυσικών & νομικών προσώπων
+* ✅ Μειωμένο λειτουργικό κόστος για χρηματοπιστωτικά ιδρύματα
+* ✅ Ενίσχυση AML/CFT ανθεκτικότητας — automated compliance checks
+* ✅ ΗΑΕ ως **κόμβος ψηφιακής ρυθμιστικής καινοτομίας** παγκοσμίως
+
+### Σύνδεση με Ψηφιακό Μετασχηματισμό
+| Διάσταση ΨΜ | Παράδειγμα στο case |
+|---|---|
+| **e-Governance** | Κεντρική ρύθμιση από CBUAE |
+| **BPR** | Επανασχεδιασμός KYC διεργασίας |
+| **Διαλειτουργικότητα** | APIs μεταξύ τραπεζών & κράτους |
+| **Privacy** | Consent-based, GDPR-aligned |
+
+</div>
+<div>
+
+### Quote
+
+> *"The development of the e-KYC Platform represents a strategic transformation towards a more efficient and resilient financial ecosystem."*
+> — H.E. Saif Humaid Al Dhaheri, CBUAE
+
+> *"We will enable financial institutions to access trusted and secure data in real time from multiple sources, enhancing operational efficiency while adhering to the highest international standards."*
+> — Astyanax Kanakakis, CEO Norbloc AB
+
+📌 **Πηγή:** FinTech Global, Απρίλιος 2026
+
+</div>
+</div>
+
+<!--
+🗣️ **Γιατί αυτό το case study:**
+Αυτό το παράδειγμα δείχνει πώς ο ΨΜ λειτουργεί σε κυβερνητικό επίπεδο: δεν αρκεί να ψηφιοποιήσεις μια υπηρεσία — πρέπει να επανασχεδιάσεις ολόκληρο το οικοσύστημα. Η CBUAE δεν έφτιαξε μια εφαρμογή: επανασχεδίασε τον τρόπο που ολόκληρος ο χρηματοπιστωτικός τομέας επαληθεύει ταυτότητες.
+-->
+
+---
+
 <!-- _class: small -->
 # 4. Smart Cities (Έξυπνες Πόλεις)
 
