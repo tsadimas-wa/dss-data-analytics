@@ -1401,6 +1401,219 @@ Strategy & Organization · Product · Technology · Data Integration · Logistic
 
 ---
 
+<!-- _class: xsmall -->
+# 5.3α Cloud Native — Η Φιλοσοφία Πίσω από τα Εργαλεία
+
+Το **Cloud Native** δεν είναι απλώς "εκτέλεση στο cloud" — είναι φιλοσοφία σχεδιασμού λογισμικού που αξιοποιεί πλήρως τα χαρακτηριστικά της σύγχρονης cloud υποδομής.
+
+> *"Cloud native technologies empower organizations to build and run scalable applications in modern, dynamic environments."*
+> — CNCF (Cloud Native Computing Foundation)
+
+| Χαρακτηριστικό | Περιγραφή |
+|----------------|-----------|
+| 📦 **Containers** | Ελαφριά, φορητά πακέτα λογισμικού — εκτελούνται παντού ομοιόμορφα |
+| 🔬 **Microservices** | Κατανεμημένη αρχιτεκτονική: μικρά, ανεξάρτητα services αντί για monolith |
+| 🎛️ **Dynamic Orchestration** | Αυτόματη κλιμάκωση, self-healing & διαχείριση πόρων (Kubernetes) |
+| 🔄 **CI/CD & DevSecOps** | Αυτοματοποιημένα pipelines: από τον κώδικα στην παραγωγή σε λεπτά |
+| 🔍 **Observability** | Πλήρης ορατότητα μέσω Logs, Metrics & Distributed Tracing |
+
+---
+
+<!-- _class: xsmall -->
+# 5.3β Containers & Docker
+
+Ένα **container** είναι ένα ελαφρύ, αυτόνομο πακέτο κώδικα μαζί με όλες τις εξαρτήσεις του — εκτελείται ομοιόμορφα σε οποιοδήποτε περιβάλλον.
+
+<div class="columns">
+<div>
+
+**Γιατί Containers;**
+
+* ⚠️ Πρόβλημα: *"Τρέχει στο μηχάνημά μου"* — ασυμβατότητα περιβαλλόντων dev/test/prod
+* ✅ Λύση: Ένα container είναι **αμετάβλητο** (immutable) — ό,τι τρέχει locally, τρέχει ακριβώς το ίδιο στο cloud
+
+**Βασικές Έννοιες:**
+* **Image**: Στατικό πρότυπο — σαν "εκμαγείο"
+* **Container**: Τρέχουσα εκτέλεση ενός image
+* **Dockerfile**: Ορισμός περιεχομένων σε κώδικα
+* **Registry**: Αποθετήριο images (Docker Hub, GHCR)
+
+</div>
+<div>
+
+**Κατεξοχήν Εργαλεία**
+
+| Εργαλείο | Ρόλος |
+|---------|-------|
+| **Docker** | De-facto standard για build & run |
+| **Podman** | Daemonless, rootless εναλλακτικό |
+| **Docker Compose** | Πολυ-container εφαρμογές σε YAML |
+| **OCI** | Ανοιχτό πρότυπο φορητότητας containers |
+
+> 💡 **VM vs Container**: Ένα VM εικονικοποιεί hardware. Ένα container εικονικοποιεί μόνο το OS user space — εκκινεί σε **δευτερόλεπτα**, όχι λεπτά.
+
+</div>
+</div>
+
+---
+
+<!-- _class: xsmall -->
+# 5.3γ Microservices Architecture
+
+Η **αρχιτεκτονική microservices** διαιρεί μια εφαρμογή σε μικρές, ανεξάρτητες υπηρεσίες που επικοινωνούν μέσω APIs.
+
+<div class="columns">
+<div>
+
+**Monolith vs Microservices**
+
+| | Monolith | Microservices |
+|-|---------|--------------|
+| Ανάπτυξη | Ένα μεγάλο codebase | Ανεξάρτητα services |
+| Deploy | Ολόκληρη η εφαρμογή | Μόνο το αλλαγμένο service |
+| Κλιμάκωση | Κλιμακώνεται ολόκληρη | Μόνο το bottleneck |
+| Αποτυχία | Κρασάρει ολόκληρη | Απομονωμένη αποτυχία |
+| Πολυπλοκότητα | Χαμηλή αρχικά | Υψηλή (distributed) |
+
+</div>
+<div>
+
+**Αρχές Microservices**
+* **Single Responsibility**: Κάθε service κάνει ένα πράγμα καλά
+* **Loose Coupling**: Ανεξάρτητη ανάπτυξη & deployment
+* **API-First**: Επικοινωνία μόνο μέσω REST / gRPC
+
+**⚠️ Προκλήσεις:**
+* Distributed tracing & debugging
+* Data consistency (κάθε service έχει δικό του DB)
+* Network latency & αποτυχίες δικτύου
+
+> 💡 Netflix, Uber, Amazon χρησιμοποιούν εκατοντάδες microservices — login, πληρωμή, σύσταση περιεχομένου είναι ξεχωριστά, ανεξάρτητα συστήματα.
+
+</div>
+</div>
+
+---
+
+<!-- _class: xsmall -->
+# 5.3δ Kubernetes — Ενορχήστρωση Containers
+
+Το **Kubernetes (K8s)** αυτοματοποιεί την ανάπτυξη, κλιμάκωση και διαχείριση containerized εφαρμογών σε παραγωγικό περιβάλλον.
+
+<div class="columns">
+<div>
+
+**Βασικές Έννοιες**
+
+| Έννοια | Ορισμός |
+|--------|---------|
+| **Pod** | Η μικρότερη μονάδα — 1+ containers |
+| **Deployment** | Ορισμός επιθυμητής κατάστασης |
+| **Service** | Σταθερό endpoint για πρόσβαση σε Pods |
+| **Namespace** | Λογική απομόνωση πόρων |
+| **Node** | Server που τρέχει Pods |
+| **Cluster** | Σύνολο Nodes υπό K8s |
+
+</div>
+<div>
+
+**Τι Κάνει Αυτόματα το K8s**
+* 🔄 **Self-healing**: Επανεκκινεί αποτυχημένα containers
+* 📈 **Auto-scaling**: Κλιμάκωση βάσει CPU/memory
+* 🚀 **Rolling updates**: Zero-downtime deployments
+* ⚖️ **Load balancing**: Κατανομή traffic μεταξύ Pods
+
+**Managed Kubernetes Services:**
+
+| | |
+|-|-|
+| ☁️ AWS | EKS — Elastic Kubernetes Service |
+| 🔵 Azure | AKS — Azure Kubernetes Service |
+| 🟡 GCP | GKE — Google Kubernetes Engine |
+
+> 💡 Αναλογία: Αν τα containers είναι "πλοία", το Kubernetes είναι το **λιμάνι** — αποφασίζει πού ελλιμενίζεται κάθε πλοίο, πότε κινείται, πόσο χώρο παίρνει.
+
+</div>
+</div>
+
+---
+
+<!-- _class: xsmall -->
+# 5.3ε CI/CD & DevSecOps — Συνεχής Παράδοση Λογισμικού
+
+Τα **CI/CD pipelines** αυτοματοποιούν το ταξίδι κώδικα από τον developer ως την παραγωγή — γρήγορα, με ασφάλεια, χωρίς χειροκίνητες εργασίες.
+
+<div class="columns">
+<div>
+
+**Τα Στάδια ενός Pipeline**
+
+| Στάδιο | Τι γίνεται |
+|--------|-----------|
+| **CI** — Continuous Integration | Αυτόματο build & tests σε κάθε commit |
+| **CD** — Continuous Delivery | Αυτόματο deploy σε test/staging |
+| **CD** — Continuous Deployment | Αυτόματο deploy στην παραγωγή |
+| **DevSecOps** | SAST/DAST, dependency & secrets scanning |
+
+**GitOps Αρχή**: Η υποδομή ορίζεται ως κώδικας σε Git — κάθε αλλαγή μέσω pull request, αυτόματη εφαρμογή, πλήρης audit trail.
+
+</div>
+<div>
+
+**Κατεξοχήν Εργαλεία**
+
+| Εργαλείο | Ρόλος |
+|---------|-------|
+| **GitHub Actions** | CI/CD ενσωματωμένο στο GitHub |
+| **GitLab CI/CD** | Full DevSecOps platform |
+| **ArgoCD** | GitOps CD για Kubernetes |
+| **Jenkins** | Κλασικό open-source CI/CD |
+| **Tekton** | Cloud-native pipelines για K8s |
+
+> 💡 Πριν CI/CD: deploy κάθε 3 μήνες, χειροκίνητα. Μετά: **Amazon κάνει deploy κάθε 11 δευτερόλεπτα** — αυτή είναι η δύναμη της αυτοματοποίησης.
+
+</div>
+</div>
+
+---
+
+<!-- _class: xsmall -->
+# 5.3στ Observability — Ορατότητα σε Distributed Systems
+
+Σε ένα σύστημα με δεκάδες microservices, το παραδοσιακό monitoring δεν αρκεί. **Observability** = η ικανότητα να κατανοείς την εσωτερική κατάσταση ενός συστήματος από τα εξωτερικά σήματά του.
+
+<div class="columns">
+<div>
+
+**Οι 3 Πυλώνες (CNCF)**
+
+| Πυλώνας | Τι Μετρά | Εργαλεία |
+|---------|---------|---------|
+| 📋 **Logs** | Ακριβή γεγονότα & σφάλματα | Elasticsearch, Loki, Splunk |
+| 📈 **Metrics** | Αριθμητικά μεγέθη (CPU, req/s, latency) | **Prometheus** + **Grafana** |
+| 🔍 **Distributed Tracing** | Πορεία ενός request μέσα από όλα τα services | **Jaeger**, Zipkin, Tempo |
+
+**OpenTelemetry (OTel)**: Ανοιχτό CNCF πρότυπο για ενιαία συλλογή Logs, Metrics & Traces από οποιοδήποτε σύστημα.
+
+</div>
+<div>
+
+**Google SRE "Golden Signals"**
+
+Τέσσερις μετρικές που καλύπτουν κάθε παραγωγικό σύστημα:
+
+* ⏱️ **Latency**: Πόσο αργά απαντά;
+* 🌊 **Traffic**: Πόσα requests/sec δέχεται;
+* ❌ **Errors**: Ποιο % αποτυγχάνει;
+* 💾 **Saturation**: Πόσο "γεμάτη" είναι η υποδομή;
+
+> 💡 Αναλογία: Αν τα microservices είναι τα τμήματα ενός νοσοκομείου, η observability είναι το κεντρικό ταμπλό που δείχνει ποιος ασθενής (request) βρίσκεται σε ποιο δωμάτιο, πόσο περιμένει και αν έχει επείγον πρόβλημα.
+
+</div>
+</div>
+
+---
+
 <!-- _class: xxsmall -->
 # 5.4 IoT & Digital Twins — Φυσικός & Ψηφιακός Κόσμος
 
