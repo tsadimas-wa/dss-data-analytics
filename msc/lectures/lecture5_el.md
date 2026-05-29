@@ -1342,6 +1342,87 @@ Strategy & Organization · Product · Technology · Data Integration · Logistic
 Ρωτήστε: "Αν έπρεπε να διαλέξετε μία μόνο τεχνολογία από αυτές που καλύψαμε σήμερα που θα έχει τη μεγαλύτερη επίδραση στη δουλειά σας τα επόμενα 5 χρόνια, ποια θα ήταν;" Αφήστε 2-3 φοιτητές να απαντήσουν. Δεν υπάρχει λάθος απάντηση — η συζήτηση αυτή δείχνει πόσο ευρύ και διεπιστημονικό είναι το πεδίο.
 -->
 
+
+---
+
+<!-- _class: small -->
+# 5. Οικοσύστημα Εργαλείων & Τεχνολογιών Ψηφιακού Μετασχηματισμού
+
+Τα εργαλεία του ΨΜ οργανώνονται σε **5 βασικούς πυλώνες** — κατηγορίες που μεταμορφώνουν επιχειρηματικά μοντέλα, διεργασίες και εμπειρία πελάτη.
+
+| # | Πυλώνας | Επίκεντρο |
+|---|---------|-----------|
+| 1 | ⚙️ **BPM & Hyperautomation** | Μοντελοποίηση, εκτέλεση & ρομποτική αυτοματοποίηση διεργασιών |
+| 2 | 📊 **Data & Analytics Core** | Υποδομές δεδομένων, data science & BI dashboards |
+| 3 | ☁️ **Cloud & Modern Tech Stack** | On-demand υποδομή, APIs, DevOps & IaC |
+| 4 | 🌐 **IoT & Digital Twins** | Σύνδεση φυσικού/ψηφιακού κόσμου & virtual testing |
+| 5 | 🤝 **Customer Engagement & Workplace** | CRM/ERP, omnichannel & ψηφιακή συνεργασία |
+
+> 💡 Βλ. πλαίσιο McKinsey *Rewired* & μοντέλα επιχειρησιακής αρχιτεκτονικής (TOGAF, ArchiMate).
+
+---
+
+<!-- _class: xxsmall -->
+# 5.1 BPM & Hyperautomation — Ο Επιχειρησιακός Κινητήρας
+
+Η τεχνολογία δεν αποδίδει αξία πάνω σε προβληματικές διεργασίες — αυτά τα εργαλεία είναι ο πρακτικός βραχίονας του BPR (βλ. §2.5).
+
+| Κατηγορία | Κατεξοχήν Εργαλεία | Χρήση |
+|-----------|-------------------|-------|
+| **Business BPM** (Μοντελοποίηση & Ανάλυση) | SAP Signavio, ARIS, Bizagi | Χαρτογράφηση AS-IS, εντοπισμός bottlenecks, προσομοιώσεις κόστους/χρόνου πριν από επένδυση σε κώδικα |
+| **Technical BPM** (Workflow Engines) | Camunda, Bonita, jBPM | Executable BPMN: ενορχήστρωση User Tasks (άνθρωποι) & Service Tasks (συστήματα) σε εκτελέσιμο λογισμικό |
+| **RPA** (Ρομποτική Αυτοματοποίηση) | UiPath, Automation Anywhere, Microsoft Power Automate | Software bots που μιμούνται ανθρώπινες κινήσεις — αυτοματοποίηση επαναλαμβανόμενων εργασιών σε legacy συστήματα |
+
+---
+
+<!-- _class: xxsmall -->
+# 5.2 Πλατφόρμες Δεδομένων & Επιχειρηματικής Αναλυτικής
+
+Τα δεδομένα είναι το καύσιμο για real-time αποφάσεις και εκπαίδευση μοντέλων AI.
+
+| Κατηγορία | Κατεξοχήν Εργαλεία | Χρήση |
+|-----------|-------------------|-------|
+| **Data Lakehouses & Warehouses** | Snowflake, Databricks, Google BigQuery, AWS Redshift | Ενοποίηση data silos από ERP/CRM/IoT σε ενιαία «Data Products» έτοιμα για κατανάλωση |
+| **No-Code / Low-Code Data Science** | KNIME, Alteryx, RapidMiner | Οπτικά pipelines για Text/Sentiment Mining & predictive μοντέλα (Decision Trees, Clustering) χωρίς κώδικα |
+| **BI & Data Visualization** | Microsoft Power BI, Tableau, Qlik | Ζωντανά dashboards με KPIs για τη διοίκηση — από raw data σε actionable insights |
+
+---
+
+<!-- _class: xxsmall -->
+# 5.3 Cloud Υποδομές & Αποσυνδεδεμένη Αρχιτεκτονική
+
+Η μετάβαση στο Cloud προσφέρει ευελιξία και κλιμακωσιμότητα για disruptive επιχειρηματικά μοντέλα.
+
+| Κατηγορία | Κατεξοχήν Εργαλεία | Χρήση |
+|-----------|-------------------|-------|
+| **Cloud Service Providers (CSPs)** | Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP) | On-demand υπολογιστική ισχύς, αποθήκευση & cloud-native υπηρεσίες (SaaS / PaaS / IaaS) |
+| **API Management** | Apigee (Google), MuleSoft, Kong, Azure API Management | Ραχοκοκαλιά αποσυνδεδεμένης αρχιτεκτονικής — ασφαλής επικοινωνία microservices, σπάζοντας μονολιθικά συστήματα |
+| **Infrastructure as Code (IaC) & DevOps** | Terraform, OpenTofu, Ansible, Kubernetes | Αυτοματοποίηση δημιουργίας & διαχείρισης υποδομής μέσω config files — εξάλειψη ανθρώπινων λαθών, πολλαπλά releases/ημέρα |
+
+---
+
+<!-- _class: xxsmall -->
+# 5.4 IoT & Digital Twins — Φυσικός & Ψηφιακός Κόσμος
+
+Γεφυρώνουν τον φυσικό κόσμο (παραγωγή, logistics, πόλεις) με ψηφιακά συστήματα ανάλυσης.
+
+| Κατηγορία | Κατεξοχήν Εργαλεία | Χρήση |
+|-----------|-------------------|-------|
+| **IoT Platforms** | PTC ThingWorx, AWS IoT Core, Siemens MindSphere, FIWARE (ανοιχτό πρότυπο Smart Cities) | Διαχείριση εκατ. αισθητήρων, συλλογή streaming δεδομένων & σύνδεση με Predictive Maintenance |
+| **Digital Twins** | Azure Digital Twins, NVIDIA Omniverse, Siemens Xcelerator | Ζωντανά ψηφιακά αντίγραφα εργοστασίων/πόλεων για virtual testing & βελτιστοποίηση διεργασιών |
+
+---
+
+<!-- _class: xxsmall -->
+# 5.5 Οικοσυστήματα Εμπειρίας Πελάτη & Ψηφιακής Συνεργασίας
+
+Μετασχηματίζουν τα κανάλια επικοινωνίας με την αγορά και τον εσωτερικό τρόπο εργασίας.
+
+| Κατηγορία | Κατεξοχήν Εργαλεία | Χρήση |
+|-----------|-------------------|-------|
+| **Enterprise CRM & ERP** | Salesforce, SAP S/4HANA, Microsoft Dynamics 365 | Ενοποίηση πωλήσεων, marketing, εξυπηρέτησης & οικονομικών σε omnichannel εμπειρία πελάτη |
+| **Digital Workplace & Collaboration** | Microsoft 365, Google Workspace, Atlassian (Jira / Confluence), Slack | Υποστήριξη agile ομάδων, κατάργηση σιλό-δομής, real-time & ασύγχρονη συνεργασία |
+
 ---
 
 <!-- _class: small -->
