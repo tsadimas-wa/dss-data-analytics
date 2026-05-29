@@ -581,33 +581,31 @@ Digitization: Φωτογράφιση ενός βιβλίου. Digitalization: Δ
 
 ---
 
-<!-- _class: xsmall -->
+<!-- _class: xxsmall -->
 # 1.6 Κύριες Ψηφιακές Τεχνολογίες του Industry 4.0
-
-Το Industry 4.0 στηρίζεται σε ένα οικοσύστημα διασυνδεδεμένων ψηφιακών τεχνολογιών. Η αξία τους βρίσκεται στη **σύγκλισή** τους.
 
 <div class="columns">
 <div>
 
 | Τεχνολογία | Ρόλος στο Industry 4.0 |
 |-----------|------------------------|
-| ☁️ **Cloud Computing** | Αποθήκευση & επεξεργασία δεδομένων παραγωγής, scalable υποδομή |
-| 📡 **Internet of Things (IIoT)** | Συλλογή δεδομένων από αισθητήρες & μηχανές σε real-time |
-| 📈 **Advanced Analytics** | Ανάλυση μεγάλου όγκου δεδομένων για patterns & insights |
+| ☁️ **Cloud Computing** | Ευέλικτη αποθήκευση & επεξεργασία δεδομένων παραγωγής |
+| 📡 **IIoT** | Συλλογή δεδομένων από αισθητήρες & μηχανές real-time |
+| 📈 **Advanced Analytics** | Ανάλυση δεδομένων για patterns & insights |
 | 🧠 **Artificial Intelligence** | Αυτόματη λήψη αποφάσεων, computer vision, NLP |
-| 🤖 **Robots, Cobots & Drones** | Αυτόματη εκτέλεση εργασιών, συνεργασία ανθρώπου–μηχανής |
+| 🤖 **Robots, Cobots & Drones** | Εκτέλεση εργασιών, συνεργασία ανθρώπου–μηχανής |
 
 </div>
 <div>
 
 | Τεχνολογία | Ρόλος στο Industry 4.0 |
 |-----------|------------------------|
-| 🔮 **Machine Learning** | Predictive maintenance, ποιοτικός έλεγχος, βελτιστοποίηση παραγωγής |
-| 🔗 **Blockchain** | Αξιοπιστία εφοδιαστικής αλυσίδας, traceability, smart contracts |
-| 🪞 **Digital Twin** | Ψηφιακή αναπαράσταση συστημάτων για προσομοίωση & βελτιστοποίηση |
-| 🥽 **AR/VR/Mixed Reality** | Εκπαίδευση, απομακρυσμένη συντήρηση, HMI interfaces |
+| 🔮 **Machine Learning** | Predictive maintenance, ποιοτικός έλεγχος |
+| 🔗 **Blockchain** | Εφοδιαστική αλυσίδα, traceability, smart contracts |
+| 🪞 **Digital Twin** | Ψηφιακή αναπαράσταση για προσομοίωση & βελτιστοποίηση |
+| 🥽 **AR/VR/Mixed Reality** | Εκπαίδευση, συντήρηση, HMI interfaces |
 
-> 💡 Παράδειγμα σύγκλισης: **IIoT + ML + Digital Twin** → σύστημα predictive maintenance που προβλέπει βλάβη 48 ώρες πριν, μηδενίζοντας το unplanned downtime.
+> 💡 **Σύγκλιση:** IIoT + ML + Digital Twin → predictive maintenance που προβλέπει βλάβη **48h πριν**, μηδενίζοντας το unplanned downtime.
 
 </div>
 </div>
@@ -716,15 +714,13 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 ---
 
-<!-- _class: xsmall -->
+<!-- _class: xxsmall -->
 # 1.9 Αλυσίδα Αξίας & Ψηφιακή Ωριμότητα
 
 <div class="columns">
 <div>
 
-**Ψηφιακή Αλυσίδα Αξίας (Digital Value Chain)**
-
-Το παραδοσιακό γραμμικό μοντέλο εφοδιαστικής αλυσίδας μετασχηματίζεται σε **Ψηφιακά Εφοδιαστικά Δίκτυα (Digital Supply Chain Networks — DSNs)** — πηγή ανταγωνιστικού πλεονεκτήματος με **Ψηφιακό Πυρήνα** που συνδέει όλα τα στάδια.
+**Ψηφιακή Αλυσίδα Αξίας → Digital Supply Chain Networks (DSNs)**
 
 | Παραδοσιακό | → | Ψηφιακό |
 |-------------|---|---------|
@@ -740,19 +736,15 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 **Επίπεδα Ψηφιακής Ωριμότητας (5 Επίπεδα)**
 
-| Επίπεδο | Τίτλος | Χαρακτηριστικά |
-|---------|--------|----------------|
-| **1** | Ψηφιακά Αρχάριο | Αρχική εφαρμογή πιλοτικών πρωτοβουλιών I4.0 |
-| **2** | Ενδιάμεσο | Ενσωμάτωση μιας I4.0 πρωτοβουλίας στη στρατηγική |
-| **3** | Έμπειρο | Διαμόρφωση στρατηγικής & επενδύσεις σε περισσότερους τομείς |
-| **4** | Ειδικό | Χρήση στρατηγικής με παρακολούθηση δεικτών, επενδύσεις παντού |
-| **5** | Κορυφαίο | Πλήρης εφαρμογή I4.0 & παρακολούθηση για νέες εφαρμογές |
+| # | Τίτλος | Χαρακτηριστικά |
+|---|--------|----------------|
+| **1** | Αρχάριο | Πιλοτικές πρωτοβουλίες I4.0 |
+| **2** | Ενδιάμεσο | Μία I4.0 πρωτοβουλία στη στρατηγική |
+| **3** | Έμπειρο | Στρατηγική & επενδύσεις σε πολλούς τομείς |
+| **4** | Ειδικό | Παρακολούθηση KPIs, επενδύσεις παντού |
+| **5** | Κορυφαίο | Πλήρης I4.0 & αναζήτηση νέων εφαρμογών |
 
-**6 Διαστάσεις Αξιολόγησης Ωριμότητας:**
-
-Strategy & Organization · Product · Technology · Data Integration · Logistics · People
-
-*(Αξιολογούνται από "Poor" έως "World class")*
+**6 Διαστάσεις:** Strategy · Product · Technology · Data · Logistics · People *(Poor → World class)*
 
 </div>
 </div>
@@ -902,29 +894,27 @@ Strategy & Organization · Product · Technology · Data Integration · Logistic
 <!-- _class: xxsmall -->
 # 2.4 Παραδοσιακά vs. Disruptive Ψηφιακά Μοντέλα
 
-[cite_start]Η ψηφιοποίηση επιτρέπει στις επιχειρήσεις να παρέχουν αγαθά και υπηρεσίες στον χρόνο, τον τόπο και με τον τρόπο που ακριβώς τα θέλει ο πελάτης, αλλάζοντας ριζικά τη λογική των εσόδων[cite: 200, 251].
-
 <div class="columns">
 <div>
 
 **Κύριοι Τύποι Ψηφιακών Μοντέλων**
-* [cite_start]📅 **Subscription:** Μηνιαία συνδρομή για συνεχή πρόσβαση (π.χ. Netflix)[cite: 211, 212].
-* [cite_start]🎁 **Freemium:** Δωρεάν βασική έκδοση, χρέωση για premium χαρακτηριστικά (π.χ. LinkedIn, Dropbox)[cite: 213, 215].
-* [cite_start]📢 **Free ("The User is the Product"):** Έσοδα 100% από διαφήμιση και data (π.χ. Google ~77%, Facebook ~97%)[cite: 217, 219, 222].
-* [cite_start]🚗 **On-Demand & Access over Ownership:** Πληρωμή για προσωρινή πρόσβαση/χρήση, χωρίς ιδιοκτησία (π.χ. Uber, Airbnb)[cite: 227, 228, 231, 245].
-* [cite_start]🌐 **Ecosystem:** Σουίτα αλληλένδετων προϊόντων/υπηρεσιών που αυξάνουν την αξία τους όσο περισσότερα κατέχεις (π.χ. Apple, Google)[cite: 232, 247, 248].
+* 📅 **Subscription:** Μηνιαία συνδρομή για συνεχή πρόσβαση (π.χ. Netflix).
+* 🎁 **Freemium:** Δωρεάν βασική έκδοση, χρέωση για premium (π.χ. LinkedIn, Dropbox).
+* 📢 **Free ("The User is the Product"):** Έσοδα από διαφήμιση & data (Google ~77%, Facebook ~97%).
+* 🚗 **On-Demand / Access over Ownership:** Πληρωμή για πρόσβαση χωρίς ιδιοκτησία (Uber, Airbnb).
+* 🌐 **Ecosystem:** Αλληλένδετα προϊόντα — αυξάνουν αξία όσο περισσότερα κατέχεις (Apple, Google).
 
 </div>
 <div>
 
-**Πίνακας Μεταβολής (Traditional vs. Disruptive)**
+**Παραδοσιακό vs. Disruptive**
 
-| Διάσταση | Παραδοσιακό Μοντέλο | Disruptive Ψηφιακό Μοντέλο |
+| Διάσταση | Παραδοσιακό | Disruptive |
 | :--- | :--- | :--- |
-| **Πηγή Εσόδων** | [cite_start]Εφάπαξ πώληση προϊόντος [cite: 251] | [cite_start]Επαναλαμβανόμενα / Data / Πλατφόρμα [cite: 251] |
-| **Asset Ownership** | [cite_start]Η εταιρεία κατέχει τα assets [cite: 251] | [cite_start]Πρόσβαση έναντι Ιδιοκτησίας (Uber, Airbnb) [cite: 251] |
-| **Κλιμακωσιμότητα** | [cite_start]Περιορισμένη από φυσικά assets [cite: 251] | [cite_start]Άπειρη ψηφιακή κλιμακωσιμότητα (Infinite) [cite: 251] |
-| **Lock-in Πελάτη** | [cite_start]Χαμηλό κόστος αλλαγής [cite: 251] | [cite_start]Ecosystem lock-in (Apple, Google) [cite: 251] |
+| **Πηγή Εσόδων** | Εφάπαξ πώληση | Επαναλαμβανόμενα / Data / Πλατφόρμα |
+| **Asset Ownership** | Η εταιρεία κατέχει assets | Πρόσβαση έναντι Ιδιοκτησίας |
+| **Κλιμακωσιμότητα** | Περιορισμένη από φυσικά assets | Άπειρη ψηφιακή κλιμάκωση |
+| **Lock-in Πελάτη** | Χαμηλό κόστος αλλαγής | Ecosystem lock-in (Apple, Google) |
 
 </div>
 </div>
@@ -1305,8 +1295,6 @@ Strategy & Organization · Product · Technology · Data Integration · Logistic
 <!-- _class: xsmall -->
 # 4.3 Εφαρμογές & Παραδείγματα Smart Cities
 
-<div class="columns">
-<div>
 
 **Τομείς Εφαρμογής**
 
@@ -1316,8 +1304,7 @@ Strategy & Organization · Product · Technology · Data Integration · Logistic
 * 🅿️ **Smart Parking:** Αισθητήρες κενών θέσεων, πλοήγηση στο πλησιέστερο διαθέσιμο χώρο. Μείωση κυκλοφοριακής συμφόρησης λόγω αναζήτησης στάθμευσης κατά 30% (SFPark, San Francisco).
 * 💧 **Smart Water Networks:** Ανίχνευση διαρροών σε πραγματικό χρόνο, βελτιστοποίηση κατανάλωσης (π.χ. Barcelone ανακτά 25% απώλειας νερού).
 
-</div>
-<div>
+
 
 **Πρωτοπόρες Smart Cities Παγκοσμίως**
 
@@ -1330,8 +1317,7 @@ Strategy & Organization · Product · Technology · Data Integration · Logistic
 | **Σεούλ** | 5G-enabled city services, AI κέντρο ελέγχου, ψηφιακός δίδυμος ποταμού Cheonggyecheon |
 | **Τάλιν (Εσθονία)** | Αναφορά ανωμαλιών από πολίτες (Bürokratt AI), ψηφιακή κατοικία (e-Residency) |
 
-</div>
-</div>
+
 
 <!-- 
 🗣️ **Σιγκαπούρη — η πιο προχωρημένη Smart City:**
