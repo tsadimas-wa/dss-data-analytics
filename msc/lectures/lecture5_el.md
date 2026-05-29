@@ -7,134 +7,134 @@ html: true
 header: 'Ενότητα 5: Ψηφιακός Μετασχηματισμός & Καινοτόμα Οικοσυστήματα'
 footer: 'Πανεπιστήμιο Δυτικής Αττικής (ΠΑΔΑ) — Συστήματα Αποφάσεων, Διαχείριση Διεργασιών και Επιχειρηματική Ανάλυση'
 style: |
-  section {
-    font-size: 22px;
-  }
-  section.small {
-    font-size: 18px;
-  }
+ section {
+ font-size: 22px;
+ }
+ section.small {
+ font-size: 18px;
+ }
 
-  section.xsmall {
-    font-size: 16px;
-  }
+ section.xsmall {
+ font-size: 16px;
+ }
 
-  section.xxsmall {
-    font-size: 14px;
-  }
+ section.xxsmall {
+ font-size: 14px;
+ }
 
 
-  /* Two-column layout */
-  .columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
+ /* Two-column layout */
+ .columns {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 16px;
+ }
 
-  /* Image-left / content-right (75/25) */
-  .columns-img {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 16px;
-    align-items: start;
-  }
+ /* Image-left / content-right (75/25) */
+ .columns-img {
+ display: grid;
+ grid-template-columns: 3fr 1fr;
+ gap: 16px;
+ align-items: start;
+ }
 
-  /* IPO model (three boxes in a row) */
-  .ipo-row {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    margin-top: 6px;
-  }
-  .ipo-box { flex: 1; border-radius: 8px; padding: 10px; }
-  .ipo-input   { background: #e8f4f8; }
-  .ipo-process { background: #fff8e1; }
-  .ipo-output  { background: #e8f5e9; }
-  .ipo-sep { font-size: 1.6em; align-self: center; color: #888; flex-shrink: 0; }
+ /* IPO model (three boxes in a row) */
+ .ipo-row {
+ display: flex;
+ gap: 10px;
+ align-items: flex-start;
+ margin-top: 6px;
+ }
+ .ipo-box { flex: 1; border-radius: 8px; padding: 10px; }
+ .ipo-input { background: #e8f4f8; }
+ .ipo-process { background: #fff8e1; }
+ .ipo-output { background: #e8f5e9; }
+ .ipo-sep { font-size: 1.6em; align-self: center; color: #888; flex-shrink: 0; }
 
-  /* SWOT 2×2 grid */
-  .swot-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-top: 6px;
-  }
-  .swot-box { border-radius: 6px; padding: 8px; }
-  .swot-s { background: #dcfce7; }
-  .swot-o { background: #dbeafe; }
-  .swot-w { background: #fff7ed; }
-  .swot-t { background: #fef2f2; }
-  .swot-label {
-    border-radius: 4px;
-    padding: 3px 8px;
-    font-weight: bold;
-    margin-bottom: 4px;
-    color: white;
-  }
-  .swot-s-label { background: #15803d; }
-  .swot-o-label { background: #1d4ed8; }
-  .swot-w-label { background: #c2410c; }
-  .swot-t-label { background: #dc2626; }
+ /* SWOT 2×2 grid */
+ .swot-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 8px;
+ margin-top: 6px;
+ }
+ .swot-box { border-radius: 6px; padding: 8px; }
+ .swot-s { background: #dcfce7; }
+ .swot-o { background: #dbeafe; }
+ .swot-w { background: #fff7ed; }
+ .swot-t { background: #fef2f2; }
+ .swot-label {
+ border-radius: 4px;
+ padding: 3px 8px;
+ font-weight: bold;
+ margin-bottom: 4px;
+ color: white;
+ }
+ .swot-s-label { background: #15803d; }
+ .swot-o-label { background: #1d4ed8; }
+ .swot-w-label { background: #c2410c; }
+ .swot-t-label { background: #dc2626; }
 
-  /* Slide με μόνο διάγραμμα — μεγάλο max-height εικόνας */
-  section.diagram img {
-    max-height: 500px !important;
-    max-width: 94% !important;
-    display: block;
-    margin: 0 auto;
-  }
-  /* Slide με διάγραμμα + κείμενο */
-  section.diagram-sm img {
-    max-height: 320px !important;
-    max-width: 94% !important;
-    display: block;
-    margin: 0 auto;
-    font-size: 14px;
-  }
-  /* Case Study slides */
-  section.casestudy {
-    background: #fff7ed;
-    color: #1e293b;
-  }
-  section.casestudy h1 {
-    color: #c2410c;
-    border-bottom: 2px solid #f97316;
-    padding-bottom: 4px;
-  }
-  section.casestudy strong {
-    color: #9a3412;
-  }
-  section.casestudy em {
-    color: #b45309;
-  }
-  section.casestudy blockquote {
-    border-left: 4px solid #f97316;
-    background: rgba(249,115,22,0.08);
-    color: #374151;
-  }
-  section.casestudy table th {
-    background: #ea580c;
-    color: #ffffff;
-  }
-  section.casestudy table td {
-    border-color: #fed7aa;
-    color: #1e293b;
-  }
-  section.casestudy table tr:nth-child(even) td {
-    background: rgba(249,115,22,0.06);
-  }
-  section.casestudy header, section.casestudy footer {
-    color: #9a3412;
-  }
-  /* Company logo — top-right corner of case study slides */
-  .slide-logo {
-    position: absolute;
-    top: 58px;
-    right: 20px;
-    width: 62px;
-    border-radius: 50%;
-    opacity: 0.92;
-    z-index: 10;
-  }
+ /* Slide με μόνο διάγραμμα — μεγάλο max-height εικόνας */
+ section.diagram img {
+ max-height: 500px !important;
+ max-width: 94% !important;
+ display: block;
+ margin: 0 auto;
+ }
+ /* Slide με διάγραμμα + κείμενο */
+ section.diagram-sm img {
+ max-height: 320px !important;
+ max-width: 94% !important;
+ display: block;
+ margin: 0 auto;
+ font-size: 14px;
+ }
+ /* Case Study slides */
+ section.casestudy {
+ background: #fff7ed;
+ color: #1e293b;
+ }
+ section.casestudy h1 {
+ color: #c2410c;
+ border-bottom: 2px solid #f97316;
+ padding-bottom: 4px;
+ }
+ section.casestudy strong {
+ color: #9a3412;
+ }
+ section.casestudy em {
+ color: #b45309;
+ }
+ section.casestudy blockquote {
+ border-left: 4px solid #f97316;
+ background: rgba(249,115,22,0.08);
+ color: #374151;
+ }
+ section.casestudy table th {
+ background: #ea580c;
+ color: #ffffff;
+ }
+ section.casestudy table td {
+ border-color: #fed7aa;
+ color: #1e293b;
+ }
+ section.casestudy table tr:nth-child(even) td {
+ background: rgba(249,115,22,0.06);
+ }
+ section.casestudy header, section.casestudy footer {
+ color: #9a3412;
+ }
+ /* Company logo — top-right corner of case study slides */
+ .slide-logo {
+ position: absolute;
+ top: 58px;
+ right: 20px;
+ width: 62px;
+ border-radius: 50%;
+ opacity: 0.92;
+ z-index: 10;
+ }
 ---
 
 <div style="text-align:center; margin-bottom:16px;">
@@ -163,19 +163,19 @@ style: |
 # Ενότητα 5 — Περίγραμμα
 
 0. **Ψηφιακός Μετασχηματισμός — Θεμέλια & Ορισμοί**
-   — Ορισμός · Επίπεδα (Digitization → DT) · Παράγοντες Επιτυχίας · 5 Πεδία (Rogers, 2016)
+ — Ορισμός · Επίπεδα (Digitization → DT) · Παράγοντες Επιτυχίας · 5 Πεδία (Rogers, 2016)
 1. **Industry 4.0 & Τεχνολογίες Εφαρμογής**
-   — IoT · Digital Twins · Smart Factory · CPS · Smart Connected Products · Ψηφιακή Ωριμότητα
+ — IoT · Digital Twins · Smart Factory · CPS · Smart Connected Products · Ψηφιακή Ωριμότητα
 2. **e-Business: Ψηφιακός Μετασχηματισμός Επιχειρήσεων**
-   — Μοντέλα e-Commerce · Disruptive Μοντέλα · BPR
+ — Μοντέλα e-Commerce · Disruptive Μοντέλα · BPR
 3. **e-Governance & Ευρωπαϊκό Πλαίσιο Διαλειτουργικότητας (EIF)**
-   — e-Government vs. e-Governance · Στάδια Ωριμότητας · EIF · Δείκτες (DESI, GDI, IDI)
+ — e-Government vs. e-Governance · Στάδια Ωριμότητας · EIF · Δείκτες (DESI, GDI, IDI)
 4. **Smart Cities (Έξυπνες Πόλεις)**
-   — Πυλώνες · Αρχιτεκτονική · Εφαρμογές · Προκλήσεις
+ — Πυλώνες · Αρχιτεκτονική · Εφαρμογές · Προκλήσεις
 5. **Οικοσύστημα Εργαλείων & Τεχνολογιών Ψηφιακού Μετασχηματισμού**
-   — BPM & Hyperautomation · Data & Analytics · Cloud Native · IoT Platforms · Digital Twins · CRM/ERP & Collaboration
+ — BPM & Hyperautomation · Data & Analytics · Cloud Native · IoT Platforms · Digital Twins · CRM/ERP & Collaboration
 6. **McKinsey Rewired — Τεχνολογική Αρχιτεκτονική**
-   — 6 Πυλώνες · Αποσυνδεδεμένη Αρχιτεκτονική · Στρατηγική Cloud
+ — 6 Πυλώνες · Αποσυνδεδεμένη Αρχιτεκτονική · Στρατηγική Cloud
 
 <!--
 🗣️ **Επισκόπηση:**
@@ -932,28 +932,28 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 <!-- _class: xxsmall -->
 # 2.5 Business Process Reengineering (BPR)
 
-[cite_start]Το **Business Process Reengineering (BPR)** είναι ο ριζικός ανασχεδιασμός των βασικών διεργασιών μιας επιχείρησης με σκοπό την επίτευξη εντυπωσιακών βελτιώσεων σε απόδοση, κόστος και ταχύτητα[cite: 397, 399]. [cite_start]Δεν πρόκειται για μικρές, σταδιακές διορθώσεις, αλλά για θεμελιώδη αναθεώρηση από το μηδέν[cite: 399].
+Το **Business Process Reengineering (BPR)** είναι ο ριζικός ανασχεδιασμός των βασικών διεργασιών μιας επιχείρησης με σκοπό την επίτευξη εντυπωσιακών βελτιώσεων σε απόδοση, κόστος και ταχύτητα. Δεν πρόκειται για μικρές, σταδιακές διορθώσεις, αλλά για θεμελιώδη αναθεώρηση από το μηδέν.
 
 <div class="columns">
 <div>
 
 **Γιατί το BPR είναι κεντρικό στον Ψηφιακό Μετασχηματισμό;**
-* [cite_start]Αποτελεί τον **επιχειρησιακό κινητήρα** (operational engine).
-* [cite_start]Μόλις οριστεί η στρατηγική και το ψηφιακό επιχειρηματικό μοντέλο, το BPR είναι η μεθοδολογία που θα επανασχεδιάσει τις διεργασίες, ώστε οι τεχνολογίες (ERP, CRM, AI, cloud) να αναπτυχθούν αποτελεσματικά[cite: 485].
-* [cite_start]**Μετατρέπει την ψηφιακή φιλοδοξία σε επιχειρησιακή πραγματικότητα**[cite: 485].
+* Αποτελεί τον **επιχειρησιακό κινητήρα** (operational engine).
+* Μόλις οριστεί η στρατηγική και το ψηφιακό επιχειρηματικό μοντέλο, το BPR είναι η μεθοδολογία που θα επανασχεδιάσει τις διεργασίες, ώστε οι τεχνολογίες (ERP, CRM, AI, cloud) να αναπτυχθούν αποτελεσματικά.
+* **Μετατρέπει την ψηφιακή φιλοδοξία σε επιχειρησιακή πραγματικότητα**.
 
 </div>
 <div>
 
 **Τα 8 Στάδια του Κύκλου BPR (McKinsey/BPR Model)**
-1. [cite_start]Ανάπτυξη Οράματος & Στόχων (*Define success*) [cite: 401, 402]
-2. [cite_start]Κατανόηση Υπαρχουσών Διεργασιών (*Map AS-IS*) [cite: 403, 417]
-3. [cite_start]Αναγνώριση Διεργασιών για Ανασχεδιασμό (*Find bottlenecks*) [cite: 406, 429]
-4. [cite_start]Προσδιορισμός Μοχλών Αλλαγής (*Select technologies: AI, chatbots*) [cite: 439, 441, 442]
-5. [cite_start]Υλοποίηση Νέας Διεργασίας (*Redesign & deploy TO-BE*) [cite: 440, 450]
-6. [cite_start]Επιχειρησιακή Λειτουργία (*Test and go live*) [cite: 407, 460]
-7. [cite_start]Αξιολόγηση Νέας Διεργασίας (*Measure against KPIs*) [cite: 404, 465]
-8. [cite_start]Εκτέλεση Συνεχούς Βελτίωσης (*Keep refining over time*) [cite: 400, 473]
+1. Ανάπτυξη Οράματος & Στόχων (*Define success*) 
+2. Κατανόηση Υπαρχουσών Διεργασιών (*Map AS-IS*) 
+3. Αναγνώριση Διεργασιών για Ανασχεδιασμό (*Find bottlenecks*) 
+4. Προσδιορισμός Μοχλών Αλλαγής (*Select technologies: AI, chatbots*) 
+5. Υλοποίηση Νέας Διεργασίας (*Redesign & deploy TO-BE*) 
+6. Επιχειρησιακή Λειτουργία (*Test and go live*) 
+7. Αξιολόγηση Νέας Διεργασίας (*Measure against KPIs*) 
+8. Εκτέλεση Συνεχούς Βελτίωσης (*Keep refining over time*) 
 
 </div>
 </div>
@@ -1091,20 +1091,23 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 ---
 
-<!-- _class: xsmall -->
+<!-- _class: xxsmall -->
 # 3.4 Δείκτες Ψηφιακής Ανάπτυξης & Η Θέση της Ελλάδας
 
-[cite_start]Οι χώρες αξιολογούνται διεθνώς με βάση σύνθετους δείκτες που μετρούν πόσο προηγμένες είναι οι οικονομίες, οι κυβερνήσεις και οι κοινωνίες τους[cite: 89, 90].
+
+![h:250](../img/lec5/desi.png)
+
+Οι χώρες αξιολογούνται διεθνώς με βάση σύνθετους δείκτες που μετρούν πόσο προηγμένες είναι οι οικονομίες, οι κυβερνήσεις και οι κοινωνίες τους.
 
 * 🇪🇺 **DESI (Digital Economy and Society Index — EU):**
-  * [cite_start]Η Ελλάδα κατατάσσεται στην **25η θέση** εντός της ΕΕ με σκορ **38.9** (κάτω από τον ευρωπαϊκό μέσο όρο)[cite: 114, 116, 122]. 
-  * [cite_start]Οι πυλώνες που προσμετρώνται είναι: *Human Capital, Connectivity, Integration of Digital Technology,* και *Digital Public Services*[cite: 118, 120].
+ * Η Ελλάδα κατατάσσεται στην **25η θέση** εντός της ΕΕ με σκορ **38.9** (κάτω από τον ευρωπαϊκό μέσο όρο). 
+ * Οι πυλώνες που προσμετρώνται είναι: *Human Capital, Connectivity, Integration of Digital Technology,* και *Digital Public Services*.
 * 🌐 **GDI (Global Digitalization Index — Huawei):**
-  * [cite_start]Χωρίζει τις χώρες σε *Frontrunners* (USA, Singapore), *Adopters* (Spain, Italy, Greece) και *Starters* (Vietnam, Bangladesh)[cite: 125].
-  * [cite_start]Η Ελλάδα βρίσκεται στο cluster των **Adopters** με σκορ **49.9** (με άριστα το 100)[cite: 125].
+ * Χωρίζει τις χώρες σε *Frontrunners* (USA, Singapore), *Adopters* (Spain, Italy, Greece) και *Starters* (Vietnam, Bangladesh).
+ * Η Ελλάδα βρίσκεται στο cluster των **Adopters** με σκορ **49.9** (με άριστα το 100).
 * 📞 **IDI (ICT Development Index — ITU):**
-  * [cite_start]Μετρά την *Universal Connectivity* (πρόσβαση/κόστος) και την *Meaningful Connectivity* (ποιότητα/ψηφιακές δεξιότητες)[cite: 131, 134, 135].
-  * [cite_start]Η Ελλάδα καταλαμβάνει την **27η θέση** ανάμεσα σε 164 οικονομίες παγκοσμίως[cite: 138, 139].
+ * Μετρά την *Universal Connectivity* (πρόσβαση/κόστος) και την *Meaningful Connectivity* (ποιότητα/ψηφιακές δεξιότητες).
+ * Η Ελλάδα καταλαμβάνει την **27η θέση** ανάμεσα σε 164 οικονομίες παγκοσμίως.
 
 <!-- 
 🗣️ **Πώς μετράμε την πρόοδο:**
