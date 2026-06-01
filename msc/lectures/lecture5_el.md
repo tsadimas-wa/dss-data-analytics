@@ -255,6 +255,8 @@ style: |
 * Διευκολύνει την εργασία: ταχύτερη αναζήτηση, ελαχιστοποίηση χρόνου διαχείρισης
 * ⚠️ Δεν αλλάζει τη διαδικασία — απλώς τη μεταφέρει σε ψηφιακό μέσο
 
+🛠️ **Εργαλεία:** Object storage ([MinIO](https://min.io/), Amazon S3), σαρωτές, OCR (Tesseract, Adobe Acrobat)
+
 </div>
 <div>
 
@@ -263,6 +265,8 @@ style: |
 * Αυτοματοποίηση ροής εγκρίσεων (workflow)
 * Εφαρμογή νέων εργαλείων παρακολούθησης
 * Βελτιώνει την αποδοτικότητα χωρίς ριζική αλλαγή
+
+🛠️ **Εργαλεία:** BPM/Workflow ([Camunda](https://camunda.com/), [SAP Signavio](https://www.signavio.com/)), RPA (UiPath, Automation Anywhere), Παρακολούθηση διαδικασιών ([Grafana](https://grafana.com/), [Prometheus](https://prometheus.io/), Kibana)
 
 </div>
 </div>
