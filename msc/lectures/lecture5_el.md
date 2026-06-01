@@ -1922,7 +1922,7 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 
 
-![w:500](../img/lec5/book17-1.png)
+![w:550](../img/lec5/book17-1.png)
 
 
 
@@ -1948,7 +1948,7 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 ---
 
-<!-- _class: xxsmall -->
+<!-- _class: small -->
 # Μετατόπιση 1: Point-to-Point → Αποσυνδεδεμένη (APIs)
 
 **Αποσύνδεση:** Κάθε ομάδα εκθέτει δεδομένα & λειτουργικότητα μέσω **API** — τα μεγάλα monolithic συστήματα διασπώνται σε **microservices**.
@@ -1999,7 +1999,7 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 <div>
 
 
-![h:520](../img/lec5/book17-2.png)
+![h:530](../img/lec5/book17-2.png)
 
 
 </div>
@@ -2032,7 +2032,7 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 <div>
 
 
-![h:520](../img/lec5/book17-3.png)
+![h:540](../img/lec5/book17-3.png)
 
 
 </div>
