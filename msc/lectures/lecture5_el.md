@@ -1240,13 +1240,14 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 Οι χώρες αξιολογούνται διεθνώς με βάση σύνθετους δείκτες που μετρούν πόσο προηγμένες είναι οι οικονομίες, οι κυβερνήσεις και οι κοινωνίες τους.
 
-* 🇪🇺 **DESI (Digital Economy and Society Index — EU):**
+* 🇪🇺 **[DESI](https://digital-strategy.ec.europa.eu/en/policies/desi) (Digital Economy and Society Index — EU):**
  * Η Ελλάδα κατατάσσεται στην **25η θέση** εντός της ΕΕ με σκορ **38.9** (κάτω από τον ευρωπαϊκό μέσο όρο). 
  * Οι πυλώνες που προσμετρώνται είναι: *Human Capital, Connectivity, Integration of Digital Technology,* και *Digital Public Services*.
-* 🌐 **GDI (Global Digitalization Index — Huawei):**
+ * 📌 Από το 2023 ενσωματώθηκε στο [Digital Decade Policy Programme 2030](https://digital-decade.ec.europa.eu/progress-and-key-metrics_en)
+* 🌐 **[GDI](https://carrier.huawei.com/en/gdi) (Global Digitalization Index — Huawei):**
  * Χωρίζει τις χώρες σε *Frontrunners* (USA, Singapore), *Adopters* (Spain, Italy, Greece) και *Starters* (Vietnam, Bangladesh).
  * Η Ελλάδα βρίσκεται στο cluster των **Adopters** με σκορ **49.9** (με άριστα το 100).
-* 📞 **IDI (ICT Development Index — ITU):**
+* 📞 **[IDI](https://www.itu.int/en/ITU-D/Statistics/Pages/IDI/default.aspx) (ICT Development Index — ITU):**
  * Μετρά την *Universal Connectivity* (πρόσβαση/κόστος) και την *Meaningful Connectivity* (ποιότητα/ψηφιακές δεξιότητες).
  * Η Ελλάδα καταλαμβάνει την **27η θέση** ανάμεσα σε 164 οικονομίες παγκοσμίως.
 
