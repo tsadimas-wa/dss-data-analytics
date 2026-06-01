@@ -2131,10 +2131,10 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 ---
 
-<!-- _class: xsmall -->
-# Case Study: Emirates NBD — API Transformation
+<!-- _class: casestudy xsmall -->
+# 📋 Case Study: Emirates NBD — API Transformation
 
-**Πλαίσιο:** Τράπεζα στο Ντουμπάι, πλήρης αρχιτεκτονικός μετασχηματισμός μέσω APIs.
+**Πλαίσιο:** Τράπεζα στο Ντουμπάι (MENAT), πλήρης αρχιτεκτονικός μετασχηματισμός μέσω APIs από το 2017.
 
 **Τα βήματα:**
 1. Ιεράρχηση υπαρχόντων services σε **banking domains** και **non-banking** (campaigns, OCR)
@@ -2148,6 +2148,8 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 > *"Completely redesigning the integration architecture, setting up an API management platform and developer portal are very complex tasks. We needed both experienced engineers and experienced product owners."*
 > — Saud Al Dhawyani, CTO, Emirates NBD
+
+📎 *Πηγή: McKinsey, Jan 2022 — [APIs: The secret ingredient for one company's massive tech leap](https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/apis-the-secret-ingredient-for-one-companys-massive-tech-leap)*
 
 ---
 
