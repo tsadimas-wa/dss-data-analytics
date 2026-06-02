@@ -1898,6 +1898,66 @@ Cloud Native σημαίνει ότι η εφαρμογή σχεδιάστηκε 
 
 ---
 
+<!-- _class: casestudy xxsmall -->
+# 🔐 Case Study: CyberArk — Εξουσιοδοτημένη Πρόσβαση σε Cloud Υπηρεσία
+
+<div class="columns">
+<div>
+
+**Σενάριο: Έκτακτη Πρόσβαση DBA σε Production Database**
+
+Ένας DBA χρειάζεται να αποκτήσει πρόσβαση στην παραγωγική βάση δεδομένων AWS RDS (PostgreSQL) για να διορθώσει κρίσιμο incident. Χωρίς PAM: παίρνει password από συνάδελφο στο Slack — **κανένα audit trail, κανέναν έλεγχο**.
+
+**Η Ροή με CyberArk (Just-in-Time Access)**
+
+```
+[1] DBA → CyberArk Portal: "Χρειάζομαι πρόσβαση σε prod-db-eu"
+         Αιτιολογία: "Incident #4821 — query timeout"
+
+[2] CyberArk → Manager: email/Slack για έγκριση  (2 λεπτά)
+         ✅ Έγκριση από: ops-lead@company.com
+
+[3] CyberArk → AWS IAM: δημιουργία temporary credentials
+         Access Key: ASIA... (TTL: 60 λεπτά)
+
+[4] DBA συνδέεται — CyberArk καταγράφει ολόκληρη τη συνεδρία (video)
+
+[5] Μετά από 60 λεπτά: credentials ανακαλούνται αυτόματα
+```
+
+</div>
+<div>
+
+**Τι παρέχει η πλατφόρμα**
+
+| Χαρακτηριστικό | Τι σημαίνει |
+|----------------|-------------|
+| **Vaulting** | Κεντρική, κρυπτογραφημένη αποθήκη credentials |
+| **JIT Access** | Πρόσβαση μόνο όταν χρειάζεται, για συγκεκριμένο χρόνο |
+| **Session Recording** | Video + keystroke logging κάθε privileged session |
+| **Credential Rotation** | Αυτόματη εναλλαγή passwords/keys χωρίς ανθρώπινη παρέμβαση |
+| **Audit Trail** | Πλήρες log: ποιος, πότε, σε τι, γιατί |
+
+**Αρχή Zero Standing Privileges (ZSP)**
+
+> Κανένας χρήστης δεν έχει **μόνιμη** πρόσβαση σε privileged resources. Η πρόσβαση δίνεται **on-demand, με έγκριση, για περιορισμένο χρόνο** — και κάθε κίνηση καταγράφεται.
+
+**Σύνδεση με DevSecOps:** Το CyberArk ενσωματώνεται στα CI/CD pipelines ώστε τα secrets (API keys, DB passwords) να μην υπάρχουν ποτέ σε plaintext μέσα στον κώδικα ή στις μεταβλητές περιβάλλοντος.
+
+</div>
+</div>
+
+<!--
+🗣️ **Γιατί χρειαζόμαστε PAM:**
+Η πιο συνηθισμένη αιτία παραβίασης cloud συστημάτων δεν είναι η εκμετάλλευση zero-day vulnerabilities — είναι κλεμμένα ή μόνιμα ενεργά credentials. Ο developer που έφυγε από την εταιρεία αλλά το access key του στο AWS δεν ανακλήθηκε. Ο DevOps που έβαλε το production password σε ένα .env αρχείο που ανέβηκε κατά λάθος στο GitHub.
+
+💡 **Πρακτικό παράδειγμα κόστους:** Μια τράπεζα στις ΗΠΑ ανακάλυψε ότι 340 πρώην υπάλληλοι είχαν ακόμα ενεργά privileged credentials σε production systems. Με CyberArk αυτό εντοπίζεται και κλείνει αυτόματα.
+
+🔗 **Σύνδεση με Compliance:** GDPR, PCI-DSS, SOC2, ISO 27001 απαιτούν όλα audit trail για privileged access. Το CyberArk παράγει αυτόματα τα απαραίτητα reports για τους ελεγκτές.
+-->
+
+---
+
 <!-- _class: xsmall -->
 # 5.3στ Observability — Ορατότητα σε Distributed Systems
 
