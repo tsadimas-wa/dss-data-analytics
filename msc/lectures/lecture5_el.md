@@ -175,7 +175,7 @@ style: |
 5. **Οικοσύστημα Εργαλείων & Τεχνολογιών Ψηφιακού Μετασχηματισμού**
  — BPM & Hyperautomation · Data & Analytics · Cloud Native · IoT Platforms · Digital Twins · CRM/ERP & Collaboration
 6. **McKinsey Rewired — Τεχνολογική Αρχιτεκτονική**
- — 6 Πυλώνες · Αποσυνδεδεμένη Αρχιτεκτονική · Στρατηγική Cloud
+ — 6 Πυλώνες · Αποσυνδεδεμένη Αρχιτεκτονική · Στρατηγική Cloud · Kubeflow MLOps Platform
 7. **Ασφάλεια Πληροφοριών (Information Security)**
  — CIA Triad · Περιουσιακά Στοιχεία Πληροφορίας · Απειλές & MOA · Αρχές Ασφάλειας · Ταξινόμηση · Social Engineering · Κωδικοί & MFA · Τηλεργασία · Διαχείριση Περιστατικών · ISO 27001 · GDPR · ITSRM
 
@@ -2441,6 +2441,61 @@ Cloud περιβάλλοντα όπου ζουν οι εφαρμογές — π�
 <!-- 
 🗣️ **Τελικό Συμπέρασμα για το Cloud:**
 Κλείστε την ενότητα τονίζοντας ότι το Cloud είναι πολλαπλασιαστής ισχύος (force multiplier). Επιτρέπει σε μια εταιρεία να καινοτομεί ταχύτατα, αρκεί να υπάρχει σωστό foundation και αυστηρός έλεγχος κόστους (FinOps). 
+-->
+
+---
+
+<!-- _class: xsmall -->
+# Kubeflow — MLOps Platform on Kubernetes
+
+**Kubeflow** είναι η κορυφαία open-source πλατφόρμα για ανάπτυξη, εκπαίδευση και ανάπτυξη μοντέλων ML σε παραγωγή, βασισμένη σε **Kubernetes**.
+
+<div class="columns">
+<div>
+
+**Γιατί Kubeflow;**
+
+* Αφαιρεί την επιχειρησιακή πολυπλοκότητα — οι ομάδες ML εστιάζουν στην ML εργασία
+* Φορητές αναπτύξεις σε οποιοδήποτε Kubernetes cluster (on-prem, GKE, EKS, AKS)
+* **Modular:** επιλέγεις μόνο τα components που χρειάζεσαι
+* Δημιουργήθηκε από εσωτερικά TensorFlow workflows της Google · σήμερα CNCF project
+
+**Βασικά Components**
+
+| Component | Λειτουργία |
+|-----------|-----------|
+| **Kubeflow Pipelines** | Ορχήστρωση ML workflows end-to-end |
+| **Kubeflow Trainer** | Distributed training (PyTorch, JAX, XGBoost) |
+| **Kubeflow Notebooks** | Interactive Jupyter περιβάλλοντα |
+| **Katib** | Hyperparameter tuning & AutoML |
+| **Central Dashboard** | Ενιαία διεπαφή πλατφόρμας |
+
+</div>
+<div>
+
+![Kubeflow Overview](https://www.kubeflow.org/docs/started/images/kubeflow-overview.drawio.svg)
+
+</div>
+</div>
+
+<!--
+🗣️ **Hook:**
+Ρωτήστε: "Ένας data scientist εκπαίδευσε μοντέλο σε laptop — πώς το κάνει scale σε 100 GPUs και το βάζει σε παραγωγή;" Αυτό ακριβώς λύνει το Kubeflow: το χάσμα μεταξύ ML experimentation και production deployment.
+
+💡 **Βασικό μήνυμα:**
+Το Kubeflow είναι ο "συνδετικός ιστός" ενός ML platform — συνδέει data scientists (που γράφουν code) με ML engineers (που τρέχουν production workloads) σε ένα Kubernetes-native περιβάλλον. Χωρίς κάτι τέτοιο, η μετάβαση από notebook σε production μπορεί να πάρει εβδομάδες.
+
+📌 **Για τη σύνδεση με Kubernetes:**
+Kubernetes παρέχει scheduling, scaling, fault tolerance. Το Kubeflow χτίζει πάνω ML-specific abstractions: training jobs, pipeline steps, notebook servers. Αποτέλεσμα: elastic scaling (200 GPUs για 2 ώρες, μετά 0), pay-per-use υπολογιστική ισχύς.
+
+📌 **Για τα Pipelines:**
+Κάθε ML pipeline step (data prep → training → evaluation → serving) τρέχει ως ανεξάρτητο container. Αν αποτύχει ένα βήμα — επανεκκίνηση μόνο αυτού. Κάθε run τεκμηριώνεται αυτόματα: reproducibility by design.
+
+📌 **Για τον Katib:**
+Hyperparameter tuning αυτοματοποιημένο — αντί ο data scientist να δοκιμάζει χειροκίνητα 100 combinations, ο Katib τα εκτελεί παράλληλα στο cluster χρησιμοποιώντας Bayesian optimization ή grid search.
+
+🔗 **Σύνδεση:**
+"Το Kubeflow είναι χαρακτηριστικό παράδειγμα του πώς το cloud και το Kubernetes ενεργοποιούν νέες δυνατότητες στην AI/ML — ακριβώς η 'force multiplier' λογική που μόλις είδαμε."
 -->
 
 ---
