@@ -1585,7 +1585,7 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 **Βασικές Αρχές Σχεδίασης (Design Principles)**
 
 * 👤 **Human-Centric Design:** Ο πολίτης είναι το κέντρο, όχι η τεχνολογία. Ξεκινάμε από τις ανάγκες, όχι από τις δυνατότητες.
-* 🔓 **Open Standards & Interoperability:** Αποφυγή vendor lock-in, χρήση ανοιχτών προτύπων (FIWARE NGSI, ISO 37122).
+* 🔓 **Open Standards & Interoperability:** Αποφυγή vendor lock-in, χρήση ανοιχτών προτύπων (FIWARE NGSI, [ISO 37122](https://www.iso.org/standard/69763.html)).
 * 🌱 **Sustainability by Design:** Περιβαλλοντικά, οικονομικά και κοινωνικά βιώσιμη ανάπτυξη (Triple Bottom Line).
 * 📐 **Data Governance Framework:** Σαφής πολιτική για ιδιοκτησία, πρόσβαση, χρήση και ασφάλεια δεδομένων της πόλης.
 * 🔬 **Living Labs & Pilot-First:** Πιλοτικές εφαρμογές σε μικρή κλίμακα πριν τη μαζική ανάπτυξη (fail fast, learn fast).
@@ -1594,11 +1594,13 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 </div>
 </div>
 
+> ⚠️ **Αντι-παράδειγμα — [Sidewalk Toronto](https://www.sidewalktoronto.ca/):** Ακυρώθηκε (2020) λόγω αντίδρασης πολιτών & NGOs για data governance — *«Ποιος κατέχει τα δεδομένα της πόλης;»*
+
 <!-- 
-⚠️ **Το "Sidewalk Toronto" ως αντι-παράδειγμα:**
+⚠️ **Το "[Sidewalk Toronto](https://www.sidewalktoronto.ca/)" ως αντι-παράδειγμα:**
 Η Google/Sidewalk Labs ανακοίνωσε (2017) σχέδιο για μια smart neighborhood στο Toronto, με πλήρη ψηφιακή υποδομή. Το 2020 ανακοίνωσε ακύρωση λόγω "αβεβαιότητας post-COVID" — αλλά η πραγματική αιτία ήταν η έντονη αντίδραση πολιτών και NGOs για data governance: Ποιος ελέγχει τα δεδομένα που συλλέγει η Google στον δημόσιο χώρο; Αυτό είναι ίσως το σημαντικότερο μάθημα για το σχεδιασμό Smart Cities.
 
-🗣️ **ISO 37122:**
+🗣️ **[ISO 37122](https://www.iso.org/standard/69763.html):**
 Ένα διεθνές πρότυπο με >100 δείκτες (KPIs) για την αξιολόγηση μιας Smart City. Καλύπτει τομείς από ενέργεια και μεταφορές έως υγεία, εκπαίδευση και governance. Χρησιμοποιείται ως benchmark από πόλεις παγκοσμίως για να μετρήσουν και να συγκρίνουν την πρόοδό τους.
 -->
 
