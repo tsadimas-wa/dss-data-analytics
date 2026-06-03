@@ -174,7 +174,7 @@ style: |
  — Πυλώνες · Αρχιτεκτονική · Εφαρμογές · Προκλήσεις
 5. **Οικοσύστημα Εργαλείων & Τεχνολογιών Ψηφιακού Μετασχηματισμού**
  — BPM & Hyperautomation · Data & Analytics · Cloud Native · IoT Platforms · Digital Twins · CRM/ERP & Collaboration
-6. **McKinsey Rewired — Τεχνολογική Αρχιτεκτονική**
+6. **Τεχνολογική Αρχιτεκτονική & Στρατηγική Ψηφιακού Μετασχηματισμού**
  — 6 Πυλώνες · Αποσυνδεδεμένη Αρχιτεκτονική · Στρατηγική Cloud · Kubeflow MLOps Platform
 7. **Ασφάλεια Πληροφοριών (Information Security)**
  — CIA Triad · Περιουσιακά Στοιχεία Πληροφορίας · Απειλές & MOA · Αρχές Ασφάλειας · Ταξινόμηση · Social Engineering · Κωδικοί & MFA · Τηλεργασία · Διαχείριση Περιστατικών · ISO 27001 · GDPR · ITSRM
