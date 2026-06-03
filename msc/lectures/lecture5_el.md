@@ -2350,7 +2350,7 @@ Cloud Native σημαίνει ότι η εφαρμογή σχεδιάστηκε 
 
 ---
 
-<!-- _class: small -->
+<!-- _class: xsmall -->
 # Μετατόπιση 2 & 3: Αυτοματοποίηση & Εξελισσόμενη Αρχιτεκτονική
 
 <div class="columns">
@@ -2375,15 +2375,15 @@ Cloud Native σημαίνει ότι η εφαρμογή σχεδιάστηκε 
 <div>
 
 ### Μετατόπιση 3: Fixed → Evolving
-Δεν υπάρχει τέλεια, προσχεδιασμένη αρχιτεκτονική — η τεχνολογία αλλάζει συνεχώς.
+Δεν υπάρχει "τέλεια" αρχιτεκτονική — επιχειρηματικές ανάγκες και τεχνολογίες αλλάζουν. Η αρχιτεκτονική πρέπει να **εξελίσσεται χωρίς διακοπή λειτουργίας**.
 
-**Πώς επιτυγχάνεται η ευελιξία:**
-* **Modular architecture** — best-of-breed & open-source components
-* **Σαφή standards** — αποτροπή proliferation εργαλείων
-* **Well-designed interfaces** — ελαχιστοποίηση πολυπλοκότητας
-* Enterprise architects **ενσωματωμένοι** στις agile ομάδες (όχι ivory tower)
+**Βασικές Πρακτικές:**
+* 🌿 **Strangler Fig Pattern:** Σταδιακή αντικατάσταση legacy — νέες λειτουργίες στο νέο σύστημα, παλαιές "μεταναστεύουν" τμηματικά (χωρίς "big bang")
+* 🧩 **Modular Architecture:** Best-of-breed & open-source components με σαφή, σταθερά interfaces
+* 📋 **ADRs (Architecture Decision Records):** Τεκμηρίωση αποφάσεων — *"γιατί επιλέξαμε X αντί Y"* (audit trail σχεδιασμού)
+* 🤝 **Architects in Teams:** Enterprise architects **ενσωματωμένοι** στις agile ομάδες — όχι ivory tower
 
-> Πρέπει να κατανοεί τόσο **cutting-edge tools** όσο και **τι χρειάζεται για delivery** στην παραγωγή.
+> *"Any organization that designs a system produces a design whose structure mirrors its own communication structure."* — **Conway's Law**
 
 </div>
 
