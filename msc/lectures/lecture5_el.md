@@ -1528,7 +1528,7 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 ---
 
-<!-- _class: xsmall -->
+<!-- _class: xxsmall -->
 # 🛠️ ThingsBoard — Ανοιχτή Πλατφόρμα IoT για Smart Cities
 
 <div class="columns">
@@ -1570,6 +1570,8 @@ Smart Connected Products και Έξυπνες Μεταφορές, μαζί με
 
 </div>
 </div>
+
+> 🏛️ **Ελληνικό παράδειγμα:** Το [Χαροκόπειο Πανεπιστήμιο](https://www.hua.gr/%CF%84%CE%BF-%CF%87%CE%B1%CF%81%CE%BF%CE%BA%CF%8C%CF%80%CE%B5%CE%B9%CE%BF-%CF%80%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84%CE%AE%CE%BC%CE%B9%CE%BF-%CF%84%CE%BF-%CF%80%CF%81%CF%8E%CF%84%CE%BF-smart-cam/) είναι το **πρώτο Smart Campus** στην Ελλάδα — αξιοποιεί IoT πλατφόρμα για monitoring ενέργειας, περιβάλλοντος και υποδομών.
 
 <!--
 💡 **Γιατί ThingsBoard για Smart Cities;**
